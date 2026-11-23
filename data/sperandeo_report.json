@@ -1,0 +1,645 @@
+{
+ "generated_at": "2026-11-23 23:23 UTC",
+ "rows": [
+  {
+   "strategy": "1-2-3 trend change",
+   "variant": "all markets, long+short",
+   "protect": false,
+   "stats": {
+    "trades": 270,
+    "win_rate": 40.7,
+    "expectancy": -0.082,
+    "profit_factor": 0.85,
+    "total_r": -22.13,
+    "max_dd_r": 44.16,
+    "oos_expectancy": -0.368
+   },
+   "verdict": "LOSES",
+   "per_market": {
+    "NIFTY": {
+     "trades": 18,
+     "win_rate": 27.8,
+     "expectancy": -0.318,
+     "profit_factor": 0.55,
+     "total_r": -5.73,
+     "max_dd_r": 7.7,
+     "oos_expectancy": -1.035
+    },
+    "BANKNIFTY": {
+     "trades": 28,
+     "win_rate": 35.7,
+     "expectancy": -0.152,
+     "profit_factor": 0.75,
+     "total_r": -4.25,
+     "max_dd_r": 9.05,
+     "oos_expectancy": -0.789
+    },
+    "RELIANCE": {
+     "trades": 16,
+     "win_rate": 43.8,
+     "expectancy": 0.056,
+     "profit_factor": 1.12,
+     "total_r": 0.89,
+     "max_dd_r": 3.12,
+     "oos_expectancy": -0.552
+    },
+    "HDFCBANK": {
+     "trades": 19,
+     "win_rate": 26.3,
+     "expectancy": -0.293,
+     "profit_factor": 0.57,
+     "total_r": -5.56,
+     "max_dd_r": 8.21,
+     "oos_expectancy": 0.327
+    },
+    "ICICIBANK": {
+     "trades": 24,
+     "win_rate": 41.7,
+     "expectancy": -0.047,
+     "profit_factor": 0.91,
+     "total_r": -1.12,
+     "max_dd_r": 9.37,
+     "oos_expectancy": -0.529
+    },
+    "SBIN": {
+     "trades": 26,
+     "win_rate": 30.8,
+     "expectancy": -0.328,
+     "profit_factor": 0.52,
+     "total_r": -8.52,
+     "max_dd_r": 10.49,
+     "oos_expectancy": 0.249
+    },
+    "INFY": {
+     "trades": 22,
+     "win_rate": 45.5,
+     "expectancy": -0.034,
+     "profit_factor": 0.94,
+     "total_r": -0.74,
+     "max_dd_r": 5.31,
+     "oos_expectancy": -0.53
+    },
+    "TCS": {
+     "trades": 21,
+     "win_rate": 47.6,
+     "expectancy": 0.058,
+     "profit_factor": 1.1,
+     "total_r": 1.21,
+     "max_dd_r": 4.0,
+     "oos_expectancy": -0.111
+    },
+    "EURUSD": {
+     "trades": 26,
+     "win_rate": 38.5,
+     "expectancy": -0.068,
+     "profit_factor": 0.87,
+     "total_r": -1.76,
+     "max_dd_r": 5.41,
+     "oos_expectancy": 0.058
+    },
+    "GBPUSD": {
+     "trades": 26,
+     "win_rate": 53.8,
+     "expectancy": 0.181,
+     "profit_factor": 1.43,
+     "total_r": 4.71,
+     "max_dd_r": 5.37,
+     "oos_expectancy": -0.183
+    },
+    "USDJPY": {
+     "trades": 21,
+     "win_rate": 42.9,
+     "expectancy": -0.119,
+     "profit_factor": 0.79,
+     "total_r": -2.49,
+     "max_dd_r": 7.96,
+     "oos_expectancy": -0.804
+    },
+    "XAUUSD": {
+     "trades": 23,
+     "win_rate": 52.2,
+     "expectancy": 0.053,
+     "profit_factor": 1.12,
+     "total_r": 1.23,
+     "max_dd_r": 3.06,
+     "oos_expectancy": 0.066
+    }
+   }
+  },
+  {
+   "strategy": "1-2-3 trend change",
+   "variant": "all markets, long+short",
+   "protect": true,
+   "stats": {
+    "trades": 282,
+    "win_rate": 51.8,
+    "expectancy": -0.023,
+    "profit_factor": 0.95,
+    "total_r": -6.39,
+    "max_dd_r": 32.92,
+    "oos_expectancy": -0.246
+   },
+   "verdict": "LOSES",
+   "per_market": {
+    "NIFTY": {
+     "trades": 18,
+     "win_rate": 44.4,
+     "expectancy": -0.243,
+     "profit_factor": 0.57,
+     "total_r": -4.38,
+     "max_dd_r": 5.98,
+     "oos_expectancy": -0.688
+    },
+    "BANKNIFTY": {
+     "trades": 29,
+     "win_rate": 55.2,
+     "expectancy": 0.077,
+     "profit_factor": 1.18,
+     "total_r": 2.23,
+     "max_dd_r": 3.74,
+     "oos_expectancy": -0.391
+    },
+    "RELIANCE": {
+     "trades": 17,
+     "win_rate": 58.8,
+     "expectancy": 0.182,
+     "profit_factor": 1.52,
+     "total_r": 3.09,
+     "max_dd_r": 3.12,
+     "oos_expectancy": -0.16
+    },
+    "HDFCBANK": {
+     "trades": 21,
+     "win_rate": 42.9,
+     "expectancy": -0.337,
+     "profit_factor": 0.48,
+     "total_r": -7.07,
+     "max_dd_r": 7.75,
+     "oos_expectancy": -0.244
+    },
+    "ICICIBANK": {
+     "trades": 26,
+     "win_rate": 50.0,
+     "expectancy": -0.054,
+     "profit_factor": 0.89,
+     "total_r": -1.41,
+     "max_dd_r": 9.19,
+     "oos_expectancy": -0.474
+    },
+    "SBIN": {
+     "trades": 29,
+     "win_rate": 37.9,
+     "expectancy": -0.268,
+     "profit_factor": 0.55,
+     "total_r": -7.77,
+     "max_dd_r": 9.74,
+     "oos_expectancy": 0.004
+    },
+    "INFY": {
+     "trades": 23,
+     "win_rate": 52.2,
+     "expectancy": -0.001,
+     "profit_factor": 1.0,
+     "total_r": -0.02,
+     "max_dd_r": 5.78,
+     "oos_expectancy": -0.246
+    },
+    "TCS": {
+     "trades": 21,
+     "win_rate": 47.6,
+     "expectancy": -0.134,
+     "profit_factor": 0.76,
+     "total_r": -2.81,
+     "max_dd_r": 5.27,
+     "oos_expectancy": -0.254
+    },
+    "EURUSD": {
+     "trades": 26,
+     "win_rate": 46.2,
+     "expectancy": -0.1,
+     "profit_factor": 0.8,
+     "total_r": -2.61,
+     "max_dd_r": 6.06,
+     "oos_expectancy": 0.185
+    },
+    "GBPUSD": {
+     "trades": 26,
+     "win_rate": 65.4,
+     "expectancy": 0.299,
+     "profit_factor": 1.89,
+     "total_r": 7.77,
+     "max_dd_r": 4.09,
+     "oos_expectancy": 0.114
+    },
+    "USDJPY": {
+     "trades": 22,
+     "win_rate": 59.1,
+     "expectancy": 0.032,
+     "profit_factor": 1.07,
+     "total_r": 0.7,
+     "max_dd_r": 6.14,
+     "oos_expectancy": -0.5
+    },
+    "XAUUSD": {
+     "trades": 24,
+     "win_rate": 62.5,
+     "expectancy": 0.245,
+     "profit_factor": 1.7,
+     "total_r": 5.88,
+     "max_dd_r": 2.07,
+     "oos_expectancy": 0.303
+    }
+   }
+  },
+  {
+   "strategy": "1-2-3 trend change",
+   "variant": "India only, buy-only (Kite delivery)",
+   "protect": false,
+   "stats": {
+    "trades": 98,
+    "win_rate": 36.7,
+    "expectancy": -0.148,
+    "profit_factor": 0.77,
+    "total_r": -14.48,
+    "max_dd_r": 26.27,
+    "oos_expectancy": -0.17
+   },
+   "verdict": "LOSES",
+   "per_market": {
+    "NIFTY": {
+     "trades": 6,
+     "win_rate": 33.3,
+     "expectancy": -0.091,
+     "profit_factor": 0.88,
+     "total_r": -0.55,
+     "max_dd_r": 2.21,
+     "oos_expectancy": -1.071
+    },
+    "BANKNIFTY": {
+     "trades": 16,
+     "win_rate": 43.8,
+     "expectancy": -0.146,
+     "profit_factor": 0.77,
+     "total_r": -2.33,
+     "max_dd_r": 5.64,
+     "oos_expectancy": -1.172
+    },
+    "RELIANCE": {
+     "trades": 12,
+     "win_rate": 41.7,
+     "expectancy": -0.101,
+     "profit_factor": 0.83,
+     "total_r": -1.21,
+     "max_dd_r": 4.32,
+     "oos_expectancy": -0.41
+    },
+    "HDFCBANK": {
+     "trades": 7,
+     "win_rate": 28.6,
+     "expectancy": -0.181,
+     "profit_factor": 0.75,
+     "total_r": -1.27,
+     "max_dd_r": 5.17,
+     "oos_expectancy": 0.437
+    },
+    "ICICIBANK": {
+     "trades": 12,
+     "win_rate": 33.3,
+     "expectancy": -0.012,
+     "profit_factor": 0.98,
+     "total_r": -0.14,
+     "max_dd_r": 4.06,
+     "oos_expectancy": -0.785
+    },
+    "SBIN": {
+     "trades": 17,
+     "win_rate": 29.4,
+     "expectancy": -0.326,
+     "profit_factor": 0.55,
+     "total_r": -5.54,
+     "max_dd_r": 8.18,
+     "oos_expectancy": 0.141
+    },
+    "INFY": {
+     "trades": 14,
+     "win_rate": 35.7,
+     "expectancy": -0.279,
+     "profit_factor": 0.58,
+     "total_r": -3.91,
+     "max_dd_r": 6.5,
+     "oos_expectancy": -0.573
+    },
+    "TCS": {
+     "trades": 14,
+     "win_rate": 42.9,
+     "expectancy": 0.033,
+     "profit_factor": 1.06,
+     "total_r": 0.47,
+     "max_dd_r": 3.07,
+     "oos_expectancy": -0.099
+    }
+   }
+  },
+  {
+   "strategy": "1-2-3 trend change",
+   "variant": "India only, buy-only (Kite delivery)",
+   "protect": true,
+   "stats": {
+    "trades": 100,
+    "win_rate": 47.0,
+    "expectancy": -0.116,
+    "profit_factor": 0.79,
+    "total_r": -11.64,
+    "max_dd_r": 23.99,
+    "oos_expectancy": -0.236
+   },
+   "verdict": "LOSES",
+   "per_market": {
+    "NIFTY": {
+     "trades": 6,
+     "win_rate": 50.0,
+     "expectancy": -0.032,
+     "profit_factor": 0.94,
+     "total_r": -0.19,
+     "max_dd_r": 2.21,
+     "oos_expectancy": -1.071
+    },
+    "BANKNIFTY": {
+     "trades": 16,
+     "win_rate": 50.0,
+     "expectancy": -0.168,
+     "profit_factor": 0.71,
+     "total_r": -2.68,
+     "max_dd_r": 4.69,
+     "oos_expectancy": -1.172
+    },
+    "RELIANCE": {
+     "trades": 12,
+     "win_rate": 50.0,
+     "expectancy": -0.182,
+     "profit_factor": 0.64,
+     "total_r": -2.19,
+     "max_dd_r": 4.32,
+     "oos_expectancy": -0.485
+    },
+    "HDFCBANK": {
+     "trades": 7,
+     "win_rate": 57.1,
+     "expectancy": -0.061,
+     "profit_factor": 0.89,
+     "total_r": -0.43,
+     "max_dd_r": 2.86,
+     "oos_expectancy": -0.296
+    },
+    "ICICIBANK": {
+     "trades": 12,
+     "win_rate": 50.0,
+     "expectancy": 0.14,
+     "profit_factor": 1.35,
+     "total_r": 1.68,
+     "max_dd_r": 3.11,
+     "oos_expectancy": 0.066
+    },
+    "SBIN": {
+     "trades": 18,
+     "win_rate": 38.9,
+     "expectancy": -0.198,
+     "profit_factor": 0.66,
+     "total_r": -3.57,
+     "max_dd_r": 5.55,
+     "oos_expectancy": 0.277
+    },
+    "INFY": {
+     "trades": 15,
+     "win_rate": 46.7,
+     "expectancy": -0.146,
+     "profit_factor": 0.73,
+     "total_r": -2.18,
+     "max_dd_r": 6.97,
+     "oos_expectancy": -0.146
+    },
+    "TCS": {
+     "trades": 14,
+     "win_rate": 42.9,
+     "expectancy": -0.149,
+     "profit_factor": 0.75,
+     "total_r": -2.08,
+     "max_dd_r": 4.76,
+     "oos_expectancy": -0.185
+    }
+   }
+  }
+ ],
+ "rule2": [
+  {
+   "name": "Trend pullback",
+   "off": {
+    "trades": 600,
+    "win_rate": 39.2,
+    "expectancy": -0.068,
+    "profit_factor": 0.89,
+    "total_r": -40.76,
+    "max_dd_r": 53.31,
+    "oos_expectancy": -0.142
+   },
+   "on": {
+    "trades": 657,
+    "win_rate": 47.5,
+    "expectancy": -0.051,
+    "profit_factor": 0.91,
+    "total_r": -33.76,
+    "max_dd_r": 40.89,
+    "oos_expectancy": -0.102
+   }
+  },
+  {
+   "name": "20-day breakout",
+   "off": {
+    "trades": 504,
+    "win_rate": 41.3,
+    "expectancy": -0.049,
+    "profit_factor": 0.91,
+    "total_r": -24.61,
+    "max_dd_r": 53.43,
+    "oos_expectancy": -0.077
+   },
+   "on": {
+    "trades": 531,
+    "win_rate": 50.3,
+    "expectancy": -0.026,
+    "profit_factor": 0.95,
+    "total_r": -13.57,
+    "max_dd_r": 45.01,
+    "oos_expectancy": -0.106
+   }
+  },
+  {
+   "name": "RSI(2) dip buy",
+   "off": {
+    "trades": 361,
+    "win_rate": 48.2,
+    "expectancy": -0.002,
+    "profit_factor": 0.99,
+    "total_r": -0.81,
+    "max_dd_r": 14.45,
+    "oos_expectancy": -0.035
+   },
+   "on": {
+    "trades": 361,
+    "win_rate": 48.5,
+    "expectancy": -0.008,
+    "profit_factor": 0.97,
+    "total_r": -2.94,
+    "max_dd_r": 14.42,
+    "oos_expectancy": -0.028
+   }
+  },
+  {
+   "name": "Bollinger squeeze",
+   "off": {
+    "trades": 297,
+    "win_rate": 42.8,
+    "expectancy": 0.053,
+    "profit_factor": 1.09,
+    "total_r": 15.75,
+    "max_dd_r": 23.48,
+    "oos_expectancy": -0.003
+   },
+   "on": {
+    "trades": 298,
+    "win_rate": 52.0,
+    "expectancy": 0.047,
+    "profit_factor": 1.1,
+    "total_r": 14.05,
+    "max_dd_r": 16.08,
+    "oos_expectancy": -0.089
+   }
+  },
+  {
+   "name": "MACD trend cross",
+   "off": {
+    "trades": 427,
+    "win_rate": 40.3,
+    "expectancy": -0.046,
+    "profit_factor": 0.92,
+    "total_r": -19.66,
+    "max_dd_r": 33.11,
+    "oos_expectancy": -0.168
+   },
+   "on": {
+    "trades": 441,
+    "win_rate": 49.0,
+    "expectancy": -0.013,
+    "profit_factor": 0.97,
+    "total_r": -5.82,
+    "max_dd_r": 27.54,
+    "oos_expectancy": -0.1
+   }
+  },
+  {
+   "name": "Inside-bar breakout",
+   "off": {
+    "trades": 442,
+    "win_rate": 46.4,
+    "expectancy": 0.044,
+    "profit_factor": 1.09,
+    "total_r": 19.49,
+    "max_dd_r": 24.57,
+    "oos_expectancy": 0.127
+   },
+   "on": {
+    "trades": 454,
+    "win_rate": 52.0,
+    "expectancy": 0.033,
+    "profit_factor": 1.07,
+    "total_r": 14.9,
+    "max_dd_r": 26.23,
+    "oos_expectancy": 0.122
+   }
+  },
+  {
+   "name": "55-day breakout (Turtle-style)",
+   "off": {
+    "trades": 263,
+    "win_rate": 35.0,
+    "expectancy": -0.161,
+    "profit_factor": 0.73,
+    "total_r": -42.44,
+    "max_dd_r": 42.44,
+    "oos_expectancy": -0.177
+   },
+   "on": {
+    "trades": 279,
+    "win_rate": 44.8,
+    "expectancy": -0.122,
+    "profit_factor": 0.77,
+    "total_r": -33.94,
+    "max_dd_r": 36.21,
+    "oos_expectancy": -0.171
+   }
+  },
+  {
+   "name": "EMA20/50 trend cross",
+   "off": {
+    "trades": 123,
+    "win_rate": 37.4,
+    "expectancy": 0.033,
+    "profit_factor": 1.05,
+    "total_r": 4.04,
+    "max_dd_r": 14.76,
+    "oos_expectancy": -0.05
+   },
+   "on": {
+    "trades": 131,
+    "win_rate": 55.7,
+    "expectancy": 0.032,
+    "profit_factor": 1.07,
+    "total_r": 4.21,
+    "max_dd_r": 10.66,
+    "oos_expectancy": 0.149
+   }
+  },
+  {
+   "name": "Range Bollinger reversion",
+   "off": {
+    "trades": 138,
+    "win_rate": 45.7,
+    "expectancy": 0.013,
+    "profit_factor": 1.03,
+    "total_r": 1.79,
+    "max_dd_r": 12.5,
+    "oos_expectancy": -0.168
+   },
+   "on": {
+    "trades": 139,
+    "win_rate": 50.4,
+    "expectancy": -0.033,
+    "profit_factor": 0.93,
+    "total_r": -4.57,
+    "max_dd_r": 14.55,
+    "oos_expectancy": -0.21
+   }
+  },
+  {
+   "name": "Momentum pullback",
+   "off": {
+    "trades": 281,
+    "win_rate": 41.3,
+    "expectancy": 0.092,
+    "profit_factor": 1.16,
+    "total_r": 25.91,
+    "max_dd_r": 15.03,
+    "oos_expectancy": -0.07
+   },
+   "on": {
+    "trades": 324,
+    "win_rate": 54.9,
+    "expectancy": 0.086,
+    "profit_factor": 1.18,
+    "total_r": 27.71,
+    "max_dd_r": 11.6,
+    "oos_expectancy": 0.026
+   }
+  }
+ ]
+}

@@ -1,4 +1,4 @@
-# EdgeDesk research - 2026-11-23 23:10 UTC
+# EdgeDesk research - 2026-11-23 23:23 UTC
 
 All results are **after estimated costs**, in R (1R = the amount risked, e.g. 1% of the account). Backtests do not predict the future. Paper research only - **not investment advice**.
 
@@ -35,16 +35,16 @@ PASS = enough trades, avg ≥ +0.10R, profit factor ≥ 1.2 and positive in the 
 ## 1-hour candles - last ~2 years (forex + gold)
 | Strategy | Verdict | Trades | Win % | Avg R | PF | Recent 30% avg R | Max DD R |
 |---|---|---|---|---|---|---|---|
-| EMA20/50 trend cross *(new)* | WEAK + | 553 | 37.8 | 0.058 | 1.1 | -0.191 | 41.9 |
-| 55-day breakout (Turtle-style) *(new)* | LOSES | 1101 | 40.9 | -0.004 | 0.99 | -0.134 | 61.5 |
-| MACD trend cross | LOSES | 1863 | 42.2 | -0.02 | 0.97 | -0.008 | 92.15 |
-| 20-day breakout | LOSES | 2199 | 41.2 | -0.037 | 0.94 | -0.06 | 106.64 |
-| Momentum pullback *(new)* | LOSES | 1239 | 37.6 | -0.042 | 0.94 | -0.131 | 94.33 |
-| Bollinger squeeze | LOSES | 1480 | 37.4 | -0.096 | 0.85 | -0.086 | 161.89 |
-| RSI(2) dip buy | LOSES | 1457 | 44.3 | -0.107 | 0.73 | -0.101 | 162.24 |
-| Inside-bar breakout | LOSES | 1975 | 40.1 | -0.119 | 0.79 | -0.161 | 240.65 |
-| Trend pullback | LOSES | 2874 | 37.8 | -0.121 | 0.81 | -0.18 | 360.53 |
-| Range Bollinger reversion *(new)* | LOSES | 681 | 42.9 | -0.147 | 0.73 | -0.048 | 103.36 |
+| EMA20/50 trend cross *(new)* | WEAK + | 548 | 37.8 | 0.062 | 1.1 | -0.145 | 39.94 |
+| 55-day breakout (Turtle-style) *(new)* | LOSES | 1096 | 41.0 | -0.002 | 1.0 | -0.131 | 58.36 |
+| MACD trend cross | LOSES | 1856 | 42.3 | -0.017 | 0.97 | 0.014 | 91.99 |
+| 20-day breakout | LOSES | 2189 | 41.3 | -0.034 | 0.94 | -0.041 | 103.19 |
+| Momentum pullback *(new)* | LOSES | 1234 | 37.8 | -0.039 | 0.94 | -0.113 | 89.64 |
+| Bollinger squeeze | LOSES | 1475 | 37.2 | -0.103 | 0.84 | -0.107 | 170.61 |
+| RSI(2) dip buy | LOSES | 1451 | 44.3 | -0.106 | 0.74 | -0.102 | 161.17 |
+| Trend pullback | LOSES | 2861 | 37.7 | -0.121 | 0.81 | -0.181 | 359.06 |
+| Inside-bar breakout | LOSES | 1970 | 40.0 | -0.124 | 0.78 | -0.174 | 249.71 |
+| Range Bollinger reversion *(new)* | LOSES | 678 | 42.9 | -0.147 | 0.74 | -0.048 | 102.71 |
 
 ## Forex & gold - which is best? (daily, all strategies combined)
 
@@ -67,10 +67,10 @@ PASS = enough trades, avg ≥ +0.10R, profit factor ≥ 1.2 and positive in the 
 **1-hour, last ~2 years**
 | Market | Trades (all strategies) | Avg R / trade | Best strategy there | Its avg R (trades) |
 |---|---|---|---|---|
-| Gold (XAU/USD) | 3240 | -0.026 | EMA20/50 trend cross | 0.261 (104) |
-| EUR/USD | 3973 | -0.059 | Momentum pullback | 0.075 (319) |
-| USD/JPY | 4012 | -0.083 | 55-day breakout (Turtle-style) | -0.007 (285) |
-| GBP/USD | 4197 | -0.112 | EMA20/50 trend cross | 0.065 (151) |
+| Gold (XAU/USD) | 3227 | -0.032 | EMA20/50 trend cross | 0.237 (103) |
+| EUR/USD | 3954 | -0.055 | Momentum pullback | 0.089 (318) |
+| USD/JPY | 3998 | -0.083 | 55-day breakout (Turtle-style) | -0.007 (284) |
+| GBP/USD | 4179 | -0.111 | EMA20/50 trend cross | 0.08 (150) |
 
 ## All markets - last 5 years (daily)
 | Market | Trades (all strategies) | Avg R / trade | Best strategy there | Its avg R (trades) |

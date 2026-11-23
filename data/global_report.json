@@ -93,19 +93,19 @@
     "trades": 96,
     "win_pct": 35.4,
     "avg_rs": -410.0,
-    "total_rs": -39322.0
+    "total_rs": -39379.0
    },
    "disagrees": {
     "trades": 111,
-    "win_pct": 30.6,
-    "avg_rs": -530.0,
-    "total_rs": -58811.0
+    "win_pct": 31.5,
+    "avg_rs": -529.0,
+    "total_rs": -58743.0
    },
    "neutral": {
-    "trades": 273,
-    "win_pct": 34.1,
-    "avg_rs": -292.0,
-    "total_rs": -79666.0
+    "trades": 271,
+    "win_pct": 33.9,
+    "avg_rs": -291.0,
+    "total_rs": -78862.0
    }
   }
  },
@@ -208,14 +208,14 @@
    "disagrees": {
     "trades": 114,
     "win_pct": 36.8,
-    "avg_rs": -571.0,
-    "total_rs": -65148.0
+    "avg_rs": -511.0,
+    "total_rs": -58300.0
    },
    "neutral": {
-    "trades": 274,
+    "trades": 272,
     "win_pct": 46.0,
-    "avg_rs": -95.0,
-    "total_rs": -25912.0
+    "avg_rs": -99.0,
+    "total_rs": -27013.0
    }
   }
  }

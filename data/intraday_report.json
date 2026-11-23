@@ -1,53 +1,53 @@
 {
- "generated_at": "2026-11-23 23:11 UTC",
+ "generated_at": "2026-11-23 23:23 UTC",
  "results": [
   {
    "chart": "1h",
    "strategy": "orb",
    "label": "Opening-range breakout",
    "train": {
-    "trades": 4205,
+    "trades": 4187,
     "win_rate": 38.4,
     "avg_r": -0.132,
     "pf": 0.54,
     "avg_rs": -3.3,
-    "total_rs": -13796.0,
-    "t": -15.01
+    "total_rs": -13627.0,
+    "t": -14.99
    },
    "test": {
-    "trades": 1809,
-    "win_rate": 41.9,
+    "trades": 1808,
+    "win_rate": 41.8,
     "avg_r": -0.114,
     "pf": 0.61,
     "avg_rs": -3.3,
-    "total_rs": -5994.0,
-    "t": -7.97
+    "total_rs": -5934.0,
+    "t": -7.99
    },
    "full": {
-    "trades": 6014,
+    "trades": 5995,
     "win_rate": 39.4,
     "avg_r": -0.127,
     "pf": 0.56,
     "avg_rs": -3.3,
-    "total_rs": -19790.0,
-    "t": -16.87
+    "total_rs": -19561.0,
+    "t": -16.86
    },
    "green": false,
    "best_stocks": [
     [
-     "BAJFINANCE",
-     -0.072,
-     413
+     "MARUTI",
+     -0.069,
+     427
     ],
     [
-     "MARUTI",
+     "BAJFINANCE",
      -0.072,
-     430
+     412
     ],
     [
      "BHARTIARTL",
      -0.094,
-     412
+     410
     ]
    ]
   },
@@ -56,48 +56,48 @@
    "strategy": "vwap",
    "label": "VWAP trend cross",
    "train": {
-    "trades": 4259,
+    "trades": 4247,
     "win_rate": 34.7,
-    "avg_r": -0.258,
+    "avg_r": -0.256,
     "pf": 0.49,
     "avg_rs": -3.9,
-    "total_rs": -16751.0,
-    "t": -19.19
+    "total_rs": -16665.0,
+    "t": -19.04
    },
    "test": {
-    "trades": 1835,
-    "win_rate": 40.3,
-    "avg_r": -0.191,
+    "trades": 1827,
+    "win_rate": 40.4,
+    "avg_r": -0.195,
     "pf": 0.6,
     "avg_rs": -3.7,
-    "total_rs": -6805.0,
-    "t": -9.1
+    "total_rs": -6751.0,
+    "t": -9.24
    },
    "full": {
-    "trades": 6094,
-    "win_rate": 36.3,
-    "avg_r": -0.238,
+    "trades": 6074,
+    "win_rate": 36.4,
+    "avg_r": -0.237,
     "pf": 0.52,
     "avg_rs": -3.9,
-    "total_rs": -23556.0,
-    "t": -20.99
+    "total_rs": -23416.0,
+    "t": -20.94
    },
    "green": false,
    "best_stocks": [
     [
      "TCS",
      -0.176,
-     426
+     427
     ],
     [
      "BHARTIARTL",
-     -0.186,
-     433
+     -0.179,
+     429
     ],
     [
      "INFY",
      -0.197,
-     451
+     449
     ]
    ]
   },
@@ -115,22 +115,22 @@
     "t": 0.22
    },
    "test": {
-    "trades": 270,
-    "win_rate": 42.2,
-    "avg_r": -0.123,
-    "pf": 0.75,
+    "trades": 272,
+    "win_rate": 42.3,
+    "avg_r": -0.122,
+    "pf": 0.76,
     "avg_rs": -5.0,
-    "total_rs": -1351.0,
-    "t": -1.96
+    "total_rs": -1358.0,
+    "t": -1.95
    },
    "full": {
-    "trades": 518,
+    "trades": 520,
     "win_rate": 45.2,
-    "avg_r": -0.058,
+    "avg_r": -0.057,
     "pf": 0.87,
     "avg_rs": -1.6,
-    "total_rs": -837.0,
-    "t": -1.28
+    "total_rs": -844.0,
+    "t": -1.27
    },
    "green": false,
    "best_stocks": [
@@ -146,8 +146,8 @@
     ],
     [
      "BAJFINANCE",
-     0.075,
-     50
+     0.09,
+     49
     ]
    ]
   },
@@ -165,22 +165,22 @@
     "t": -2.33
    },
    "test": {
-    "trades": 232,
-    "win_rate": 44.0,
-    "avg_r": -0.124,
+    "trades": 228,
+    "win_rate": 44.7,
+    "avg_r": -0.129,
     "pf": 0.73,
     "avg_rs": -4.3,
-    "total_rs": -1002.0,
-    "t": -1.81
+    "total_rs": -970.0,
+    "t": -1.85
    },
    "full": {
-    "trades": 500,
-    "win_rate": 44.0,
-    "avg_r": -0.139,
+    "trades": 496,
+    "win_rate": 44.4,
+    "avg_r": -0.142,
     "pf": 0.7,
     "avg_rs": -2.3,
-    "total_rs": -1156.0,
-    "t": -2.95
+    "total_rs": -1124.0,
+    "t": -2.97
    },
    "green": false,
    "best_stocks": [
@@ -191,8 +191,8 @@
     ],
     [
      "MARUTI",
-     0.031,
-     39
+     0.036,
+     38
     ],
     [
      "SUNPHARMA",
@@ -256,31 +256,31 @@
    "strategy": "vwap",
    "label": "VWAP trend cross",
    "train": {
-    "trades": 402,
-    "win_rate": 36.8,
-    "avg_r": -0.425,
-    "pf": 0.52,
-    "avg_rs": -3.1,
-    "total_rs": -1264.0,
-    "t": -6.4
+    "trades": 406,
+    "win_rate": 37.2,
+    "avg_r": -0.413,
+    "pf": 0.53,
+    "avg_rs": -3.2,
+    "total_rs": -1301.0,
+    "t": -6.23
    },
    "test": {
-    "trades": 185,
-    "win_rate": 40.0,
-    "avg_r": -0.209,
-    "pf": 0.74,
-    "avg_rs": -0.1,
-    "total_rs": -18.0,
-    "t": -2.03
+    "trades": 186,
+    "win_rate": 40.3,
+    "avg_r": -0.19,
+    "pf": 0.76,
+    "avg_rs": 0.0,
+    "total_rs": 7.0,
+    "t": -1.85
    },
    "full": {
-    "trades": 587,
-    "win_rate": 37.8,
-    "avg_r": -0.357,
-    "pf": 0.58,
+    "trades": 592,
+    "win_rate": 38.2,
+    "avg_r": -0.343,
+    "pf": 0.6,
     "avg_rs": -2.2,
-    "total_rs": -1282.0,
-    "t": -6.38
+    "total_rs": -1294.0,
+    "t": -6.14
    },
    "green": false,
    "best_stocks": [
@@ -290,14 +290,14 @@
      36
     ],
     [
-     "MARUTI",
-     -0.097,
-     44
+     "SBIN",
+     -0.118,
+     46
     ],
     [
-     "SBIN",
-     -0.12,
-     46
+     "MARUTI",
+     -0.128,
+     45
     ]
    ]
   },

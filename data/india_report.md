@@ -1,4 +1,4 @@
-# EdgeDesk - India report for Kite (BUY-only, Zerodha delivery costs) - 2026-11-23 23:10 UTC
+# EdgeDesk - India report for Kite (BUY-only, Zerodha delivery costs) - 2026-11-23 23:23 UTC
 
 Win rate = % of trades that made money. **Avg R** = average result per trade after costs (1R = amount risked). A strategy can win 60% and still lose money if losses are bigger than wins.
 
