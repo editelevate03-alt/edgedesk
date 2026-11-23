@@ -2,7 +2,7 @@ name: EdgeDesk bots
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # every 15 minutes (GitHub may delay scheduled runs a little)
+    - cron: "7,22,37,52 * * * *"   # every 15 minutes, off the busy :00 mark (GitHub may still delay runs)
   workflow_dispatch:          # "Run workflow" button: also sends "EdgeDesk is connected" to Telegram
 
 permissions:
