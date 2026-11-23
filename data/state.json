@@ -2,5 +2,7 @@
  "started": "2026-11-23T15:29:29.962469+00:00",
  "open_trades": [],
  "closed_trades": [],
- "sent_ids": []
+ "sent_ids": [],
+ "telegram_chat_id": 7776064636,
+ "connected_at": "2026-11-23T16:24:36.707185+00:00"
 }
