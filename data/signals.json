@@ -2,8 +2,8 @@
  "app": "EdgeDesk Live",
  "version": "1.0.0",
  "mode": "live",
- "generated_at": "2026-11-23T17:26:31.663701+00:00",
- "generated_at_ist": "23 Nov 2026, 22:56 IST",
+ "generated_at": "2026-11-23T17:27:57.738777+00:00",
+ "generated_at_ist": "23 Nov 2026, 22:57 IST",
  "refresh_minutes": 15,
  "disclaimer": "Paper-trading research tool. Not investment advice. Signals are not guaranteed and can lose money. Past/backtest results do not predict the future.",
  "settings": {
@@ -7616,10 +7616,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 5,
-   "price": 1.08921,
+   "price": 1.08885,
    "price_time": "2026-11-23T17:15:00+00:00",
    "prev_close": 1.09697,
-   "change_pct": -0.71,
+   "change_pct": -0.74,
    "last_bar": "2026-11-23",
    "last_completed_bar": "2026-11-20",
    "today_forming": true,
@@ -8539,7 +8539,7 @@
      "open": 1.09649,
      "high": 1.10084,
      "low": 1.08861,
-     "close": 1.08921
+     "close": 1.08885
     }
    ],
    "patterns": [
@@ -8567,10 +8567,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 5,
-   "price": 1.3022,
+   "price": 1.30207,
    "price_time": "2026-11-23T17:15:00+00:00",
    "prev_close": 1.30864,
-   "change_pct": -0.49,
+   "change_pct": -0.5,
    "last_bar": "2026-11-23",
    "last_completed_bar": "2026-11-20",
    "today_forming": true,
@@ -9490,7 +9490,7 @@
      "open": 1.30863,
      "high": 1.31442,
      "low": 1.30125,
-     "close": 1.3022
+     "close": 1.30207
     }
    ],
    "patterns": [
@@ -10437,7 +10437,7 @@
      "open": 158.601,
      "high": 159.503,
      "low": 158.474,
-     "close": 159.281
+     "close": 159.28
     }
    ],
    "patterns": [
@@ -11384,7 +11384,7 @@
      "open": 3570.5,
      "high": 3691.0,
      "low": 3552.3,
-     "close": 3666.6
+     "close": 3667.1
     }
    ],
    "patterns": [
@@ -11419,22 +11419,6 @@
    "target": 3262.48
   },
   {
-   "market": "GBPUSD",
-   "name": "GBP/USD",
-   "strategy_name": "20-day breakout",
-   "direction": "SHORT",
-   "score": 52,
-   "blocks": [
-    "Strategy is REJECTED for this market in the backtest (not proven after costs)",
-    "Price already moved 0.8 ATR past the trigger - don't chase",
-    "Score 52 is below 60"
-   ],
-   "bar_date": "2026-11-20",
-   "entry": 1.3022,
-   "stop": 1.3192,
-   "target": 1.2682
-  },
-  {
    "market": "INFY",
    "name": "Infosys",
    "strategy_name": "Trend pullback",
@@ -11448,6 +11432,22 @@
    "entry": 1103.4,
    "stop": 1154.83,
    "target": 1000.54
+  },
+  {
+   "market": "GBPUSD",
+   "name": "GBP/USD",
+   "strategy_name": "20-day breakout",
+   "direction": "SHORT",
+   "score": 51,
+   "blocks": [
+    "Strategy is REJECTED for this market in the backtest (not proven after costs)",
+    "Price already moved 0.8 ATR past the trigger - don't chase",
+    "Score 51 is below 60"
+   ],
+   "bar_date": "2026-11-20",
+   "entry": 1.30207,
+   "stop": 1.31907,
+   "target": 1.26806
   },
   {
    "market": "USDJPY",
@@ -11475,7 +11475,7 @@
    "trigger": 1.09545,
    "when": "a daily close below the 20-day low",
    "verdict": "WATCH",
-   "price": 1.08921,
+   "price": 1.08885,
    "atr": 0.006872708271158039
   },
   {
@@ -11523,7 +11523,7 @@
    "trigger": 1.09585,
    "when": "a daily close below this inside bar's low",
    "verdict": "REJECTED",
-   "price": 1.08921,
+   "price": 1.08885,
    "atr": 0.006872708271158039
   },
   {
@@ -12545,8 +12545,8 @@
    "name": "Chief",
    "job": "Runs all bots, combines scores, applies the rules, writes the website data",
    "status": "ok",
-   "note": "Finished in 14.5s",
-   "ms": 14485
+   "note": "Finished in 14.1s",
+   "ms": 14132
   },
   {
    "key": "data",
@@ -12554,7 +12554,7 @@
    "job": "Downloads daily + 15-minute prices (Yahoo Finance, free)",
    "status": "ok",
    "note": "12/12 markets loaded via yfinance",
-   "ms": 10753
+   "ms": 11126
   },
   {
    "key": "chart",
@@ -12562,7 +12562,7 @@
    "job": "Calculates EMA, RSI, ATR, Bollinger, MACD, 20-day high/low",
    "status": "ok",
    "note": "Indicators for 12 markets (finished daily candles only)",
-   "ms": 183
+   "ms": 214
   },
   {
    "key": "candle",
@@ -12578,7 +12578,7 @@
    "job": "Checks volume and on-balance volume (money flow)",
    "status": "ok",
    "note": "Volume available for 7 markets",
-   "ms": 2
+   "ms": 3
   },
   {
    "key": "network",
@@ -12586,7 +12586,7 @@
    "job": "Market breadth, relative strength vs NIFTY, US-dollar strength",
    "status": "ok",
    "note": "Breadth: india index 100%, india stock 83%, fx 33%, metal 0%",
-   "ms": 0
+   "ms": 1
   },
   {
    "key": "news",
@@ -12594,7 +12594,7 @@
    "job": "Reads free RSS headlines and tags them by market",
    "status": "ok",
    "note": "60 headlines from last 48h (0 feed(s) failed)",
-   "ms": 2278
+   "ms": 1975
   },
   {
    "key": "backtest",
@@ -12602,7 +12602,7 @@
    "job": "Tests all 6 strategies on ~5 years of daily data, after costs",
    "status": "ok",
    "note": "0/6 strategies TRADEABLE after costs",
-   "ms": 120
+   "ms": 131
   },
   {
    "key": "forward",
@@ -12634,7 +12634,7 @@
    "job": "Sends new signals, closed trades and warnings to your phone",
    "status": "ok",
    "note": "0 signal alert(s), 0 close alert(s)",
-   "ms": 1135
+   "ms": 668
   }
  ],
  "news": [
@@ -12795,17 +12795,6 @@
    "usd_news": true
   },
   {
-   "title": "Gold Rate Today in India, 23 Nov 2026 - Live 18K, 22K & 24K Gold Prices - Kotak Neo",
-   "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9oS1doakpSUWg2blRCZGtNeWp5UXFadUo5cVZtTzd5bzBsdHNnUHlsTG9KVEN5UGVMaENmNVNDSGxrVmVLaHgtYWRPeEE?oc=5",
-   "published": "2026-11-23T16:08:36+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "XAUUSD"
-   ]
-  },
-  {
    "title": "Ashish Kacholia portfolio stock already up 36% in 2026, SBI Securities sees 15% more returns - Check target price - Livemint",
    "source": "Google News: Indian stocks",
    "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxORnV5ZUFWd2xaMmJUNmJ5Y1Y4ZVJSMV9OZWpzNERaSkFMcHVhZDRxbkxWYko4MDVXTERsb19qOGRSNDJTdmJma3RZZkdaOU9neHFDSWozalRWY01mVnJYelVMNDNXT3Q5OWVUb3pPSU5oTFotQlNtQWRJY0V0TFN3TTA0X2xTUGtvbDR6Y3N0MTRBQXBaaUZKcG5oWEdEdjdhQzluRTRULWloVUlEc0RMenhZT19oZTVnWTVwRTJ5Qld1S3gyX3ZiVWd0aTNrNDNKcTZCa2pQeE03YVdzMENIbkVFaHh3ZkJDUEtQVFgyWmdFNGxPTmg3LURXUDlVN25tRWNWWHA3WHdQQQ?oc=5",
@@ -12843,11 +12832,11 @@
    "usd_news": true
   },
   {
-   "title": "US dollar rally loses yield support as Nvidia looms - StoneX",
+   "title": "Gold price drops to more than one-year low as US dollar marches higher - Mining.com",
    "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQTMxZ1JlTWdUNk9mUEpWUXBnMXFLZlhqYmxLbGpZN2tWZzlZWTF0NWlyaE12QmZHR0x6TGlLSzVMU0dUWTJjVE5kczRRTmh0STY3Zkg1dHlZTFViNzBEYl9Zd2t4UlRXVzM4aTV4N0tvV3NQTzVndW9meVowSFdySkZFLVdJbXlrYnFJSW5IdjdvOXpvWUZnV1RDWjBBRlNs?oc=5",
-   "published": "2026-11-23T15:56:26+00:00",
-   "sentiment": 1,
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQ01MbDdGek9jMG03bjU2OEhwQXpYU3pUOWUtRnRlbHY5VkhoMy05QkRFR2FfREVoMkQ2NzQtUGxJMDJ6R3dHNVJHaWpvNkJEaGo2dXNNb0ZsbEVOT1JPYUloOW1JQnZhMF9jNGgyOXV2eEJHdGVtNlBHMW04c0J3bTBHOGplXzJUUWE4cjRzaG9zQk1DWE53?oc=5",
+   "published": "2026-11-23T15:55:37+00:00",
+   "sentiment": -1,
    "high_impact": false,
    "markets": [
     "EURUSD",
@@ -12858,15 +12847,19 @@
    "usd_news": true
   },
   {
-   "title": "Nifty 23150 PE 01 DEC 2026: Option Premium, OI & Price - Kotak Neo",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOUmhUaVZRVlVOM0tNa29weGRtWXp2WDM1LVk3QUZzVkZyWlJGTWlqWHBKejlWME5INmRDMTdDTno2VDhZeGlCYmJfNDMyWkRFdEFVZWJFczN1R1c2WUpwX0w1Q01EOWlTN2lEMGIwOXFOMUdZRWNDb0VXQWIwUTgyN3dNdw?oc=5",
-   "published": "2026-11-23T15:54:52+00:00",
+   "title": "CFA Co-Leads Letter to Federal Reserve Regarding Chime Financial's Application to Buy Central Services Corporation - Consumer Federation of America",
+   "source": "Google News: Fed & dollar",
+   "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOVktmZThTOUlCcGxXY3dZbDExNnZ0VVZRaXJtc01Pb0g1RFMzODRxVk5BbnpTN2VvWUNtYWhGWGZPZGh6Y3hoM0JwT052VXhaSTJDcG1hZndpT0QxclhSaFRHX0hhQzFGcm1DcnFia1JUZjctRndwS3VkNDVvdk8wcXNBZ1NmSFlVcGxxNXRjNzBDYlpNbGl6dm5IdnVhbmEtZm5HOWFNTF9DUWlNZktVbWZFM0tPa0U4REZwWC1oc1BGdzNTbHEtZHh4clpyUUtSZEprcGtERVhuS3dMZHZBQ05jY0FsQzdNdFJlY245RzR6Njh2?oc=5",
+   "published": "2026-11-23T15:51:17+00:00",
    "sentiment": 0,
-   "high_impact": false,
+   "high_impact": true,
    "markets": [
-    "NIFTY"
-   ]
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "XAUUSD"
+   ],
+   "usd_news": true
   },
   {
    "title": "\u20b95.2 trillion wiped off market value as Sensex, Nifty slump over 1.7% - Business Standard",
@@ -12910,6 +12903,17 @@
    "high_impact": false,
    "markets": [
     "NIFTY"
+   ]
+  },
+  {
+   "title": "Japanese Yen Technical Outlook: USD/JPY Rally Stalls Near 160\u2014Breakout Support in Focus - StoneX",
+   "source": "Google News: Forex & gold",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQem5nUmpKWF9TeXg5WTNuV1htT1hjakpGMUlWa1RDMHFiYnZWV3NHdWwxODlSY3g1VEVFaS05aUtPSk44ck05bWpqaTVEMXdtaGFNMzJ0YzJqUkd3UktTWW9BcGYxODYzLTJweHZleWQ3ajNmbmU1N0hZVndtdXJuWFdmQUFlYVVWRV9iWTJITEV3RmNOQzZGMlRZc2dDTzZrOG5va3d1QjB5X3h0cEVxZ2FnNGNhZ0J4Q0prcmF3ZE1CYUhxdGhsTzhuQTdkc1k?oc=5",
+   "published": "2026-11-23T15:34:34+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "USDJPY"
    ]
   },
   {
@@ -13034,6 +13038,17 @@
    ]
   },
   {
+   "title": "Gold recovers from 14-month low as Nvidia reinstates Jensen Huang as CEO - FXStreet",
+   "source": "Google News: Fed & dollar",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbVZxM1F1VXJ3dDBHWld0OG1tMERFXzdvcjlfMjhYSnRydjQ2aHJhT1RxUUc0OWFfOTFkeXMtYVlCYTJDUTRsM3d4d1NGWUNEVlI2YmFyZF9XZTNGSkotMGRpaU5jMXpFUklfOUpvUlhZaWFjbUhlZUpiUjVzRzZ6X0xNWHVOdTVGQ1p3YUhKSVN3ZmRLdUttOVFpeC1VRFJvaUc2RjI1ZTBDbUY1MFE?oc=5",
+   "published": "2026-11-23T14:55:58+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": [
+    "XAUUSD"
+   ]
+  },
+  {
    "title": "Stock Market Crash Today: Sensex, Nifty Tumble Nearly 2%; Investors Lose Over \u20b95 Lakh Crore \u2013 What Triggered The Massive Sell-Off? - Jagran Josh",
    "source": "Google News: India markets",
    "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQRzNrdkpVLXAydmw2Y0tyZ2plazFSVGtTa2dQWlZ3clZjMU5NRkJpWGpmZXhERkZLQ3hUUnVadTZjRlkxRHlRaGJMdnd0M0ZZdmdPMzhrMDlvc3hnRFhnWXFjNS02UjJOMEJjVXFfcG5QWkxGSGdQaGRmb1B0LWZDRTA3VGE4LUlGQzEzT05IalhiOE1SZVNXU1N2Q1gxckNGQ1hsREhzQUU2dmNYWWxaVnpSZ0dWbXBXb1lsemI4T3laUHY1Um9lTWVzaV9MVGdSMEJSb0MwU25JejdvUGFZV1dZSldjS3hfdW53UGREVzVRU1Z6cmc2STlMTTR1T0xlRnQ3WVdiRDRVeWvSAZICQVVfeXFMT0pvNDY4enhiT05BNFRmX2FZSHNsUnpDZnFtRDFiZjlMMWc2LVRJUXFlLVpfTmZaR3d1c0hnNldwVFpMdG1FeFJVVUs2XzQyNFBLZE5hZzNZNGNLbnJmMDZnTnM1MnMzTUNzNWdoM0ZfekJfVE1pNjZXd3BfbFFLVnZReUU0bTgwdGtnc05yVXNDeFYxWWRiZFgxZy04dmFUM044STN2cVUwdGlEYWZhWWwwdGt2WHJPMWh4NVpDMEl0RWo1aG1kcDhIa2llVmdxUnZqNWhZSXdyUFRIR3p2aE1UMTQya3ZNeEdZa1lsazBOLUJmdU1GTHlVRnA2S0oyS3F1YzlDdHVBMXZTdW1vRjBqZw?oc=5",
@@ -13087,30 +13102,15 @@
    ]
   },
   {
-   "title": "Chart EUR/USD Update: Extending cautious trade above year lo - Continuum Economics",
+   "title": "Gold Rate Today in India, 23 Nov 2026 - Live 18K, 22K & 24K Gold Prices - Kotak Neo",
    "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPc2hwX05sd3VmN2Izc1A2dE5IZ3hHc2gyVjMwOE1QaWJRRnAyeXR6VDlvYzNiSVRiR2tBT2NEQUxqXzZkMG5QYVd1NGliYkJqMGRhVEhGVGJjWlB0LVBabDY3R3MwWDZBWlZwSXA4dFoxcDR3M1p5d2VqOXkyZG9zQlhBZXFCUWJNUFBDT0NhN2NuNEJ3MC1KeV8yZXlLMTdPMWxJ?oc=5",
-   "published": "2026-11-23T14:41:24+00:00",
+   "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9oS1doakpSUWg2blRCZGtNeWp5UXFadUo5cVZtTzd5bzBsdHNnUHlsTG9KVEN5UGVMaENmNVNDSGxrVmVLaHgtYWRPeEE?oc=5",
+   "published": "2026-11-23T14:42:09+00:00",
    "sentiment": 0,
    "high_impact": false,
    "markets": [
-    "EURUSD"
-   ]
-  },
-  {
-   "title": "FCE Adds US Dollar and Euro IBANs for Individuals and Companies - HackerNoon",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOMGh5VUwyRGYxaUhyTGx0cm95OXgxQk9TbXNtakJXYXoyaEcxaDBCSmh4MkJxM1d4ZzhnWUE3NmZmZmYtZWRmc2tJWW5DbG43dmpPdXhaRnppSjhRWU92OXhXZVNyUHJyZDZJYmhCQmN4cExSYnViQXYwZ25mSGJBMTZfNEFBSnN5bFppZGQ5UQ?oc=5",
-   "published": "2026-11-23T14:35:45+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
     "XAUUSD"
-   ],
-   "usd_news": true
+   ]
   }
  ],
  "errors": []
