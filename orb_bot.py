@@ -26,6 +26,7 @@ import pandas as pd
 import bot
 import fno_research as F
 import india_news
+import global_cues
 from bot import IST, fetch, log
 
 U = F.UNDERLYINGS["BANKNIFTY"]
@@ -137,6 +138,12 @@ def main():
             send(nb["text"], state)
         except Exception as ex:
             log(f"news brief failed: {ex}")
+        try:
+            gb = global_cues.live_brief()
+            day["global_score"] = round(gb["score"])
+            send(gb["text"], state)
+        except Exception as ex:
+            log(f"global brief failed: {ex}")
         save_state(state)
 
     while True:
@@ -197,6 +204,10 @@ def main():
                               f"🎯 Exit if BANK NIFTY reaches <b>{tgt_idx:,.0f}</b> · Exit if it goes back past <b>{stop_idx:,.0f}</b> · Exit by 3:15 PM."]
                 if "news_mood" in day:
                     lines.append(f"📰 {india_news.agreement(day['news_mood'], cp)} (BANK NIFTY mood {day['news_mood']:+d})")
+                if "global_score" in day:
+                    g = day["global_score"]
+                    lines.append("🌍 " + ("Global mood neutral" if abs(g) < 20 else
+                                 ("Global mood AGREES" if (g > 0) == (cp == 1) else "⚠️ Global mood DISAGREES")) + f" ({g:+d})")
                 if day.get("news_events"):
                     lines.append("⚡ Big-event news today: " + ", ".join(day["news_events"]))
                 lines.append("<i>Yellow (not proven) · ~1 in 3 trades won in tests · alerts only · not investment advice.</i>")
@@ -237,7 +248,10 @@ def main():
                 day["exit"] = dict(reason=reason, index=px, est_pnl=est, time=now.isoformat())
                 nm = day.get("news_mood")
                 state["trades"].append(dict(date=today, cp=e["cp"], reason=reason, est_pnl=est, news_mood=nm,
-                                            news_agrees=None if nm is None or abs(nm) < 20 else ((nm > 0) == (e["cp"] == 1))))
+                                            news_agrees=None if nm is None or abs(nm) < 20 else ((nm > 0) == (e["cp"] == 1)),
+                                            global_score=day.get("global_score"),
+                                            global_agrees=None if day.get("global_score") is None or abs(day["global_score"]) < 20
+                                            else ((day["global_score"] > 0) == (e["cp"] == 1))))
                 send(f"🚪 <b>EXIT NOW - BANK NIFTY {'CE' if e['cp'] == 1 else 'PE'}</b>\nReason: {reason} (index ~{px:,.0f}).\n"
                      + (f"Estimated result for 1 lot: <b>Rs {est:+,.0f}</b> (check your real P&L in Kite)." if est is not None else ""), state)
                 save_state(state)
@@ -250,8 +264,9 @@ def main():
         wins = sum(1 for t in tr if (t.get("est_pnl") or 0) > 0)
         total = sum(t.get("est_pnl") or 0 for t in tr)
         msg = f"📒 <b>ORB paper record</b>: {len(tr)} trades · {wins} wins ({wins / len(tr) * 100:.0f}%) · total est. Rs {total:+,.0f}"
-        for lab, flag in (("news agreed", True), ("news disagreed", False)):
-            g = [t for t in tr if t.get("news_agrees") is flag]
+        for lab, key, flag in (("news agreed", "news_agrees", True), ("news disagreed", "news_agrees", False),
+                               ("global agreed", "global_agrees", True), ("global disagreed", "global_agrees", False)):
+            g = [t for t in tr if t.get(key) is flag]
             if g:
                 w = sum(1 for t in g if (t.get("est_pnl") or 0) > 0)
                 msg += f"\n• When {lab}: {len(g)} trades, {w} wins ({w / len(g) * 100:.0f}%), Rs {sum(t.get('est_pnl') or 0 for t in g):+,.0f}"
