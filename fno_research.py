@@ -39,6 +39,7 @@ PREMIUM_SL = 0.40          # exit if option loses 40%
 COST_FIXED = 65.0          # Rs per round trip (brokerage 40 + taxes/charges ~25)
 SLIP_PTS = 0.3             # option points slippage per side
 RISK_FREE = 0.065
+ALL_TRADES: list = []
 
 
 # ---------------- option pricing ----------------
@@ -306,6 +307,8 @@ def main():
     vix = vix.reindex(pd.date_range(vix.index.min(), pd.Timestamp.today().normalize())).ffill()
     vix = {k: float(v) for k, v in vix.items()}
     results, errors = [], []
+    global ALL_TRADES
+    ALL_TRADES = []
     for name, u in UNDERLYINGS.items():
         frames = {}
         for tf, period, interval in (("15m", "60d", "15m"), ("1h", "730d", "1h"), ("1d", "6y", "1d")):
@@ -344,6 +347,7 @@ def main():
                 sig, stops = fn(d)
                 for mode in ("affordable", "atm"):
                     tr = simulate(d, sig, stops, u, vix, stop_atr, rr, False, hold, mode)
+                    ALL_TRADES.extend(dict(index=name, chart="1d", strategy=label, mode=mode, **t) for t in tr if not t.get("skipped"))
                     s = summarise(tr)
                     results.append(dict(underlying=name, chart="1d", strategy=label, mode=mode, stats=s, verdict=verdict(s),
                                         last_trades=[t for t in tr if not t.get("skipped")][-5:]))
@@ -375,6 +379,19 @@ def main():
     md += ["", "## Passed with your capital", *([f"- {r['underlying']} {r['chart']} {r['strategy']}: win {r['stats']['win_rate']}%, avg Rs {r['stats']['avg_rs']}/trade over {r['stats']['trades']} trades" for r in passing] or ["- **None.**"])]
     if errors:
         md += ["", "Data errors: " + "; ".join(errors)]
+    if ALL_TRADES:   # every 5-year daily trade, one row each (open in Google Sheets / Excel)
+        tdf = pd.DataFrame(ALL_TRADES)
+        tdf["dir"] = tdf["dir"].map({1: "CE (up)", -1: "PE (down)"})
+        tdf["result"] = np.where(tdf["pnl"] > 0, "WIN", "LOSS")
+        tdf = tdf[["index", "chart", "strategy", "mode", "time", "dir", "strike", "entry", "exit", "reason", "cost", "pnl", "result"]]
+        tdf.columns = ["Index", "Chart", "Strategy", "Strike type", "Entry time", "Option", "Strike", "Entry premium",
+                       "Exit premium", "Exit reason", "Lot cost Rs", "Profit/Loss Rs", "Result"]
+        tdf.sort_values(["Index", "Strategy", "Strike type", "Entry time"]).to_csv(bot.DATA / "trades_5y.csv", index=False)
+        yr = tdf.assign(Year=tdf["Entry time"].str[:4]).groupby(["Index", "Strategy", "Strike type", "Year"])
+        ytab = yr["Profit/Loss Rs"].agg(["count", "sum"]).join(yr["Result"].apply(lambda r: round((r == "WIN").mean() * 100, 1)).rename("win%"))
+        md += ["", "## Daily strategies year by year (5 years)", "| Index | Strategy | Strike | Year | Trades | Win % | Total Rs |", "|---|---|---|---|---|---|---|"]
+        md += [f"| {i} | {s_} | {m} | {y} | {int(r['count'])} | {r['win%']} | {r['sum']:,.0f} |" for (i, s_, m, y), r in ytab.iterrows()]
+        md += ["", f"Every trade: data/trades_5y.csv ({len(tdf)} trades)"]
     (bot.DATA / "fno_report.md").write_text("\n".join(md))
     (bot.DATA / "fno_report.json").write_text(json.dumps(clean(dict(generated_at=gen, capital=CAPITAL, underlyings=UNDERLYINGS,
                                                                   results=results, passing=[(r['underlying'], r['chart'], r['strategy']) for r in passing],
