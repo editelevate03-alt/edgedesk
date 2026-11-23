@@ -18,7 +18,7 @@ Every 15 minutes GitHub Actions (free for public repos) runs `bot.py`:
 | 3. Candle | Engulfing, hammer, shooting star, doji, inside bar… |
 | 4. Flow | Volume vs average, on-balance volume |
 | 5. Network | Market breadth, strength vs NIFTY, US-dollar strength |
-| 6. News | Free RSS headlines (Google News, Economic Times, FXStreet) |
+| 6. News | Free RSS headlines (Google News, Economic Times) |
 | 7. Strategy | 6 strategies on **finished daily candles** |
 | 8. Backtest | ~5 years, all markets, **after costs** → TRADEABLE / WATCH / REJECTED |
 | 9. Risk + mistake guard | 1% sizing, stop on every trade, −3R daily loss limit, blocks bad trades |

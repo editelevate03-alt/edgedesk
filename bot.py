@@ -93,7 +93,7 @@ NEWS_FEEDS = [
     ("Google News: Indian stocks", "https://news.google.com/rss/search?q=Reliance+OR+%22HDFC+Bank%22+OR+ICICI+OR+SBI+OR+Infosys+OR+TCS+shares+when:2d&hl=en-IN&gl=IN&ceid=IN:en"),
     ("Google News: Forex & gold", "https://news.google.com/rss/search?q=EUR/USD+OR+GBP/USD+OR+USD/JPY+OR+%22gold+price%22+when:2d&hl=en-US&gl=US&ceid=US:en"),
     ("Economic Times Markets", "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"),
-    ("FXStreet", "https://www.fxstreet.com/rss/news"),
+    ("Google News: Fed & dollar", "https://news.google.com/rss/search?q=%22Federal+Reserve%22+OR+%22US+dollar%22+OR+%22gold+prices%22+when:2d&hl=en-US&gl=US&ceid=US:en"),
 ]
 POS = ["surge", "jump", "rally", "gain", "gains", "rise", "rises", "soar", "record high", "beat", "beats", "upgrade",
        "bullish", "strong", "rebound", "climb", "higher", "profit up", "buy rating", "outperform", "boost"]
