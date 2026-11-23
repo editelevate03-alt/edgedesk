@@ -37,12 +37,17 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python global_cues.py --backtest
+        run: python global_cues.py --backtest --no-telegram
+      - name: Intraday stocks backtest (sends to Telegram)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python intraday_research.py
       - name: Save results
         run: |
           git config user.name "edgedesk-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/research.json data/research.md data/india_report.md data/india_report.json data/fno_report.md data/fno_report.json data/trades_5y.csv data/global_report.md data/global_report.json
+          git add data/research.json data/research.md data/india_report.md data/india_report.json data/fno_report.md data/fno_report.json data/trades_5y.csv data/global_report.md data/global_report.json data/intraday_report.md data/intraday_report.json
           git diff --cached --quiet && exit 0
           git commit -m "Research results $(date -u +'%Y-%m-%d %H:%M UTC')"
           for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep $((i * 5)); done
