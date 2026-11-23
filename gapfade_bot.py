@@ -136,17 +136,20 @@ def main():
                 gain_rs = abs(c["target"] - c["entry"]) * qty
                 act = "SHORT (sell first)" if c["side"] == -1 else "BUY"
                 first, second = ("SELL", "BUY") if c["side"] == -1 else ("BUY", "SELL")
-                send(f"🔔 <b>LIVE TRADE: {act} {c['sym']}</b> (Intraday / MIS)\n"
-                     f"Gap {c['gap'] * 100:+.1f}% and the first candle turned back.\n"
-                     f"Entry ~ ₹{c['entry']:,.2f} · Qty <b>{qty}</b> (~₹{qty * c['entry']:,.0f})\n"
-                     f"🛑 Stop-loss <b>₹{c['stop']:,.2f}</b> (max loss ~₹{risk_rs:,.0f}) · 🎯 Target <b>₹{c['target']:,.2f}</b> (~₹{gain_rs:,.0f})\n\n"
-                     f"<b>In Kite:</b>\n"
-                     f"1️⃣ Search <b>{c['sym']}</b> → <b>{first}</b> → product <b>Intraday (MIS)</b> → qty <b>{qty}</b> → Market → {first}\n"
-                     f"2️⃣ Immediately: <b>{second}</b> → <b>SL-M</b> → trigger <b>₹{c['stop']:,.2f}</b> → MIS → qty {qty} → {second}\n"
-                     f"3️⃣ Optional target: <b>{second}</b> → Limit <b>₹{c['target']:,.2f}</b> → MIS (cancel the other order when one fills)\n"
-                     f"⏰ Not filled by 3:10 PM? Exit at market.\n\n"
-                     f"Rules: 2% risk · move the stop when 🛡️ says · <b>never add to a loser</b> · skip if price already moved far from ₹{c['entry']:,.2f}.\n"
-                     "<i>Not proven strategy · not investment advice · you can lose money.</i>")
+                why = "went UP more than 1% at the open, then started falling" if c["side"] == -1 else "went DOWN more than 1% at the open, then started rising"
+                sl_why = "highest price of 9:15-9:30" if c["side"] == -1 else "lowest price of 9:15-9:30"
+                send(f"🔔 <b>TRADE: {first} {c['sym']}</b>\n"
+                     f"Qty: <b>{qty}</b>\n"
+                     f"Stop-loss: <b>{c['stop']:.2f}</b> (= {sl_why}; max loss ₹{risk_rs:,.0f})\n"
+                     f"Target: <b>{c['target']:.2f}</b> (yesterday's close; profit ~₹{gain_rs:,.0f})\n\n"
+                     f"<b>Do in Kite (all Intraday / MIS):</b>\n"
+                     f"1) <code>{first} {qty} {c['sym']} MARKET</code>\n"
+                     f"2) <code>{second} {qty} {c['sym']} SL-M trigger {c['stop']:.2f}</code>\n"
+                     f"3) <code>{second} {qty} {c['sym']} LIMIT {c['target']:.2f}</code>\n"
+                     f"When 2) or 3) fills, cancel the other. Close everything by 3:10 PM.\n\n"
+                     f"Why: {c['sym']} {why}.\n"
+                     f"Skip it if the price is already far from {c['entry']:.2f}. Never add more if it goes against you.\n"
+                     "<i>Not proven · not investment advice.</i>")
                 day["open"].append(dict(c, qty=qty, time=now.isoformat()))
             save(s)
         # ---- exits ----
