@@ -1,0 +1,53 @@
+name: EdgeDesk bots
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # every 15 minutes (GitHub may delay scheduled runs a little)
+  workflow_dispatch:          # "Run workflow" button: also sends "EdgeDesk is connected" to Telegram
+
+permissions:
+  contents: write             # lets the bot commit data/signals.json
+
+concurrency:
+  group: edgedesk-bots
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Run the Chief and 10 bots
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python bot.py --hello
+          else
+            python bot.py
+          fi
+
+      - name: Commit new data
+        if: always()
+        run: |
+          git config user.name "edgedesk-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/signals.json data/state.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Update signals $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3; do
+            git pull --rebase --autostash -X theirs && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

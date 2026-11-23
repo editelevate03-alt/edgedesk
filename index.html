@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EdgeDesk Live</title>
+<meta name="description" content="Free paper-trading signal desk for NIFTY, BANK NIFTY, top Indian stocks, forex and gold. Not investment advice.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230f1720'/><path d='M7 22l6-7 5 4 7-10' stroke='%2322c55e' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+<style>
+:root{
+  --bg:#0b1016;--panel:#111821;--panel2:#16202b;--line:#223041;--text:#e6edf3;--muted:#8b9bab;
+  --green:#22c55e;--red:#ef4444;--amber:#f59e0b;--blue:#3b82f6;--violet:#a78bfa;
+  --radius:12px;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){--bg:#f5f7fa;--panel:#ffffff;--panel2:#f0f3f7;--line:#dde3ea;--text:#121a23;--muted:#5d6b7a;}
+}
+:root[data-theme="light"]{--bg:#f5f7fa;--panel:#ffffff;--panel2:#f0f3f7;--line:#dde3ea;--text:#121a23;--muted:#5d6b7a;}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--blue)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;gap:12px;padding:10px 0;flex-wrap:wrap}
+.brand{font-weight:800;font-size:18px;letter-spacing:.2px;display:flex;align-items:center;gap:8px}
+.brand svg{width:26px;height:26px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid var(--line);background:var(--panel)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.live .dot{background:var(--green);box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:pulse 2s infinite}
+.stale .dot{background:var(--amber)} .demo .dot{background:var(--violet)} .off .dot{background:var(--red)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.55)}70%{box-shadow:0 0 0 8px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.upd{color:var(--muted);font-size:12px}
+.spacer{flex:1}
+button,.btn{font:inherit;font-size:13px;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:5px 10px;cursor:pointer}
+nav{display:flex;gap:4px;overflow-x:auto;padding:0 0 8px;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:13px;padding:5px 10px;border-radius:999px;border:1px solid transparent}
+nav a:hover,nav a.on{color:var(--text);border-color:var(--line);background:var(--panel)}
+.notice{margin:14px 0;padding:10px 14px;border-radius:var(--radius);background:color-mix(in srgb,var(--amber) 12%,var(--panel));border:1px solid color-mix(in srgb,var(--amber) 40%,var(--line));font-size:13px}
+section{padding:18px 0 6px;scroll-margin-top:100px}
+h2{font-size:18px;margin:0 0 4px} .sub{color:var(--muted);font-size:13px;margin:0 0 12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:14px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px}
+.kpi b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.kpi span{color:var(--muted);font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+@media (max-width:420px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px;min-width:0}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pill{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);white-space:nowrap}
+.long{color:var(--green);border-color:color-mix(in srgb,var(--green) 45%,var(--line))}
+.short{color:var(--red);border-color:color-mix(in srgb,var(--red) 45%,var(--line))}
+.TRADEABLE{color:var(--green)} .WATCH{color:var(--amber)} .REJECTED{color:var(--red)} .NODATA{color:var(--muted)}
+.lv{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:10px 0}
+.lv div{background:var(--panel2);border-radius:8px;padding:6px 8px;font-size:12px;color:var(--muted)}
+.lv b{display:block;color:var(--text);font-size:14px;font-variant-numeric:tabular-nums}
+.chart{height:220px;margin-top:8px;border-radius:8px;overflow:hidden}
+.small{font-size:12px;color:var(--muted)}
+.score{font-weight:800;font-variant-numeric:tabular-nums}
+.bar{height:6px;background:var(--panel2);border-radius:4px;overflow:hidden;margin-top:4px}
+.bar i{display:block;height:100%;background:var(--blue)}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{color:var(--muted);font-weight:600;font-size:12px}
+.tbl{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+tr.click{cursor:pointer} tr.click:hover{background:var(--panel2)}
+.up{color:var(--green)} .down{color:var(--red)}
+.empty{padding:18px;text-align:center;color:var(--muted);background:var(--panel);border:1px dashed var(--line);border-radius:var(--radius)}
+ul.clean{margin:6px 0 0;padding-left:18px} ul.clean li{margin:2px 0}
+.tv{height:460px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+select{font:inherit;font-size:13px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:5px 8px}
+.news a{text-decoration:none;color:var(--text)} .news a:hover{text-decoration:underline}
+.news li{padding:8px 0;border-bottom:1px solid var(--line);list-style:none}
+.news ul{padding:0;margin:0}
+.st-ok{color:var(--green)} .st-warn{color:var(--amber)} .st-error{color:var(--red)}
+footer{margin:30px 0 40px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+details summary{cursor:pointer;color:var(--muted);font-size:12px}
+.play h3{font-size:15px;margin:14px 0 4px}
+.play p,.play li{font-size:14px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#0f1720"/><path d="M7 22l6-7 5 4 7-10" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>EdgeDesk Live</div>
+      <span id="status" class="badge off"><span class="dot"></span><span id="statusText">Loading…</span></span>
+      <span id="updated" class="upd"></span>
+      <span class="spacer"></span>
+      <button id="refresh" title="Reload data">↻ Refresh</button>
+      <button id="theme" title="Light / dark" aria-label="Switch light or dark">Theme</button>
+    </div>
+    <nav id="nav">
+      <a href="#signals">Signals</a><a href="#upcoming">Upcoming</a><a href="#markets">Markets</a><a href="#live">Live chart</a>
+      <a href="#record">Track record</a><a href="#strategies">Strategies</a><a href="#bots">Bots</a><a href="#news">News</a><a href="#playbook">Playbook</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="notice"><b>Paper trading only · Not investment advice.</b> Signals are not guaranteed and can lose money. Backtests do not predict the future. Every idea has a stop-loss and uses 1% risk. Practise on paper first.</div>
+  <div id="halt"></div>
+  <div class="kpis" id="kpis"></div>
+
+  <section id="signals">
+    <h2>Active signals</h2>
+    <p class="sub">Paper trades opened by the bots that are still running. They passed the backtest, scoring and the mistake guard. Green line = target, red = stop, blue = entry.</p>
+    <div id="signalList" class="grid"></div>
+    <details style="margin-top:10px" id="blockedWrap"><summary>Setups blocked by the mistake guard (and why)</summary><div id="blockedList" style="margin-top:8px"></div></details>
+  </section>
+
+  <section id="upcoming">
+    <h2>Upcoming setups</h2>
+    <p class="sub">Almost-ready setups. Nothing to do yet: wait for the trigger on a <b>finished daily candle</b>. Only strategies marked TRADEABLE can become signals.</p>
+    <div id="upcomingList"></div>
+  </section>
+
+  <section id="markets">
+    <h2>Markets</h2>
+    <p class="sub">Tap a row to see its candle chart.</p>
+    <div class="tbl"><table id="mktTable"></table></div>
+    <div class="card" style="margin-top:10px">
+      <div class="row"><b id="mktTitle">—</b><span class="spacer"></span><span class="small" id="mktInfo"></span></div>
+      <div id="mktChart" class="chart" style="height:300px"></div>
+      <div class="small">Lines: EMA20 (amber) · EMA50 (blue) · EMA200 (violet)</div>
+    </div>
+  </section>
+
+  <section id="live">
+    <h2>Live chart (TradingView)</h2>
+    <p class="sub">Free TradingView widget. Some exchanges may show delayed data or no data inside the widget.</p>
+    <div class="row" style="margin-bottom:8px"><select id="tvSel"></select></div>
+    <div id="tvBox" class="tv"></div>
+  </section>
+
+  <section id="record">
+    <h2>Forward-test track record</h2>
+    <p class="sub">Every signal is tracked as a paper trade from the moment it was sent, after estimated costs. R = multiples of the amount risked (1R = 1% of the account).</p>
+    <div class="kpis" id="recKpis"></div>
+    <div class="tbl" style="margin-top:10px"><table id="recTable"></table></div>
+  </section>
+
+  <section id="strategies">
+    <h2>Strategies &amp; honest backtest verdicts</h2>
+    <p class="sub">About 5 years of daily data, all 12 markets, <b>after costs</b>. TRADEABLE needs 30+ trades, at least +0.10R per trade, profit factor ≥ 1.2, and a positive result in the most recent 30% of trades. Anything else is WATCH or REJECTED and can't send signals.</p>
+    <div class="tbl"><table id="stratTable"></table></div>
+  </section>
+
+  <section id="bots">
+    <h2>The bots</h2>
+    <p class="sub">The Chief runs 10 bots every 15 minutes on GitHub Actions (free).</p>
+    <div id="botList" class="grid"></div>
+    <div id="errBox"></div>
+  </section>
+
+  <section id="news" class="news">
+    <h2>News (last 48h)</h2>
+    <p class="sub">Free RSS headlines with a simple positive/negative word score. It's a rough hint only. ⚡ = high-impact topic.</p>
+    <div class="card"><ul id="newsList"></ul></div>
+  </section>
+
+  <section id="playbook" class="play">
+    <h2>Playbook: how to use EdgeDesk</h2>
+    <div class="card">
+      <h3>1. Check once or twice a day</h3>
+      <p>Indian markets: after 3:40 PM IST, when the daily candle is finished. Forex &amp; gold: after the new day starts (5:30 AM IST). Signals use <b>finished daily candles</b>, so there's no need to watch every minute.</p>
+      <h3>2. A signal arrives (Telegram + this page)</h3>
+      <ul class="clean">
+        <li>Check the score (60+ only) and the backtest verdict (must be TRADEABLE).</li>
+        <li>Note the <b>entry, stop and target</b>. Never trade without the stop.</li>
+        <li>Use the size shown. It risks <b>1%</b> of the paper account. If 1 lot is more than 1%, <b>skip</b> the trade.</li>
+        <li>If price has already run far past the entry, skip it. Don't chase. The guard blocks this too.</li>
+      </ul>
+      <h3>3. While in a trade</h3>
+      <ul class="clean"><li>Don't move the stop further away. Let the stop or target do the work.</li><li>The forward-test bot closes the paper trade at the stop, the target or the time limit, and sends a Telegram message.</li></ul>
+      <h3>4. Safety rules (built in)</h3>
+      <ul class="clean">
+        <li>1% risk per trade · max <span id="pbMax">5</span> open trades · max 2 same-direction trades in related markets.</li>
+        <li>Daily loss limit: after <b>−3R</b> of closed losses in a day, no new signals until tomorrow.</li>
+        <li>The mistake guard blocks: no stop, tight or wide stops, R:R below 1.5, unproven strategies, chasing, stale data, duplicates and conflicting signals.</li>
+      </ul>
+      <h3>5. Be honest with yourself</h3>
+      <p>Paper trade for at least 1–3 months. Compare the forward-test record with the backtest. If live results are much worse, stop and review. Losing streaks of 5–10 trades are normal even for strategies with an edge.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>Disclaimer:</b> <span id="disc">EdgeDesk is a free educational paper-trading tool. It is not investment advice and not a SEBI-registered advisor. Signals are not guaranteed and can lose money.</span> Prices from Yahoo Finance (may be delayed). Charts by TradingView Lightweight Charts.</p>
+    <p id="ver"></p>
+  </footer>
+</main>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const nf = (x, dp=2) => (x === null || x === undefined || isNaN(x)) ? "—" : Number(x).toLocaleString("en-IN", {minimumFractionDigits: dp, maximumFractionDigits: dp});
+  const sgn = (x, dp=2) => (x === null || x === undefined) ? "—" : (x > 0 ? "+" : "") + nf(x, dp);
+  const cls = x => x > 0 ? "up" : x < 0 ? "down" : "";
+  let D = null, charts = [], mktChart = null, curMkt = null;
+
+  // theme
+  const root = document.documentElement;
+  try { const t = localStorage.getItem("ed-theme"); if (t) root.dataset.theme = t; } catch(e){}
+  const isDark = () => root.dataset.theme ? root.dataset.theme === "dark" : !matchMedia("(prefers-color-scheme: light)").matches;
+  $("#theme").onclick = () => { root.dataset.theme = isDark() ? "light" : "dark"; try{localStorage.setItem("ed-theme", root.dataset.theme)}catch(e){}; render(); loadTV(); };
+  const css = v => getComputedStyle(root).getPropertyValue(v).trim();
+
+  function chartOpts(el, h){
+    return { width: el.clientWidth, height: h, layout: { background: { type: "solid", color: css("--panel") }, textColor: css("--muted"), fontSize: 11 },
+      grid: { vertLines: { color: css("--line") }, horzLines: { color: css("--line") } },
+      rightPriceScale: { borderColor: css("--line") }, timeScale: { borderColor: css("--line") },
+      crosshair: { mode: 0 }, handleScroll: true, handleScale: true };
+  }
+  function candleChart(el, mk, lines, emas){
+    if (!window.LightweightCharts || !mk) { el.innerHTML = '<div class="empty">Chart library did not load.</div>'; return null; }
+    el.innerHTML = "";
+    const ch = LightweightCharts.createChart(el, chartOpts(el, el.clientHeight || 220));
+    const s = ch.addCandlestickSeries({ upColor: css("--green"), downColor: css("--red"), borderVisible: false,
+      wickUpColor: css("--green"), wickDownColor: css("--red"),
+      priceFormat: { type: "price", precision: mk.dp, minMove: Math.pow(10, -mk.dp) } });
+    const data = (mk.candles || []).filter(c => c.open != null);
+    s.setData(data);
+    (lines || []).forEach(l => s.createPriceLine({ price: l.p, color: l.c, lineWidth: 2, lineStyle: l.dash ? 2 : 0, axisLabelVisible: true, title: l.t }));
+    if (emas) {
+      // approximate EMAs from candles for display only
+      [[20, css("--amber")], [50, css("--blue")], [200, css("--violet")]].forEach(([n, col]) => {
+        const k = 2 / (n + 1); let e = null; const out = [];
+        data.forEach(c => { e = e === null ? c.close : c.close * k + e * (1 - k); out.push({ time: c.time, value: e }); });
+        if (n === 200) return; // not enough candles for a fair EMA200; latest value shown as a line instead
+        ch.addLineSeries({ color: col, lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(out.slice(Math.min(n, out.length - 1)));
+      });
+      if (mk.ema200) s.createPriceLine({ price: mk.ema200, color: css("--violet"), lineWidth: 1, lineStyle: 1, axisLabelVisible: false, title: "EMA200" });
+    }
+    if (data.length > 90) ch.timeScale().setVisibleLogicalRange({ from: data.length - 90, to: data.length + 3 });
+    else ch.timeScale().fitContent();
+    new ResizeObserver(() => ch.applyOptions({ width: el.clientWidth })).observe(el);
+    return ch;
+  }
+  const mkt = id => (D.markets || []).find(m => m.id === id);
+
+  function status(){
+    const b = $("#status"), t = $("#statusText");
+    if (!D) { b.className = "badge off"; t.textContent = "No data"; return; }
+    const age = (Date.now() - new Date(D.generated_at).getTime()) / 60000;
+    if (D.mode === "demo") { b.className = "badge demo"; t.textContent = "Demo data"; }
+    else if (age <= 45) { b.className = "badge live"; t.textContent = "Live"; }
+    else { b.className = "badge stale"; t.textContent = "Stale (" + (age < 120 ? Math.round(age) + " min" : Math.round(age / 60) + " h") + " old)"; }
+    $("#updated").textContent = "Updated " + D.generated_at_ist + " · refreshes every " + (D.refresh_minutes || 15) + " min";
+  }
+
+  function render(){
+    if (!D) return;
+    charts.forEach(c => { try { c.remove(); } catch(e){} }); charts = [];
+    status();
+    const S = D.summary || {}, TR = (D.track_record || {}).stats || {};
+    $("#halt").innerHTML = S.trading_halted ? '<div class="notice" style="border-color:var(--red)"><b>🛑 Daily loss limit hit.</b> No new signals until tomorrow. Step away from the screen.</div>' : "";
+    $("#kpis").innerHTML = [
+      [S.markets_loaded + "/" + S.markets_total, "markets loaded"], [S.open_trades, "active signals"], [S.upcoming, "upcoming setups"],
+      [(S.tradeable_strategies || []).length + "/6", "strategies TRADEABLE"], [TR.trades || 0, "paper trades closed"],
+      [sgn(TR.total_r || 0) + "R", "forward-test total"]].map(([a, b]) => `<div class="kpi"><b>${a}</b><span>${b}</span></div>`).join("");
+
+    // signals
+    const sl = $("#signalList");
+    if (!(D.signals || []).length) sl.innerHTML = '<div class="empty" style="grid-column:1/-1">No active signals right now. That\'s normal: the rules are strict on purpose. Check "Upcoming".</div>';
+    else {
+      sl.innerHTML = D.signals.map((s, i) => {
+        const m = mkt(s.market) || { dp: 2 }; const L = s.dir === "LONG";
+        return `<div class="card">
+          <div class="row"><b>${esc(s.name)}</b><span class="pill ${L ? "long" : "short"}">${L ? "▲ LONG" : "▼ SHORT"}</span>${s.is_new ? '<span class="pill" style="color:var(--blue)">NEW</span>' : ""}<span class="spacer"></span><span class="score">${s.score}/100</span></div>
+          <div class="small">${esc(s.strategy_name)} · opened ${new Date(s.opened_at).toLocaleString("en-IN", {dateStyle: "medium", timeStyle: "short"})}</div>
+          <div class="lv"><div>Entry<b>${nf(s.entry, m.dp)}</b></div><div>Stop<b class="down">${nf(s.stop, m.dp)}</b></div><div>Target<b class="up">${nf(s.target, m.dp)}</b></div>
+          <div>Now<b>${nf(s.price, m.dp)}</b></div><div>Open P&amp;L<b class="${cls(s.open_r)}">${sgn(s.open_r)}R</b></div><div>R:R<b>1:${s.rr}</b></div></div>
+          <div class="small">Size for 1% risk: <b>${esc(s.size)}</b></div>
+          <div class="chart" id="sc${i}"></div></div>`;
+      }).join("");
+      D.signals.forEach((s, i) => {
+        const el = $("#sc" + i);
+        charts.push(candleChart(el, mkt(s.market), [{ p: s.entry, c: css("--blue"), t: "Entry" }, { p: s.stop, c: css("--red"), t: "Stop" }, { p: s.target, c: css("--green"), t: "Target" }]));
+      });
+    }
+    const bl = D.blocked || [];
+    $("#blockedWrap").style.display = bl.length ? "" : "none";
+    $("#blockedList").innerHTML = bl.map(b => `<div class="card" style="margin-bottom:6px"><div class="row"><b>${esc(b.name)}</b><span class="pill ${b.direction === "LONG" ? "long" : "short"}">${b.direction}</span><span class="small">${esc(b.strategy_name)} · score ${b.score}</span></div><ul class="clean small">${b.blocks.map(x => "<li>" + esc(x) + "</li>").join("")}</ul></div>`).join("");
+
+    // upcoming
+    const up = D.upcoming || [];
+    $("#upcomingList").innerHTML = up.length ? `<div class="tbl"><table><tr><th>Market</th><th>Side</th><th>Strategy</th><th>Waiting for</th><th>Trigger</th><th>Price</th><th>Verdict</th></tr>${
+      up.map(u => { const m = mkt(u.market) || { dp: 2 }; return `<tr><td><b>${esc(u.name)}</b></td><td><span class="pill ${u.direction === "LONG" ? "long" : "short"}">${u.direction}</span></td><td>${esc(u.strategy_name)}</td><td style="white-space:normal;min-width:180px">${esc(u.when)}</td><td>${nf(u.trigger, m.dp)}</td><td>${nf(u.price, m.dp)}</td><td class="${u.verdict.replace(" ", "")}">${u.verdict}</td></tr>`; }).join("")}</table></div>`
+      : '<div class="empty">No setups close to triggering.</div>';
+
+    // markets
+    $("#mktTable").innerHTML = `<tr><th>Market</th><th>Price</th><th>Change</th><th>Trend</th><th>RSI14</th><th>Last candle</th></tr>` +
+      D.markets.map(m => `<tr class="click" data-id="${m.id}"><td><b>${esc(m.name)}</b>${m.stale_days > 4 ? ' <span class="pill" style="color:var(--amber)">stale</span>' : ""}</td><td>${nf(m.price, m.dp)}</td><td class="${cls(m.change_pct)}">${sgn(m.change_pct)}%</td><td class="${m.trend === "Up" ? "up" : m.trend === "Down" ? "down" : ""}">${m.trend}</td><td>${nf(m.rsi14, 1)}</td><td class="small">${m.last_bar}${m.today_forming ? " (forming)" : ""}</td></tr>`).join("");
+    document.querySelectorAll("#mktTable tr.click").forEach(tr => tr.onclick = () => { showMkt(tr.dataset.id); });
+    showMkt(curMkt || (D.markets[0] || {}).id);
+
+    // record
+    const rec = D.track_record || {}; const st = rec.stats || {};
+    $("#recKpis").innerHTML = [[st.trades || 0, "closed paper trades"], [st.win_rate == null ? "—" : st.win_rate + "%", "win rate"], [st.expectancy == null ? "—" : sgn(st.expectancy) + "R", "average per trade"], [sgn(st.total_r || 0) + "R", "total"], [nf(st.max_dd_r || 0) + "R", "worst drawdown"]]
+      .map(([a, b]) => `<div class="kpi"><b>${a}</b><span>${b}</span></div>`).join("");
+    const cl = rec.closed || [];
+    $("#recTable").innerHTML = cl.length ? `<tr><th>Closed</th><th>Market</th><th>Side</th><th>Strategy</th><th>Entry</th><th>Exit</th><th>Reason</th><th>Result</th></tr>` +
+      cl.map(t => { const m = mkt(t.market) || { dp: 2 }; return `<tr><td class="small">${new Date(t.closed_at).toLocaleDateString("en-IN")}</td><td>${esc(t.name)}</td><td>${t.dir}</td><td>${esc(t.strategy_name)}</td><td>${nf(t.entry, m.dp)}</td><td>${nf(t.exit, m.dp)}</td><td>${esc(t.exit_reason)}</td><td class="${cls(t.r)}"><b>${sgn(t.r)}R</b></td></tr>`; }).join("")
+      : `<tr><td class="small" style="padding:16px">No closed paper trades yet. The record started ${rec.started ? new Date(rec.started).toLocaleDateString("en-IN") : "today"} and builds up over weeks.</td></tr>`;
+
+    // strategies
+    $("#stratTable").innerHTML = `<tr><th>Strategy</th><th>Verdict</th><th>Trades</th><th>Win %</th><th>Avg R</th><th>Profit factor</th><th>Recent 30% avg R</th><th>Max DD</th><th>Stop / R:R</th><th>Tradeable on</th></tr>` +
+      D.strategies.map(s => { const st = s.stats; const on = Object.entries(s.per_market).filter(([k, v]) => v.verdict === "TRADEABLE").map(([k]) => k);
+        return `<tr><td><b>${esc(s.name)}</b><div class="small" style="white-space:normal;max-width:280px">${esc(s.desc)}</div></td><td class="${s.verdict.replace(" ", "")}"><b>${s.verdict}</b></td><td>${st.trades}</td><td>${nf(st.win_rate, 1)}</td><td class="${cls(st.expectancy)}">${sgn(st.expectancy, 3)}</td><td>${nf(st.profit_factor)}</td><td class="${cls(st.oos_expectancy)}">${sgn(st.oos_expectancy, 3)}</td><td>${nf(st.max_dd_r, 1)}R</td><td>${s.stop_atr} ATR / 1:${s.rr}</td><td class="small" style="white-space:normal;max-width:200px">${on.length ? on.join(", ") : "—"}</td></tr>`; }).join("");
+
+    // bots
+    $("#botList").innerHTML = D.bots.map(b => `<div class="card"><div class="row"><b>${esc(b.name)}</b><span class="spacer"></span><span class="st-${b.status}">● ${b.status.toUpperCase()}</span></div><div class="small">${esc(b.job)}</div><div style="font-size:13px;margin-top:4px">${esc(b.note)}</div></div>`).join("");
+    $("#errBox").innerHTML = (D.errors || []).length ? `<details style="margin-top:10px"><summary>${D.errors.length} data warning(s)</summary><ul class="clean small">${D.errors.map(e => "<li>" + esc(e) + "</li>").join("")}</ul></details>` : "";
+
+    // news
+    $("#newsList").innerHTML = (D.news || []).length ? D.news.map(n => `<li>${n.sentiment > 0 ? '<span class="up">▲</span>' : n.sentiment < 0 ? '<span class="down">▼</span>' : '<span class="small">•</span>'} ${n.high_impact ? "⚡ " : ""}${n.link ? `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}</a>` : esc(n.title)}<div class="small">${esc(n.source)}${n.published ? " · " + new Date(n.published).toLocaleString("en-IN", {dateStyle: "medium", timeStyle: "short"}) : ""}${(n.markets || []).length ? " · " + n.markets.join(", ") : ""}</div></li>`).join("") : '<li class="small">No headlines loaded.</li>';
+
+    $("#pbMax").textContent = (D.settings || {}).max_open || 5;
+    $("#disc").textContent = D.disclaimer || $("#disc").textContent;
+    $("#ver").textContent = `${D.app} v${D.version} · mode: ${D.mode} · ${D.settings.timeframe}`;
+    fillTV();
+  }
+
+  function showMkt(id){
+    const m = mkt(id); if (!m) return; curMkt = id;
+    if (mktChart) { try { mktChart.remove(); } catch(e){} }
+    $("#mktTitle").textContent = m.name + " · " + nf(m.price, m.dp);
+    $("#mktInfo").textContent = `ATR ${nf(m.atr, m.dp)} · trend ${m.trend}` + ((m.patterns || []).length ? " · " + m.patterns.map(p => p.name).join(", ") : "");
+    mktChart = candleChart($("#mktChart"), m, [], true);
+  }
+
+  // TradingView widget
+  let tvLoaded = false;
+  function fillTV(){
+    const sel = $("#tvSel"); if (sel.options.length) return;
+    sel.innerHTML = D.markets.map(m => `<option value="${esc(m.tv)}">${esc(m.name)}</option>`).join("");
+    sel.onchange = loadTV;
+    const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting) && !tvLoaded) { tvLoaded = true; loadTV(); } });
+    io.observe($("#tvBox"));
+  }
+  function loadTV(){
+    if (!tvLoaded) return;
+    const box = $("#tvBox"); box.innerHTML = '<div id="tvw" style="height:100%"></div>';
+    const go = () => new TradingView.widget({ container_id: "tvw", autosize: true, symbol: $("#tvSel").value, interval: "D", timezone: "Asia/Kolkata",
+      theme: isDark() ? "dark" : "light", style: "1", locale: "en", hide_side_toolbar: true, allow_symbol_change: true, withdateranges: true });
+    if (window.TradingView) return go();
+    const s = document.createElement("script"); s.src = "https://s3.tradingview.com/tv.js"; s.onload = go;
+    s.onerror = () => box.innerHTML = '<div class="empty">TradingView widget could not load.</div>';
+    document.head.appendChild(s);
+  }
+
+  async function load(){
+    try {
+      const r = await fetch("data/signals.json?t=" + Date.now(), { cache: "no-store" });
+      if (!r.ok) throw new Error(r.status);
+      D = await r.json();
+      render();
+    } catch (e) {
+      $("#status").className = "badge off"; $("#statusText").textContent = "Offline";
+      $("#updated").textContent = "Could not load data/signals.json (" + e.message + ")";
+      if (!D) $("#signalList").innerHTML = '<div class="empty" style="grid-column:1/-1">No data yet. Run <code>python bot.py</code> or wait for the GitHub Action.</div>';
+    }
+  }
+  $("#refresh").onclick = load;
+  setInterval(load, 60000);
+  setInterval(status, 30000);
+  // highlight nav
+  const links = [...document.querySelectorAll("nav a")];
+  addEventListener("scroll", () => { let cur = links[0]; links.forEach(a => { const s = $(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < 140) cur = a; }); links.forEach(a => a.classList.toggle("on", a === cur)); }, { passive: true });
+  load();
+})();
+</script>
+</body>
+</html>

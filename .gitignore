@@ -1,0 +1,11 @@
+# never commit secrets or local environments
+.env
+.env.*
+*.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+data/state_demo.json
+data/signals_demo.json
