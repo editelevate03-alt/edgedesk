@@ -1,0 +1,380 @@
+{
+ "generated_at": "2026-11-23 23:11 UTC",
+ "results": [
+  {
+   "chart": "1h",
+   "strategy": "orb",
+   "label": "Opening-range breakout",
+   "train": {
+    "trades": 4205,
+    "win_rate": 38.4,
+    "avg_r": -0.132,
+    "pf": 0.54,
+    "avg_rs": -3.3,
+    "total_rs": -13796.0,
+    "t": -15.01
+   },
+   "test": {
+    "trades": 1809,
+    "win_rate": 41.9,
+    "avg_r": -0.114,
+    "pf": 0.61,
+    "avg_rs": -3.3,
+    "total_rs": -5994.0,
+    "t": -7.97
+   },
+   "full": {
+    "trades": 6014,
+    "win_rate": 39.4,
+    "avg_r": -0.127,
+    "pf": 0.56,
+    "avg_rs": -3.3,
+    "total_rs": -19790.0,
+    "t": -16.87
+   },
+   "green": false,
+   "best_stocks": [
+    [
+     "BAJFINANCE",
+     -0.072,
+     413
+    ],
+    [
+     "MARUTI",
+     -0.072,
+     430
+    ],
+    [
+     "BHARTIARTL",
+     -0.094,
+     412
+    ]
+   ]
+  },
+  {
+   "chart": "1h",
+   "strategy": "vwap",
+   "label": "VWAP trend cross",
+   "train": {
+    "trades": 4259,
+    "win_rate": 34.7,
+    "avg_r": -0.258,
+    "pf": 0.49,
+    "avg_rs": -3.9,
+    "total_rs": -16751.0,
+    "t": -19.19
+   },
+   "test": {
+    "trades": 1835,
+    "win_rate": 40.3,
+    "avg_r": -0.191,
+    "pf": 0.6,
+    "avg_rs": -3.7,
+    "total_rs": -6805.0,
+    "t": -9.1
+   },
+   "full": {
+    "trades": 6094,
+    "win_rate": 36.3,
+    "avg_r": -0.238,
+    "pf": 0.52,
+    "avg_rs": -3.9,
+    "total_rs": -23556.0,
+    "t": -20.99
+   },
+   "green": false,
+   "best_stocks": [
+    [
+     "TCS",
+     -0.176,
+     426
+    ],
+    [
+     "BHARTIARTL",
+     -0.186,
+     433
+    ],
+    [
+     "INFY",
+     -0.197,
+     451
+    ]
+   ]
+  },
+  {
+   "chart": "1h",
+   "strategy": "gap_go",
+   "label": "Gap-and-go (>1% gap)",
+   "train": {
+    "trades": 248,
+    "win_rate": 48.4,
+    "avg_r": 0.014,
+    "pf": 1.03,
+    "avg_rs": 2.1,
+    "total_rs": 514.0,
+    "t": 0.22
+   },
+   "test": {
+    "trades": 270,
+    "win_rate": 42.2,
+    "avg_r": -0.123,
+    "pf": 0.75,
+    "avg_rs": -5.0,
+    "total_rs": -1351.0,
+    "t": -1.96
+   },
+   "full": {
+    "trades": 518,
+    "win_rate": 45.2,
+    "avg_r": -0.058,
+    "pf": 0.87,
+    "avg_rs": -1.6,
+    "total_rs": -837.0,
+    "t": -1.28
+   },
+   "green": false,
+   "best_stocks": [
+    [
+     "RELIANCE",
+     0.188,
+     16
+    ],
+    [
+     "BHARTIARTL",
+     0.102,
+     23
+    ],
+    [
+     "BAJFINANCE",
+     0.075,
+     50
+    ]
+   ]
+  },
+  {
+   "chart": "1h",
+   "strategy": "gap_fade",
+   "label": "Gap-fade (>1% gap)",
+   "train": {
+    "trades": 268,
+    "win_rate": 44.0,
+    "avg_r": -0.153,
+    "pf": 0.68,
+    "avg_rs": -0.6,
+    "total_rs": -154.0,
+    "t": -2.33
+   },
+   "test": {
+    "trades": 232,
+    "win_rate": 44.0,
+    "avg_r": -0.124,
+    "pf": 0.73,
+    "avg_rs": -4.3,
+    "total_rs": -1002.0,
+    "t": -1.81
+   },
+   "full": {
+    "trades": 500,
+    "win_rate": 44.0,
+    "avg_r": -0.139,
+    "pf": 0.7,
+    "avg_rs": -2.3,
+    "total_rs": -1156.0,
+    "t": -2.95
+   },
+   "green": false,
+   "best_stocks": [
+    [
+     "BHARTIARTL",
+     0.158,
+     26
+    ],
+    [
+     "MARUTI",
+     0.031,
+     39
+    ],
+    [
+     "SUNPHARMA",
+     0.008,
+     39
+    ]
+   ]
+  },
+  {
+   "chart": "15m",
+   "strategy": "orb",
+   "label": "Opening-range breakout",
+   "train": {
+    "trades": 480,
+    "win_rate": 46.0,
+    "avg_r": -0.088,
+    "pf": 0.77,
+    "avg_rs": -0.9,
+    "total_rs": -422.0,
+    "t": -2.29
+   },
+   "test": {
+    "trades": 212,
+    "win_rate": 43.4,
+    "avg_r": -0.067,
+    "pf": 0.82,
+    "avg_rs": 0.3,
+    "total_rs": 62.0,
+    "t": -1.18
+   },
+   "full": {
+    "trades": 692,
+    "win_rate": 45.2,
+    "avg_r": -0.081,
+    "pf": 0.79,
+    "avg_rs": -0.5,
+    "total_rs": -359.0,
+    "t": -2.56
+   },
+   "green": false,
+   "best_stocks": [
+    [
+     "ICICIBANK",
+     0.113,
+     48
+    ],
+    [
+     "RELIANCE",
+     0.112,
+     47
+    ],
+    [
+     "BAJFINANCE",
+     0.084,
+     48
+    ]
+   ]
+  },
+  {
+   "chart": "15m",
+   "strategy": "vwap",
+   "label": "VWAP trend cross",
+   "train": {
+    "trades": 402,
+    "win_rate": 36.8,
+    "avg_r": -0.425,
+    "pf": 0.52,
+    "avg_rs": -3.1,
+    "total_rs": -1264.0,
+    "t": -6.4
+   },
+   "test": {
+    "trades": 185,
+    "win_rate": 40.0,
+    "avg_r": -0.209,
+    "pf": 0.74,
+    "avg_rs": -0.1,
+    "total_rs": -18.0,
+    "t": -2.03
+   },
+   "full": {
+    "trades": 587,
+    "win_rate": 37.8,
+    "avg_r": -0.357,
+    "pf": 0.58,
+    "avg_rs": -2.2,
+    "total_rs": -1282.0,
+    "t": -6.38
+   },
+   "green": false,
+   "best_stocks": [
+    [
+     "INFY",
+     -0.063,
+     36
+    ],
+    [
+     "MARUTI",
+     -0.097,
+     44
+    ],
+    [
+     "SBIN",
+     -0.12,
+     46
+    ]
+   ]
+  },
+  {
+   "chart": "15m",
+   "strategy": "gap_go",
+   "label": "Gap-and-go (>1% gap)",
+   "train": {
+    "trades": 46,
+    "win_rate": 37.0,
+    "avg_r": -0.211,
+    "pf": 0.63,
+    "avg_rs": -0.5,
+    "total_rs": -25.0,
+    "t": -1.39
+   },
+   "test": {
+    "trades": 24,
+    "win_rate": 33.3,
+    "avg_r": -0.357,
+    "pf": 0.52,
+    "avg_rs": -6.7,
+    "total_rs": -162.0,
+    "t": -1.43
+   },
+   "full": {
+    "trades": 70,
+    "win_rate": 35.7,
+    "avg_r": -0.261,
+    "pf": 0.58,
+    "avg_rs": -2.7,
+    "total_rs": -187.0,
+    "t": -2.0
+   },
+   "green": false,
+   "best_stocks": [
+    [
+     "INFY",
+     -0.255,
+     18
+    ]
+   ]
+  },
+  {
+   "chart": "15m",
+   "strategy": "gap_fade",
+   "label": "Gap-fade (>1% gap)",
+   "train": {
+    "trades": 21,
+    "win_rate": 57.1,
+    "avg_r": 0.058,
+    "pf": 1.16,
+    "avg_rs": 3.4,
+    "total_rs": 71.0,
+    "t": 0.25
+   },
+   "test": {
+    "trades": 23,
+    "win_rate": 56.5,
+    "avg_r": 0.333,
+    "pf": 1.75,
+    "avg_rs": 2.6,
+    "total_rs": 59.0,
+    "t": 0.86
+   },
+   "full": {
+    "trades": 44,
+    "win_rate": 56.8,
+    "avg_r": 0.202,
+    "pf": 1.5,
+    "avg_rs": 3.0,
+    "total_rs": 130.0,
+    "t": 0.88
+   },
+   "green": false,
+   "best_stocks": []
+  }
+ ],
+ "errors": []
+}

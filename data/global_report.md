@@ -1,4 +1,4 @@
-# Global cues vs Indian market - 5-year backtest (2026-11-23 22:34 UTC)
+# Global cues vs Indian market - 5-year backtest (2026-11-23 23:11 UTC)
 
 Cues known before 09:15 IST (previous US close, crude, USD/INR, dollar index, US 10y yield). 'Right %' = how often the market moved in the direction the score said. Base = % of all days that were up. TRAIN = first 70% of days, TEST = last 30% (unseen). Not investment advice.
 

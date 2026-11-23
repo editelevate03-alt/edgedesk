@@ -1,4 +1,4 @@
-# EdgeDesk research - 2026-11-23 22:34 UTC
+# EdgeDesk research - 2026-11-23 23:10 UTC
 
 All results are **after estimated costs**, in R (1R = the amount risked, e.g. 1% of the account). Backtests do not predict the future. Paper research only - **not investment advice**.
 
