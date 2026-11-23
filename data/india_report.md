@@ -1,4 +1,4 @@
-# EdgeDesk - India report for Kite (BUY-only, Zerodha delivery costs) - 2026-11-23 18:28 UTC
+# EdgeDesk - India report for Kite (BUY-only, Zerodha delivery costs) - 2026-11-23 18:37 UTC
 
 Win rate = % of trades that made money. **Avg R** = average result per trade after costs (1R = amount risked). A strategy can win 60% and still lose money if losses are bigger than wins.
 
@@ -6,7 +6,7 @@ Win rate = % of trades that made money. **Avg R** = average result per trade aft
 | Strategy | Verdict | Trades | Win rate % | Avg R | Profit factor |
 |---|---|---|---|---|---|
 | Inside-bar breakout | LOSES | 23 | 34.8 | -0.148 | 0.75 |
-| 20-day breakout | LOSES | 27 | 37.0 | -0.166 | 0.75 |
+| 20-day breakout | LOSES | 26 | 34.6 | -0.246 | 0.64 |
 | Bollinger squeeze | LOSES | 14 | 28.6 | -0.318 | 0.61 |
 | 55-day breakout (Turtle-style) | LOSES | 10 | 30.0 | -0.339 | 0.49 |
 | RSI(2) dip buy | LOSES | 17 | 29.4 | -0.535 | 0.13 |
@@ -26,7 +26,7 @@ Win rate = % of trades that made money. **Avg R** = average result per trade aft
 | Momentum pullback | LOSES | 73 | 37.0 | -0.038 | 0.94 |
 | 55-day breakout (Turtle-style) | LOSES | 67 | 40.3 | -0.084 | 0.85 |
 | MACD trend cross | LOSES | 116 | 37.9 | -0.135 | 0.78 |
-| 20-day breakout | LOSES | 131 | 38.2 | -0.159 | 0.75 |
+| 20-day breakout | LOSES | 130 | 37.7 | -0.175 | 0.73 |
 | Bollinger squeeze | LOSES | 52 | 36.5 | -0.236 | 0.68 |
 | Range Bollinger reversion | LOSES | 23 | 30.4 | -0.362 | 0.49 |
 
@@ -39,8 +39,8 @@ Win rate = % of trades that made money. **Avg R** = average result per trade aft
 | Momentum pullback | LOSES | 124 | 35.5 | -0.032 | 0.95 |
 | RSI(2) dip buy | LOSES | 162 | 46.3 | -0.051 | 0.86 |
 | MACD trend cross | LOSES | 205 | 39.0 | -0.076 | 0.88 |
-| 20-day breakout | LOSES | 221 | 40.7 | -0.081 | 0.87 |
 | Bollinger squeeze | LOSES | 99 | 40.4 | -0.082 | 0.88 |
+| 20-day breakout | LOSES | 220 | 40.5 | -0.09 | 0.85 |
 | Trend pullback | LOSES | 266 | 39.1 | -0.12 | 0.82 |
 | 55-day breakout (Turtle-style) | LOSES | 107 | 35.5 | -0.172 | 0.71 |
 

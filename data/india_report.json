@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23 18:28 UTC",
+ "generated_at": "2026-11-23 18:37 UTC",
  "periods": {
   "1y": {
    "trend_pullback": {
@@ -92,13 +92,13 @@
    "donchian": {
     "name": "20-day breakout",
     "stats": {
-     "trades": 27,
-     "win_rate": 37.0,
-     "expectancy": -0.166,
-     "profit_factor": 0.75,
-     "total_r": -4.48,
+     "trades": 26,
+     "win_rate": 34.6,
+     "expectancy": -0.246,
+     "profit_factor": 0.64,
+     "total_r": -6.4,
      "max_dd_r": 13.71,
-     "oos_expectancy": 0.879
+     "oos_expectancy": 0.73
     },
     "verdict": "LOSES",
     "per_market": {
@@ -112,13 +112,13 @@
       "oos_expectancy": 1.902
      },
      "BANKNIFTY": {
-      "trades": 5,
-      "win_rate": 60.0,
-      "expectancy": 0.355,
-      "profit_factor": 1.8,
-      "total_r": 1.77,
+      "trades": 4,
+      "win_rate": 50.0,
+      "expectancy": -0.037,
+      "profit_factor": 0.93,
+      "total_r": -0.15,
       "max_dd_r": 2.22,
-      "oos_expectancy": 1.919
+      "oos_expectancy": 1.912
      },
      "RELIANCE": {
       "trades": 1,
@@ -964,13 +964,13 @@
    "donchian": {
     "name": "20-day breakout",
     "stats": {
-     "trades": 131,
-     "win_rate": 38.2,
-     "expectancy": -0.159,
-     "profit_factor": 0.75,
-     "total_r": -20.85,
+     "trades": 130,
+     "win_rate": 37.7,
+     "expectancy": -0.175,
+     "profit_factor": 0.73,
+     "total_r": -22.77,
      "max_dd_r": 42.5,
-     "oos_expectancy": -0.031
+     "oos_expectancy": -0.108
     },
     "verdict": "LOSES",
     "per_market": {
@@ -984,13 +984,13 @@
       "oos_expectancy": -0.272
      },
      "BANKNIFTY": {
-      "trades": 22,
-      "win_rate": 54.5,
-      "expectancy": 0.148,
-      "profit_factor": 1.29,
-      "total_r": 3.25,
+      "trades": 21,
+      "win_rate": 52.4,
+      "expectancy": 0.064,
+      "profit_factor": 1.12,
+      "total_r": 1.33,
       "max_dd_r": 6.82,
-      "oos_expectancy": 0.35
+      "oos_expectancy": 0.34
      },
      "RELIANCE": {
       "trades": 11,
@@ -1836,13 +1836,13 @@
    "donchian": {
     "name": "20-day breakout",
     "stats": {
-     "trades": 221,
-     "win_rate": 40.7,
-     "expectancy": -0.081,
-     "profit_factor": 0.87,
-     "total_r": -17.95,
+     "trades": 220,
+     "win_rate": 40.5,
+     "expectancy": -0.09,
+     "profit_factor": 0.85,
+     "total_r": -19.87,
      "max_dd_r": 42.5,
-     "oos_expectancy": -0.196
+     "oos_expectancy": -0.228
     },
     "verdict": "LOSES",
     "per_market": {
@@ -1856,13 +1856,13 @@
       "oos_expectancy": -0.442
      },
      "BANKNIFTY": {
-      "trades": 33,
-      "win_rate": 54.5,
-      "expectancy": 0.187,
-      "profit_factor": 1.38,
-      "total_r": 6.17,
+      "trades": 32,
+      "win_rate": 53.1,
+      "expectancy": 0.133,
+      "profit_factor": 1.26,
+      "total_r": 4.25,
       "max_dd_r": 6.82,
-      "oos_expectancy": 0.666
+      "oos_expectancy": 0.663
      },
      "RELIANCE": {
       "trades": 21,
