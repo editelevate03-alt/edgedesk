@@ -78,9 +78,22 @@ footer{margin:30px 0 40px;color:var(--muted);font-size:12px;border-top:1px solid
 details summary{cursor:pointer;color:var(--muted);font-size:12px}
 .play h3{font-size:15px;margin:14px 0 4px}
 .play p,.play li{font-size:14px}
+#gate{position:fixed;inset:0;z-index:100;background:var(--bg);display:none;align-items:center;justify-content:center;padding:16px}
+#gate form{width:100%;max-width:340px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:10px}
+#gate input{font:inherit;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--text)}
+#gate button{padding:10px;background:var(--blue);color:#fff;border:0;font-weight:700}
+body.locked main,body.locked header{visibility:hidden}
 </style>
 </head>
 <body>
+<div id="gate"><form id="gateForm" autocomplete="on">
+  <div class="brand" style="justify-content:center">EdgeDesk Live</div>
+  <div class="small" style="text-align:center">Private desk - please log in</div>
+  <input id="gUser" name="username" placeholder="User ID" autocomplete="username" required>
+  <input id="gPass" name="password" type="password" placeholder="Password" autocomplete="current-password" required>
+  <button type="submit">Log in</button>
+  <div id="gMsg" class="small" style="color:var(--red);text-align:center"></div>
+</form></div>
 <header>
   <div class="wrap">
     <div class="top">
@@ -92,6 +105,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:12px}
       <label class="upd" style="display:inline-flex;align-items:center;gap:4px"><input type="checkbox" id="autoSpeak"> Auto-voice</label>
       <button id="refresh" title="Reload data">↻ Refresh</button>
       <button id="theme" title="Light / dark" aria-label="Switch light or dark">Theme</button>
+      <button id="logout" title="Log out" style="display:none">Log out</button>
     </div>
     <nav id="nav">
       <a href="#signals">Signals</a><a href="#upcoming">Upcoming</a><a href="#markets">Markets</a><a href="#live">Live chart</a>
@@ -428,13 +442,40 @@ details summary{cursor:pointer;color:var(--muted);font-size:12px}
     }
     lastNewIds = ids;
   }
+
+  // ---------- Login gate (hash from the SITE_LOGIN GitHub secret; keeps casual visitors out) ----------
+  const hex = b => [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, "0")).join("");
+  async function pbkdf2(text, saltHex, iter){
+    const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(text), "PBKDF2", false, ["deriveBits"]);
+    const salt = new Uint8Array(saltHex.match(/../g).map(h => parseInt(h, 16)));
+    return hex(await crypto.subtle.deriveBits({ name: "PBKDF2", hash: "SHA-256", salt, iterations: iter }, key, 256));
+  }
+  async function gate(){
+    let auth = null;
+    try { const r = await fetch("data/auth.json?t=" + Date.now(), { cache: "no-store" }); if (r.ok) auth = await r.json(); } catch(e){}
+    if (!auth || !auth.hash) return true;                       // no login configured
+    let saved = null; try { saved = localStorage.getItem("ed-auth"); } catch(e){}
+    $("#logout").style.display = "";
+    $("#logout").onclick = () => { try { localStorage.removeItem("ed-auth"); } catch(e){} location.reload(); };
+    if (saved === auth.hash) return true;
+    document.body.classList.add("locked"); $("#gate").style.display = "flex";
+    return new Promise(res => {
+      $("#gateForm").onsubmit = async ev => {
+        ev.preventDefault(); $("#gMsg").textContent = "Checking…";
+        const h = await pbkdf2($("#gUser").value.trim().toLowerCase() + ":" + $("#gPass").value, auth.salt, auth.iterations);
+        if (h === auth.hash) { try { localStorage.setItem("ed-auth", h); } catch(e){}
+          $("#gate").style.display = "none"; document.body.classList.remove("locked"); res(true); }
+        else { $("#gMsg").textContent = "Wrong user ID or password."; $("#gPass").value = ""; }
+      };
+    });
+  }
   $("#refresh").onclick = load;
-  setInterval(load, 60000);
+  setInterval(() => { if (!document.body.classList.contains("locked")) load(); }, 60000);
   setInterval(status, 30000);
   // highlight nav
   const links = [...document.querySelectorAll("nav a")];
   addEventListener("scroll", () => { let cur = links[0]; links.forEach(a => { const s = $(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < 140) cur = a; }); links.forEach(a => a.classList.toggle("on", a === cur)); }, { passive: true });
-  load();
+  gate().then(() => load());
 })();
 </script>
 </body>
