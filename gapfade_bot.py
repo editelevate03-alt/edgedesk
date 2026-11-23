@@ -27,6 +27,7 @@ from intraday_research import CAPITAL, COST_RT, STOCKS
 
 STATE = bot.DATA / "gapfade_state.json"
 MAX_SIGNALS = 2
+MAX_RISK = 0.02 * CAPITAL       # Sperandeo rule 3: a stop-out costs at most 2% of capital (Rs 40 on Rs 2,000)
 EXIT_MIN = 15 * 60 + 10
 END_MIN = 15 * 60 + 20
 
@@ -116,7 +117,10 @@ def main():
             if not cands:
                 send("🔁 Gap-fade: no stock gapped >1% and turned back in the first candle - <b>no trade today</b>.")
             for c in cands[:MAX_SIGNALS]:
-                qty = max(1, math.floor(CAPITAL / c["entry"]))
+                qty = min(math.floor(CAPITAL / c["entry"]), math.floor(MAX_RISK / abs(c["entry"] - c["stop"])))
+                if qty < 1:
+                    send(f"🔁 Gap-fade {c['sym']}: setup found but even 1 share would risk more than ₹{MAX_RISK:,.0f} (2% rule) - <b>skip</b>.")
+                    continue
                 risk_rs = abs(c["entry"] - c["stop"]) * qty
                 gain_rs = abs(c["target"] - c["entry"]) * qty
                 act = "SHORT (sell first)" if c["side"] == -1 else "BUY"
@@ -125,6 +129,7 @@ def main():
                      f"Entry ~ ₹{c['entry']:,.2f} · Qty <b>{qty}</b> (~₹{qty * c['entry']:,.0f})\n"
                      f"🛑 Stop-loss ₹{c['stop']:,.2f} (risk ~₹{risk_rs:,.0f}) · 🎯 Target ₹{c['target']:,.2f} (yesterday's close, ~₹{gain_rs:,.0f})\n"
                      f"Exit by 3:10 PM if neither is hit. Place the stop-loss order right after entry.\n"
+                     f"Rules: max risk 2% (₹{MAX_RISK:,.0f}) · at +1R move stop to breakeven · never give back >50% of the gain · <b>never add to a loser</b>.\n"
                      "<i>Yellow (not proven) · alerts only · not investment advice.</i>")
                 day["open"].append(dict(c, qty=qty, time=now.isoformat()))
             save(s)
@@ -137,13 +142,25 @@ def main():
                 still.append(t); continue
             after = b[b.index > pd.Timestamp(t["time"]) - timedelta(minutes=1)]
             reason, px = None, None
+            risk0 = abs(t["entry"] - t["stop"])
+            stop_now, best = t["stop"], 0.0
             for _, r in after.iterrows():
                 adverse = r.High if t["side"] == -1 else r.Low
                 fav = r.Low if t["side"] == -1 else r.High
-                if t["side"] * (adverse - t["stop"]) <= 0:
-                    reason, px = "stop-loss", t["stop"]; break
+                if t["side"] * (adverse - stop_now) <= 0:
+                    reason = "stop-loss" if stop_now == t["stop"] else "protected stop (kept profit)"
+                    px = stop_now; break
                 if t["side"] * (fav - t["target"]) >= 0:
                     reason, px = "target (gap filled)", t["target"]; break
+                best = max(best, t["side"] * (fav - t["entry"]) / risk0)          # Sperandeo rule 2 (after the bar)
+                if best >= 1.0:
+                    new_stop = t["entry"] + t["side"] * 0.5 * best * risk0
+                    if t["side"] * (new_stop - stop_now) > 0:
+                        stop_now = new_stop
+            if not reason and best >= 1.0 and not t.get("be_sent"):
+                send(f"🛡️ <b>{t['sym']}: move your stop-loss to ₹{stop_now:,.2f}</b> (profit protection - trade is up {best:.1f}R). "
+                     "Never let this profit turn into a loss.")
+                t["be_sent"] = True
             if not reason and mins >= EXIT_MIN and len(b):
                 reason, px = "3:10 PM time exit", float(b.Close.iloc[-1])
             if not reason:

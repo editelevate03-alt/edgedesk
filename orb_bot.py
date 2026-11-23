@@ -201,6 +201,9 @@ def main():
                                      "Safer choice: <b>skip</b> and wait for the last 1-2 weeks before expiry.")
                     lines += [f"👉 Check the REAL premium of <b>{int(K)} {side}</b> in Kite. Only buy if 1 lot costs ≤ Rs {CAPITAL:,.0f}.",
                               f"🛑 Stop-loss: premium −40% (e.g. buy Rs {p:,.0f} → SL Rs {p * 0.6:,.0f}). Place it right after buying.",
+                              f"⚠️ Risk check: this trade can lose ~Rs {p * 0.4 * U['lot']:,.0f} = {p * 0.4 * U['lot'] / CAPITAL * 100:.0f}% of your capital. "
+                              "Sperandeo's rule is 1-2% - with Rs 2,000 option buying cannot meet it. Paper trade, or accept this is far above the rule.",
+                              "Rules: at +1R (index moved one range) move your SL to your buy price · never give back >50% of the gain · <b>never average down</b>.",
                               f"🎯 Exit if BANK NIFTY reaches <b>{tgt_idx:,.0f}</b> · Exit if it goes back past <b>{stop_idx:,.0f}</b> · Exit by 3:15 PM."]
                 if "news_mood" in day:
                     lines.append(f"📰 {india_news.agreement(day['news_mood'], cp)} (BANK NIFTY mood {day['news_mood']:+d})")
@@ -229,13 +232,27 @@ def main():
             et = pd.Timestamp(e["time"])
             after = b[b.index > et]
             reason, px = None, None
+            risk0 = abs(e["S"] - e["stop_idx"])
+            stop_now, best = e["stop_idx"], 0.0
             for t, r in after.iterrows():
                 adverse = r.Low if e["cp"] == 1 else r.High
                 favour = r.High if e["cp"] == 1 else r.Low
-                if e["cp"] * (adverse - e["stop_idx"]) <= 0:
-                    reason, px = "index went back through the range (stop)", e["stop_idx"]; break
+                if e["cp"] * (adverse - stop_now) <= 0:
+                    reason = ("index went back through the range (stop)" if stop_now == e["stop_idx"]
+                              else "protected stop hit - profit kept (never let a profit become a loss)")
+                    px = stop_now; break
                 if e["cp"] * (favour - e["tgt_idx"]) >= 0:
                     reason, px = "target reached", e["tgt_idx"]; break
+                best = max(best, e["cp"] * (favour - e["S"]) / risk0)             # Sperandeo rule 2
+                if best >= 1.0:
+                    ns = e["S"] + e["cp"] * 0.5 * best * risk0
+                    if e["cp"] * (ns - stop_now) > 0:
+                        stop_now = ns
+            if not reason and best >= 1.0 and not day.get("be_sent"):
+                send(f"🛡️ <b>Profit protection:</b> BANK NIFTY moved {best:.1f}R your way. Move your option stop-loss up to at least your "
+                     f"buy price (Rs {e['prem']:,.0f}). Exit if BANK NIFTY goes back to {stop_now:,.0f}.", state)
+                day["be_sent"] = True
+                save_state(state)
             if not reason and mins >= EXIT_MIN and len(b):
                 reason, px = "3:15 PM time exit", float(b.Close.iloc[-1])
             if reason:
