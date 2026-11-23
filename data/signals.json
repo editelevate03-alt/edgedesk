@@ -2,8 +2,8 @@
  "app": "EdgeDesk Live",
  "version": "1.0.0",
  "mode": "live",
- "generated_at": "2026-11-23T15:52:39.241480+00:00",
- "generated_at_ist": "23 Nov 2026, 21:22 IST",
+ "generated_at": "2026-11-23T15:54:05.568544+00:00",
+ "generated_at_ist": "23 Nov 2026, 21:24 IST",
  "refresh_minutes": 15,
  "disclaimer": "Paper-trading research tool. Not investment advice. Signals are not guaranteed and can lose money. Past/backtest results do not predict the future.",
  "settings": {
@@ -7616,10 +7616,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 5,
-   "price": 1.09075,
+   "price": 1.09051,
    "price_time": "2026-11-23T15:45:00+00:00",
    "prev_close": 1.09697,
-   "change_pct": -0.57,
+   "change_pct": -0.59,
    "last_bar": "2026-11-23",
    "last_completed_bar": "2026-11-20",
    "today_forming": true,
@@ -8538,8 +8538,8 @@
      "time": "2026-11-23",
      "open": 1.09649,
      "high": 1.10084,
-     "low": 1.09075,
-     "close": 1.09075
+     "low": 1.09051,
+     "close": 1.09051
     }
    ],
    "patterns": [
@@ -8567,10 +8567,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 5,
-   "price": 1.30388,
+   "price": 1.30331,
    "price_time": "2026-11-23T15:45:00+00:00",
    "prev_close": 1.30864,
-   "change_pct": -0.36,
+   "change_pct": -0.41,
    "last_bar": "2026-11-23",
    "last_completed_bar": "2026-11-20",
    "today_forming": true,
@@ -9490,7 +9490,7 @@
      "open": 1.30863,
      "high": 1.31442,
      "low": 1.3032,
-     "close": 1.30388
+     "close": 1.30331
     }
    ],
    "patterns": [
@@ -9514,7 +9514,7 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 3,
-   "price": 159.298,
+   "price": 159.289,
    "price_time": "2026-11-23T15:45:00+00:00",
    "prev_close": 159.707,
    "change_pct": -0.26,
@@ -10437,7 +10437,7 @@
      "open": 158.601,
      "high": 159.423,
      "low": 158.474,
-     "close": 159.298
+     "close": 159.289
     }
    ],
    "patterns": [
@@ -10461,10 +10461,10 @@
    "group": "metal",
    "ccy": "USD",
    "dp": 2,
-   "price": 3675.6,
+   "price": 3675.4,
    "price_time": "2026-11-23T10:30:00-05:00",
    "prev_close": 3515.4,
-   "change_pct": 4.56,
+   "change_pct": 4.55,
    "last_bar": "2026-11-23",
    "last_completed_bar": "2026-11-20",
    "today_forming": true,
@@ -11384,7 +11384,7 @@
      "open": 3570.5,
      "high": 3691.0,
      "low": 3552.3,
-     "close": 3675.6
+     "close": 3675.4
     }
    ],
    "patterns": [
@@ -11414,9 +11414,9 @@
     "Strategy is WATCH for this market in the backtest (not proven after costs)"
    ],
    "bar_date": "2026-11-20",
-   "entry": 3675.6,
-   "stop": 3877.91,
-   "target": 3270.98
+   "entry": 3675.4,
+   "stop": 3877.71,
+   "target": 3270.78
   },
   {
    "market": "GBPUSD",
@@ -11430,9 +11430,9 @@
     "Score 52 is below 60"
    ],
    "bar_date": "2026-11-20",
-   "entry": 1.30388,
-   "stop": 1.32088,
-   "target": 1.26988
+   "entry": 1.30331,
+   "stop": 1.32031,
+   "target": 1.2693
   },
   {
    "market": "INFY",
@@ -11460,9 +11460,9 @@
     "Score 50 is below 60"
    ],
    "bar_date": "2026-11-20",
-   "entry": 159.298,
-   "stop": 157.873,
-   "target": 162.147
+   "entry": 159.289,
+   "stop": 157.864,
+   "target": 162.138
   }
  ],
  "upcoming": [
@@ -11475,7 +11475,7 @@
    "trigger": 1.09545,
    "when": "a daily close below the 20-day low",
    "verdict": "WATCH",
-   "price": 1.09075
+   "price": 1.09051
   },
   {
    "market": "INFY",
@@ -11508,7 +11508,7 @@
    "trigger": 160.176,
    "when": "a daily close above the 20-day high",
    "verdict": "WATCH",
-   "price": 159.298
+   "price": 159.289
   },
   {
    "market": "EURUSD",
@@ -11519,7 +11519,7 @@
    "trigger": 1.09585,
    "when": "a daily close below this inside bar's low",
    "verdict": "REJECTED",
-   "price": 1.09075
+   "price": 1.09051
   },
   {
    "market": "TCS",
@@ -12539,8 +12539,8 @@
    "name": "Chief",
    "job": "Runs all bots, combines scores, applies the rules, writes the website data",
    "status": "ok",
-   "note": "Finished in 13.3s",
-   "ms": 13318
+   "note": "Finished in 13.7s",
+   "ms": 13704
   },
   {
    "key": "data",
@@ -12548,7 +12548,7 @@
    "job": "Downloads daily + 15-minute prices (Yahoo Finance, free)",
    "status": "ok",
    "note": "12/12 markets loaded via yfinance",
-   "ms": 11015
+   "ms": 10152
   },
   {
    "key": "chart",
@@ -12556,7 +12556,7 @@
    "job": "Calculates EMA, RSI, ATR, Bollinger, MACD, 20-day high/low",
    "status": "ok",
    "note": "Indicators for 12 markets (finished daily candles only)",
-   "ms": 110
+   "ms": 205
   },
   {
    "key": "candle",
@@ -12564,7 +12564,7 @@
    "job": "Finds candlestick patterns on the last finished candle",
    "status": "ok",
    "note": "14 patterns found",
-   "ms": 0
+   "ms": 1
   },
   {
    "key": "flow",
@@ -12572,7 +12572,7 @@
    "job": "Checks volume and on-balance volume (money flow)",
    "status": "ok",
    "note": "Volume available for 7 markets",
-   "ms": 1
+   "ms": 2
   },
   {
    "key": "network",
@@ -12580,7 +12580,7 @@
    "job": "Market breadth, relative strength vs NIFTY, US-dollar strength",
    "status": "ok",
    "note": "Breadth: india index 100%, india stock 83%, fx 33%, metal 0%",
-   "ms": 0
+   "ms": 1
   },
   {
    "key": "news",
@@ -12588,7 +12588,7 @@
    "job": "Reads free RSS headlines and tags them by market",
    "status": "ok",
    "note": "60 headlines from last 48h (0 feed(s) failed)",
-   "ms": 1859
+   "ms": 2025
   },
   {
    "key": "backtest",
@@ -12596,7 +12596,7 @@
    "job": "Tests all 6 strategies on ~5 years of daily data, after costs",
    "status": "ok",
    "note": "0/6 strategies TRADEABLE after costs",
-   "ms": 74
+   "ms": 129
   },
   {
    "key": "forward",
@@ -12612,7 +12612,7 @@
    "job": "Checks the 6 strategies on the latest finished candle",
    "status": "ok",
    "note": "4 raw setups triggered on the last candle",
-   "ms": 0
+   "ms": 1
   },
   {
    "key": "risk",
@@ -12628,7 +12628,7 @@
    "job": "Sends new signals, closed trades and warnings to your phone",
    "status": "warn",
    "note": "Not configured (add the TELEGRAM_TOKEN secret and send /start to your bot)",
-   "ms": 250
+   "ms": 1176
   }
  ],
  "news": [
@@ -12855,17 +12855,6 @@
    "usd_news": true
   },
   {
-   "title": "HDFC Bank Share Price Prediction for Wednesday (25 Nov 2026): Stock Falls 3.33% on 55.6 Million Shares - Univest",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxON1gzSUxxOGhsUDhFelV1amdocXF0dUFkMWZtbUlSOXBJQ0JGcW9ySFZHUmxLVWpVd0hHN1FsYUM0TXRhZFJLdmJWUElZYlp4TEF1d1p0SkZfVU1sT1k2aVBDZm5XMnVicXlNVWdJbWc2T1o5SEV6Wk1adnVXQ0E4ZkR0eVpsbnpIYjUtdmJ2NjR6QQ?oc=5",
-   "published": "2026-11-23T14:33:28+00:00",
-   "sentiment": -1,
-   "high_impact": false,
-   "markets": [
-    "HDFCBANK"
-   ]
-  },
-  {
    "title": "Infosys Share Price Prediction for Wednesday (25 Nov 2026): Stock Edges Up 0.49% After Touching 1,132 - Univest",
    "source": "Google News: Indian stocks",
    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcVNHMktIdXZ2WGQ0emN2c1U5RGljSmMzeHJjUXVST3YyNzB6ckJrdmRYZUtwYkNlbkUydGhaZFJkZWgzMnlJdlRMSjRxdkN1cFNvUjhvbmYzdE9RS1VLaWtMOHlzM0VhemdmLUdPZFJfNG94NUx1S0xPdWtsX1VxN3ZDY1ZWVDVkVFhMdlhXbw?oc=5",
@@ -12900,17 +12889,6 @@
    "high_impact": false,
    "markets": [
     "GBPUSD"
-   ]
-  },
-  {
-   "title": "10 Stocks to Buy Today: SBI, DLF, Bank of Baroda Levels - Univest",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9tYVluZzc1UlJHRWtjWEZxemMzend2cGdwaHZ3NElpRDNHbU9kWFZ2Ym9mOERaLXkzMUxTX29jZFNVNVo0TV9QWG1YWnBPNXVsNlNFTEVEZlhxUnBxd1ZZOHJR?oc=5",
-   "published": "2026-11-23T14:22:32+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "SBIN"
    ]
   },
   {
@@ -13064,6 +13042,17 @@
    "usd_news": true
   },
   {
+   "title": "Gold Rate Today in India, 23 Nov 2026 - Live 18K, 22K & 24K Gold Prices - Kotak Neo",
+   "source": "Google News: Forex & gold",
+   "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9oS1doakpSUWg2blRCZGtNeWp5UXFadUo5cVZtTzd5bzBsdHNnUHlsTG9KVEN5UGVMaENmNVNDSGxrVmVLaHgtYWRPeEE?oc=5",
+   "published": "2026-11-23T13:56:37+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": [
+    "XAUUSD"
+   ]
+  },
+  {
    "title": "Reliance Global Management buys 11% stake in company - TradingView",
    "source": "Google News: Indian stocks",
    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPck1UcVBCdW1sVF9xOUZ3VndNLVFOb2lZMFVMN3pFNmlScEtScmRXNE5xNF93bHN1THNxNmtSQWlsaGxfQ0EwRmRaNXZjeFJfVllnWkpzcXJCUlJSZlNkWVVNZjlWckNlbUNBUmQ0bnRaaGFveW5uekxYc1ZZNXNxSmRVQVpWdUo0QkFSZVdfMTFMT0tMUm5uSm5QU1NrUjBqYlhxemdfeTNRM2ZRNXFZYmx0MjY?oc=5",
@@ -13090,6 +13079,17 @@
     "XAUUSD"
    ],
    "usd_news": true
+  },
+  {
+   "title": "Sensex plunges nearly 1,484 pts in worst single-day fall in over 4 months; Nifty below 25,350 - First India",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPX28teFdZN01HaTluWmw4UVpYY0x5alUtYlAzSlhkRlJrbDlUV0RRMmZHUDhqNVJRWlMyTkp3WDNpZHA4MnRsTU51MDV0SXRnc3BTaWxsdmh4bDNlMVF2aXA2ZC1yQUVZVngtbExpSkJHZXhITHRpOHQtUGFnTXNnZ2tUa0gtS1BNVDdmWkItYVcySnlHTkc3c0EzcVVPek42LWpSMGJRenhaa1JEWmxQVzV3ZkJ4V2xkcHE3WV8tYlZ2UGpRb3pDQ2Z5QWpnYk5ZZGtJSndUaw?oc=5",
+   "published": "2026-11-23T13:52:30+00:00",
+   "sentiment": -1,
+   "high_impact": false,
+   "markets": [
+    "NIFTY"
+   ]
   },
   {
    "title": "Reliance Global Group Chairman, Senior Executives Acquire About 11% of Outstanding Shares - TradingView",
