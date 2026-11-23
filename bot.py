@@ -848,6 +848,13 @@ def find_chat_id(state: dict) -> str:
     if not token:
         return ""
     try:
+        me = requests.get(f"https://api.telegram.org/bot{token}/getMe", timeout=15).json()
+        if me.get("ok"):
+            log(f"telegram: the TELEGRAM_TOKEN secret belongs to bot @{me['result'].get('username')} "
+                f"(\"{me['result'].get('first_name')}\") - send /start to THIS bot")
+        else:
+            log(f"telegram: token rejected by Telegram: {me.get('description')} (revoked or mistyped?)")
+            return ""
         r = requests.get(f"https://api.telegram.org/bot{token}/getUpdates", timeout=15).json()
         if not r.get("ok"):
             log(f"telegram: getUpdates refused: {r.get('error_code')} {r.get('description')}")
