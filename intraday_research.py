@@ -194,6 +194,8 @@ def main():
         st = json.loads((bot.DATA / "state.json").read_text())
     except Exception:
         st = {}
+    if os.getenv("SEND_TG", "1") != "1":
+        return
     os.environ["EDGEDESK_CHAT"] = bot.find_chat_id(st)
     ok, msg = bot.telegram("\n".join(T))
     log(f"telegram: {msg}")
