@@ -1,0 +1,222 @@
+{
+ "NIFTY": {
+  "gap": {
+   "train": {
+    "strong up (score \u2265 +40)": {
+     "days": 46,
+     "right_pct": 93.5,
+     "avg_move_pct": 0.634
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 63,
+     "right_pct": 76.2,
+     "avg_move_pct": -0.627
+    },
+    "base_up_pct": 64.7,
+    "corr": 0.477
+   },
+   "test": {
+    "strong up (score \u2265 +40)": {
+     "days": 26,
+     "right_pct": 69.2,
+     "avg_move_pct": 0.371
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 25,
+     "right_pct": 84.0,
+     "avg_move_pct": -0.565
+    },
+    "base_up_pct": 52.9,
+    "corr": 0.361
+   },
+   "all": {
+    "strong up (score \u2265 +40)": {
+     "days": 72,
+     "right_pct": 84.7,
+     "avg_move_pct": 0.539
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 88,
+     "right_pct": 78.4,
+     "avg_move_pct": -0.609
+    },
+    "base_up_pct": 61.2,
+    "corr": 0.44
+   }
+  },
+  "open_to_close": {
+   "train": {
+    "strong up (score \u2265 +40)": {
+     "days": 46,
+     "right_pct": 47.8,
+     "avg_move_pct": -0.22
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 63,
+     "right_pct": 50.8,
+     "avg_move_pct": 0.062
+    },
+    "base_up_pct": 47.7,
+    "corr": -0.077
+   },
+   "test": {
+    "strong up (score \u2265 +40)": {
+     "days": 26,
+     "right_pct": 53.8,
+     "avg_move_pct": 0.033
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 25,
+     "right_pct": 52.0,
+     "avg_move_pct": -0.119
+    },
+    "base_up_pct": 48.7,
+    "corr": -0.0
+   },
+   "all": {
+    "strong up (score \u2265 +40)": {
+     "days": 72,
+     "right_pct": 50.0,
+     "avg_move_pct": -0.129
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 88,
+     "right_pct": 51.1,
+     "avg_move_pct": 0.011
+    },
+    "base_up_pct": 48.0,
+    "corr": -0.056
+   }
+  },
+  "orb_1h": {
+   "agrees": {
+    "trades": 96,
+    "win_pct": 35.4,
+    "avg_rs": -410.0,
+    "total_rs": -39322.0
+   },
+   "disagrees": {
+    "trades": 111,
+    "win_pct": 30.6,
+    "avg_rs": -530.0,
+    "total_rs": -58811.0
+   },
+   "neutral": {
+    "trades": 273,
+    "win_pct": 34.1,
+    "avg_rs": -292.0,
+    "total_rs": -79666.0
+   }
+  }
+ },
+ "BANKNIFTY": {
+  "gap": {
+   "train": {
+    "strong up (score \u2265 +40)": {
+     "days": 46,
+     "right_pct": 89.1,
+     "avg_move_pct": 0.715
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 63,
+     "right_pct": 79.4,
+     "avg_move_pct": -0.75
+    },
+    "base_up_pct": 60.4,
+    "corr": 0.459
+   },
+   "test": {
+    "strong up (score \u2265 +40)": {
+     "days": 26,
+     "right_pct": 61.5,
+     "avg_move_pct": 0.346
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 25,
+     "right_pct": 76.0,
+     "avg_move_pct": -0.688
+    },
+    "base_up_pct": 50.3,
+    "corr": 0.352
+   },
+   "all": {
+    "strong up (score \u2265 +40)": {
+     "days": 72,
+     "right_pct": 79.2,
+     "avg_move_pct": 0.582
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 88,
+     "right_pct": 78.4,
+     "avg_move_pct": -0.732
+    },
+    "base_up_pct": 57.4,
+    "corr": 0.427
+   }
+  },
+  "open_to_close": {
+   "train": {
+    "strong up (score \u2265 +40)": {
+     "days": 46,
+     "right_pct": 41.3,
+     "avg_move_pct": -0.367
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 63,
+     "right_pct": 50.8,
+     "avg_move_pct": 0.152
+    },
+    "base_up_pct": 48.3,
+    "corr": -0.116
+   },
+   "test": {
+    "strong up (score \u2265 +40)": {
+     "days": 26,
+     "right_pct": 42.3,
+     "avg_move_pct": 0.009
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 25,
+     "right_pct": 52.0,
+     "avg_move_pct": -0.037
+    },
+    "base_up_pct": 50.5,
+    "corr": -0.012
+   },
+   "all": {
+    "strong up (score \u2265 +40)": {
+     "days": 72,
+     "right_pct": 41.7,
+     "avg_move_pct": -0.231
+    },
+    "strong down (score \u2264 \u221240)": {
+     "days": 88,
+     "right_pct": 51.1,
+     "avg_move_pct": 0.098
+    },
+    "base_up_pct": 49.0,
+    "corr": -0.089
+   }
+  },
+  "orb_1h": {
+   "agrees": {
+    "trades": 77,
+    "win_pct": 35.1,
+    "avg_rs": -503.0,
+    "total_rs": -38744.0
+   },
+   "disagrees": {
+    "trades": 114,
+    "win_pct": 36.8,
+    "avg_rs": -571.0,
+    "total_rs": -65148.0
+   },
+   "neutral": {
+    "trades": 274,
+    "win_pct": 46.0,
+    "avg_rs": -95.0,
+    "total_rs": -25912.0
+   }
+  }
+ }
+}

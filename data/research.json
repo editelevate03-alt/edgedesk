@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23 21:09 UTC",
+ "generated_at": "2026-11-23 22:34 UTC",
  "mode": "live",
  "daily_1y": {
   "trend_pullback": {
@@ -2617,13 +2617,13 @@
    "desc": "In a long-term uptrend, buy a sharp short-term dip (RSI(2) < 5). Mirror for shorts.",
    "new": false,
    "stats": {
-    "trades": 1456,
+    "trades": 1457,
     "win_rate": 44.3,
     "expectancy": -0.107,
     "profit_factor": 0.73,
-    "total_r": -155.92,
+    "total_r": -155.3,
     "max_dd_r": 162.24,
-    "oos_expectancy": -0.102
+    "oos_expectancy": -0.101
    },
    "verdict": "LOSES",
    "per_market": {
@@ -2655,13 +2655,13 @@
      "oos_expectancy": -0.169
     },
     "XAUUSD": {
-     "trades": 308,
-     "win_rate": 43.2,
-     "expectancy": -0.127,
-     "profit_factor": 0.66,
-     "total_r": -39.13,
+     "trades": 309,
+     "win_rate": 43.4,
+     "expectancy": -0.125,
+     "profit_factor": 0.67,
+     "total_r": -38.52,
      "max_dd_r": 40.29,
-     "oos_expectancy": -0.097
+     "oos_expectancy": -0.106
     }
    }
   },
@@ -3260,8 +3260,8 @@
   },
   "XAUUSD": {
    "name": "Gold (XAU/USD)",
-   "trades": 3239,
-   "avg_r_all_strategies": -0.027,
+   "trades": 3240,
+   "avg_r_all_strategies": -0.026,
    "best_strategy": "EMA20/50 trend cross",
    "best_avg_r": 0.261,
    "best_trades": 104

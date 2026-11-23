@@ -1,4 +1,4 @@
-# EdgeDesk research - 2026-11-23 21:09 UTC
+# EdgeDesk research - 2026-11-23 22:34 UTC
 
 All results are **after estimated costs**, in R (1R = the amount risked, e.g. 1% of the account). Backtests do not predict the future. Paper research only - **not investment advice**.
 
@@ -41,7 +41,7 @@ PASS = enough trades, avg ≥ +0.10R, profit factor ≥ 1.2 and positive in the 
 | 20-day breakout | LOSES | 2199 | 41.2 | -0.037 | 0.94 | -0.06 | 106.64 |
 | Momentum pullback *(new)* | LOSES | 1239 | 37.6 | -0.042 | 0.94 | -0.131 | 94.33 |
 | Bollinger squeeze | LOSES | 1480 | 37.4 | -0.096 | 0.85 | -0.086 | 161.89 |
-| RSI(2) dip buy | LOSES | 1456 | 44.3 | -0.107 | 0.73 | -0.102 | 162.24 |
+| RSI(2) dip buy | LOSES | 1457 | 44.3 | -0.107 | 0.73 | -0.101 | 162.24 |
 | Inside-bar breakout | LOSES | 1975 | 40.1 | -0.119 | 0.79 | -0.161 | 240.65 |
 | Trend pullback | LOSES | 2874 | 37.8 | -0.121 | 0.81 | -0.18 | 360.53 |
 | Range Bollinger reversion *(new)* | LOSES | 681 | 42.9 | -0.147 | 0.73 | -0.048 | 103.36 |
@@ -67,7 +67,7 @@ PASS = enough trades, avg ≥ +0.10R, profit factor ≥ 1.2 and positive in the 
 **1-hour, last ~2 years**
 | Market | Trades (all strategies) | Avg R / trade | Best strategy there | Its avg R (trades) |
 |---|---|---|---|---|
-| Gold (XAU/USD) | 3239 | -0.027 | EMA20/50 trend cross | 0.261 (104) |
+| Gold (XAU/USD) | 3240 | -0.026 | EMA20/50 trend cross | 0.261 (104) |
 | EUR/USD | 3973 | -0.059 | Momentum pullback | 0.075 (319) |
 | USD/JPY | 4012 | -0.083 | 55-day breakout (Turtle-style) | -0.007 (285) |
 | GBP/USD | 4197 | -0.112 | EMA20/50 trend cross | 0.065 (151) |

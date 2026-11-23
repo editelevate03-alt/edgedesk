@@ -1,4 +1,4 @@
-# EdgeDesk F&O research - option BUYING with Rs 2,000 - 2026-11-23 21:10 UTC
+# EdgeDesk F&O research - option BUYING with Rs 2,000 - 2026-11-23 22:34 UTC
 
 Option prices are **estimates** (Black-Scholes + India VIX); real fills are usually a bit worse for buyers. Rupees per trade for 1 lot, after Zerodha charges and slippage. **Win %** = trades that made money (your 'accuracy'). Index accuracy = % of trades where the index reached the target. Paper research - not investment advice.
 
