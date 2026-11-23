@@ -59,6 +59,7 @@ REAL_ACCOUNT_EUR = float(os.getenv("REAL_ACCOUNT_EUR", "20"))
 REAL_RISK_EUR = float(os.getenv("REAL_RISK_EUR", "1"))       # EUR 1 per trade (5% of EUR 20)
 REAL_FLOOR_EUR = float(os.getenv("REAL_FLOOR_EUR", "14"))    # below this: stop trading for the month
 DIGEST_HOUR_UTC = int(os.getenv("DIGEST_HOUR_UTC", "6"))     # daily message after 06:00 UTC (11:30 IST)
+DIGEST_ENABLED = os.getenv("DIGEST_ENABLED", "0") == "1"     # forex/gold EUR digest - off (focus is India F&O now)
 DISCLAIMER = ("Paper-trading research tool. Not investment advice. Signals are not guaranteed "
               "and can lose money. Past/backtest results do not predict the future.")
 
@@ -1195,7 +1196,7 @@ def chief(args) -> int:
             telegram(f"{emoji} <b>Paper trade closed - {html.escape(t['name'])}</b>\n{t['dir']} · {html.escape(t['strategy_name'])}\n"
                      f"{t['exit_reason']} at {t['exit']:.{MARKET_BY_ID[t['market']]['dp']}f} → <b>{t['r']:+.2f}R</b> (after costs)")
         today_utc = now_utc().date().isoformat()
-        if (args.digest or (now_utc().hour >= DIGEST_HOUR_UTC and state.get("digest_date") != today_utc)):
+        if args.digest or (DIGEST_ENABLED and now_utc().hour >= DIGEST_HOUR_UTC and state.get("digest_date") != today_utc):
             ok, msg = telegram(daily_digest(cands, upcoming, data, today_utc))
             tg_notes.append(f"digest: {msg}")
             if ok:
