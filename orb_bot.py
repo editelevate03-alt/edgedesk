@@ -25,6 +25,7 @@ import pandas as pd
 
 import bot
 import fno_research as F
+import india_news
 from bot import IST, fetch, log
 
 U = F.UNDERLYINGS["BANKNIFTY"]
@@ -129,6 +130,13 @@ def main():
              + ("⏸️ <b>Paused today: 2 losing days in a row.</b> Watch only - no trade." if paused else "")
              + "\n<i>Yellow strategy (not proven). Alerts only - you decide and place orders in Kite. Not investment advice.</i>", state)
         day["hello"] = True
+        try:
+            nb = india_news.brief()
+            day["news_mood"] = nb["banknifty"]
+            day["news_events"] = nb["events"]
+            send(nb["text"], state)
+        except Exception as ex:
+            log(f"news brief failed: {ex}")
         save_state(state)
 
     while True:
@@ -187,6 +195,10 @@ def main():
                     lines += [f"👉 Check the REAL premium of <b>{int(K)} {side}</b> in Kite. Only buy if 1 lot costs ≤ Rs {CAPITAL:,.0f}.",
                               f"🛑 Stop-loss: premium −40% (e.g. buy Rs {p:,.0f} → SL Rs {p * 0.6:,.0f}). Place it right after buying.",
                               f"🎯 Exit if BANK NIFTY reaches <b>{tgt_idx:,.0f}</b> · Exit if it goes back past <b>{stop_idx:,.0f}</b> · Exit by 3:15 PM."]
+                if "news_mood" in day:
+                    lines.append(f"📰 {india_news.agreement(day['news_mood'], cp)} (BANK NIFTY mood {day['news_mood']:+d})")
+                if day.get("news_events"):
+                    lines.append("⚡ Big-event news today: " + ", ".join(day["news_events"]))
                 lines.append("<i>Yellow (not proven) · ~1 in 3 trades won in tests · alerts only · not investment advice.</i>")
                 send("\n".join(lines), state)
                 if not fit:
@@ -223,7 +235,9 @@ def main():
                     exit_p = max(exit_p, e["prem"] * 0.6)          # your -40% premium SL caps the loss
                     est = round((exit_p - e["prem"]) * U["lot"] - F.COST_FIXED, 0)
                 day["exit"] = dict(reason=reason, index=px, est_pnl=est, time=now.isoformat())
-                state["trades"].append(dict(date=today, cp=e["cp"], reason=reason, est_pnl=est))
+                nm = day.get("news_mood")
+                state["trades"].append(dict(date=today, cp=e["cp"], reason=reason, est_pnl=est, news_mood=nm,
+                                            news_agrees=None if nm is None or abs(nm) < 20 else ((nm > 0) == (e["cp"] == 1))))
                 send(f"🚪 <b>EXIT NOW - BANK NIFTY {'CE' if e['cp'] == 1 else 'PE'}</b>\nReason: {reason} (index ~{px:,.0f}).\n"
                      + (f"Estimated result for 1 lot: <b>Rs {est:+,.0f}</b> (check your real P&L in Kite)." if est is not None else ""), state)
                 save_state(state)
@@ -235,7 +249,15 @@ def main():
     if tr and not day.get("summary"):
         wins = sum(1 for t in tr if (t.get("est_pnl") or 0) > 0)
         total = sum(t.get("est_pnl") or 0 for t in tr)
-        send(f"📒 <b>ORB paper record</b>: {len(tr)} trades · {wins} wins ({wins / len(tr) * 100:.0f}%) · total est. Rs {total:+,.0f}", state)
+        msg = f"📒 <b>ORB paper record</b>: {len(tr)} trades · {wins} wins ({wins / len(tr) * 100:.0f}%) · total est. Rs {total:+,.0f}"
+        for lab, flag in (("news agreed", True), ("news disagreed", False)):
+            g = [t for t in tr if t.get("news_agrees") is flag]
+            if g:
+                w = sum(1 for t in g if (t.get("est_pnl") or 0) > 0)
+                msg += f"\n• When {lab}: {len(g)} trades, {w} wins ({w / len(g) * 100:.0f}%), Rs {sum(t.get('est_pnl') or 0 for t in g):+,.0f}"
+        if len(tr) < 20:
+            msg += "\n<i>Need 20+ trades before the news filter can be judged.</i>"
+        send(msg, state)
         day["summary"] = True
     save_state(state)
 
