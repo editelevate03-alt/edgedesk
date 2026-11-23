@@ -849,6 +849,13 @@ def find_chat_id(state: dict) -> str:
         return ""
     try:
         r = requests.get(f"https://api.telegram.org/bot{token}/getUpdates", timeout=15).json()
+        if not r.get("ok"):
+            log(f"telegram: getUpdates refused: {r.get('error_code')} {r.get('description')}")
+            if r.get("error_code") == 409:
+                log("telegram: this bot has a webhook (another app, e.g. Alisa, receives its messages). "
+                    "Use a separate bot for EdgeDesk, or set the TELEGRAM_CHAT_ID secret.")
+            return ""
+        log(f"telegram: getUpdates returned {len(r.get('result', []))} update(s)")
         for upd in reversed(r.get("result", [])):
             msg = upd.get("message") or upd.get("my_chat_member") or {}
             c = msg.get("chat") or {}
