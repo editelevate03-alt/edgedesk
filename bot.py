@@ -56,8 +56,8 @@ ACCOUNTS = {
 }
 # Real-money helper (your own manual trades). The bot never trades for you.
 REAL_ACCOUNT_EUR = float(os.getenv("REAL_ACCOUNT_EUR", "20"))
-REAL_RISK_EUR = float(os.getenv("REAL_RISK_EUR", "5"))       # your choice: EUR 5 per trade (25% of EUR 20!)
-REAL_FLOOR_EUR = float(os.getenv("REAL_FLOOR_EUR", "10"))    # below this: stop trading for the month
+REAL_RISK_EUR = float(os.getenv("REAL_RISK_EUR", "1"))       # EUR 1 per trade (5% of EUR 20)
+REAL_FLOOR_EUR = float(os.getenv("REAL_FLOOR_EUR", "14"))    # below this: stop trading for the month
 DIGEST_HOUR_UTC = int(os.getenv("DIGEST_HOUR_UTC", "6"))     # daily message after 06:00 UTC (11:30 IST)
 DISCLAIMER = ("Paper-trading research tool. Not investment advice. Signals are not guaranteed "
               "and can lose money. Past/backtest results do not predict the future.")
