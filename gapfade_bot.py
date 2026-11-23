@@ -8,8 +8,9 @@ moves back against the gap -> trade the gap closing:
    gap DOWN + first candle green -> BUY                           target = yesterday's close, stop = first candle low
 Exit by 3:10 PM at the latest. Max 2 signals per day. Quantity for Rs 2,000, no leverage.
 
-Runs ~09:20 -> 15:20 IST, checks every minute, sends Telegram alerts, keeps its own paper record
-(data/gapfade_state.json). Yellow strategy (60-day test: 44 trades, win 57%, not proven). Not investment advice.
+LIVE mode: alerts include exact Kite steps; the user places every order. Monthly stop at Rs 1,600 (-20%).
+Runs ~09:18 -> 15:20 IST, checks every minute, keeps an estimated record (data/gapfade_state.json).
+Not proven (60-day test: 44 trades, win 57%). Not investment advice.
 """
 from __future__ import annotations
 
@@ -27,6 +28,7 @@ from intraday_research import CAPITAL, COST_RT, STOCKS
 
 STATE = bot.DATA / "gapfade_state.json"
 MAX_SIGNALS = 2
+MONTH_FLOOR = float(os.getenv("GAPFADE_MONTH_FLOOR", "1600"))   # stop for the month below this (−20%)
 MAX_RISK = 0.02 * CAPITAL       # Sperandeo rule 3: a stop-out costs at most 2% of capital (Rs 40 on Rs 2,000)
 EXIT_MIN = 15 * 60 + 10
 END_MIN = 15 * 60 + 20
@@ -74,12 +76,21 @@ def main():
         return
     today = now.date().isoformat()
     day = s["days"].setdefault(today, {"open": []})
+    month = today[:7]
+    month_pnl = sum(t["pnl"] for t in s["trades"] if t["date"].startswith(month))
+    balance = CAPITAL + month_pnl
+    halted = balance <= MONTH_FLOOR
     if not day.get("hello"):
-        send(f"🔁 <b>EdgeDesk GAP-FADE bot</b> ({today}) watching {len(STOCKS)} NIFTY stocks.\n"
-             f"First alerts after the 9:30 candle. Max {MAX_SIGNALS} trades · Rs {CAPITAL:,.0f} per trade, no leverage · exit by 3:10 PM.\n"
-             "<i>Separate from the BANK NIFTY ORB bot. Yellow (not proven) - paper trade first. Not investment advice.</i>")
+        send(f"🔁 <b>EdgeDesk GAP-FADE · LIVE mode</b> ({today}) watching {len(STOCKS)} NIFTY stocks.\n"
+             f"Estimated account this month: <b>₹{balance:,.0f}</b> (start ₹{CAPITAL:,.0f}, stop level ₹{MONTH_FLOOR:,.0f}).\n"
+             + (f"🛑 <b>STOP FOR THE MONTH</b> - the account is at or below ₹{MONTH_FLOOR:,.0f}. No trades until next month. "
+                "Take a break and review the trades with me." if halted else
+                f"First alerts after the 9:30 candle · max {MAX_SIGNALS} trades · 2% risk (₹{MAX_RISK:,.0f}) · exit by 3:10 PM.")
+             + "\n<i>Not investment advice. Results not guaranteed. You place every order yourself in Kite.</i>")
         day["hello"] = True
         save(s)
+    if halted:
+        return
     while True:
         now = now_ist()
         mins = now.hour * 60 + now.minute
@@ -124,13 +135,18 @@ def main():
                 risk_rs = abs(c["entry"] - c["stop"]) * qty
                 gain_rs = abs(c["target"] - c["entry"]) * qty
                 act = "SHORT (sell first)" if c["side"] == -1 else "BUY"
-                send(f"🔁 <b>GAP-FADE: {act} {c['sym']}</b> (intraday / MIS)\n"
+                first, second = ("SELL", "BUY") if c["side"] == -1 else ("BUY", "SELL")
+                send(f"🔔 <b>LIVE TRADE: {act} {c['sym']}</b> (Intraday / MIS)\n"
                      f"Gap {c['gap'] * 100:+.1f}% and the first candle turned back.\n"
                      f"Entry ~ ₹{c['entry']:,.2f} · Qty <b>{qty}</b> (~₹{qty * c['entry']:,.0f})\n"
-                     f"🛑 Stop-loss ₹{c['stop']:,.2f} (risk ~₹{risk_rs:,.0f}) · 🎯 Target ₹{c['target']:,.2f} (yesterday's close, ~₹{gain_rs:,.0f})\n"
-                     f"Exit by 3:10 PM if neither is hit. Place the stop-loss order right after entry.\n"
-                     f"Rules: max risk 2% (₹{MAX_RISK:,.0f}) · at +1R move stop to breakeven · never give back >50% of the gain · <b>never add to a loser</b>.\n"
-                     "<i>Yellow (not proven) · alerts only · not investment advice.</i>")
+                     f"🛑 Stop-loss <b>₹{c['stop']:,.2f}</b> (max loss ~₹{risk_rs:,.0f}) · 🎯 Target <b>₹{c['target']:,.2f}</b> (~₹{gain_rs:,.0f})\n\n"
+                     f"<b>In Kite:</b>\n"
+                     f"1️⃣ Search <b>{c['sym']}</b> → <b>{first}</b> → product <b>Intraday (MIS)</b> → qty <b>{qty}</b> → Market → {first}\n"
+                     f"2️⃣ Immediately: <b>{second}</b> → <b>SL-M</b> → trigger <b>₹{c['stop']:,.2f}</b> → MIS → qty {qty} → {second}\n"
+                     f"3️⃣ Optional target: <b>{second}</b> → Limit <b>₹{c['target']:,.2f}</b> → MIS (cancel the other order when one fills)\n"
+                     f"⏰ Not filled by 3:10 PM? Exit at market.\n\n"
+                     f"Rules: 2% risk · move the stop when 🛡️ says · <b>never add to a loser</b> · skip if price already moved far from ₹{c['entry']:,.2f}.\n"
+                     "<i>Not proven strategy · not investment advice · you can lose money.</i>")
                 day["open"].append(dict(c, qty=qty, time=now.isoformat()))
             save(s)
         # ---- exits ----
@@ -167,8 +183,11 @@ def main():
                 still.append(t); continue
             pnl = (t["side"] * (px - t["entry"]) - COST_RT * t["entry"]) * t["qty"]
             s["trades"].append(dict(date=today, sym=t["sym"], side=t["side"], reason=reason, pnl=round(pnl, 1)))
+            close_act = "BUY back" if t["side"] == -1 else "SELL"
             send(f"🚪 <b>EXIT {t['sym']}</b> ({'short' if t['side'] == -1 else 'long'}) - {reason} at ~₹{px:,.2f}\n"
-                 f"Estimated result: <b>₹{pnl:+,.1f}</b> after charges (check your real P&L in Kite).")
+                 + ("If your stop/target order already filled: done ✅ - cancel any leftover order.\n" if "time" not in reason else
+                    f"In Kite: <b>{close_act} {t['qty']} {t['sym']}</b> at market (MIS) now, and cancel the SL order.\n")
+                 + f"Estimated result: <b>₹{pnl:+,.1f}</b> after charges (your real P&L is in Kite → Positions).")
         day["open"] = still
         save(s)
         if day.get("scanned") and not day["open"]:
@@ -177,8 +196,10 @@ def main():
     tr = s["trades"]
     if tr and not day.get("summary"):
         w = sum(1 for t in tr if t["pnl"] > 0)
-        send(f"📒 <b>Gap-fade paper record</b>: {len(tr)} trades · {w} wins ({w / len(tr) * 100:.0f}%) · total ₹{sum(t['pnl'] for t in tr):+,.1f}"
-             + ("\n<i>Need 30+ trades before judging.</i>" if len(tr) < 30 else ""))
+        mp = sum(t["pnl"] for t in tr if t["date"].startswith(month))
+        send(f"📒 <b>Gap-fade record</b> (bot estimate): {len(tr)} trades · {w} wins ({w / len(tr) * 100:.0f}%) · total ₹{sum(t['pnl'] for t in tr):+,.1f}\n"
+             f"This month: ₹{mp:+,.1f} → estimated account <b>₹{CAPITAL + mp:,.0f}</b> (stop level ₹{MONTH_FLOOR:,.0f})"
+             + ("\n<i>After 30 trades we review the record together.</i>" if len(tr) < 30 else ""))
         day["summary"] = True
     save(s)
 
