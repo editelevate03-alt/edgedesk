@@ -836,10 +836,36 @@ def track_record(state: dict) -> dict:
 # --------------------------------------------------------------------------
 # Telegram
 # --------------------------------------------------------------------------
+def find_chat_id(state: dict) -> str:
+    """Chat id from the secret; otherwise the chat id saved earlier; otherwise ask Telegram who
+    last messaged the bot (the user just sends /start to their bot - no @userinfobot needed)."""
+    chat = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+    if chat:
+        return chat
+    if state.get("telegram_chat_id"):
+        return str(state["telegram_chat_id"])
+    token = os.getenv("TELEGRAM_TOKEN", "").strip()
+    if not token:
+        return ""
+    try:
+        r = requests.get(f"https://api.telegram.org/bot{token}/getUpdates", timeout=15).json()
+        for upd in reversed(r.get("result", [])):
+            msg = upd.get("message") or upd.get("my_chat_member") or {}
+            c = msg.get("chat") or {}
+            if c.get("type") == "private" and c.get("id"):
+                state["telegram_chat_id"] = c["id"]
+                log("telegram: found your chat automatically (you messaged the bot)")
+                return str(c["id"])
+        log("telegram: no chat found - open your bot in Telegram and send /start, then run again")
+    except Exception as e:
+        log(f"telegram: getUpdates failed: {type(e).__name__}")
+    return ""
+
+
 def telegram(text: str) -> tuple[bool, str]:
-    token, chat = os.getenv("TELEGRAM_TOKEN", "").strip(), os.getenv("TELEGRAM_CHAT_ID", "").strip()
+    token, chat = os.getenv("TELEGRAM_TOKEN", "").strip(), os.environ.get("EDGEDESK_CHAT", "").strip()
     if not token or not chat:
-        return False, "TELEGRAM_TOKEN / TELEGRAM_CHAT_ID not set"
+        return False, ("TELEGRAM_TOKEN secret not set" if not token else "no chat yet - open your bot in Telegram and send /start")
     try:
         r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
                           json=dict(chat_id=chat, text=text[:4000], parse_mode="HTML", disable_web_page_preview=True),
@@ -1057,7 +1083,8 @@ def chief(args) -> int:
     # Telegram
     bots.start("telegram", "Telegram bot", "Sends new signals, closed trades and warnings to your phone")
     tg_notes = []
-    tg_on = bool(os.getenv("TELEGRAM_TOKEN") and os.getenv("TELEGRAM_CHAT_ID"))
+    os.environ["EDGEDESK_CHAT"] = find_chat_id(state)
+    tg_on = bool(os.getenv("TELEGRAM_TOKEN") and os.environ["EDGEDESK_CHAT"])
     hello_ok = True
     if args.hello:
         ok, msg = telegram(f"✅ <b>EdgeDesk is connected</b>\nMode: {'demo' if args.demo else 'live'} · "
@@ -1079,7 +1106,7 @@ def chief(args) -> int:
             telegram(f"🛑 <b>Daily loss limit hit</b> ({day_r:+.2f}R today). EdgeDesk will not send new signals until tomorrow. Step away from the screen.")
             state["halt_sent"] = today_ist
     if not tg_on:
-        bots.done("telegram", "Not configured (add TELEGRAM_TOKEN and TELEGRAM_CHAT_ID secrets)", "warn")
+        bots.done("telegram", "Not configured (add the TELEGRAM_TOKEN secret and send /start to your bot)", "warn")
     else:
         bad = [n for n in tg_notes if "sent" not in n]
         bots.done("telegram", f"{len(new_signals)} signal alert(s), {len(closed_now)} close alert(s)" + (f"; {bad[0]}" if bad else ""),
