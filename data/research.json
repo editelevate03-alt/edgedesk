@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23 17:17 UTC",
+ "generated_at": "2026-11-23 18:28 UTC",
  "mode": "live",
  "daily_1y": {
   "trend_pullback": {
@@ -2511,51 +2511,51 @@
    "desc": "In an uptrend (price > EMA50 > EMA200), buy when price dips to EMA20 and closes back above. Mirror for shorts.",
    "new": false,
    "stats": {
-    "trades": 2861,
-    "win_rate": 37.7,
+    "trades": 2874,
+    "win_rate": 37.8,
     "expectancy": -0.121,
     "profit_factor": 0.81,
-    "total_r": -345.11,
-    "max_dd_r": 359.06,
-    "oos_expectancy": -0.181
+    "total_r": -346.55,
+    "max_dd_r": 360.53,
+    "oos_expectancy": -0.18
    },
    "verdict": "LOSES",
    "per_market": {
     "EURUSD": {
-     "trades": 752,
-     "win_rate": 39.1,
-     "expectancy": -0.061,
+     "trades": 755,
+     "win_rate": 38.9,
+     "expectancy": -0.065,
      "profit_factor": 0.9,
-     "total_r": -45.5,
-     "max_dd_r": 60.97,
-     "oos_expectancy": -0.08
+     "total_r": -48.93,
+     "max_dd_r": 64.7,
+     "oos_expectancy": -0.094
     },
     "GBPUSD": {
-     "trades": 771,
-     "win_rate": 35.8,
-     "expectancy": -0.163,
+     "trades": 774,
+     "win_rate": 35.9,
+     "expectancy": -0.161,
      "profit_factor": 0.76,
-     "total_r": -125.65,
-     "max_dd_r": 129.55,
-     "oos_expectancy": -0.194
+     "total_r": -124.54,
+     "max_dd_r": 128.44,
+     "oos_expectancy": -0.191
     },
     "USDJPY": {
-     "trades": 744,
-     "win_rate": 38.4,
-     "expectancy": -0.134,
+     "trades": 748,
+     "win_rate": 38.6,
+     "expectancy": -0.135,
      "profit_factor": 0.78,
-     "total_r": -99.95,
-     "max_dd_r": 118.49,
-     "oos_expectancy": -0.285
+     "total_r": -101.19,
+     "max_dd_r": 119.73,
+     "oos_expectancy": -0.286
     },
     "XAUUSD": {
-     "trades": 594,
+     "trades": 597,
      "win_rate": 37.7,
-     "expectancy": -0.125,
-     "profit_factor": 0.8,
-     "total_r": -74.01,
-     "max_dd_r": 78.92,
-     "oos_expectancy": -0.128
+     "expectancy": -0.12,
+     "profit_factor": 0.81,
+     "total_r": -71.89,
+     "max_dd_r": 76.85,
+     "oos_expectancy": -0.12
     }
    }
   },
@@ -2564,51 +2564,51 @@
    "desc": "Buy a close above the 20-day high when above EMA200; sell a close below the 20-day low when below EMA200.",
    "new": false,
    "stats": {
-    "trades": 2188,
-    "win_rate": 41.3,
-    "expectancy": -0.034,
+    "trades": 2198,
+    "win_rate": 41.2,
+    "expectancy": -0.037,
     "profit_factor": 0.94,
-    "total_r": -74.02,
-    "max_dd_r": 103.19,
-    "oos_expectancy": -0.036
+    "total_r": -80.44,
+    "max_dd_r": 106.64,
+    "oos_expectancy": -0.059
    },
    "verdict": "LOSES",
    "per_market": {
     "EURUSD": {
-     "trades": 588,
-     "win_rate": 39.6,
-     "expectancy": -0.082,
-     "profit_factor": 0.86,
-     "total_r": -48.35,
-     "max_dd_r": 58.88,
-     "oos_expectancy": -0.114
+     "trades": 593,
+     "win_rate": 39.3,
+     "expectancy": -0.091,
+     "profit_factor": 0.85,
+     "total_r": -53.84,
+     "max_dd_r": 64.37,
+     "oos_expectancy": -0.179
     },
     "GBPUSD": {
-     "trades": 598,
-     "win_rate": 40.8,
-     "expectancy": -0.013,
-     "profit_factor": 0.98,
-     "total_r": -7.64,
-     "max_dd_r": 28.63,
-     "oos_expectancy": 0.069
+     "trades": 600,
+     "win_rate": 40.7,
+     "expectancy": -0.016,
+     "profit_factor": 0.97,
+     "total_r": -9.53,
+     "max_dd_r": 30.51,
+     "oos_expectancy": 0.058
     },
     "USDJPY": {
-     "trades": 558,
+     "trades": 561,
      "win_rate": 42.1,
      "expectancy": -0.03,
      "profit_factor": 0.95,
-     "total_r": -16.46,
-     "max_dd_r": 49.83,
-     "oos_expectancy": -0.219
+     "total_r": -16.92,
+     "max_dd_r": 50.29,
+     "oos_expectancy": -0.208
     },
     "XAUUSD": {
      "trades": 444,
-     "win_rate": 43.0,
-     "expectancy": -0.004,
-     "profit_factor": 0.99,
-     "total_r": -1.56,
+     "win_rate": 43.5,
+     "expectancy": -0.0,
+     "profit_factor": 1.0,
+     "total_r": -0.15,
      "max_dd_r": 33.56,
-     "oos_expectancy": 0.153
+     "oos_expectancy": 0.164
     }
    }
   },
@@ -2617,51 +2617,51 @@
    "desc": "In a long-term uptrend, buy a sharp short-term dip (RSI(2) < 5). Mirror for shorts.",
    "new": false,
    "stats": {
-    "trades": 1450,
+    "trades": 1456,
     "win_rate": 44.3,
     "expectancy": -0.107,
-    "profit_factor": 0.74,
-    "total_r": -154.85,
-    "max_dd_r": 161.17,
-    "oos_expectancy": -0.101
+    "profit_factor": 0.73,
+    "total_r": -155.92,
+    "max_dd_r": 162.24,
+    "oos_expectancy": -0.102
    },
    "verdict": "LOSES",
    "per_market": {
     "EURUSD": {
-     "trades": 385,
-     "win_rate": 46.2,
-     "expectancy": -0.066,
+     "trades": 386,
+     "win_rate": 46.1,
+     "expectancy": -0.068,
      "profit_factor": 0.83,
-     "total_r": -25.38,
+     "total_r": -26.12,
      "max_dd_r": 34.44,
-     "oos_expectancy": -0.008
+     "oos_expectancy": -0.011
     },
     "GBPUSD": {
-     "trades": 365,
-     "win_rate": 43.0,
-     "expectancy": -0.129,
+     "trades": 367,
+     "win_rate": 43.3,
+     "expectancy": -0.126,
      "profit_factor": 0.71,
-     "total_r": -47.02,
-     "max_dd_r": 53.73,
-     "oos_expectancy": -0.078
+     "total_r": -46.17,
+     "max_dd_r": 53.1,
+     "oos_expectancy": -0.082
     },
     "USDJPY": {
-     "trades": 394,
-     "win_rate": 44.4,
-     "expectancy": -0.112,
+     "trades": 395,
+     "win_rate": 44.3,
+     "expectancy": -0.113,
      "profit_factor": 0.72,
-     "total_r": -43.94,
-     "max_dd_r": 44.22,
-     "oos_expectancy": -0.161
+     "total_r": -44.5,
+     "max_dd_r": 44.78,
+     "oos_expectancy": -0.169
     },
     "XAUUSD": {
-     "trades": 306,
-     "win_rate": 43.1,
-     "expectancy": -0.126,
-     "profit_factor": 0.67,
-     "total_r": -38.51,
-     "max_dd_r": 40.01,
-     "oos_expectancy": -0.084
+     "trades": 308,
+     "win_rate": 43.2,
+     "expectancy": -0.127,
+     "profit_factor": 0.66,
+     "total_r": -39.13,
+     "max_dd_r": 40.29,
+     "oos_expectancy": -0.097
     }
    }
   },
@@ -2670,51 +2670,51 @@
    "desc": "After a very quiet period (narrow bands), trade the breakout close outside the bands.",
    "new": false,
    "stats": {
-    "trades": 1475,
-    "win_rate": 37.2,
-    "expectancy": -0.103,
-    "profit_factor": 0.84,
-    "total_r": -151.52,
-    "max_dd_r": 170.61,
-    "oos_expectancy": -0.107
+    "trades": 1480,
+    "win_rate": 37.4,
+    "expectancy": -0.096,
+    "profit_factor": 0.85,
+    "total_r": -142.8,
+    "max_dd_r": 161.89,
+    "oos_expectancy": -0.086
    },
    "verdict": "LOSES",
    "per_market": {
     "EURUSD": {
-     "trades": 403,
-     "win_rate": 37.0,
-     "expectancy": -0.117,
-     "profit_factor": 0.82,
-     "total_r": -47.01,
-     "max_dd_r": 54.28,
-     "oos_expectancy": -0.041
+     "trades": 404,
+     "win_rate": 37.1,
+     "expectancy": -0.112,
+     "profit_factor": 0.83,
+     "total_r": -45.15,
+     "max_dd_r": 53.67,
+     "oos_expectancy": -0.026
     },
     "GBPUSD": {
-     "trades": 413,
-     "win_rate": 36.1,
-     "expectancy": -0.173,
-     "profit_factor": 0.75,
-     "total_r": -71.25,
-     "max_dd_r": 78.07,
-     "oos_expectancy": -0.16
+     "trades": 415,
+     "win_rate": 36.4,
+     "expectancy": -0.167,
+     "profit_factor": 0.76,
+     "total_r": -69.27,
+     "max_dd_r": 76.09,
+     "oos_expectancy": -0.158
     },
     "USDJPY": {
      "trades": 367,
-     "win_rate": 38.7,
-     "expectancy": -0.05,
-     "profit_factor": 0.92,
-     "total_r": -18.23,
-     "max_dd_r": 35.17,
-     "oos_expectancy": -0.214
+     "win_rate": 39.0,
+     "expectancy": -0.045,
+     "profit_factor": 0.93,
+     "total_r": -16.55,
+     "max_dd_r": 33.48,
+     "oos_expectancy": -0.199
     },
     "XAUUSD": {
-     "trades": 292,
-     "win_rate": 37.0,
-     "expectancy": -0.051,
-     "profit_factor": 0.92,
-     "total_r": -15.03,
+     "trades": 294,
+     "win_rate": 37.4,
+     "expectancy": -0.04,
+     "profit_factor": 0.94,
+     "total_r": -11.83,
      "max_dd_r": 37.58,
-     "oos_expectancy": 0.029
+     "oos_expectancy": 0.077
     }
    }
   },
@@ -2723,51 +2723,51 @@
    "desc": "MACD crosses its signal line in the direction of the EMA200 trend.",
    "new": false,
    "stats": {
-    "trades": 1856,
-    "win_rate": 42.3,
-    "expectancy": -0.017,
+    "trades": 1863,
+    "win_rate": 42.2,
+    "expectancy": -0.02,
     "profit_factor": 0.97,
-    "total_r": -30.78,
-    "max_dd_r": 91.99,
-    "oos_expectancy": 0.014
+    "total_r": -36.41,
+    "max_dd_r": 92.15,
+    "oos_expectancy": -0.008
    },
    "verdict": "LOSES",
    "per_market": {
     "EURUSD": {
-     "trades": 494,
-     "win_rate": 42.9,
-     "expectancy": -0.014,
-     "profit_factor": 0.98,
-     "total_r": -6.83,
+     "trades": 496,
+     "win_rate": 42.7,
+     "expectancy": -0.02,
+     "profit_factor": 0.97,
+     "total_r": -9.94,
      "max_dd_r": 30.33,
-     "oos_expectancy": 0.067
+     "oos_expectancy": 0.062
     },
     "GBPUSD": {
-     "trades": 508,
-     "win_rate": 40.7,
-     "expectancy": -0.01,
+     "trades": 510,
+     "win_rate": 40.6,
+     "expectancy": -0.014,
      "profit_factor": 0.98,
-     "total_r": -5.01,
+     "total_r": -6.99,
      "max_dd_r": 47.01,
-     "oos_expectancy": 0.041
+     "oos_expectancy": 0.016
     },
     "USDJPY": {
-     "trades": 469,
-     "win_rate": 42.2,
+     "trades": 470,
+     "win_rate": 42.1,
      "expectancy": -0.047,
      "profit_factor": 0.91,
-     "total_r": -22.18,
-     "max_dd_r": 50.73,
-     "oos_expectancy": -0.188
+     "total_r": -22.23,
+     "max_dd_r": 50.78,
+     "oos_expectancy": -0.187
     },
     "XAUUSD": {
-     "trades": 385,
+     "trades": 387,
      "win_rate": 43.9,
-     "expectancy": 0.008,
-     "profit_factor": 1.02,
-     "total_r": 3.23,
+     "expectancy": 0.007,
+     "profit_factor": 1.01,
+     "total_r": 2.75,
      "max_dd_r": 21.22,
-     "oos_expectancy": 0.015
+     "oos_expectancy": 0.02
     }
    }
   },
@@ -2776,51 +2776,51 @@
    "desc": "After an inside day, trade the close beyond its high/low in the trend direction.",
    "new": false,
    "stats": {
-    "trades": 1970,
-    "win_rate": 40.0,
-    "expectancy": -0.124,
-    "profit_factor": 0.78,
-    "total_r": -243.34,
-    "max_dd_r": 249.71,
-    "oos_expectancy": -0.174
+    "trades": 1975,
+    "win_rate": 40.1,
+    "expectancy": -0.119,
+    "profit_factor": 0.79,
+    "total_r": -234.23,
+    "max_dd_r": 240.65,
+    "oos_expectancy": -0.161
    },
    "verdict": "LOSES",
    "per_market": {
     "EURUSD": {
-     "trades": 384,
-     "win_rate": 39.8,
-     "expectancy": -0.11,
-     "profit_factor": 0.81,
-     "total_r": -42.39,
-     "max_dd_r": 49.81,
-     "oos_expectancy": -0.159
+     "trades": 386,
+     "win_rate": 39.6,
+     "expectancy": -0.116,
+     "profit_factor": 0.8,
+     "total_r": -44.73,
+     "max_dd_r": 52.15,
+     "oos_expectancy": -0.184
     },
     "GBPUSD": {
-     "trades": 542,
-     "win_rate": 35.6,
-     "expectancy": -0.215,
-     "profit_factor": 0.64,
-     "total_r": -116.7,
-     "max_dd_r": 118.27,
-     "oos_expectancy": -0.3
+     "trades": 545,
+     "win_rate": 35.8,
+     "expectancy": -0.212,
+     "profit_factor": 0.65,
+     "total_r": -115.61,
+     "max_dd_r": 117.17,
+     "oos_expectancy": -0.296
     },
     "USDJPY": {
-     "trades": 565,
-     "win_rate": 41.1,
-     "expectancy": -0.121,
-     "profit_factor": 0.78,
-     "total_r": -68.5,
-     "max_dd_r": 83.4,
-     "oos_expectancy": -0.189
+     "trades": 566,
+     "win_rate": 41.0,
+     "expectancy": -0.117,
+     "profit_factor": 0.79,
+     "total_r": -66.06,
+     "max_dd_r": 80.96,
+     "oos_expectancy": -0.163
     },
     "XAUUSD": {
-     "trades": 479,
-     "win_rate": 43.8,
-     "expectancy": -0.033,
-     "profit_factor": 0.94,
-     "total_r": -15.74,
-     "max_dd_r": 26.16,
-     "oos_expectancy": -0.06
+     "trades": 478,
+     "win_rate": 44.4,
+     "expectancy": -0.016,
+     "profit_factor": 0.97,
+     "total_r": -7.82,
+     "max_dd_r": 18.65,
+     "oos_expectancy": -0.012
     }
    }
   },
@@ -2829,51 +2829,51 @@
    "desc": "Close beyond the 55-day high/low in the EMA200 trend; wide stop, big target.",
    "new": true,
    "stats": {
-    "trades": 1096,
-    "win_rate": 41.0,
-    "expectancy": -0.002,
-    "profit_factor": 1.0,
-    "total_r": -1.66,
-    "max_dd_r": 58.36,
-    "oos_expectancy": -0.131
+    "trades": 1101,
+    "win_rate": 40.9,
+    "expectancy": -0.004,
+    "profit_factor": 0.99,
+    "total_r": -4.72,
+    "max_dd_r": 61.5,
+    "oos_expectancy": -0.134
    },
    "verdict": "LOSES",
    "per_market": {
     "EURUSD": {
-     "trades": 296,
-     "win_rate": 36.5,
-     "expectancy": -0.098,
-     "profit_factor": 0.83,
-     "total_r": -29.07,
-     "max_dd_r": 29.41,
-     "oos_expectancy": -0.118
+     "trades": 297,
+     "win_rate": 36.4,
+     "expectancy": -0.101,
+     "profit_factor": 0.82,
+     "total_r": -30.12,
+     "max_dd_r": 30.46,
+     "oos_expectancy": -0.129
     },
     "GBPUSD": {
-     "trades": 297,
-     "win_rate": 41.4,
-     "expectancy": -0.019,
+     "trades": 299,
+     "win_rate": 41.5,
+     "expectancy": -0.022,
      "profit_factor": 0.96,
-     "total_r": -5.62,
-     "max_dd_r": 23.98,
-     "oos_expectancy": -0.206
+     "total_r": -6.67,
+     "max_dd_r": 25.04,
+     "oos_expectancy": -0.223
     },
     "USDJPY": {
-     "trades": 284,
-     "win_rate": 39.4,
+     "trades": 285,
+     "win_rate": 39.3,
      "expectancy": -0.007,
      "profit_factor": 0.99,
-     "total_r": -2.07,
-     "max_dd_r": 20.21,
-     "oos_expectancy": -0.176
+     "total_r": -2.02,
+     "max_dd_r": 20.14,
+     "oos_expectancy": -0.163
     },
     "XAUUSD": {
-     "trades": 219,
-     "win_rate": 48.4,
-     "expectancy": 0.16,
-     "profit_factor": 1.34,
-     "total_r": 35.09,
-     "max_dd_r": 9.48,
-     "oos_expectancy": -0.033
+     "trades": 220,
+     "win_rate": 48.2,
+     "expectancy": 0.155,
+     "profit_factor": 1.32,
+     "total_r": 34.1,
+     "max_dd_r": 10.31,
+     "oos_expectancy": -0.047
     }
    }
   },
@@ -2882,51 +2882,51 @@
    "desc": "EMA20 crosses EMA50 in the EMA200 trend; long hold to catch big trends.",
    "new": true,
    "stats": {
-    "trades": 548,
+    "trades": 553,
     "win_rate": 37.8,
-    "expectancy": 0.062,
+    "expectancy": 0.058,
     "profit_factor": 1.1,
-    "total_r": 34.0,
-    "max_dd_r": 39.94,
-    "oos_expectancy": -0.145
+    "total_r": 32.03,
+    "max_dd_r": 41.9,
+    "oos_expectancy": -0.191
    },
    "verdict": "WEAK +",
    "per_market": {
     "EURUSD": {
-     "trades": 149,
-     "win_rate": 33.6,
-     "expectancy": 0.054,
-     "profit_factor": 1.09,
-     "total_r": 8.1,
-     "max_dd_r": 13.3,
-     "oos_expectancy": -0.092
+     "trades": 151,
+     "win_rate": 33.1,
+     "expectancy": 0.045,
+     "profit_factor": 1.07,
+     "total_r": 6.77,
+     "max_dd_r": 14.15,
+     "oos_expectancy": -0.097
     },
     "GBPUSD": {
-     "trades": 150,
-     "win_rate": 38.7,
-     "expectancy": 0.08,
-     "profit_factor": 1.13,
-     "total_r": 11.97,
+     "trades": 151,
+     "win_rate": 38.4,
+     "expectancy": 0.065,
+     "profit_factor": 1.11,
+     "total_r": 9.79,
      "max_dd_r": 17.05,
-     "oos_expectancy": -0.106
+     "oos_expectancy": -0.131
     },
     "USDJPY": {
-     "trades": 146,
-     "win_rate": 36.3,
-     "expectancy": -0.072,
-     "profit_factor": 0.89,
-     "total_r": -10.5,
-     "max_dd_r": 18.0,
-     "oos_expectancy": -0.304
+     "trades": 147,
+     "win_rate": 36.1,
+     "expectancy": -0.08,
+     "profit_factor": 0.88,
+     "total_r": -11.7,
+     "max_dd_r": 19.21,
+     "oos_expectancy": -0.325
     },
     "XAUUSD": {
-     "trades": 103,
-     "win_rate": 44.7,
-     "expectancy": 0.237,
-     "profit_factor": 1.47,
-     "total_r": 24.42,
-     "max_dd_r": 14.73,
-     "oos_expectancy": 0.054
+     "trades": 104,
+     "win_rate": 46.2,
+     "expectancy": 0.261,
+     "profit_factor": 1.53,
+     "total_r": 27.17,
+     "max_dd_r": 11.94,
+     "oos_expectancy": 0.14
     }
    }
   },
@@ -2935,33 +2935,33 @@
    "desc": "Only in sideways markets: fade closes outside the bands with RSI extreme.",
    "new": true,
    "stats": {
-    "trades": 678,
+    "trades": 681,
     "win_rate": 42.9,
     "expectancy": -0.147,
-    "profit_factor": 0.74,
-    "total_r": -99.76,
-    "max_dd_r": 102.71,
+    "profit_factor": 0.73,
+    "total_r": -100.41,
+    "max_dd_r": 103.36,
     "oos_expectancy": -0.048
    },
    "verdict": "LOSES",
    "per_market": {
     "EURUSD": {
-     "trades": 185,
-     "win_rate": 45.4,
-     "expectancy": -0.041,
-     "profit_factor": 0.92,
-     "total_r": -7.62,
+     "trades": 186,
+     "win_rate": 45.7,
+     "expectancy": -0.034,
+     "profit_factor": 0.94,
+     "total_r": -6.24,
      "max_dd_r": 26.02,
-     "oos_expectancy": 0.221
+     "oos_expectancy": 0.247
     },
     "GBPUSD": {
-     "trades": 183,
-     "win_rate": 42.1,
-     "expectancy": -0.188,
-     "profit_factor": 0.67,
-     "total_r": -34.36,
-     "max_dd_r": 37.29,
-     "oos_expectancy": -0.264
+     "trades": 184,
+     "win_rate": 42.4,
+     "expectancy": -0.182,
+     "profit_factor": 0.68,
+     "total_r": -33.48,
+     "max_dd_r": 36.41,
+     "oos_expectancy": -0.243
     },
     "USDJPY": {
      "trades": 166,
@@ -2973,13 +2973,13 @@
      "oos_expectancy": -0.188
     },
     "XAUUSD": {
-     "trades": 144,
-     "win_rate": 46.5,
-     "expectancy": -0.116,
-     "profit_factor": 0.78,
-     "total_r": -16.76,
-     "max_dd_r": 17.22,
-     "oos_expectancy": -0.051
+     "trades": 145,
+     "win_rate": 45.5,
+     "expectancy": -0.136,
+     "profit_factor": 0.75,
+     "total_r": -19.68,
+     "max_dd_r": 19.68,
+     "oos_expectancy": -0.094
     }
    }
   },
@@ -2988,51 +2988,51 @@
    "desc": "Strong 3-month trend; enter when RSI(14) turns back through 50.",
    "new": true,
    "stats": {
-    "trades": 1234,
-    "win_rate": 37.8,
-    "expectancy": -0.039,
+    "trades": 1239,
+    "win_rate": 37.6,
+    "expectancy": -0.042,
     "profit_factor": 0.94,
-    "total_r": -47.79,
-    "max_dd_r": 89.64,
-    "oos_expectancy": -0.113
+    "total_r": -51.45,
+    "max_dd_r": 94.33,
+    "oos_expectancy": -0.131
    },
    "verdict": "LOSES",
    "per_market": {
     "EURUSD": {
-     "trades": 318,
-     "win_rate": 41.5,
-     "expectancy": 0.089,
-     "profit_factor": 1.14,
-     "total_r": 28.21,
+     "trades": 319,
+     "win_rate": 41.1,
+     "expectancy": 0.075,
+     "profit_factor": 1.12,
+     "total_r": 23.84,
      "max_dd_r": 24.62,
-     "oos_expectancy": 0.112
+     "oos_expectancy": 0.077
     },
     "GBPUSD": {
      "trades": 352,
-     "win_rate": 31.5,
-     "expectancy": -0.18,
-     "profit_factor": 0.75,
-     "total_r": -63.53,
-     "max_dd_r": 83.78,
-     "oos_expectancy": -0.319
+     "win_rate": 31.2,
+     "expectancy": -0.19,
+     "profit_factor": 0.74,
+     "total_r": -66.8,
+     "max_dd_r": 87.05,
+     "oos_expectancy": -0.35
     },
     "USDJPY": {
-     "trades": 304,
-     "win_rate": 41.1,
-     "expectancy": -0.027,
+     "trades": 306,
+     "win_rate": 40.8,
+     "expectancy": -0.028,
      "profit_factor": 0.95,
-     "total_r": -8.3,
-     "max_dd_r": 37.37,
-     "oos_expectancy": -0.165
+     "total_r": -8.55,
+     "max_dd_r": 37.62,
+     "oos_expectancy": -0.161
     },
     "XAUUSD": {
-     "trades": 260,
-     "win_rate": 37.7,
-     "expectancy": -0.016,
-     "profit_factor": 0.97,
-     "total_r": -4.18,
+     "trades": 262,
+     "win_rate": 38.2,
+     "expectancy": 0.0,
+     "profit_factor": 1.0,
+     "total_r": 0.06,
      "max_dd_r": 16.42,
-     "oos_expectancy": 0.013
+     "oos_expectancy": 0.049
     }
    }
   }
@@ -3236,35 +3236,35 @@
  "markets_hourly": {
   "EURUSD": {
    "name": "EUR/USD",
-   "trades": 3954,
-   "avg_r_all_strategies": -0.055,
+   "trades": 3973,
+   "avg_r_all_strategies": -0.059,
    "best_strategy": "Momentum pullback",
-   "best_avg_r": 0.089,
-   "best_trades": 318
+   "best_avg_r": 0.075,
+   "best_trades": 319
   },
   "GBPUSD": {
    "name": "GBP/USD",
-   "trades": 4179,
-   "avg_r_all_strategies": -0.111,
+   "trades": 4197,
+   "avg_r_all_strategies": -0.112,
    "best_strategy": "EMA20/50 trend cross",
-   "best_avg_r": 0.08,
-   "best_trades": 150
+   "best_avg_r": 0.065,
+   "best_trades": 151
   },
   "USDJPY": {
    "name": "USD/JPY",
-   "trades": 3997,
-   "avg_r_all_strategies": -0.083,
+   "trades": 4011,
+   "avg_r_all_strategies": -0.082,
    "best_strategy": "55-day breakout (Turtle-style)",
    "best_avg_r": -0.007,
-   "best_trades": 284
+   "best_trades": 285
   },
   "XAUUSD": {
    "name": "Gold (XAU/USD)",
-   "trades": 3226,
-   "avg_r_all_strategies": -0.032,
+   "trades": 3239,
+   "avg_r_all_strategies": -0.027,
    "best_strategy": "EMA20/50 trend cross",
-   "best_avg_r": 0.237,
-   "best_trades": 103
+   "best_avg_r": 0.261,
+   "best_trades": 104
   }
  },
  "passing": [],
