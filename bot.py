@@ -54,6 +54,11 @@ ACCOUNTS = {
     "INR": float(os.getenv("ACCOUNT_INR", "100000")),
     "USD": float(os.getenv("ACCOUNT_USD", "10000")),
 }
+# Real-money helper (your own manual trades). The bot never trades for you.
+REAL_ACCOUNT_EUR = float(os.getenv("REAL_ACCOUNT_EUR", "20"))
+REAL_RISK_EUR = float(os.getenv("REAL_RISK_EUR", "5"))       # your choice: EUR 5 per trade (25% of EUR 20!)
+REAL_FLOOR_EUR = float(os.getenv("REAL_FLOOR_EUR", "10"))    # below this: stop trading for the month
+DIGEST_HOUR_UTC = int(os.getenv("DIGEST_HOUR_UTC", "6"))     # daily message after 06:00 UTC (11:30 IST)
 DISCLAIMER = ("Paper-trading research tool. Not investment advice. Signals are not guaranteed "
               "and can lose money. Past/backtest results do not predict the future.")
 
@@ -913,6 +918,72 @@ def signal_message(s: dict) -> str:
             f"<i>Paper-trade idea, not investment advice. Not guaranteed. Always use the stop.</i>")
 
 
+
+# --------------------------------------------------------------------------
+# Daily real-money digest (forex + gold, sized for your small EUR account)
+# --------------------------------------------------------------------------
+def real_size(mid: str, entry: float, stop: float, eurusd: float) -> tuple[str, bool]:
+    risk_usd = REAL_RISK_EUR * eurusd
+    dist = abs(entry - stop)
+    if dist <= 0:
+        return "n/a", False
+    if mid == "XAUUSD":
+        oz = risk_usd / dist
+        lots = oz / 100
+        ok = lots >= 0.01
+        return f"{oz:.2f} oz = {lots:.3f} lot" + ("" if ok else " (below 0.01 lot - only if your broker allows smaller gold sizes)"), ok
+    units = risk_usd * entry / dist if mid == "USDJPY" else risk_usd / dist
+    lots = units / 100000
+    ok = lots >= 0.01
+    return f"{units:,.0f} units = {lots:.2f} lot" + ("" if ok else " (below 0.01 lot - skip unless your broker allows nano lots)"), ok
+
+
+def daily_digest(cands: list, upcoming: list, data: dict, today: str) -> str:
+    eurusd = data.get("EURUSD", {}).get("price") or 1.08
+    picks = []
+    for c in cands:                                    # setups that triggered on the last candle
+        if MARKET_BY_ID[c["market"]]["group"] not in ("fx", "metal"):
+            continue
+        if any("stale" in b.lower() for b in c.get("blocks", [])):
+            continue
+        picks.append(dict(kind="TRIGGERED", market=c["market"], dir=c["direction"], strat=c["strategy_name"],
+                          entry=c["entry"], stop=c["stop"], target=c["target"], score=c["score"],
+                          proven=c["market_verdict"] == "TRADEABLE", verdict=c["market_verdict"], note=""))
+    for u in upcoming:                                 # almost-ready setups: wait for the trigger
+        if MARKET_BY_ID[u["market"]]["group"] not in ("fx", "metal"):
+            continue
+        p = STRATEGIES[u["strategy"]]
+        s = 1 if u["direction"] == "LONG" else -1
+        entry = u["trigger"]
+        stop = entry - s * p["stop_atr"] * u["atr"]
+        tgt = entry + s * p["rr"] * p["stop_atr"] * u["atr"]
+        score = {"TRADEABLE": 55, "WATCH": 40}.get(u["verdict"], 20)
+        picks.append(dict(kind="WAIT FOR TRIGGER", market=u["market"], dir=u["direction"], strat=u["strategy_name"],
+                          entry=entry, stop=stop, target=tgt, score=score, proven=u["verdict"] == "TRADEABLE",
+                          verdict=u["verdict"], note=f"Only if: {u['when']}"))
+    picks.sort(key=lambda x: (-x["proven"], -x["score"]))
+    top = picks[:3]
+    L = [f"<b>EdgeDesk daily - {today}</b>",
+         f"Account EUR {REAL_ACCOUNT_EUR:.0f} · risk EUR {REAL_RISK_EUR:.0f} per trade · STOP trading for the month below EUR {REAL_FLOOR_EUR:.0f}", ""]
+    if not top:
+        L.append("No forex/gold setups today. <b>No trade is a good trade.</b>")
+    for i, x in enumerate(top, 1):
+        m = MARKET_BY_ID[x["market"]]
+        dp = m["dp"]
+        size, ok = real_size(x["market"], x["entry"], x["stop"], eurusd)
+        label = "✅ PROVEN in backtest" if x["proven"] else f"⚠️ NOT PROVEN ({x['verdict']}) - higher risk of losing"
+        L += [f"<b>{i}. {html.escape(m['name'])} {x['dir']}</b> · {html.escape(x['strat'])} · {x['kind']}",
+              label,
+              f"Entry ~ {x['entry']:.{dp}f} | Stop {x['stop']:.{dp}f} | Target {x['target']:.{dp}f}",
+              f"Size for EUR {REAL_RISK_EUR:.0f} risk: {html.escape(size)}"]
+        if x["note"]:
+            L.append(html.escape(x["note"]))
+        L.append("")
+    L += ["Rules: max 1 new trade today · stop-loss set when you open · never move the stop further away · "
+          "no leverage above 1:10 · no trade 30 min before big news.",
+          "<i>Not investment advice. Not guaranteed. You can lose the whole amount. You place trades yourself.</i>"]
+    return "\n".join(L)
+
 # --------------------------------------------------------------------------
 # Chief
 # --------------------------------------------------------------------------
@@ -1088,7 +1159,8 @@ def chief(args) -> int:
                 mv = bt[key]["per_market"][mid]["verdict"]
                 upcoming.append(dict(market=mid, name=m["name"], strategy=key, strategy_name=STRATEGIES[key]["name"],
                                      direction="LONG" if u["dir"] == 1 else "SHORT", trigger=rnd(u["trigger"], m["dp"]),
-                                     when=u["when"], verdict=mv, price=rnd(data[mid]["price"], m["dp"])))
+                                     when=u["when"], verdict=mv, price=rnd(data[mid]["price"], m["dp"]),
+                                     atr=float(d.iloc[-1].atr)))
     upcoming.sort(key=lambda u: (u["verdict"] != "TRADEABLE", u["verdict"] != "WATCH", u["market"]))
 
     # Signals shown on the site = currently open paper trades from signals (latest first)
@@ -1122,6 +1194,12 @@ def chief(args) -> int:
             emoji = "✅" if (t["r"] or 0) > 0 else "❌"
             telegram(f"{emoji} <b>Paper trade closed - {html.escape(t['name'])}</b>\n{t['dir']} · {html.escape(t['strategy_name'])}\n"
                      f"{t['exit_reason']} at {t['exit']:.{MARKET_BY_ID[t['market']]['dp']}f} → <b>{t['r']:+.2f}R</b> (after costs)")
+        today_utc = now_utc().date().isoformat()
+        if (args.digest or (now_utc().hour >= DIGEST_HOUR_UTC and state.get("digest_date") != today_utc)):
+            ok, msg = telegram(daily_digest(cands, upcoming, data, today_utc))
+            tg_notes.append(f"digest: {msg}")
+            if ok:
+                state["digest_date"] = today_utc
         if halted and state.get("halt_sent") != today_ist:
             telegram(f"🛑 <b>Daily loss limit hit</b> ({day_r:+.2f}R today). EdgeDesk will not send new signals until tomorrow. Step away from the screen.")
             state["halt_sent"] = today_ist
@@ -1165,6 +1243,7 @@ def main():
     ap = argparse.ArgumentParser(description="EdgeDesk Live bots (paper trading, not investment advice)")
     ap.add_argument("--demo", action="store_true", help="use fake offline data")
     ap.add_argument("--hello", action="store_true", help="send 'EdgeDesk is connected' to Telegram")
+    ap.add_argument("--digest", action="store_true", help="send the daily real-money digest now")
     ap.add_argument("--keep-live", action="store_true", help="with --demo: write signals_demo.json instead of signals.json")
     args = ap.parse_args()
     try:
