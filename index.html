@@ -131,7 +131,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:12px}
 
   <section id="live">
     <h2>Live chart (TradingView)</h2>
-    <p class="sub">Free TradingView widget. Some exchanges may show delayed data or no data inside the widget.</p>
+    <p class="sub">Forex &amp; gold show a live TradingView chart here. For NIFTY, BANK NIFTY and Indian stocks, tap the button to open the full chart in TradingView (NSE data can't be embedded).</p>
     <div class="row" style="margin-bottom:8px"><select id="tvSel"></select></div>
     <div id="tvBox" class="tv"></div>
   </section>
@@ -344,7 +344,18 @@ details summary{cursor:pointer;color:var(--muted);font-size:12px}
   }
   function loadTV(){
     if (!tvLoaded) return;
-    const box = $("#tvBox"); box.innerHTML = '<div id="tvw" style="height:100%"></div>';
+    const box = $("#tvBox"); const sym = $("#tvSel").value;
+    if (/^(NSE|BSE):/.test(sym)) {          // NSE data is not allowed in the free embedded widget
+      const m = (D.markets || []).find(x => x.tv === sym) || {};
+      const url = "https://www.tradingview.com/chart/?symbol=" + encodeURIComponent(sym);
+      box.innerHTML = `<div class="empty" style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:12px;border:0">
+        <div><b>${esc(m.name || sym)}</b>${m.price ? " · " + nf(m.price, m.dp) : ""}</div>
+        <div class="small">TradingView doesn't allow Indian (NSE) live data inside other websites.<br>Tap below to open the full live chart.</div>
+        <div><a class="btn" style="display:inline-block;text-decoration:none;background:var(--blue);color:#fff;border-color:var(--blue);padding:10px 16px" href="${url}" target="_blank" rel="noopener">📈 Open ${esc(m.name || sym)} in TradingView</a></div>
+        <div class="small">Or use the 15-min / 1-hour chart in Kite. The candle chart in "Markets" above uses EdgeDesk's own data.</div></div>`;
+      return;
+    }
+    box.innerHTML = '<div id="tvw" style="height:100%"></div>';
     const go = () => new TradingView.widget({ container_id: "tvw", autosize: true, symbol: $("#tvSel").value, interval: "D", timezone: "Asia/Kolkata",
       theme: isDark() ? "dark" : "light", style: "1", locale: "en", hide_side_toolbar: true, allow_symbol_change: true, withdateranges: true });
     if (window.TradingView) return go();
