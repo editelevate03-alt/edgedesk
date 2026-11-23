@@ -855,7 +855,13 @@ def find_chat_id(state: dict) -> str:
         else:
             log(f"telegram: token rejected by Telegram: {me.get('description')} (revoked or mistyped?)")
             return ""
-        r = requests.get(f"https://api.telegram.org/bot{token}/getUpdates", timeout=15).json()
+        r = {}
+        for attempt in range(3):
+            try:
+                r = requests.get(f"https://api.telegram.org/bot{token}/getUpdates", timeout=20).json()
+                break
+            except requests.RequestException:
+                time.sleep(3)
         if not r.get("ok"):
             log(f"telegram: getUpdates refused: {r.get('error_code')} {r.get('description')}")
             if r.get("error_code") == 409:
