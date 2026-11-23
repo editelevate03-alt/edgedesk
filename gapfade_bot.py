@@ -173,10 +173,14 @@ def main():
                     new_stop = t["entry"] + t["side"] * 0.5 * best * risk0
                     if t["side"] * (new_stop - stop_now) > 0:
                         stop_now = new_stop
-            if not reason and best >= 1.0 and not t.get("be_sent"):
-                send(f"🛡️ <b>{t['sym']}: move your stop-loss to ₹{stop_now:,.2f}</b> (profit protection - trade is up {best:.1f}R). "
+            last_lock = t.get("lock_sent", 0.0)
+            if not reason and best >= 1.0 and (last_lock == 0.0 or best >= last_lock + 0.5):
+                first_msg = last_lock == 0.0
+                send(f"🛡️ <b>{t['sym']}: move your stop-loss to ₹{stop_now:,.2f}</b> "
+                     f"({'profit protection starts' if first_msg else 'raise it again'} - trade is up {best:.1f}R).\n"
+                     f"In Kite: Orders → your SL order → Modify → trigger ₹{stop_now:,.2f} → Modify. "
                      "Never let this profit turn into a loss.")
-                t["be_sent"] = True
+                t["lock_sent"] = best
             if not reason and mins >= EXIT_MIN and len(b):
                 reason, px = "3:10 PM time exit", float(b.Close.iloc[-1])
             if not reason:
