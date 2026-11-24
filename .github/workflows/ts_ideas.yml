@@ -1,0 +1,38 @@
+name: EdgeDesk TS ideas
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: edgedesk-bots
+  cancel-in-progress: false
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Trading Strategy ideas on Indian stocks
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python ts_ideas.py
+      - name: Save results
+        run: |
+          git config user.name "edgedesk-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ts_ideas_report.md data/ts_ideas_report.json
+          git diff --cached --quiet && exit 0
+          git commit -m "TS ideas $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3; do git pull --rebase --autostash -X theirs && git push && exit 0; sleep $((i * 5)); done
+          exit 1
+          # enabled by owner
