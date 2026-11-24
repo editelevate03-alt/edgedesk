@@ -2,8 +2,8 @@
  "app": "EdgeDesk Live",
  "version": "1.0.0",
  "mode": "live",
- "generated_at": "2026-11-24T03:21:25.919342+00:00",
- "generated_at_ist": "24 Nov 2026, 08:51 IST",
+ "generated_at": "2026-11-24T13:58:25.521611+00:00",
+ "generated_at_ist": "24 Nov 2026, 19:28 IST",
  "refresh_minutes": 15,
  "disclaimer": "Paper-trading research tool. Not investment advice. Signals are not guaranteed and can lose money. Past/backtest results do not predict the future.",
  "settings": {
@@ -7616,10 +7616,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 5,
-   "price": 1.09146,
-   "price_time": "2026-11-24T03:15:00+00:00",
+   "price": 1.09685,
+   "price_time": "2026-11-24T13:45:00+00:00",
    "prev_close": 1.09715,
-   "change_pct": -0.52,
+   "change_pct": -0.03,
    "last_bar": "2026-11-24",
    "last_completed_bar": "2026-11-23",
    "today_forming": true,
@@ -8537,9 +8537,9 @@
     {
      "time": "2026-11-24",
      "open": 1.09039,
-     "high": 1.09218,
-     "low": 1.09039,
-     "close": 1.09146
+     "high": 1.09709,
+     "low": 1.08992,
+     "close": 1.09685
     }
    ],
    "patterns": [
@@ -8563,10 +8563,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 5,
-   "price": 1.30404,
-   "price_time": "2026-11-24T03:15:00+00:00",
+   "price": 1.30988,
+   "price_time": "2026-11-24T13:45:00+00:00",
    "prev_close": 1.30947,
-   "change_pct": -0.41,
+   "change_pct": 0.03,
    "last_bar": "2026-11-24",
    "last_completed_bar": "2026-11-23",
    "today_forming": true,
@@ -9484,9 +9484,9 @@
     {
      "time": "2026-11-24",
      "open": 1.30363,
-     "high": 1.30487,
-     "low": 1.30305,
-     "close": 1.30404
+     "high": 1.31053,
+     "low": 1.30298,
+     "close": 1.30988
     }
    ],
    "patterns": [
@@ -9510,10 +9510,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 3,
-   "price": 158.94,
-   "price_time": "2026-11-24T03:15:00+00:00",
+   "price": 159.134,
+   "price_time": "2026-11-24T13:45:00+00:00",
    "prev_close": 158.931,
-   "change_pct": 0.01,
+   "change_pct": 0.13,
    "last_bar": "2026-11-24",
    "last_completed_bar": "2026-11-23",
    "today_forming": true,
@@ -10431,9 +10431,9 @@
     {
      "time": "2026-11-24",
      "open": 158.988,
-     "high": 159.103,
+     "high": 159.581,
      "low": 158.746,
-     "close": 158.932
+     "close": 159.134
     }
    ],
    "patterns": [
@@ -10461,28 +10461,21 @@
    "group": "metal",
    "ccy": "USD",
    "dp": 2,
-   "price": 3630.3,
-   "price_time": "2026-11-23T22:00:00-05:00",
-   "prev_close": 3515.4,
-   "change_pct": 3.27,
-   "last_bar": "2026-11-23",
+   "price": 3615.1,
+   "price_time": "2026-11-24T08:45:00-05:00",
+   "prev_close": 3651.4,
+   "change_pct": -0.99,
+   "last_bar": "2026-11-24",
    "last_completed_bar": "2026-11-23",
-   "today_forming": false,
-   "stale_days": 1,
+   "today_forming": true,
+   "stale_days": 0,
    "trend": "Down",
-   "rsi14": 31.6,
-   "atr": 105.45,
-   "ema20": 3884.37,
-   "ema50": 4049.98,
-   "ema200": 4234.58,
+   "rsi14": 33.2,
+   "atr": 106.47,
+   "ema20": 3886.38,
+   "ema50": 4050.8,
+   "ema200": 4234.79,
    "candles": [
-    {
-     "time": "2026-05-20",
-     "open": 4486.6,
-     "high": 4558.4,
-     "low": 4455.0,
-     "close": 4535.3
-    },
     {
      "time": "2026-05-21",
      "open": 4548.0,
@@ -11381,24 +11374,46 @@
     },
     {
      "time": "2026-11-23",
+     "open": 3570.5,
+     "high": 3691.0,
+     "low": 3552.3,
+     "close": 3651.4
+    },
+    {
+     "time": "2026-11-24",
      "open": 3636.4,
      "high": 3676.7,
-     "low": 3618.5,
-     "close": 3630.3
+     "low": 3606.4,
+     "close": 3615.1
     }
    ],
    "patterns": [],
    "flow": {
     "available": true,
-    "vol_ratio": 0.16,
+    "vol_ratio": 1.69,
     "obv_slope": -1.0,
-    "note": "Volume 0.2x 20-day average, OBV falling"
+    "note": "Volume 1.7x 20-day average, OBV falling"
    }
   }
  ],
  "signals": [],
  "new_signals": [],
  "blocked": [
+  {
+   "market": "USDJPY",
+   "name": "USD/JPY",
+   "strategy_name": "Trend pullback",
+   "direction": "LONG",
+   "score": 52,
+   "blocks": [
+    "Strategy is REJECTED for this market in the backtest (not proven after costs)",
+    "Score 52 is below 60"
+   ],
+   "bar_date": "2026-11-23",
+   "entry": 159.134,
+   "stop": 157.714,
+   "target": 161.973
+  },
   {
    "market": "INFY",
    "name": "Infosys",
@@ -11413,21 +11428,6 @@
    "entry": 1103.4,
    "stop": 1154.83,
    "target": 1000.54
-  },
-  {
-   "market": "USDJPY",
-   "name": "USD/JPY",
-   "strategy_name": "Trend pullback",
-   "direction": "LONG",
-   "score": 50,
-   "blocks": [
-    "Strategy is REJECTED for this market in the backtest (not proven after costs)",
-    "Score 50 is below 60"
-   ],
-   "bar_date": "2026-11-23",
-   "entry": 158.94,
-   "stop": 157.52,
-   "target": 161.779
   }
  ],
  "upcoming": [
@@ -11440,7 +11440,7 @@
    "trigger": 1.08844,
    "when": "a daily close below the 20-day low",
    "verdict": "WATCH",
-   "price": 1.09146,
+   "price": 1.09685,
    "atr": 0.00725029981652611
   },
   {
@@ -11476,7 +11476,7 @@
    "trigger": 159.484,
    "when": "a daily close above this inside bar's high",
    "verdict": "WATCH",
-   "price": 158.94,
+   "price": 159.134,
    "atr": 0.9464696777657087
   },
   {
@@ -11488,7 +11488,7 @@
    "trigger": 1.30132,
    "when": "a daily close below the 20-day low",
    "verdict": "REJECTED",
-   "price": 1.30404,
+   "price": 1.30988,
    "atr": 0.008822087198674918
   },
   {
@@ -11675,7 +11675,7 @@
       "win_rate": 51.1,
       "expectancy": 0.276,
       "profit_factor": 1.6,
-      "total_r": 12.98,
+      "total_r": 12.99,
       "max_dd_r": 7.03,
       "oos_expectancy": 0.355
      },
@@ -12510,8 +12510,8 @@
    "name": "Chief",
    "job": "Runs all bots, combines scores, applies the rules, writes the website data",
    "status": "ok",
-   "note": "Finished in 12.8s",
-   "ms": 12827
+   "note": "Finished in 38.6s",
+   "ms": 38587
   },
   {
    "key": "data",
@@ -12519,7 +12519,7 @@
    "job": "Downloads daily + 15-minute prices (Yahoo Finance, free)",
    "status": "ok",
    "note": "12/12 markets loaded via yfinance",
-   "ms": 10592
+   "ms": 10779
   },
   {
    "key": "chart",
@@ -12527,7 +12527,7 @@
    "job": "Calculates EMA, RSI, ATR, Bollinger, MACD, 20-day high/low",
    "status": "ok",
    "note": "Indicators for 12 markets (finished daily candles only)",
-   "ms": 204
+   "ms": 109
   },
   {
    "key": "candle",
@@ -12535,7 +12535,7 @@
    "job": "Finds candlestick patterns on the last finished candle",
    "status": "ok",
    "note": "13 patterns found",
-   "ms": 1
+   "ms": 0
   },
   {
    "key": "flow",
@@ -12543,7 +12543,7 @@
    "job": "Checks volume and on-balance volume (money flow)",
    "status": "ok",
    "note": "Volume available for 9 markets",
-   "ms": 3
+   "ms": 2
   },
   {
    "key": "network",
@@ -12551,15 +12551,15 @@
    "job": "Market breadth, relative strength vs NIFTY, US-dollar strength",
    "status": "ok",
    "note": "Breadth: india index 100%, india stock 83%, fx 33%, metal 0%",
-   "ms": 1
+   "ms": 0
   },
   {
    "key": "news",
    "name": "News bot",
    "job": "Reads free RSS headlines and tags them by market",
-   "status": "ok",
-   "note": "60 headlines from last 48h (0 feed(s) failed)",
-   "ms": 1888
+   "status": "warn",
+   "note": "49 headlines from last 48h (4 feed(s) failed)",
+   "ms": 27615
   },
   {
    "key": "backtest",
@@ -12567,7 +12567,7 @@
    "job": "Tests all 6 strategies on ~5 years of daily data, after costs",
    "status": "ok",
    "note": "0/6 strategies TRADEABLE after costs",
-   "ms": 126
+   "ms": 73
   },
   {
    "key": "forward",
@@ -12583,7 +12583,7 @@
    "job": "Checks the 6 strategies on the latest finished candle",
    "status": "ok",
    "note": "2 raw setups triggered on the last candle",
-   "ms": 1
+   "ms": 0
   },
   {
    "key": "risk",
@@ -12604,22 +12604,41 @@
  ],
  "news": [
   {
-   "title": "GIFT Nifty up 100 pts as Nasdaq surges 6.5%, Asian markets rally; Sensex, Nifty shut for Guru Nanak... - Moneycontrol.com",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPRGZ4cFJBUDcteldDMVRRVWxTN1FwTHF4cERjMzI0bnI1N19RVWtWWl9HVzF4cUxvU0dhVjNlSE9KSnVDOWZ2N2t5UzFjS3BPS2xNeEJXNlpIZEszZHE1bmN0Vmg2cUJYREU0c3NQU1VaZlNKQkJ3RmJwRDV0OW5rVGZiVlplbGxNTnhXMFRJblJSb1NQeEFHMENmY2twcXhfZk9WSHlabHhsbW5fVlpaTUV2Z1VhVEVqWXc3MnpCWFhqNl9wTGlRNG5rcEN4NC1zdjA3d0pFZUhaOC1MTl82NVFINC1JMDJxSV9pOWkweTZ5cnU2M2Znb1E0cXfSAYICQVVfeXFMTkFOMnM1cTNuYVJWUmNyNkN6c3lqUHN0VVRFMkVrUG5oTlpuNzFYSVgtbk50NVdEM0hNNUpCT1dPSlN0SzFKODVZMkdXRC1YOTRxME5CaXZZa29LbjVKc2VNSFVyLWg0Nkc4WEx6TlBQWWlHTElrVEV2Wm5aQmxhQmlUMlI0MDZjamFvN2tpTl9SVWcyVWZKOEFSY2Z2NEVORUFqeE9pdlFxWnhKd2psczZteXV4UVh1alJOXzVQX09uUEszQnNwbVJYYkFaU1VlZ3pNWVRvb0h3eG9iMW02OHhJc0x1Y2wxV1NOY2xBTFdKRkxMNm5ZSnRNSkRpLTAzT3hR?oc=5",
-   "published": "2026-11-24T03:10:08+00:00",
-   "sentiment": 1,
+   "title": "Nasdaq futures drop as AI stocks cool after Nvidia-fueled rally: US Stock Market Live Updates",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-anthropic-iphone-google-meta-tesla-earnings-treasury-yield-news-24-nov-2026/liveblog/136131363.cms",
+   "published": "2026-11-24T13:00:48+00:00",
+   "sentiment": 0,
    "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Shift in pension and insurance money to equities dampens long-term G-sec demand: RBI DG",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/bonds/shift-in-pension-and-insurance-money-to-equities-dampens-long-term-g-sec-demand-rbi-dg/articleshow/136130860.cms",
+   "published": "2026-11-24T12:39:55+00:00",
+   "sentiment": 0,
+   "high_impact": true,
    "markets": [
-    "NIFTY"
+    "NIFTY",
+    "BANKNIFTY"
    ]
   },
   {
-   "title": "Australian Dollar holds ground against US Dollar, Aussie/US inflation data eyed - FXStreet",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOT2ZvWHRWa2JGTXQ5Zy00aGtLa25Ddm9LOTViM2ZIbVlKN01tTUhhSHNWam9kMGJZTEpmY1ZyTEtVMmg4UE9kc2R3RDljdVUxZUNjYk9VYTBnVzJtUmVaYU1rUGc0X2VFNUdfdFBMbE9veGhtYklxMnNpSXZZT0NkMjVxZkFwX2RITURZS25tWUJkM3JyVF84WUk0ZXVGXy1fbzZZdjVLNm4yNVVleXFYZ202SDlWWnJTTUZMb1dn?oc=5",
-   "published": "2026-11-24T03:06:35+00:00",
-   "sentiment": 1,
+   "title": "A 50 bps jumbo rate hike can lead to financial stability concerns, hurt growth: Report",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/a-50-bps-jumbo-rate-hike-can-lead-to-financial-stability-concerns-hurt-growth-report/articleshow/136130764.cms",
+   "published": "2026-11-24T12:38:23+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "AI boom looms over Warsh's Fed as inflation worries grow",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/ai-boom-looms-over-warshs-fed-as-inflation-worries-grow/articleshow/136129160.cms",
+   "published": "2026-11-24T11:39:37+00:00",
+   "sentiment": 0,
    "high_impact": true,
    "markets": [
     "EURUSD",
@@ -12630,12 +12649,99 @@
    "usd_news": true
   },
   {
-   "title": "\u2018Smart money\u2019 eyes dim sum bonds over US dollar assets: ChinaAMC (HK) - South China Morning Post",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNaUhDdWpMemhSMnZFeHYtSjl3TkN6Q0ZJbFV4SUdBbDE5ZmZQSTdXVHRhTEU5OV9jMVI1YjJMZnA4ckNiLWNrOG1FZkJ5MGRrNlljSlFsOVZ2S0tmMUVjLXBEUm1FOXFWYjAyVWVhWEh3R0NWMHllVGIwckh5ek5HNXl3bldLeFpmNnRsdGZYX1gzWUdaODJ5dEFtdTdhYzV4Nkl4aS1mMXowWTlwX3hnRGp4dC1oWFVSSFJiMXR3T041OGVDNHFhUFpHMi13OWtEZ0V4Tg?oc=5",
-   "published": "2026-11-24T03:00:12+00:00",
+   "title": "Anthropic CEO Dario Amodei sells shares worth USD 280.41 million following IPO",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropic-ceo-dario-amodei-sells-shares-worth-usd-280-41-million-following-ipo/articleshow/136129119.cms",
+   "published": "2026-11-24T11:37:14+00:00",
    "sentiment": 0,
    "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "RBI DG asks primary dealers to bid responsibly in G-Sec underwriting auctions",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/bonds/rbi-dg-asks-primary-dealers-to-bid-responsibly-in-g-sec-underwriting-auctions/articleshow/136125661.cms",
+   "published": "2026-11-24T09:26:23+00:00",
+   "sentiment": 0,
+   "high_impact": true,
+   "markets": [
+    "NIFTY",
+    "BANKNIFTY"
+   ]
+  },
+  {
+   "title": "IIFCL IPO: Govt plans to sell part of its stake, company to issue fresh shares",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/iifcl-ipo-govt-plans-to-sell-part-of-its-stake-company-to-issue-fresh-shares/articleshow/136124476.cms",
+   "published": "2026-11-24T08:32:38+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Investors mint Rs 34.61 lakh cr in November as markets rally nearly 11%",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/investors-mint-rs-34-61-lakh-cr-in-november-as-markets-rally-nearly-11/articleshow/136123662.cms",
+   "published": "2026-11-24T07:58:46+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "HDFC Bank, Reliance Industries among 10 stocks with highest DII holding in Q2. See full list",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/hdfc-bank-reliance-industries-among-10-stocks-with-highest-dii-holding-in-q2-see-full-list/slideshow/136126992.cms",
+   "published": "2026-11-24T06:15:03+00:00",
+   "sentiment": 0,
+   "high_impact": true,
+   "markets": [
+    "RELIANCE",
+    "HDFCBANK"
+   ]
+  },
+  {
+   "title": "The LTCG debate: Why markets need tax stability and not ad-hoc fixes",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/the-ltcg-debate-why-markets-need-tax-stability-and-not-ad-hoc-fixes/articleshow/136121257.cms",
+   "published": "2026-11-24T06:08:55+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Bitcoin fails to hold Nvidia bump with crypto headwinds in focus",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/cryptocurrency/bitcoin-fails-to-hold-nvidia-bump-with-crypto-headwinds-in-focus/articleshow/136119619.cms",
+   "published": "2026-11-24T04:40:09+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "South Korea\u2019s Kospi rockets 8% as AI-linked stocks get breather after Jensen Huang\u2019s return as Nvidia CEO. Worst over?",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/south-korean-shares-rebound-as-huangs-nvidia-return-lifts-ai-stocks/articleshow/136118071.cms",
+   "published": "2026-11-24T03:05:02+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Japanese bond yields fall as lower oil prices ease inflation concerns",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/bonds/japanese-bond-yields-fall-as-lower-oil-prices-ease-inflation-concerns/articleshow/136118046.cms",
+   "published": "2026-11-24T03:04:17+00:00",
+   "sentiment": -1,
+   "high_impact": true,
+   "markets": []
+  },
+  {
+   "title": "Dollar climbs as renewed AI euphoria fuels Fed hike bets",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/forex/dollar-climbs-as-renewed-ai-euphoria-fuels-fed-hike-bets/articleshow/136118031.cms",
+   "published": "2026-11-24T03:02:32+00:00",
+   "sentiment": 1,
+   "high_impact": true,
    "markets": [
     "EURUSD",
     "GBPUSD",
@@ -12643,18 +12749,6 @@
     "XAUUSD"
    ],
    "usd_news": true
-  },
-  {
-   "title": "ICICI Bank Share Price Declines 3.32 Percent; ICICI Reverses from 52-week Highs, NSE Nifty Drops 450 Points - TopNews",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTGhYQmZSeENJbUZzbGY1amx2aVo2S3JyUnBCeUl1S3cxNldZS01wMnk4bkVCeFFSZ3I5SzFVOFZmQTVWb1IteVg0ZkVfdU5acWwwOG12NTBjc3JJemNVZGx0RVlibVJKeDRsbG82V3VKajJITUNhLUVsbkc5UllpbmFldEpGS2pFRVg2bVh6Zmg5NUtWM3ZTNXlXTldCbDdBVXlNMDgzN1pVZEYzNDNnRnJ0aGFhSDlS?oc=5",
-   "published": "2026-11-24T02:51:15+00:00",
-   "sentiment": -1,
-   "high_impact": false,
-   "markets": [
-    "NIFTY",
-    "ICICIBANK"
-   ]
   },
   {
    "title": "Asian stocks rally as Huang's Nvidia return revives AI trade",
@@ -12666,89 +12760,6 @@
    "markets": []
   },
   {
-   "title": "Thai baht/US dollar steady on Tuesday - TradingView",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPN21tZE5zeG52NDhfR01xNEZuenhpR1dCZzVILWZhZ3NPcjExbzdiV3kxNUJPdDRQM0tMZk02OUpSU0g0eThXUTFlalJWMzZnQWtFUzFjekVGS010YVptNVZoTXNMNE9aajlLMi13T0NGNWRYWHBCX0luNmlsOWZEZGZIWjhCUmRmZ1lLUko5akFMeTJBay1qR2V0UTZ5d2paQUh6V3JEdnVJdEk?oc=5",
-   "published": "2026-11-24T02:44:00+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "Gold price today 24.11: Extending the upward momentum for 2 consecutive days - Laodong.vn",
-   "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTi1RMElBbXc5YkdQSF80b2Y4eGpEeDhhcWxxRWphVXRBeGZnTld2Y2JRQ2lsVDU0YXV4TmlVcHlnTXlTNFR5enVTWnlIVzl1czVzM0Y0N2ZYMmRKeXFETFd0dFAtRndtemxLVEhsVTJZZ0NPeld1UmVyMWhMWXZlckNycGp1c1JXVUkybjdTNm1rc25kS0NKbm1UTmdoZGx2WklPd1FUaC14WnEzYVdqZg?oc=5",
-   "published": "2026-11-24T02:41:42+00:00",
-   "sentiment": -1,
-   "high_impact": true,
-   "markets": [
-    "XAUUSD"
-   ]
-  },
-  {
-   "title": "Reliance Worldwide Corporation (ASX:RWC) Jumps 11.92% Ahead of the Brookfield Scheme Vote - Kalkine",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQVUszX2tWeFZhNzFvNm5rWlI4SWs1UkNwcDh2dm1BR19HQkJQM2F1UjZsbmtfTDI1VXp0Q2tOeHRXTWhldFMtMVI4YUNFVzZwcWhfUUl5ek1DbWdNRUJ6OVE1aXp2b01GaV9nUnFvbzRLNElfVjFuTlQxTUNFUVJETjZ2ZUJwaWR4ZHFKa2pERmY2T2liQjJES2xEUEtlYzRqZG1KSFpxOVl0M2NXVDM0STdQMXA1V0xZeEFXdi0yQ0E4QQ?oc=5",
-   "published": "2026-11-24T02:28:00+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "RELIANCE"
-   ]
-  },
-  {
-   "title": "Canadian Dollar trades weakly against US Dollar, US PCE in focus - FXStreet",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcS1feXBhcDR5OS1xY2JNUHRyb29SdGdwMHVldjJ3R1FjbGw2bGZoQnVsTV9pSWRBR1I2MzF6NnNfMDdLbVc2Snd3ZXpJQ19BTXRsUDVSUFVQOUtKRUFjYktVVUFHemxLTTF1eWI4dmxDSjIxWVlOMFlLUG5CdDJLam9HRG95Qkw2VmJsT3p6VkZteFFLLTNnaHNwSi1iRDdIOTFvelRfSTduZw?oc=5",
-   "published": "2026-11-24T02:07:10+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "Asian shares rally as Huang returns to Nvidia, sparking Wall Street rebound - Business Standard",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNcDZaemRnc3RIYmlSbUpjSjlGaGhIc0tLR25FT3NZOV9KSmFhV01OSmNYRUlvdzMwd2JWVjRkNWpidk9CTFBTbEs0dmdHWXFNZ3RpRXdra3NSNjR1OERZUUJPSUFwNzRFSmVDRUFJUjVNRXNhU09EZ2RlZElMQVdKcnlQNHVKRW1kSHdmdlRxQmxMUnlGRXRyWld5V0NUVVNHRXFibmlOVlVQNW9FVkxTc0pzb2M3Q0NpNjg1SHNiUlNIc2p4ZDhHY2Y1MFlFY0dNRDNVNTQzZ1rSAd4BQVVfeXFMUFpUTmVnMnhVQ2dVNVVsZG9maG0tckVIUzhOUHM2N2ZnZjlsN0ZYcGFUdTdGVnpoTURFTkFLVmVZZkZaWDM1eW5HLUFZSlBIYy1kQ1MtYVY5WmRJUFBMRWhvbnFqNWI5Z0xqaUFCV3E5UHVEekJXV0ljZVBHTm1maTZBZi1aQUZ5Zng2NU05NkFUNVBOREVYMWk1ZUJVVDNWMUZGUWt5alJFU1RuTk0zTk5ySU5VWEVIVXIyclZ3cE1tUUlmVjBuZmlreVlScXgxWXd4elplOXZRVjNsaDFR?oc=5",
-   "published": "2026-11-24T02:06:57+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": []
-  },
-  {
-   "title": "Reliance Worldwide shares jump as major shareholder backs Brookfield buyout By Investing.com - Investing.com India",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOYjZOY2VwQlJaZ1lrVVZ3WjN2VFVCXzQxTWIxdk1KOXJtTUdqZFNNbjEzNmdjT283X1FQTksxUnFxbFRwZllpdmxyWU91bnU2cWNaYUE0X1F2MGdsbmQ4YzVxUF9tN1BrLTJQSE00ZHRmVlZaWTVwTVBrZFRfbHFreTh6SXVRX082N3FDSzM5cTlNbmFEcDgtMll3V0dTMWk5MWtZNFJHRU1VWU50ZTVzSUJUWFpUaURnMFNBaGt3dEpfOHEyUFBBdmV1MA?oc=5",
-   "published": "2026-11-24T01:46:15+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "RELIANCE"
-   ]
-  },
-  {
-   "title": "Reliance Worldwide shares jump 12% today. Is there still time to buy? - The Motley Fool Australia",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOM2t2akRCRkJWR3JrTkt6S3BkNVZsWnQxaEgtVHNmSmJNci01UThrYjkxWVFXUkpzb19VRVprWE1RbGItNXlJM2YzeEcxN1l4UGhuY3NzcGthdWt0eWtjMFVHQlpLTDJpeW5UTzV3d0NBRDBRd25vdklYSXRYTjdpay1NYnBJSzJyZmxxWGctTmhXZVJTaTFhYmhKLUNxSGxqZFNqZQ?oc=5",
-   "published": "2026-11-24T01:44:52+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "RELIANCE"
-   ]
-  },
-  {
    "title": "India\u2019s rupee has become an accidental carry star",
    "source": "Economic Times Markets",
    "link": "https://economictimes.indiatimes.com/markets/stocks/news/indias-rupee-has-become-an-accidental-carry-star/articleshow/136117132.cms",
@@ -12756,87 +12767,6 @@
    "sentiment": 0,
    "high_impact": false,
    "markets": []
-  },
-  {
-   "title": "Sensex slides 1,484 points as global market weakness weighs on D-Street investors - The Times of India",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMiygJBVV95cUxQSm9VVWUtbmZ1cVlQVmlFT25HcjRtNEF3N3E3Q21LSHcwaTJ3dGQtOFNSSDdjY090QllzdmJwZWdvRC0zTjZ3WFFscWNubkdoYzBjcUstQ2ZORGJfam1PVDZxYU5GTmtueDViUTlGazlzTVpFMGhvWm1vQkg5YW5objFjNWQyT000aDZWd0pwZklVNHNha1NzcTBwNGNWd1JpR0FHNnZBdnpaUHltaklwek11SUc1Rzc1QVoyWUV1VWE3M0traEcxNHV5bk9QSXhXNXluNENGaVlGbkFmMVh3ajdodVBpZG5lLU91dGI3SUhmRDZwRHJqLW5NV1V1VTdsQ0NSTERjdEhNd2ZfaDVlSUVkVy1EQ2h3MGNPZnowZ2F1R2NSZUJNWElOb1dKM19HQ1k1dm5fMmNxYnNqR2RkRXY3RklOZ2xzSVHSAf8BQVVfeXFMT19JRnlCS1ctZDRfNnBWZXFueklrM3ZQc040VmZPM2FVZTc2MGk4YlhoeDMtcTF5aks0ekxBbG5hVHpQYlk5VG5nVGdVdHdfa1NTUVUxQi1IX08xVXJHWndPaFRjeTFvNmVRZElMM2xLMklZTDlKaFVDQTZUOUktWUV4OFVkd0dydjcyRlhEaWVuYzBEX1dQVGg1WHhMSGlQdDdUTkg3R0V6ZW50ZTRWc3NrSnBqWkVlX3g4Q25fNHJXQXprc05Nb1lfZFZsN3FaRnl5akx6eDlFNVd4MVNLOHowNW5qUmZuNWxsdEY2aGI5YWpmUjJPVGdiQ2Z3V2Jj?oc=5",
-   "published": "2026-11-24T01:40:00+00:00",
-   "sentiment": -1,
-   "high_impact": false,
-   "markets": [
-    "NIFTY"
-   ]
-  },
-  {
-   "title": "Stock Market Holiday: Share Markets Shut For Guru Nanak Jayanti Today. Are Banks Closed Too? - NDTV",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQmlMUlRkZDVudkRmMF9SQ016dE1Vb1dVQnBEc3RvUHpxaGgtZUUwTXZwd3NFbUxYMjZwZWVsQkdTd3VpOFN5NFRaMFc1Z3Z6WDZGeFJTNFVrRUpaR1JTeVNKVHpRVmFJT29HUGdRU3NZX29tVUZ0MWZueE1NN056QTVHaE5Obk9WbnA4UHBtLUJuMlZkemNoRnM1NWFwUHRONlh4MHhxa05OenhaSmxnR09sSmM0dnNaSEtqdk9TTlhGSGxLR1dTNnZVc3lyVWw0aEpUWlA3VkFYd9IB4gFBVV95cUxQdkZUcTRIc3oyRTRJd05wNEFTelhHQ05US1RXMzIydERjX1VPNi1HV0FjRXZoSEdkVTZsbnpRRHFOX0xvQ2hfOXJPSXJCM21wNVdranVpcmtWQmFESmx1QjNLMUxLc3ZOYUQ1M1NJQkVldTY5UElYaWpCOE9QTC1NNG8xU3h6bl9NYUNtYUt5WTVoSEdyOEVTSXFWa3Z1c3JzWEdsVzN4MjNQVmNvRUN2MmVBd3otajMxa0cxMURxQ2o1UUw5WEdaSnIxMm0teUNHWVdYVFNHN2NTVnhtbnVwRjBn?oc=5",
-   "published": "2026-11-24T01:19:14+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": []
-  },
-  {
-   "title": "Stock market holiday today: BSE, NSE to remain closed for Guru Nanak Jayanti - TradingView",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQdXZwTkhHT0NfUWtLeklOYnAzZ3otYklzamNPaGFYaDZxZjBuTWRxV3NrNHFpbndOMktIU0cwblhyR21XRHZTaHV1WWZwZFJObEtqZXFYVGhrUWRyZWN5QWRaRGVWZFVqcXNmdjgyeGlaY0E2MUZjLXBydlJpWFdOX2h6dDAzQTVFSjNFZ3ZfT2lSTkIzMC1aZUc0cGhDRTk1N3V5UzY2eFFmMG1ERmJqMnd0M01qWU5HUVdkT004NFk2WnpDaEZUZXVFV19iRFRXaklB?oc=5",
-   "published": "2026-11-24T01:15:00+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": []
-  },
-  {
-   "title": "Dollar climbs as renewed AI euphoria fuels Fed hike bets - Reuters",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWk01SnRnY1hzWHBOdlQ5eGdldmlIQkd5QUM4SFJ5S3Z5YWtVQnlYWVp3LXlqajM1QTA5UTBBSFNrOFdjVGdWME54WUJYdFRGUXJDYlVmUDFETjlITTZtYkFiWW9IcU9sVTM0R0otbjlmMXNCdC1HSEVNOXJMaDlIMC1YUnFBUDZNMXh6RlRwMVM5MDFRTy1YQXc3U21zYU0?oc=5",
-   "published": "2026-11-24T01:14:00+00:00",
-   "sentiment": 1,
-   "high_impact": true,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "Gold Price Today: Live Price per Ounce and per Gram in Dollars, Pounds and Euros - Around Prague",
-   "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1Ya3RGTDQ4VEIzY19wN3Q3UDdOdmphSkJsc2xscC1sSFZRVEZBRDdpeWdFRVdzRmQtX1gxcWl0MW83aUZxMDdoT1Y5V09rQ2JwLVRITGFQc3UzX0ZUME40Mg?oc=5",
-   "published": "2026-11-24T01:10:35+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "Gold Rate Today in India, 24 Nov 2026 - Live 18K, 22K & 24K Gold Prices - Kotak Neo",
-   "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9oS1doakpSUWg2blRCZGtNeWp5UXFadUo5cVZtTzd5bzBsdHNnUHlsTG9KVEN5UGVMaENmNVNDSGxrVmVLaHgtYWRPeEE?oc=5",
-   "published": "2026-11-24T01:07:37+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "XAUUSD"
-   ]
-  },
-  {
-   "title": "AustralianSuper to back Brookfield\u2019s $2.53 billion bid for Reliance Worldwide, shares soar - KSLM Radio",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOSXdzNnBTb1NOZWRJcnlrcU9VX05iOF83eTZTQWh6cEx1bmNFdXRIbHFkeFJXWEZyNWlORUZsTndkMXdWdnZCeUtOc0p0LXd5amIyZ2d4NlVDNk1BSjE1TWVFUEtzajBuMkxMMTUzbVNqd0NfUXh4MmMtRUFFd0dsdnJXcEk2UnVIbGxxQndDdVlESVFrQ2N4LWZ6bFNXa1d2RFBicktlZGRYb2VjRDF4eTJkQ1FhWTl6ZHVQcUNvdFFRNEF1LXM5Rg?oc=5",
-   "published": "2026-11-24T01:02:22+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "RELIANCE"
-   ]
   },
   {
    "title": "Wall Street soars on Huang's return to Nvidia, Treasury yields rise",
@@ -12854,234 +12784,215 @@
    "usd_news": true
   },
   {
-   "title": "Today's USD exchange rate (November 24): The US dollar rises sharply. - Vietnam.vn",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE52RjRaYjBjMF9hZlh2Z3ZiY091Q3kzVzhFRDBDWFFfNFBWRW0yNDhoTmVQWjVKd1BFcUhsUFR2Tm0wQ1ZDcE5MUGQycFdhQ2o4RVRwcDZVYnpSYUEtbDdGeEJidl92eUtMb0R3UmhiX1VDV0FFZVhuMw?oc=5",
-   "published": "2026-11-24T00:50:18+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "Spot gold gains 3.5% on 23 Nov after hitting 14-month low - Nation Thailand",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1IejR5NzI3XzRTWDE5Y19XRGtHRFdXNnZGdlpDSHNpVlhUYmZJd050RW52UjN6cEdrWDNQc1pqeldwZTI5dFRiVTlEYTdienNIdFpqdkJhSzQ3SUI4a0RaMWZ5Y0lqXzZaS0gyNkZaODRUaHlKSkE?oc=5",
-   "published": "2026-11-24T00:36:00+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "XAUUSD"
-   ]
-  },
-  {
-   "title": "NSE Indices revises the Nifty AAA CPSE Bond Plus SDL Apr 2027 60:40 Index - Traders Union",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOX0NMbjJzOFVwVFdnN2twZV9OdkpOY0FLNC1PcjMzTkZmNFhHYnFIXzJTTm5KRVBfUXNFSXNKcTYxbERtYnd3eUVESUdNSWpJbGF0MFpoMG5OY3gtZWRodVhuejRtSldMUWdfYU1Pcm9qMno4NUtBYU85T1RxUW5pQWpDZUZKUlpWTFZ2ODZtZWJMZExM?oc=5",
-   "published": "2026-11-24T00:25:46+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "NIFTY"
-   ]
-  },
-  {
-   "title": "Federal Reserve official faces probe over blackout period compliance - Traders Union",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSDNPZUdWOFZuUC14YzNPMDQtbnhoNG1JOFRrT0tzQkhaQWdDemtscW5uY1pfbTQ0SXQtWHN1RmIzYXRQaWlJcFhTSnhfS2pzQVJ5TnVvUGoxN3lWeXFCOU5vRlJMQ0VucHlXX2ZxTzh2RVJaeGtaanRJS2Z2bEZOOGZTdmxWU2RzbjhTckFRRXRnaVE?oc=5",
-   "published": "2026-11-24T00:25:40+00:00",
-   "sentiment": -1,
-   "high_impact": true,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "The show goes on! Jensen Huang\u2019s return helps push the U.S. dollar to new highs - \u5bcc\u9014\u725b\u725b",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWEJrNDhZUFVQS2dpN2g0bngtbGFZdzBMb0pWa1I2ZGdLZEZmLWRFVUlFdV94SDlKZjUzRTRpb3VPcW0xNzZyVjRWMW1HYzdqVzBTWWVwOG1uNXpyRUJVdXpWQkQzdnNwVEtYa2x2VDV3dS04Q3ZlWFNiQVpnS18zN0plalEzTmNwQXg3RkQ0VTJ4TlhqbmNJ?oc=5",
-   "published": "2026-11-24T00:25:10+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "Why is Reliance Worldwide stock surging today? - Investing.com",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMVZXSGJyZDhHZ2hVdmpRQ1R1cS1Ub2dOTEVDTjRDbWlwMkVadTRkVWpSd0NxaUptb0xlQlR2eVVyV0Q4V2VMUl9wMWZETUJRWmw0OFFDb0tINnYzUTZqeDBTU0ZtYkZnVFNmcEhrTkM5UXRPLThkNF9zRVQ0ZjZJdnRqQ1h3YTlZejBISDJBVnNWRnFpTUE2RXluek1mN2pSMlR1LTJXakhITW8?oc=5",
-   "published": "2026-11-24T00:17:11+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "RELIANCE"
-   ]
-  },
-  {
-   "title": "Gold spot/US Dollar sliding between 0.382 and 0.236 arcs. Downside target at 3,590 - FXStreet",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPRUZlc2F4WmUzX05Kc21lQXVXVHliNEwzeEpCSVpxV3Y1REpIdXFMb2xTZnc1RmFqa1Q0N1ZCV29LbFNfVEdKYnMtbExjNHNYZWJwNXRtRldlUURVdWt6bE5TX1ZGUTRTRU9LaDBack1jODEzbFgzVjhTeHlKQTQ4MXEwUEJuSm5HN3Uwb0szQWtkNk9ONnIxWkIwM2NldG1rdjRzQ3piY05kbm0yTmFYeG1WUXpTMERaT0FRZGpjRVpHdUpm?oc=5",
-   "published": "2026-11-24T00:15:33+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "Seasonal Dynamics of the U.S. Dollar at Year-End - CME Group",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNeWxRdEttd0JMYTA4TkFuUXc5WGxsYy10elRUbEpadno4SlhpX2FISnd6TDJyNDZnbmtIU19GWW5MSzQyUnc5WU9PbEJwSzZpWHZkcFRMSFM0UFVYRjZnbFA4d2R3VlNSSnlMUXFicXRVLVJkbU42S2haVWlpeGRvVFlyZ005aHhzZ0RTWi16eVRzUWtB?oc=5",
-   "published": "2026-11-24T00:06:01+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "The Mexican Peso: A Historical Tour of Mexico\u2019s Currency Value - Mexperience",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5qNFFBd04yV1FVOXB4Z3NLT1hDSGVPS29aTEFfTkk2b0NneUNiS0hGdnBnTUx6TURtQ1Z1UzNCYTRWUjlPTy14QlpaMXBFVWd4OUszbUlET2FHdWlRbXBDZlU5U0xHS0FQZTd6RXdkUDh2RGQw?oc=5",
-   "published": "2026-11-24T00:05:33+00:00",
+   "title": "NSEL releases Rs 1,950 crore in one-time settlement, ends 14-year payment default",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/nsel-releases-rs-1950-crore-in-one-time-settlement-ends-14-year-payment-default/articleshow/136104164.cms",
+   "published": "2026-11-23T13:13:56+00:00",
    "sentiment": 0,
    "high_impact": false,
    "markets": []
   },
   {
-   "title": "Why is Reliance Worldwide stock surging today? By Investing.com - Investing.com UK",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNkN5eDd0Nld0WXNOSWZkUERfYWtkUjNfc012b0tQQWhqR05sU1JvbmdjbmI3UTBlQTVDMzdOUjQtdlF4UzYtRlg1ZDJQc0FGQ01NVUoyUTAtM2ZtaHVBbnFnYjF3YkZ4cVA0NHJ3a0FXT3N6aWk2YXFRM0dOZDhqYXFfb2tadE5ycEJRTzhUYzJJWVB5RUM3T2NUc25XOXdJNUNLUFFLdUtrdw?oc=5",
-   "published": "2026-11-24T00:02:00+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "RELIANCE"
-   ]
-  },
-  {
-   "title": "Reliance Worldwide Shareholder AustralianSuper Backs Brookfield Capital Partners Deal; Shares Rise 12% - www.marketscreener.com",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxORnBhOHIxQzV0ZWxIaGhuZ0x5cU9wd3JIWVdnMHpXN2VKZ3A1US1ockFkcHFjVVhjRTIxWjFNcEdEWVh5dzFvLWpRTWdxZDV5VDhQek5UOUFOUllBYTJTdTQ3U2xwQ3d3WWJSaGtSUnJ5ckNJeEpaYUZNZ0RMM29pSGdub1VfZnY1THl3QUItN1pVb3pBX2xIemNRRmJpWDFSaHRWMi1oSXJ4ZjkwTGl1bHhaLXplZkdSRVVBTEI3MVNBX09DaWlxSzdPX1VtNzNNNzRLSnZfUmdId005U0dZWkl2SEhIanc?oc=5",
-   "published": "2026-11-23T23:55:23+00:00",
+   "title": "Nasdaq surges 6%, Dow soars 1,400 pts as markets rebound on Huang\u2019s return: Stock Market Highlights",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/stock-market-live-updates-dow-jones-nasdaq-sp-500-nvidia-meta-anthropic-amd-micron-tesla-ai-chip-earnings-fed-rate-treasury-yield-news-23rd-november-2026/liveblog/136104474.cms",
+   "published": "2026-11-23T13:12:48+00:00",
    "sentiment": 1,
    "high_impact": false,
-   "markets": [
-    "RELIANCE"
-   ]
-  },
-  {
-   "title": "GBP/USD, EUR/USD Forecast: Two trades to watch 1711 - StoneX",
-   "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNGFHUFV3V3VQbkhRVnJWYlNEVk1nOG5fRWdFYkJTV0lpcjBWT0ZJUmFJYjZSdUEtNzlGYmFFVzhRZ3N2Z2FwYVlOaFctSkw2c2tnNnFDWThKYzEweXhoQXBCMk1GN3hEbDlFZjNVZW1VZmhDc2lQUHl6YXM3SGJqdks3RU5HY3ktLVNxMlpRMXBldWF2MEhhMTBzREY4QQ?oc=5",
-   "published": "2026-11-23T23:40:54+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD"
-   ]
-  },
-  {
-   "title": "Gold price forecast after sharp drop - Vietnam.vn",
-   "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBxdlNkTHNBZGl1MENSWUJ2LVZyV2Z5dWk0MEpWdlR0NXBKd0swdW5MbWlzS0NYbGg2eFdybElKNEE3UUh0NS1PeGFrYUdFbzRFcXlQcVF6aVpRZkR6X3VKS19GTXJ1MHE2OUl2WU0xanBxUQ?oc=5",
-   "published": "2026-11-23T23:40:23+00:00",
-   "sentiment": -1,
-   "high_impact": false,
-   "markets": [
-    "XAUUSD"
-   ]
-  },
-  {
-   "title": "Fed's Williams says inflation still too high, signals more rate hikes possible - Reuters",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNa3lvbHFTMGFKUm9paUJYVzFoQzd1QnQtSzAtTlZmSlFyRW5Sc1hic3p2MVV0VWVrYjFkNDdQZlFTUWMzZGFueG5yMTVMcGhLWUxwQi16Ujk5b2ppMVRWTGowaHlMZDQ4Z19xbWpCQTRFVzFHSHhxeW9kbG80OTVtSEZsb3REX29FRFFPR0xzTnFjYXh6?oc=5",
-   "published": "2026-11-23T23:38:48+00:00",
-   "sentiment": 0,
-   "high_impact": true,
    "markets": []
   },
   {
-   "title": "British Pound Technical Outlook: GBP/USD Tests Pivotal Support\u2014Breakdown Risk Rises - StoneX",
-   "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOd0dfRG5aRWE3NGFXSDFpUTA3ZEVleWpuVTJTX0M1aTkxNF9qSTlLZVdPd2JwSlZveWVkMm9GMEgzWVF6Sk5pV2QzWmlnbTlWWTJNMWRmZVpEcHJlY1NDM2xyR2JMU01EOUlYM1gyOE54WVBja0FFXzJORk1NSXNZZENVdG5UY1VkejI0SVJKSk5kXzhHX3NLajV6UktOa3ozQ3pQQ3QwYjd6MjA3QmdTWm5YbFFua2xQanNWZU4wLUc2cEZmNDdyV05n?oc=5",
-   "published": "2026-11-23T23:35:58+00:00",
-   "sentiment": 1,
+   "title": "Adani Airport raises $300 mn from 360 ONE Asset, taking total equity infusion to $1.35 bn",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/adani-airport-raises-300-mn-from-360-one-asset-taking-total-equity-infusion-to-1-35-bn/articleshow/136104118.cms",
+   "published": "2026-11-23T13:11:12+00:00",
+   "sentiment": 0,
    "high_impact": false,
-   "markets": [
-    "GBPUSD"
-   ]
+   "markets": []
   },
   {
-   "title": "BP Sets Yields and Cash Prices for 16 US Dollar Note Tenders - Securities.io",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWHNFV1ZVaUJKcHU0U2xVbkZhZU1GSUJ0ajZzeDRMVE1xTlhES25hM2ROcWEycWhiM20wSi12TFJkaUxsT3JpSDBQTUd2YVFzcE92OHJxOEl3UXZkbmJtMFVmSm5FaG1YeTN3Z0p5aE10M3pMV0hnLXdXeXRfRXNjSFpNRVpJNXBJM1k0NHcwYmY?oc=5",
-   "published": "2026-11-23T23:35:39+00:00",
+   "title": "Nasdaq futures surge 3% as battered AI stocks gain ground",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/nasdaq-futures-surge-3-as-battered-ai-stocks-gain-ground/articleshow/136104059.cms",
+   "published": "2026-11-23T13:09:42+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Rupee reversal, debt supply drag India bonds in holiday-shortened week",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/bonds/rupee-reversal-debt-supply-drag-india-bonds-in-holiday-shortened-week/articleshow/136103987.cms",
+   "published": "2026-11-23T13:07:06+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Rupee retreats with stocks as rally takes a breather, positive bias lingers",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/forex/rupee-retreats-with-stocks-as-rally-takes-a-breather-positive-bias-lingers/articleshow/136098391.cms",
+   "published": "2026-11-23T10:28:38+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "German bond yields edge higher as equity rebound eases safe-haven demand",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/bonds/german-bond-yields-edge-higher-as-equity-rebound-eases-safe-haven-demand/articleshow/136097404.cms",
+   "published": "2026-11-23T09:55:49+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "India bonds give up marginal opening gains as profit booking takes over",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-give-up-marginal-opening-gains-as-profit-booking-takes-over/articleshow/136093136.cms",
+   "published": "2026-11-23T07:16:54+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Rupee retreats, Goldman calls it a 'port of stability' in AI storm",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/forex/rupee-retreats-goldman-calls-it-a-port-of-stability-in-ai-storm/articleshow/136092977.cms",
+   "published": "2026-11-23T07:09:49+00:00",
    "sentiment": 0,
    "high_impact": false,
    "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
     "XAUUSD"
-   ],
-   "usd_news": true
+   ]
   },
   {
-   "title": "AustralianSuper to back Brookfield's $2.53 billion bid for Reliance Worldwide, shares soar - Reuters",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUzZOU1FmUkROU2hmSnN4TFVJN0V0UUtvbThaVGFRUUdzNHg2YjZpS0lQbXZ5aTVUNllsN3l3OWt0bEpyWThCMVdLVklmYzJYaFF6akFZOE5xSFdSa0dydDdOLTlVR3ktQ3hBWEdZLUdaSE1vVEdiTnVTNnpsR0l6T1h2RjR2YV9paWFaMkRoeHg4Y3JVaHduQzZPQVVRNTJMcC1jbnAxcFRCNnZzWjljQl9qRVF6LWdHcWtuVmFsVkUyVHgxc0w5M3k5aw?oc=5",
-   "published": "2026-11-23T23:27:29+00:00",
-   "sentiment": 1,
+   "title": "Cipla Share Price Live Updates: Cipla Stock Price History",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/cipla-stock-price-live-updates-23-nov-2026/liveblog/136092588.cms",
+   "published": "2026-11-23T06:50:09+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "JSW Steel Share Price Live Updates: JSW Steel Stock Price History",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/jsw-steel-stock-price-today-live-23-nov-2026/liveblog/136092567.cms",
+   "published": "2026-11-23T06:49:43+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Jio Financial Services Share Price Live Updates: Jio Financial Services Stock Price History",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/jio-financial-services-share-price-today-live-updates-23-nov-2026/liveblog/136092528.cms",
+   "published": "2026-11-23T06:48:52+00:00",
+   "sentiment": 0,
    "high_impact": false,
    "markets": [
     "RELIANCE"
    ]
   },
   {
-   "title": "AustralianSuper to back Brookfield's $2.53 billion bid for Reliance Worldwide, shares soar - The Lufkin Daily News",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQZG56NjF2ZmlvZng3Z0RfbHVQYmlzd2RHekdPWVR6ZmxmdzBaSmZLNU90RDRNTEJkSGZwSWFUVWxNWHpJYUw3LVFrYnEyMHZZX3h5WHFRTC1FVTIzWUg2UGFRWnlieUdkRUx1bzB5TjhBSU9NNnMtV2V5T09pRmoxblQ4bHVzNzNLU3hQdFZndXVmZjJERV9LQ1h5Z0xxTUpaT1M5TFBmRmNTaXhpbVpNUFQtR3pBalp1cFZROVB6VjJHYVFtYTFtMWVtN3hnSF85bUphOEszZjgwSFFjUDU4T2YweWlaa2VkbmpENmN0YUYzUlNrWUZCT3Q1anJFTkU0NFNxMmdjaC1sS0NPQWlBM1NjRW9uUQ?oc=5",
-   "published": "2026-11-23T23:25:41+00:00",
+   "title": "The great Indian stock market comeback. Can the rally sustain and what should investors do?",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/the-great-indian-stock-market-comeback-can-the-rally-sustain-and-what-should-investors-do/articleshow/136092236.cms",
+   "published": "2026-11-23T06:39:55+00:00",
    "sentiment": 1,
    "high_impact": false,
-   "markets": [
-    "RELIANCE"
-   ]
+   "markets": []
   },
   {
-   "title": "AustralianSuper to back Brookfield's $2.53 billion bid for Reliance Worldwide, shares soar - TradingView",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUm01VEd2WG9PVzRZSlA4RFdWeGxWTFZfOVFLbU5tTlBJOU5IMlozWHZESnp4RXJtOURMUHFZTW9TS1U0c0tXOFlhdE1RMmhZb1VHb095LW9uSnBIQXlvTzkyYmJ6N2UyeF9xb1ZNZ05BVWhTelYtYnZneFVGb1hnSHNjT1M2TmN4MVlsQnNrM2xBQ25KMi1meEROUlZpZVBTcnVhT3pTYm82TVp1ZmVSTlBSbjJ3emRfQ3JsTEtjRWhUZXA5X1UtYllLMGNuR0dwRVpzYXAwU25vSnRvTTBBVUU1SU9IS0pLQ0tuSUNXNA?oc=5",
-   "published": "2026-11-23T23:25:40+00:00",
-   "sentiment": 1,
+   "title": "Global Markets: 5 key triggers to watch this week",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-markets-5-key-triggers-to-watch-this-week/slideshow/136091589.cms",
+   "published": "2026-11-23T05:44:38+00:00",
+   "sentiment": 0,
    "high_impact": false,
-   "markets": [
-    "RELIANCE"
-   ]
+   "markets": []
+  },
+  {
+   "title": "Why is SanDisk stock falling? 5 factors weighing on shares",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/why-is-sandisk-stock-falling-5-factors-weighing-on-shares/slideshow/136091195.cms",
+   "published": "2026-11-23T05:41:26+00:00",
+   "sentiment": -1,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "ITC Share Price Highlights: ITC Stock Price History",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/itc-share-price-live-updates-23-nov-2026/liveblog/136089671.cms",
+   "published": "2026-11-23T04:43:06+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Tata Motors PV Share Price Highlights: Tata Motors PV Stock Price History",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/tata-motors-pv-stock-price-live-updates-23-nov-2026/liveblog/136089652.cms",
+   "published": "2026-11-23T04:42:27+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Adani Ent Share Price Highlights: Adani Ent. Stock Price History",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/adani-ent-share-price-live-updates-23-nov-2026/liveblog/136089643.cms",
+   "published": "2026-11-23T04:41:34+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Dr Reddys Share Price Highlights: Dr. Reddys Stock Price History",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/dr-reddys-share-price-today-live-updates-23-nov-2026/liveblog/136089636.cms",
+   "published": "2026-11-23T04:41:17+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Tata Steel Share Price Highlights: Tata Steel Stock Price History",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/tata-steel-stock-price-live-updates-23-nov-2026/liveblog/136089633.cms",
+   "published": "2026-11-23T04:41:07+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Nestle India Share Price Highlights: Nestle India Stock Price History",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/nestle-india-share-price-today-live-23-nov-2026/liveblog/136089617.cms",
+   "published": "2026-11-23T04:40:15+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Coal India Share Price Highlights: Coal India Ltd Stock Price History",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/coal-india-ltd-share-price-today-live-23-nov-2026/liveblog/136089616.cms",
+   "published": "2026-11-23T04:40:13+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Grasim Inds Share Price Highlights: Grasim Inds. Stock Price History",
+   "source": "Economic Times Markets",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/grasim-inds-share-price-today-live-23-nov-2026/liveblog/136089598.cms",
+   "published": "2026-11-23T04:40:03+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
   }
  ],
  "errors": []
