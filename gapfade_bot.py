@@ -98,7 +98,7 @@ def main():
             break
         # ---- entries: once, right after the first 15-min candle (09:30) ----
         if not day.get("scanned") and mins >= 9 * 60 + 31:
-            cands = []
+            cands, have_data = [], 0
             for sym in STOCKS:
                 try:
                     pc, b = bars(sym, now)
@@ -106,6 +106,7 @@ def main():
                     log(f"{sym}: {e}"); continue
                 if pc is None or len(b) < 1:
                     continue
+                have_data += 1
                 f = b.iloc[0]
                 gap = f.Open / pc - 1
                 if abs(gap) < 0.01:
@@ -123,6 +124,15 @@ def main():
                     continue
                 cands.append(dict(sym=sym, side=side, gap=gap, entry=entry, stop=stop, target=target, rr=reward / risk))
                 time.sleep(0.3)
+            log(f"scan at {now:%H:%M}: {have_data}/{len(STOCKS)} stocks had today's first candle, {len(cands)} setups")
+            if have_data < len(STOCKS) // 2:
+                if mins < 9 * 60 + 50:            # first candle not published yet - try again next minute
+                    time.sleep(60)
+                    continue
+                send("📅 Gap-fade: <b>no market data for today</b> - probably an NSE holiday (or a data delay). No trade.")
+                day["scanned"] = True
+                save(s)
+                break
             cands.sort(key=lambda c: -c["rr"])
             day["scanned"] = True
             if not cands:

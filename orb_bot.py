@@ -158,7 +158,7 @@ def main():
             b = pd.DataFrame()
         if len(b) == 0 and mins >= 10 * 60:
             if not day.get("closed_msg"):
-                send("📅 No BANK NIFTY data today - market holiday or data problem. No trade.", state)
+                send("📅 No BANK NIFTY data for today by 10:00 - probably an NSE holiday (or a data delay). No trade.", state)
                 day["closed_msg"] = True
                 save_state(state)
             break
