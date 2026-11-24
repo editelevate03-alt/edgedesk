@@ -1,0 +1,15 @@
+{
+ "2026-11-24": {
+  "date": "2026-11-24",
+  "nifty": -21,
+  "banknifty": -90,
+  "events": [
+   "GDP data",
+   "Inflation data",
+   "RBI policy",
+   "US Fed"
+  ],
+  "headlines": 185,
+  "feeds_failed": 0
+ }
+}

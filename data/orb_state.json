@@ -2,7 +2,16 @@
  "trades": [],
  "days": {
   "2026-11-24": {
-   "hello": true
+   "hello": true,
+   "news_mood": -90,
+   "news_events": [
+    "GDP data",
+    "Inflation data",
+    "RBI policy",
+    "US Fed"
+   ],
+   "global_score": 65,
+   "closed_msg": true
   }
  }
 }
