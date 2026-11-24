@@ -34,15 +34,17 @@ DP_RS = 15.93
 
 
 def load():
-    px, hi, lo = {}, {}, {}
+    px, hi, lo, op = {}, {}, {}, {}
     for s in STOCKS:
         try:
             d = to_daily_index(fetch(s + ".NS", "6y", "1d")[0])
-            px[s], hi[s], lo[s] = d.Close, d.High, d.Low
+            px[s], hi[s], lo[s], op[s] = d.Close, d.High, d.Low, d.Open
         except Exception as e:
             log(f"{s}: {e}")
     nifty = to_daily_index(fetch("^NSEI", "6y", "1d")[0]).Close
     P = pd.DataFrame(px).dropna(how="all").ffill()
+    global OPEN
+    OPEN = pd.DataFrame(op).reindex(P.index).ffill()
     return P, pd.DataFrame(hi).reindex(P.index).ffill(), pd.DataFrame(lo).reindex(P.index).ffill(), nifty.reindex(P.index).ffill()
 
 
@@ -98,12 +100,13 @@ def adx(h, l, c, n=14):
     return dx.ewm(alpha=1 / n, adjust=False).mean(), pdi, ndi
 
 
-def breakout_trades(c, h, l, F, S, A, T, hold=30):
+def breakout_trades(c, h, l, F, S, A, T, hold=30, o=None):
     tr = pd.concat([h - l, (h - c.shift()).abs(), (l - c.shift()).abs()], axis=1).max(axis=1)
     atr10 = tr.ewm(alpha=1 / 10, adjust=False).mean()
     ad, pdi, ndi = adx(h, l, c)
     sig = (c > c.shift() + F * atr10.shift()) & (ad > 15) & (pdi > ndi)
     C, H, L = c.to_numpy(), h.to_numpy(), l.to_numpy()
+    O = o.to_numpy() if o is not None else C
     out, i, n = [], 30, len(c)
     S_ = sig.to_numpy()
     while i < n - 1:
@@ -113,6 +116,8 @@ def breakout_trades(c, h, l, F, S, A, T, hold=30):
         stop = e * (1 - S)
         peak, trail_on, j, px = e, False, i + 1, None
         while j < n and j <= i + hold:
+            if O[j] <= stop:                 # gapped below the stop: filled at the (worse) open
+                px = O[j]; break
             if L[j] <= stop:
                 px = stop; break
             peak = max(peak, H[j])
@@ -152,7 +157,8 @@ def main():
     for F, S, A, T in itertools.product((1.0, 1.5, 2.0, 3.0), (0.02, 0.05), (0.05, 0.10), (0.01, 0.03)):
         trs = []
         for s in P.columns:
-            trs += breakout_trades(P[s].dropna(), H[s].reindex(P[s].dropna().index), L[s].reindex(P[s].dropna().index), F, S, A, T)
+            ix = P[s].dropna().index
+            trs += breakout_trades(P[s].dropna(), H[s].reindex(ix), L[s].reindex(ix), F, S, A, T, o=OPEN[s].reindex(ix))
         a = [t["ret"] for t in trs if pd.Timestamp(t["date"]) < split]
         b = [t["ret"] for t in trs if pd.Timestamp(t["date"]) >= split]
         brk.append(dict(F=F, stop=S, trail_after=A, trail=T, train=tstats(a), test=tstats(b), all=tstats([t["ret"] for t in trs])))
