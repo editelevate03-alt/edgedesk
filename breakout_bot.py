@@ -54,7 +54,34 @@ def daily(sym):
     return to_daily_index(fetch(sym + ".NS", "1y", "1d", tries=2)[0])
 
 
+def preview():
+    """Intraday preview: which stocks would qualify if today's price held until the close. No state, no Telegram."""
+    today = pd.Timestamp(datetime.now(IST).date())
+    rows = []
+    for sym in STOCKS:
+        try:
+            d = daily(sym)
+        except Exception as e:
+            print(sym, "error", e); continue
+        if len(d) < 60:
+            continue
+        c, h, l = d.Close, d.High, d.Low
+        tr = pd.concat([h - l, (h - c.shift()).abs(), (l - c.shift()).abs()], axis=1).max(axis=1)
+        atr10 = tr.ewm(alpha=1 / 10, adjust=False).mean()
+        ad, pdi, ndi = adx(h, l, c)
+        jump = (c.iloc[-1] - c.iloc[-2]) / atr10.iloc[-2]
+        ok = jump > F and ad.iloc[-1] > 15 and pdi.iloc[-1] > ndi.iloc[-1]
+        rows.append((sym, str(d.index[-1].date()), float(c.iloc[-1]), float(jump), float(ad.iloc[-1]), bool(pdi.iloc[-1] > ndi.iloc[-1]), ok))
+    rows.sort(key=lambda r: -r[3])
+    print(f"PREVIEW {datetime.now(IST):%H:%M IST} (needs jump > {F} x ATR, ADX > 15, +DI > -DI)")
+    for r in rows:
+        print(f"{'SIGNAL' if r[6] else '      '} {r[0]:11s} bar={r[1]} price={r[2]:9.2f} jump={r[3]:+5.2f}xATR ADX={r[4]:5.1f} uptrend={r[5]}")
+
+
 def main():
+    import sys
+    if "--preview" in sys.argv:
+        return preview()
     s = load_state()
     now = datetime.now(IST)
     if now.weekday() >= 5 or now.hour * 60 + now.minute < 15 * 60 + 35:
