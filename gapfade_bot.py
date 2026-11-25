@@ -75,6 +75,9 @@ def main():
     if now.weekday() >= 5:
         return
     today = now.date().isoformat()
+    if now.hour * 60 + now.minute > 9 * 60 + 50 and not s["days"].get(today, {}).get("open"):
+        log("started after 9:50 AM IST (late scheduled run) - the gap-fade window has passed, exiting quietly")
+        return
     day = s["days"].setdefault(today, {"open": []})
     month = today[:7]
     month_pnl = sum(t["pnl"] for t in s["trades"] if t["date"].startswith(month))

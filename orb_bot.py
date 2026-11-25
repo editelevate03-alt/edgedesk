@@ -109,6 +109,11 @@ def strike_ideas(S, cp, now, iv):
     return exp, note, atm, rows, fit
 
 
+def today_has_no_entry(state, now):
+    d = state.get("days", {}).get(now.date().isoformat(), {})
+    return "entry" not in d or "exit" in d
+
+
 def is_trading_loss(t):
     return (t.get("est_pnl") or 0) < 0
 
@@ -122,6 +127,8 @@ def main():
     today = now.date().isoformat()
     if now.weekday() >= 5:
         log("weekend - nothing to do"); return
+    if now.hour * 60 + now.minute > LAST_ENTRY_MIN and today_has_no_entry(state, now):
+        log("started after 1:00 PM IST (late scheduled run) - no new trades possible today, exiting quietly"); return
     day = state.setdefault("days", {}).setdefault(today, {})
     recent = [t for t in state["trades"] if t["date"] < today][-2:]
     paused = len(recent) == 2 and all(is_trading_loss(t) for t in recent)

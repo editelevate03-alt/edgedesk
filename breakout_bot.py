@@ -56,7 +56,10 @@ def daily(sym):
 
 def main():
     s = load_state()
-    today = pd.Timestamp(datetime.now(IST).date())
+    now = datetime.now(IST)
+    if now.weekday() >= 5 or now.hour * 60 + now.minute < 15 * 60 + 35:
+        log("outside the after-close window (weekdays 15:35-23:59 IST) - exiting quietly"); return
+    today = pd.Timestamp(now.date())
     if s["runs"].get(str(today.date())):
         log("already ran today"); return
     data = {}
