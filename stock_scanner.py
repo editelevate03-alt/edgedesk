@@ -81,6 +81,11 @@ def analyse(sym, d, nifty_ret63):
         flags.append(f"low liquidity (₹{value_cr:.1f} Cr/day)")
     if abs(day_move) > MAX_DAY_MOVE:
         flags.append(f"wild move {day_move * 100:+.0f}% today (pump/news risk)")
+    if len(c) > 6 and abs(c.iloc[-1] / c.iloc[-6] - 1) > 0.30:
+        flags.append("moved >30% in a week (pump/operator pattern)")
+    big_days = int((c.pct_change().tail(20).abs() > 0.08).sum())
+    if big_days >= 3:
+        flags.append(f"{big_days} days with >8% moves in a month (erratic, possible operator activity)")
     tr = pd.concat([h - l, (h - c.shift()).abs(), (l - c.shift()).abs()], axis=1).max(axis=1)
     atr10 = tr.ewm(alpha=1 / 10, adjust=False).mean()
     ad, pdi, ndi = adx(h, l, c)
@@ -98,6 +103,21 @@ def analyse(sym, d, nifty_ret63):
     score = (trend * 15 + max(-20, min(25, rs * 100)) + (15 if near_hi > -0.02 else 5 if near_hi > -0.05 else 0)
              + (10 if vol_surge > 1.5 else 0) + (10 if 1.2 <= atr_pct <= 4 else 0))
     qty = math.floor(min(BUDGET / price, 0.02 * BUDGET / (0.05 * price)))
+    downtrend = price < e200.iloc[-1] and e50.iloc[-1] < e200.iloc[-1]
+    if atr_pct > 6:
+        flags.append(f"too volatile ({atr_pct:.1f}% daily range)")
+    if flags:
+        grade, grade_why = "AVOID", flags[0]
+    elif downtrend:
+        grade, grade_why = "AVOID", "downtrend (below its 200-day average) - don't buy falling stocks"
+    elif breakout and trend == 3 and value_cr >= 50 and 1 <= atr_pct <= 4:
+        grade, grade_why = "SELECT", "tested breakout + strong uptrend + very liquid + normal volatility"
+    elif breakout:
+        grade, grade_why = "WATCH", "breakout, but not all quality checks passed (trend/liquidity/volatility)"
+    elif trend >= 2 and rs > 0:
+        grade, grade_why = "WATCH", "healthy uptrend and stronger than NIFTY - wait for a breakout"
+    else:
+        grade, grade_why = "NEUTRAL", "no clear edge right now"
     why = []
     if trend == 3:
         why.append("strong uptrend (price > EMA20 > EMA50 > EMA200)")
@@ -114,7 +134,8 @@ def analyse(sym, d, nifty_ret63):
     return dict(sym=sym, price=round(price, 2), score=round(score, 1), breakout=bool(breakout), jump=round(jump, 2),
                 adx=round(float(ad.iloc[-1]), 1), rs_pct=round(rs * 100, 1), near_hi_pct=round(near_hi * 100, 1),
                 vol_surge=round(vol_surge, 2), atr_pct=round(atr_pct, 2), value_cr=round(value_cr, 1), qty=qty,
-                stop=round(price * 0.95, 2), flags=flags, why=why or ["no strong features"])
+                stop=round(price * 0.95, 2), flags=flags, why=why or ["no strong features"],
+                grade=grade, grade_why=grade_why, fits=qty >= 1)
 
 
 def main():
@@ -128,26 +149,37 @@ def main():
         log(f"only {len(fresh)}/{len(data)} have today's bar - market holiday or data delay; using latest available")
         fresh = data
     rows = [analyse(s, d, nifty_ret63) for s, d in fresh.items()]
-    safe = [r for r in rows if not r["flags"]]
-    risky = [r for r in rows if r["flags"]]
+    safe = [r for r in rows if r["grade"] != "AVOID"]
+    risky = [r for r in rows if r["grade"] == "AVOID"]
+    counts = {g: sum(1 for r in rows if r["grade"] == g) for g in ("SELECT", "WATCH", "NEUTRAL", "AVOID")}
+    reasons = {}
+    for r in risky:
+        k = r["grade_why"].split(" (")[0].split(" - ")[0]
+        k = "".join(ch for ch in k if not ch.isdigit()).replace("% ", "").strip()
+        reasons[k] = reasons.get(k, 0) + 1
     brk = sorted([r for r in safe if r["breakout"]], key=lambda r: -r["jump"])
     watch = sorted([r for r in safe if not r["breakout"]], key=lambda r: -r["score"])
     cheap = [r for r in watch if r["qty"] >= 1][:5]
     gen = datetime.now(IST).strftime("%d %b %Y %H:%M IST")
     out = dict(generated=gen, universe=uni, scanned=len(rows), budget=BUDGET, nifty_3m_pct=round(nifty_ret63 * 100, 1),
                breakouts=brk, watchlist=watch[:30], fits_budget=cheap, excluded=len(risky),
-               excluded_examples=[(r["sym"], r["flags"]) for r in risky[:15]])
+               excluded_examples=[(r["sym"], r["grade_why"]) for r in risky[:30]], grades=counts)
     (bot.DATA / "scanner.json").write_text(json.dumps(bot.clean(out), indent=1))
 
     L = [f"🔎 <b>EdgeDesk stock analyser</b> - {gen}",
-         f"Scanned {len(rows)} stocks ({uni}) · budget ₹{BUDGET:,.0f} · {len(risky)} skipped as risky (penny / illiquid / wild jump)", ""]
-    L.append("<b>A. Tested signal - breakout (buy tomorrow 9:15, Delivery, stop −5%)</b>")
-    if brk:
-        for r in brk[:5]:
-            fit = f"qty {r['qty']}" if r["qty"] >= 1 else "too expensive for your budget - skip"
+         f"Scanned {len(rows)} stocks ({uni}) · budget ₹{BUDGET:,.0f}",
+         f"🟢 SELECT {counts['SELECT']} · 🟡 WATCH {counts['WATCH']} · ⚪ NEUTRAL {counts['NEUTRAL']} · 🔴 AVOID {counts['AVOID']}", ""]
+    sel = [r for r in brk if r["grade"] == "SELECT"]
+    L.append("<b>🟢 SELECT - tested breakout that passed every check (buy tomorrow 9:15, Delivery, stop −5%)</b>")
+    if sel:
+        for r in sel[:5]:
+            fit = f"qty {r['qty']}" if r["fits"] else "too expensive for your budget - skip"
             L.append(f"📈 <b>{r['sym']}</b> ₹{r['price']:,.2f} · {fit} · stop ~₹{r['stop']:,.2f}\n   {r['why'][0]}")
     else:
-        L.append("No breakout today.")
+        L.append("None today - no trade is fine.")
+    other = [r for r in brk if r["grade"] != "SELECT"]
+    if other:
+        L.append("🟡 Breakouts that failed a quality check (don't trade): " + ", ".join(f"{r['sym']} ({r['grade_why'].split(' (')[0]})" for r in other[:4]))
     L += ["", "<b>B. Watchlist - strongest stocks overall (education, not buy signals)</b>"]
     for r in watch[:5]:
         tag = "✅ fits budget" if r["qty"] >= 1 else "💰 above budget"
@@ -157,9 +189,11 @@ def main():
         L.append(f"• <b>{r['sym']}</b> ₹{r['price']:,.0f} · qty {r['qty']} · score {r['score']:.0f} - {', '.join(r['why'][:1])}")
     if not cheap:
         L.append("None today.")
-    L += ["", "📚 <i>Lesson: the best swing stocks are in a clear uptrend, stronger than NIFTY, near a breakout, "
-          "with rising volume - and liquid. Avoid penny and 'operator' stocks: easy to get in, hard to get out.</i>",
-          "<i>Only part A is a tested rule (not proven). Not investment advice.</i>"]
+    if reasons:
+        L += ["", "<b>🔴 AVOID today</b> (" + str(len(risky)) + "): " + " · ".join(f"{k} {v}" for k, v in sorted(reasons.items(), key=lambda x: -x[1])[:5])]
+    L += ["", "📚 <i>Rule of thumb: SELECT = breakout + strong uptrend + liquid + normal volatility. "
+          "AVOID = penny, illiquid, wild jumps, erratic moves, downtrends.</i>",
+          "<i>Only 🟢 SELECT uses the tested rule (still not proven). WATCH lists are for learning. Not investment advice.</i>"]
     try:
         st = json.loads((bot.DATA / "state.json").read_text())
     except Exception:
