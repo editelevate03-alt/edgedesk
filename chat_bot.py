@@ -50,6 +50,7 @@ HELP = ("🤖 <b>EdgeDesk bot - what you can send</b>\n"
         "• <code>holdings</code> - your positions with P&L and stop-loss\n"
         "• <code>hold TCS 2500 1</code> - track a new holding (symbol, buy price, qty)\n"
         "• <code>sold TCS</code> - stop tracking a holding\n"
+        "• <code>review</code> - long-term portfolio review (also sent automatically each month)\n"
         "• <code>record</code> - bot trade records\n"
         "• <code>rules</code> - what to select / avoid\n"
         "• <code>learn GTT</code> (also: stoploss, breakout, atr, adx, cnc, mis, amo, gap, swing, averaging, penny, rr)\n"
@@ -190,6 +191,47 @@ RULES = ("📏 <b>Stock rules</b>\n🔴 <b>AVOID</b>: price < ₹50 · traded < 
          "Every trade: buy 9:15 in the buy zone · GTT stop −5% · raise stop when told · never average down.")
 
 
+def monthly_review(cs) -> str:
+    """Private long-term review from the holdings saved with 'hold' (stored only in the private Actions cache)."""
+    from stock_scanner import analyse
+    hs = cs.get("holdings", {})
+    nif = to_daily_index(fetch("^NSEI", "1y", "1d", tries=2)[0]).Close
+    n1m, n3m = nif.iloc[-1] / nif.iloc[-22] - 1, nif.iloc[-1] / nif.iloc[-64] - 1
+    L = [f"📅 <b>Monthly long-term review</b> - {datetime.now(IST):%b %Y}",
+         f"NIFTY 50: 1 month {n1m * 100:+.1f}% · 3 months {n3m * 100:+.1f}%", ""]
+    if not hs:
+        L.append("No holdings saved. Add them privately: <code>hold SYMBOL BUYPRICE QTY</code>")
+    tot_inv = tot_now = 0.0
+    weak, strong, penny = [], [], []
+    for sym, h in hs.items():
+        try:
+            d = to_daily_index(fetch(sym + ".NS", "1y", "1d", tries=2)[0])
+            r = analyse(sym, d, float(n3m))
+        except Exception:
+            L.append(f"• {sym}: no data"); continue
+        e200 = float(d.Close.ewm(span=200, adjust=False).mean().iloc[-1])
+        inv, now = h["price"] * h["qty"], r["price"] * h["qty"]
+        tot_inv += inv; tot_now += now
+        up = r["price"] > e200
+        (strong if up else weak).append(sym)
+        if r["price"] < 50:
+            penny.append(sym)
+        L.append(f"{'🟢' if up else '🔴'} <b>{sym}</b> ₹{r['price']:,.2f} · {(r['price'] / h['price'] - 1) * 100:+.1f}% · {r['grade']} · "
+                 + (f"protect: GTT ~₹{max(e200, r['price'] * 0.9):,.2f}" if up else f"downtrend - no new money (200-day avg ₹{e200:,.2f})"))
+    if tot_inv:
+        L.append(f"\nTotal: ₹{tot_inv:,.0f} → ₹{tot_now:,.0f} ({(tot_now / tot_inv - 1) * 100:+.1f}%)")
+        if penny:
+            pv = sum(hs[s]["qty"] * hs[s]["price"] for s in penny)
+            L.append(f"Penny stocks: {', '.join(penny)} ≈ {pv / tot_inv * 100:.0f}% of invested (aim < 10%)")
+    sc = load(bot.DATA / "scanner.json", {})
+    q = [r for r in sc.get("watchlist", []) if r.get("grade") in ("WATCH", "SELECT")][:5]
+    if q:
+        L.append("\n🏆 Quality leaders in uptrends (study, not buy signals): " + ", ".join(r["sym"] for r in q))
+    L += ["\n✅ This month: SIP into your NIFTY index fund · set/raise GTT stops on 🟢 · no new money into 🔴 or penny stocks · "
+          "write exit levels for weak holdings.", "<i>Rule-based review, not investment advice.</i>"]
+    return "\n".join(L)
+
+
 def answer(text: str, cs) -> str:
     t = text.strip()
     low = t.lower()
@@ -212,6 +254,8 @@ def answer(text: str, cs) -> str:
     if w0 in ("sold", "remove", "unhold") and len(words) >= 2:
         cs.get("holdings", {}).pop(words[1].upper(), None)
         return f"🗑️ Stopped tracking {words[1].upper()}."
+    if w0 in ("review", "monthly", "portfolio-review"):
+        return monthly_review(cs)
     if w0 in ("record", "records", "results", "pnl"):
         return record()
     if w0 in ("rule", "rules", "select", "avoid"):
@@ -240,6 +284,14 @@ def main():
     cs = load(CHAT_STATE, {})
     cs.setdefault("holdings", {})        # private: kept in the Actions cache, never committed to the public repo
     offset = cs.get("offset")
+    month = datetime.now(IST).strftime("%Y-%m")
+    if cs.get("monthly_sent") != month and cs.get("holdings"):      # monthly review, first run of each month
+        try:
+            reply(owner, monthly_review(cs))
+            cs["monthly_sent"] = month
+            CHAT_STATE.write_text(json.dumps(bot.clean(cs), indent=1))
+        except Exception as e:
+            log(f"monthly review failed: {type(e).__name__}")
     end = datetime.now(IST) + timedelta(minutes=a.minutes)
     log(f"chat bot listening until {end:%H:%M IST}")
     while datetime.now(IST) < end:
