@@ -1,0 +1,42 @@
+name: EdgeDesk website refresher (market hours)
+
+on:
+  workflow_dispatch:   # started automatically at ~9:05 IST; refreshes the website every 15 min until 15:35 IST
+
+permissions:
+  contents: write
+
+concurrency:
+  group: edgedesk-live
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 400
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Refresh every 15 minutes until 15:35 IST
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SITE_LOGIN: ${{ secrets.SITE_LOGIN }}
+        run: |
+          git config user.name "edgedesk-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          while [ "$(TZ=Asia/Kolkata date +%H%M)" -lt 1535 ]; do
+            git pull -q --rebase --autostash -X theirs || true
+            python bot.py || true
+            python site_login.py || true
+            git add -A data/signals.json data/state.json data/auth.json 2>/dev/null || true
+            if ! git diff --cached --quiet; then
+              git commit -q -m "Live refresh $(TZ=Asia/Kolkata date +'%H:%M IST')"
+              git pull -q --rebase --autostash -X theirs && git push -q || true
+            fi
+            sleep 900
+          done
