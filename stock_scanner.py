@@ -138,7 +138,46 @@ def analyse(sym, d, nifty_ret63):
                 grade=grade, grade_why=grade_why, fits=qty >= 1)
 
 
+def select_card(r, budget=BUDGET):
+    need = r["price"] * 0.05 / 0.02
+    risk1 = r["price"] * 0.05
+    if r["qty"] >= 1:
+        money = f"✅ Fits your ₹{budget:,.0f}: qty <b>{r['qty']}</b> (max loss ~₹{r['qty'] * risk1:,.0f})"
+    elif r["price"] <= budget:
+        money = (f"⚠️ 1 share costs ₹{r['price']:,.0f} but risks ~₹{risk1:,.0f} = {risk1 / budget * 100:.1f}% of ₹{budget:,.0f} "
+                 f"(rule is 2%) → <b>skip</b>. Need ~₹{need:,.0f} for 1 share within the rule.")
+    else:
+        money = f"❌ 1 share (₹{r['price']:,.0f}) is above your ₹{budget:,.0f} → <b>skip</b>. Need ~₹{need:,.0f}."
+    return (f"🟢 <b>SELECT: {r['sym']}</b> - closing price <b>₹{r['price']:,.2f}</b>\n"
+            f"• Breakout strength: <b>{r['jump']}×</b> normal move (needs >1.5)\n"
+            f"• Trend strength ADX: <b>{r['adx']:.0f}</b> (25+ = strong)\n"
+            f"• vs NIFTY (3 months): <b>{r['rs_pct']:+.0f}%</b>\n"
+            f"• From 20-day high: {r['near_hi_pct']:+.1f}% · Volume: {r['vol_surge']}× normal\n"
+            f"• Daily movement: {r['atr_pct']}% · Traded/day: ₹{r['value_cr']:,.0f} Cr\n"
+            f"• Stop-loss (−5%): <b>≈ ₹{r['stop']:,.2f}</b> (5% below YOUR buy price)\n"
+            f"• Score: {r['score']:.0f}/100\n\n{money}\n\n"
+            f"<b>If you trade it:</b> tomorrow 9:15 (or AMO tonight) <code>BUY {max(r['qty'], 1)} {r['sym']} CNC MARKET</code>, "
+            f"then GTT → SELL trigger = buy price × 0.95. Raise the stop when told. Never average down.\n"
+            "<i>Tested rule but not proven · not investment advice.</i>")
+
+
+def send_details():
+    d = json.loads((bot.DATA / "scanner.json").read_text())
+    sel = [r for r in d["breakouts"] if r.get("grade") == "SELECT"]
+    msgs = [select_card(r, d.get("budget", BUDGET)) for r in sel] or ["🟢 No SELECT stocks in the latest scan."]
+    try:
+        st = json.loads((bot.DATA / "state.json").read_text())
+    except Exception:
+        st = {}
+    os.environ["EDGEDESK_CHAT"] = bot.find_chat_id(st)
+    for m in msgs:
+        print(bot.telegram(f"🔎 Details from the {d['generated']} scan\n\n" + m))
+
+
 def main():
+    import sys
+    if "--details" in sys.argv:
+        return send_details()
     syms, uni = universe()
     data = download(syms)
     nif = bot.to_daily_index(bot.fetch("^NSEI", "1y", "1d")[0]).Close
@@ -201,6 +240,8 @@ def main():
     os.environ["EDGEDESK_CHAT"] = bot.find_chat_id(st)
     ok, msg = bot.telegram("\n".join(L))
     log(f"telegram: {msg}; scanned {len(rows)}, breakouts {len(brk)}, risky {len(risky)}")
+    for r in sel[:5]:                                   # full detail card for every SELECT stock
+        bot.telegram(select_card(r))
 
 
 if __name__ == "__main__":
