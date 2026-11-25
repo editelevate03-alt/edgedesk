@@ -154,9 +154,12 @@ def select_card(r, budget=BUDGET):
             f"• vs NIFTY (3 months): <b>{r['rs_pct']:+.0f}%</b>\n"
             f"• From 20-day high: {r['near_hi_pct']:+.1f}% · Volume: {r['vol_surge']}× normal\n"
             f"• Daily movement: {r['atr_pct']}% · Traded/day: ₹{r['value_cr']:,.0f} Cr\n"
+            f"• <b>Buy zone tomorrow 9:15:</b> ₹{r['price'] * 0.99:,.2f} – ₹{r['price'] * 1.015:,.2f} "
+            f"(LIMIT max ₹{r['price'] * 1.015:,.2f}; opens higher = don't chase, lower = skip)\n"
             f"• Stop-loss (−5%): <b>≈ ₹{r['stop']:,.2f}</b> (5% below YOUR buy price)\n"
             f"• Score: {r['score']:.0f}/100\n\n{money}\n\n"
-            f"<b>If you trade it:</b> tomorrow 9:15 (or AMO tonight) <code>BUY {max(r['qty'], 1)} {r['sym']} CNC MARKET</code>, "
+            f"<b>If you trade it:</b> tomorrow 9:15 <code>BUY {max(r['qty'], 1)} {r['sym']} CNC LIMIT {r['price'] * 1.015:.2f}</code> "
+            f"(cancel if not filled by 9:30), "
             f"then GTT → SELL trigger = buy price × 0.95. Raise the stop when told. Never average down.\n"
             "<i>Tested rule but not proven · not investment advice.</i>")
 
