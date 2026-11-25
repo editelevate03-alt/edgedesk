@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Analyse a list of NSE symbols (from the SYMBOLS env var) with EdgeDesk's engine. Prints JSON.
 No quantities or buy prices - only public market data."""
-import json, os\nfrom datetime import datetime\nfrom bot import IST
+import json, os
+from datetime import datetime
 import bot
-from bot import fetch, to_daily_index
+from bot import IST, fetch, to_daily_index
 from stock_scanner import analyse
 syms = [s.strip().upper() for s in os.getenv("SYMBOLS", "").replace(",", " ").split() if s.strip()]
 nif = to_daily_index(fetch("^NSEI", "2y", "1d")[0]).Close
