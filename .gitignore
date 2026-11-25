@@ -9,3 +9,4 @@ __pycache__/
 .DS_Store
 data/state_demo.json
 data/signals_demo.json
+data/chat_state.json

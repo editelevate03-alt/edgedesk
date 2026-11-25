@@ -238,7 +238,7 @@ def main():
         log("no token/owner chat - exiting"); return
     tg("deleteWebhook")
     cs = load(CHAT_STATE, {})
-    cs.setdefault("holdings", {"ITC": dict(price=308.60, qty=1, date="2026-11-25")})
+    cs.setdefault("holdings", {})        # private: kept in the Actions cache, never committed to the public repo
     offset = cs.get("offset")
     end = datetime.now(IST) + timedelta(minutes=a.minutes)
     log(f"chat bot listening until {end:%H:%M IST}")
