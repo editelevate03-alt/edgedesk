@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Analyse a list of NSE symbols (from the SYMBOLS env var) with EdgeDesk's engine. Prints JSON.
 No quantities or buy prices - only public market data."""
-import json, os
+import json, os\nfrom datetime import datetime\nfrom bot import IST
 import bot
 from bot import fetch, to_daily_index
 from stock_scanner import analyse
@@ -22,6 +22,44 @@ for sym in syms[:30]:
         out.append(r)
     except Exception as e:
         out.append(dict(sym=sym, error=str(e)[:80]))
+
+
+def simple_note(r):
+    """Very plain language, for family members who don't trade."""
+    if "error" in r:
+        return f"❓ <b>{r['sym']}</b> - no market data available. Please check this one in the Kite app."
+    p, e200, lo = r["price"], r["ema200"], r["lo52"]
+    penny = p < 50
+    if r["above_200"] and r["ret_3m"] > 0:
+        head = "👍 Doing well"
+        tip = f"Keep it. Put a safety sell order (stop-loss) at about ₹{min(e200, p * 0.95):,.0f} so profit is protected."
+    elif r["above_200"]:
+        head = "🙂 Okay"
+        tip = f"Keep watching. Safety sell order (stop-loss) at about ₹{min(e200, p * 0.95):,.0f}."
+    else:
+        head = "👎 Weak - price has been falling"
+        tip = "Don't buy more of it now. Decide a price at which you will sell if it keeps falling" + \
+              (f" (it is near its 1-year low ₹{lo:,.0f})." if (p - lo) / max(r['hi52'] - lo, 1e-9) < 0.1 else ".")
+    extra = " ⚠️ Very cheap 'penny' share - risky, prices can be pushed up and down." if penny else ""
+    return f"<b>{r['sym']}</b> (₹{p:,.2f}) - {head}.\n   Last 3 months: {r['ret_3m']:+.0f}%. {tip}{extra}"
+
+
+def simple_report(rows):
+    good = [r["sym"] for r in rows if "error" not in r and r["above_200"]]
+    weak = [r["sym"] for r in rows if "error" not in r and not r["above_200"]]
+    L = ["👨‍👩‍👦 <b>Portfolio report - simple version</b>",
+         f"Date: {datetime.now(IST):%d %b %Y}", "",
+         "<b>In short:</b>",
+         f"👍 Going up: {', '.join(good) or 'none'}",
+         f"👎 Falling: {', '.join(weak) or 'none'}", "",
+         "<b>Each share:</b>"]
+    L += [simple_note(r) for r in rows]
+    L += ["", "<b>3 simple rules we follow:</b>",
+          "1️⃣ Never buy more of a share that keeps falling (no 'averaging down').",
+          "2️⃣ Protect profits with a safety sell order (stop-loss / GTT in Kite).",
+          "3️⃣ Put regular monthly savings into a NIFTY 50 index fund - the safest long-term growth.",
+          "", "<i>Made by our EdgeDesk tool from live market data. This is not professional investment advice.</i>"]
+    return "\n".join(L)
 
 
 def note(r):
@@ -48,10 +86,13 @@ def note(r):
 
 
 if os.getenv("SEND_TG") == "1":
-    msg = ["📋 <b>Your holdings check</b> (live market data · no amounts stored anywhere)", ""]
-    msg += [note(r) + "\n" for r in out]
-    msg.append("<b>Rules:</b> never average down · protect winners with a GTT stop · penny & downtrend stocks: no new money · "
-               "your exact P&L is in Kite.\n<i>Rule-based analysis, not investment advice.</i>")
+    if os.getenv("STYLE") == "simple":
+        msg = [simple_report(out)]
+    else:
+        msg = ["📋 <b>Your holdings check</b> (live market data · no amounts stored anywhere)", ""]
+        msg += [note(r) + "\n" for r in out]
+        msg.append("<b>Rules:</b> never average down · protect winners with a GTT stop · penny & downtrend stocks: no new money · "
+                   "your exact P&L is in Kite.\n<i>Rule-based analysis, not investment advice.</i>")
     st = {}
     try:
         st = json.loads((bot.DATA / "state.json").read_text())

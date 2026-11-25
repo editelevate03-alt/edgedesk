@@ -9,6 +9,10 @@ on:
         description: "1 = send the report to Telegram (and don't print it)"
         required: false
         default: "0"
+      style:
+        description: "normal or simple (plain language for family)"
+        required: false
+        default: "normal"
 jobs:
   analyse:
     runs-on: ubuntu-latest
@@ -23,5 +27,6 @@ jobs:
         env:
           SYMBOLS: ${{ inputs.symbols }}
           SEND_TG: ${{ inputs.telegram }}
+          STYLE: ${{ inputs.style }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
