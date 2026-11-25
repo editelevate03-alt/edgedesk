@@ -1,0 +1,1222 @@
+{
+ "generated": "25 Nov 2026 15:42 IST",
+ "universe": "NIFTY 500",
+ "scanned": 497,
+ "budget": 2000.0,
+ "nifty_3m_pct": 6.5,
+ "breakouts": [
+  {
+   "sym": "DABUR",
+   "price": 430.0,
+   "score": 65.9,
+   "breakout": true,
+   "jump": 3.43,
+   "adx": 29.0,
+   "rs_pct": 0.9,
+   "near_hi_pct": -0.8,
+   "vol_surge": 5.95,
+   "atr_pct": 2.69,
+   "value_cr": 116.2,
+   "qty": 1,
+   "stop": 408.5,
+   "flags": [],
+   "why": [
+    "BREAKOUT: jumped 3.4\u00d7 its normal move in an uptrend (ADX 29)",
+    "uptrend forming",
+    "near its 20-day high (possible breakout soon)",
+    "volume 6.0\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "breakout, but not all quality checks passed (trend/liquidity/volatility)",
+   "fits": true
+  },
+  {
+   "sym": "HINDUNILVR",
+   "price": 2141.8,
+   "score": 64.8,
+   "breakout": true,
+   "jump": 2.72,
+   "adx": 26.6,
+   "rs_pct": -0.2,
+   "near_hi_pct": 0.0,
+   "vol_surge": 2.7,
+   "atr_pct": 2.47,
+   "value_cr": 374.6,
+   "qty": 0,
+   "stop": 2034.71,
+   "flags": [],
+   "why": [
+    "BREAKOUT: jumped 2.7\u00d7 its normal move in an uptrend (ADX 27)",
+    "uptrend forming",
+    "near its 20-day high (possible breakout soon)",
+    "volume 2.7\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "breakout, but not all quality checks passed (trend/liquidity/volatility)",
+   "fits": false
+  },
+  {
+   "sym": "TATACONSUM",
+   "price": 1185.8,
+   "score": 71.6,
+   "breakout": true,
+   "jump": 2.1,
+   "adx": 42.0,
+   "rs_pct": 6.6,
+   "near_hi_pct": 0.0,
+   "vol_surge": 1.75,
+   "atr_pct": 2.35,
+   "value_cr": 204.9,
+   "qty": 0,
+   "stop": 1126.51,
+   "flags": [],
+   "why": [
+    "BREAKOUT: jumped 2.1\u00d7 its normal move in an uptrend (ADX 42)",
+    "uptrend forming",
+    "beating NIFTY by 7% over 3 months",
+    "near its 20-day high (possible breakout soon)",
+    "volume 1.7\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "breakout, but not all quality checks passed (trend/liquidity/volatility)",
+   "fits": false
+  },
+  {
+   "sym": "NESTLEIND",
+   "price": 1358.5,
+   "score": 25.5,
+   "breakout": true,
+   "jump": 1.69,
+   "adx": 27.8,
+   "rs_pct": -14.5,
+   "near_hi_pct": 0.0,
+   "vol_surge": 0.93,
+   "atr_pct": 2.45,
+   "value_cr": 205.5,
+   "qty": 0,
+   "stop": 1290.58,
+   "flags": [],
+   "why": [
+    "BREAKOUT: jumped 1.7\u00d7 its normal move in an uptrend (ADX 28)",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "breakout, but not all quality checks passed (trend/liquidity/volatility)",
+   "fits": false
+  },
+  {
+   "sym": "DIVISLAB",
+   "price": 11716.5,
+   "score": 95,
+   "breakout": true,
+   "jump": 1.66,
+   "adx": 44.3,
+   "rs_pct": 29.8,
+   "near_hi_pct": -0.9,
+   "vol_surge": 0.9,
+   "atr_pct": 2.81,
+   "value_cr": 936.6,
+   "qty": 0,
+   "stop": 11130.67,
+   "flags": [],
+   "why": [
+    "BREAKOUT: jumped 1.7\u00d7 its normal move in an uptrend (ADX 44)",
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 30% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "SELECT",
+   "grade_why": "tested breakout + strong uptrend + very liquid + normal volatility",
+   "fits": false
+  },
+  {
+   "sym": "J&KBANK",
+   "price": 155.32,
+   "score": 62.8,
+   "breakout": true,
+   "jump": 1.63,
+   "adx": 32.8,
+   "rs_pct": -2.2,
+   "near_hi_pct": -1.1,
+   "vol_surge": 2.84,
+   "atr_pct": 3.71,
+   "value_cr": 41.0,
+   "qty": 5,
+   "stop": 147.55,
+   "flags": [],
+   "why": [
+    "BREAKOUT: jumped 1.6\u00d7 its normal move in an uptrend (ADX 33)",
+    "uptrend forming",
+    "near its 20-day high (possible breakout soon)",
+    "volume 2.8\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "breakout, but not all quality checks passed (trend/liquidity/volatility)",
+   "fits": true
+  },
+  {
+   "sym": "HDFCLIFE",
+   "price": 601.3,
+   "score": 66.9,
+   "breakout": true,
+   "jump": 1.62,
+   "adx": 31.0,
+   "rs_pct": 1.9,
+   "near_hi_pct": -1.4,
+   "vol_surge": 2.55,
+   "atr_pct": 3.0,
+   "value_cr": 187.1,
+   "qty": 1,
+   "stop": 571.23,
+   "flags": [],
+   "why": [
+    "BREAKOUT: jumped 1.6\u00d7 its normal move in an uptrend (ADX 31)",
+    "uptrend forming",
+    "near its 20-day high (possible breakout soon)",
+    "volume 2.5\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "breakout, but not all quality checks passed (trend/liquidity/volatility)",
+   "fits": true
+  },
+  {
+   "sym": "ICICIBANK",
+   "price": 1640.0,
+   "score": 79.0,
+   "breakout": true,
+   "jump": 1.58,
+   "adx": 53.1,
+   "rs_pct": 9.0,
+   "near_hi_pct": -0.6,
+   "vol_surge": 1.07,
+   "atr_pct": 2.29,
+   "value_cr": 2725.2,
+   "qty": 0,
+   "stop": 1558.0,
+   "flags": [],
+   "why": [
+    "BREAKOUT: jumped 1.6\u00d7 its normal move in an uptrend (ADX 53)",
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 9% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "SELECT",
+   "grade_why": "tested breakout + strong uptrend + very liquid + normal volatility",
+   "fits": false
+  },
+  {
+   "sym": "APOLLOTYRE",
+   "price": 437.35,
+   "score": 58.0,
+   "breakout": true,
+   "jump": 1.51,
+   "adx": 31.1,
+   "rs_pct": -7.0,
+   "near_hi_pct": -0.6,
+   "vol_surge": 1.86,
+   "atr_pct": 2.76,
+   "value_cr": 40.3,
+   "qty": 1,
+   "stop": 415.48,
+   "flags": [],
+   "why": [
+    "BREAKOUT: jumped 1.5\u00d7 its normal move in an uptrend (ADX 31)",
+    "uptrend forming",
+    "near its 20-day high (possible breakout soon)",
+    "volume 1.9\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "breakout, but not all quality checks passed (trend/liquidity/volatility)",
+   "fits": true
+  },
+  {
+   "sym": "HEROMOTOCO",
+   "price": 5751.5,
+   "score": 58.8,
+   "breakout": true,
+   "jump": 1.51,
+   "adx": 18.4,
+   "rs_pct": -6.2,
+   "near_hi_pct": 0.0,
+   "vol_surge": 1.64,
+   "atr_pct": 2.62,
+   "value_cr": 361.6,
+   "qty": 0,
+   "stop": 5463.93,
+   "flags": [],
+   "why": [
+    "BREAKOUT: jumped 1.5\u00d7 its normal move in an uptrend (ADX 18)",
+    "uptrend forming",
+    "near its 20-day high (possible breakout soon)",
+    "volume 1.6\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "breakout, but not all quality checks passed (trend/liquidity/volatility)",
+   "fits": false
+  }
+ ],
+ "watchlist": [
+  {
+   "sym": "LAURUSLABS",
+   "price": 2460.0,
+   "score": 95,
+   "breakout": false,
+   "jump": 1.07,
+   "adx": 21.0,
+   "rs_pct": 30.1,
+   "near_hi_pct": -1.1,
+   "vol_surge": 0.95,
+   "atr_pct": 3.42,
+   "value_cr": 730.7,
+   "qty": 0,
+   "stop": 2337.0,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 30% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "DRREDDY",
+   "price": 1398.0,
+   "score": 92.5,
+   "breakout": false,
+   "jump": 0.74,
+   "adx": 47.2,
+   "rs_pct": 12.5,
+   "near_hi_pct": -0.7,
+   "vol_surge": 1.54,
+   "atr_pct": 1.8,
+   "value_cr": 220.7,
+   "qty": 0,
+   "stop": 1328.1,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 13% over 3 months",
+    "near its 20-day high (possible breakout soon)",
+    "volume 1.5\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "ASAHIINDIA",
+   "price": 1195.3,
+   "score": 87.3,
+   "breakout": false,
+   "jump": 0.47,
+   "adx": 48.8,
+   "rs_pct": 17.3,
+   "near_hi_pct": -0.4,
+   "vol_surge": 0.69,
+   "atr_pct": 3.11,
+   "value_cr": 29.2,
+   "qty": 0,
+   "stop": 1135.54,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 17% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "MAHABANK",
+   "price": 98.71,
+   "score": 86.5,
+   "breakout": false,
+   "jump": 0.4,
+   "adx": 37.9,
+   "rs_pct": 16.5,
+   "near_hi_pct": -2.0,
+   "vol_surge": 0.92,
+   "atr_pct": 2.92,
+   "value_cr": 196.7,
+   "qty": 8,
+   "stop": 93.77,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 17% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "LGEINDIA",
+   "price": 1818.4,
+   "score": 85.6,
+   "breakout": false,
+   "jump": 0.71,
+   "adx": 22.8,
+   "rs_pct": 5.6,
+   "near_hi_pct": -1.0,
+   "vol_surge": 2.15,
+   "atr_pct": 3.16,
+   "value_cr": 132.3,
+   "qty": 0,
+   "stop": 1727.48,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 6% over 3 months",
+    "near its 20-day high (possible breakout soon)",
+    "volume 2.1\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "INDIGO",
+   "price": 5720.0,
+   "score": 85.5,
+   "breakout": false,
+   "jump": 1.35,
+   "adx": 30.6,
+   "rs_pct": 5.5,
+   "near_hi_pct": -0.8,
+   "vol_surge": 1.62,
+   "atr_pct": 2.71,
+   "value_cr": 527.8,
+   "qty": 0,
+   "stop": 5434.0,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 5% over 3 months",
+    "near its 20-day high (possible breakout soon)",
+    "volume 1.6\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "PVRINOX",
+   "price": 1709.3,
+   "score": 85,
+   "breakout": false,
+   "jump": 0.15,
+   "adx": 61.6,
+   "rs_pct": 34.0,
+   "near_hi_pct": -2.2,
+   "vol_surge": 0.64,
+   "atr_pct": 3.62,
+   "value_cr": 159.6,
+   "qty": 0,
+   "stop": 1623.84,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 34% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "WELSPUNLIV",
+   "price": 276.57,
+   "score": 85,
+   "breakout": false,
+   "jump": 0.41,
+   "adx": 36.9,
+   "rs_pct": 39.7,
+   "near_hi_pct": -0.9,
+   "vol_surge": 0.51,
+   "atr_pct": 4.96,
+   "value_cr": 318.0,
+   "qty": 2,
+   "stop": 262.74,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 40% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "PHOENIXLTD",
+   "price": 2285.5,
+   "score": 82.0,
+   "breakout": false,
+   "jump": 0.13,
+   "adx": 41.9,
+   "rs_pct": 12.0,
+   "near_hi_pct": -1.7,
+   "vol_surge": 1.32,
+   "atr_pct": 3.01,
+   "value_cr": 113.3,
+   "qty": 0,
+   "stop": 2171.22,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 12% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "MEESHO",
+   "price": 252.34,
+   "score": 81.2,
+   "breakout": false,
+   "jump": -0.09,
+   "adx": 30.0,
+   "rs_pct": 16.2,
+   "near_hi_pct": -5.0,
+   "vol_surge": 1.52,
+   "atr_pct": 3.75,
+   "value_cr": 393.1,
+   "qty": 3,
+   "stop": 239.72,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 16% over 3 months",
+    "volume 1.5\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "DLF",
+   "price": 795.0,
+   "score": 80.8,
+   "breakout": false,
+   "jump": 0.05,
+   "adx": 40.1,
+   "rs_pct": 10.8,
+   "near_hi_pct": -0.4,
+   "vol_surge": 1.09,
+   "atr_pct": 2.28,
+   "value_cr": 233.0,
+   "qty": 1,
+   "stop": 755.25,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 11% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "GLENMARK",
+   "price": 2719.0,
+   "score": 80.8,
+   "breakout": false,
+   "jump": 0.83,
+   "adx": 40.5,
+   "rs_pct": 10.8,
+   "near_hi_pct": -0.7,
+   "vol_surge": 0.91,
+   "atr_pct": 2.77,
+   "value_cr": 237.4,
+   "qty": 0,
+   "stop": 2583.05,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 11% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "JSWINFRA",
+   "price": 357.65,
+   "score": 80.1,
+   "breakout": false,
+   "jump": 0.37,
+   "adx": 14.8,
+   "rs_pct": 0.1,
+   "near_hi_pct": -1.0,
+   "vol_surge": 1.98,
+   "atr_pct": 3.07,
+   "value_cr": 69.9,
+   "qty": 2,
+   "stop": 339.77,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "near its 20-day high (possible breakout soon)",
+    "volume 2.0\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "ABDL",
+   "price": 807.2,
+   "score": 80,
+   "breakout": false,
+   "jump": 0.14,
+   "adx": 31.4,
+   "rs_pct": 29.2,
+   "near_hi_pct": -5.6,
+   "vol_surge": 0.79,
+   "atr_pct": 3.82,
+   "value_cr": 47.7,
+   "qty": 0,
+   "stop": 766.84,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 29% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "KOTAKBANK",
+   "price": 509.0,
+   "score": 79.9,
+   "breakout": false,
+   "jump": 0.52,
+   "adx": 57.8,
+   "rs_pct": 19.9,
+   "near_hi_pct": -2.4,
+   "vol_surge": 0.74,
+   "atr_pct": 2.32,
+   "value_cr": 1017.4,
+   "qty": 1,
+   "stop": 483.55,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 20% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "SHYAMMETL",
+   "price": 1292.1,
+   "score": 79.7,
+   "breakout": false,
+   "jump": 0.33,
+   "adx": 41.6,
+   "rs_pct": 24.7,
+   "near_hi_pct": -6.5,
+   "vol_surge": 0.38,
+   "atr_pct": 3.76,
+   "value_cr": 49.6,
+   "qty": 0,
+   "stop": 1227.49,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 25% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "MOTILALOFS",
+   "price": 1230.1,
+   "score": 77.8,
+   "breakout": false,
+   "jump": -0.1,
+   "adx": 34.4,
+   "rs_pct": 17.8,
+   "near_hi_pct": -3.7,
+   "vol_surge": 0.66,
+   "atr_pct": 3.76,
+   "value_cr": 194.1,
+   "qty": 0,
+   "stop": 1168.59,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 18% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "EMCURE",
+   "price": 2313.5,
+   "score": 77.7,
+   "breakout": false,
+   "jump": 0.05,
+   "adx": 49.0,
+   "rs_pct": 17.7,
+   "near_hi_pct": -3.7,
+   "vol_surge": 0.39,
+   "atr_pct": 3.21,
+   "value_cr": 66.6,
+   "qty": 0,
+   "stop": 2197.82,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 18% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "CYIENT",
+   "price": 1151.2,
+   "score": 77.5,
+   "breakout": false,
+   "jump": -0.22,
+   "adx": 15.9,
+   "rs_pct": 22.5,
+   "near_hi_pct": -7.1,
+   "vol_surge": 0.57,
+   "atr_pct": 3.73,
+   "value_cr": 57.5,
+   "qty": 0,
+   "stop": 1093.64,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 23% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "INDHOTEL",
+   "price": 903.85,
+   "score": 77.4,
+   "breakout": false,
+   "jump": -0.1,
+   "adx": 53.8,
+   "rs_pct": 17.4,
+   "near_hi_pct": -2.4,
+   "vol_surge": 0.83,
+   "atr_pct": 2.54,
+   "value_cr": 437.5,
+   "qty": 0,
+   "stop": 858.66,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 17% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "AUROPHARMA",
+   "price": 1843.0,
+   "score": 77.2,
+   "breakout": false,
+   "jump": 1.16,
+   "adx": 30.5,
+   "rs_pct": 7.2,
+   "near_hi_pct": -0.9,
+   "vol_surge": 1.1,
+   "atr_pct": 2.23,
+   "value_cr": 248.8,
+   "qty": 0,
+   "stop": 1750.85,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 7% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "ETERNAL",
+   "price": 371.7,
+   "score": 76.9,
+   "breakout": false,
+   "jump": 1.01,
+   "adx": 28.2,
+   "rs_pct": 6.9,
+   "near_hi_pct": -1.7,
+   "vol_surge": 1.25,
+   "atr_pct": 2.69,
+   "value_cr": 844.3,
+   "qty": 2,
+   "stop": 353.12,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 7% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "PRESTIGE",
+   "price": 1685.1,
+   "score": 76.9,
+   "breakout": false,
+   "jump": -0.04,
+   "adx": 30.7,
+   "rs_pct": -3.1,
+   "near_hi_pct": -1.1,
+   "vol_surge": 1.54,
+   "atr_pct": 2.98,
+   "value_cr": 106.3,
+   "qty": 0,
+   "stop": 1600.84,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "near its 20-day high (possible breakout soon)",
+    "volume 1.5\u00d7 normal (big players active)"
+   ],
+   "grade": "NEUTRAL",
+   "grade_why": "no clear edge right now",
+   "fits": false
+  },
+  {
+   "sym": "ATHERENERG",
+   "price": 1871.9,
+   "score": 76.6,
+   "breakout": false,
+   "jump": -1.59,
+   "adx": 40.3,
+   "rs_pct": 21.6,
+   "near_hi_pct": -7.4,
+   "vol_surge": 0.87,
+   "atr_pct": 3.95,
+   "value_cr": 594.7,
+   "qty": 0,
+   "stop": 1778.31,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 22% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "KARURVYSYA",
+   "price": 378.75,
+   "score": 76.4,
+   "breakout": false,
+   "jump": -0.39,
+   "adx": 26.9,
+   "rs_pct": 6.4,
+   "near_hi_pct": -4.8,
+   "vol_surge": 1.94,
+   "atr_pct": 3.61,
+   "value_cr": 122.1,
+   "qty": 2,
+   "stop": 359.81,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 6% over 3 months",
+    "volume 1.9\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "MANKIND",
+   "price": 2685.0,
+   "score": 76.2,
+   "breakout": false,
+   "jump": 1.09,
+   "adx": 38.7,
+   "rs_pct": 6.2,
+   "near_hi_pct": -0.7,
+   "vol_surge": 0.53,
+   "atr_pct": 2.43,
+   "value_cr": 174.5,
+   "qty": 0,
+   "stop": 2550.75,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 6% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "PNB",
+   "price": 148.61,
+   "score": 76.0,
+   "breakout": false,
+   "jump": -0.24,
+   "adx": 49.8,
+   "rs_pct": 21.0,
+   "near_hi_pct": -5.0,
+   "vol_surge": 0.83,
+   "atr_pct": 3.29,
+   "value_cr": 530.0,
+   "qty": 5,
+   "stop": 141.18,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 21% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "GRAPHITE",
+   "price": 794.45,
+   "score": 75.3,
+   "breakout": false,
+   "jump": 0.18,
+   "adx": 13.1,
+   "rs_pct": 5.3,
+   "near_hi_pct": -1.6,
+   "vol_surge": 0.91,
+   "atr_pct": 3.19,
+   "value_cr": 55.7,
+   "qty": 1,
+   "stop": 754.73,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 5% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "NAVINFLUOR",
+   "price": 9956.0,
+   "score": 74.9,
+   "breakout": false,
+   "jump": -0.62,
+   "adx": 41.8,
+   "rs_pct": 14.9,
+   "near_hi_pct": -3.9,
+   "vol_surge": 0.76,
+   "atr_pct": 3.3,
+   "value_cr": 250.0,
+   "qty": 0,
+   "stop": 9458.2,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 15% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  },
+  {
+   "sym": "CPPLUS",
+   "price": 4204.7,
+   "score": 74.5,
+   "breakout": false,
+   "jump": 0.77,
+   "adx": 13.1,
+   "rs_pct": 14.5,
+   "near_hi_pct": -4.8,
+   "vol_surge": 0.74,
+   "atr_pct": 3.97,
+   "value_cr": 107.2,
+   "qty": 0,
+   "stop": 3994.47,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 15% over 3 months"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": false
+  }
+ ],
+ "fits_budget": [
+  {
+   "sym": "MAHABANK",
+   "price": 98.71,
+   "score": 86.5,
+   "breakout": false,
+   "jump": 0.4,
+   "adx": 37.9,
+   "rs_pct": 16.5,
+   "near_hi_pct": -2.0,
+   "vol_surge": 0.92,
+   "atr_pct": 2.92,
+   "value_cr": 196.7,
+   "qty": 8,
+   "stop": 93.77,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 17% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "WELSPUNLIV",
+   "price": 276.57,
+   "score": 85,
+   "breakout": false,
+   "jump": 0.41,
+   "adx": 36.9,
+   "rs_pct": 39.7,
+   "near_hi_pct": -0.9,
+   "vol_surge": 0.51,
+   "atr_pct": 4.96,
+   "value_cr": 318.0,
+   "qty": 2,
+   "stop": 262.74,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 40% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "MEESHO",
+   "price": 252.34,
+   "score": 81.2,
+   "breakout": false,
+   "jump": -0.09,
+   "adx": 30.0,
+   "rs_pct": 16.2,
+   "near_hi_pct": -5.0,
+   "vol_surge": 1.52,
+   "atr_pct": 3.75,
+   "value_cr": 393.1,
+   "qty": 3,
+   "stop": 239.72,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 16% over 3 months",
+    "volume 1.5\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "DLF",
+   "price": 795.0,
+   "score": 80.8,
+   "breakout": false,
+   "jump": 0.05,
+   "adx": 40.1,
+   "rs_pct": 10.8,
+   "near_hi_pct": -0.4,
+   "vol_surge": 1.09,
+   "atr_pct": 2.28,
+   "value_cr": 233.0,
+   "qty": 1,
+   "stop": 755.25,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "beating NIFTY by 11% over 3 months",
+    "near its 20-day high (possible breakout soon)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  },
+  {
+   "sym": "JSWINFRA",
+   "price": 357.65,
+   "score": 80.1,
+   "breakout": false,
+   "jump": 0.37,
+   "adx": 14.8,
+   "rs_pct": 0.1,
+   "near_hi_pct": -1.0,
+   "vol_surge": 1.98,
+   "atr_pct": 3.07,
+   "value_cr": 69.9,
+   "qty": 2,
+   "stop": 339.77,
+   "flags": [],
+   "why": [
+    "strong uptrend (price > EMA20 > EMA50 > EMA200)",
+    "near its 20-day high (possible breakout soon)",
+    "volume 2.0\u00d7 normal (big players active)"
+   ],
+   "grade": "WATCH",
+   "grade_why": "healthy uptrend and stronger than NIFTY - wait for a breakout",
+   "fits": true
+  }
+ ],
+ "excluded": 232,
+ "excluded_examples": [
+  [
+   "ACC",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "AIAENG",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "APLAPOLLO",
+   "moved >30% in a week (pump/operator pattern)"
+  ],
+  [
+   "AWL",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "AADHARHFC",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "AAVAS",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "ABBOTINDIA",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "ATGL",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "ABREL",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "ABSLAMC",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "AFCONS",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "ALKEM",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "ARE&M",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "AMBER",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "AMBUJACEM",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "ANANTRAJ",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "APTUS",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "ASHOKLEY",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "ASTRAL",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "ATUL",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "AIIL",
+   "low liquidity (\u20b99.9 Cr/day)"
+  ],
+  [
+   "AVANTIFEED",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "DMART",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "BLS",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "BAJAJHFL",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "BANDHANBNK",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "BATAINDIA",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "BERGEPAINT",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ],
+  [
+   "BHARATCOAL",
+   "penny price"
+  ],
+  [
+   "BDL",
+   "downtrend (below its 200-day average) - don't buy falling stocks"
+  ]
+ ],
+ "grades": {
+  "SELECT": 2,
+  "WATCH": 107,
+  "NEUTRAL": 156,
+  "AVOID": 232
+ }
+}
