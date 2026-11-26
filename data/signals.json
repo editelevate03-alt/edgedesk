@@ -2,8 +2,8 @@
  "app": "EdgeDesk Live",
  "version": "1.0.0",
  "mode": "live",
- "generated_at": "2026-11-26T09:26:57.720660+00:00",
- "generated_at_ist": "26 Nov 2026, 14:56 IST",
+ "generated_at": "2026-11-26T10:12:41.822182+00:00",
+ "generated_at_ist": "26 Nov 2026, 15:42 IST",
  "refresh_minutes": 15,
  "disclaimer": "Paper-trading research tool. Not investment advice. Signals are not guaranteed and can lose money. Past/backtest results do not predict the future.",
  "settings": {
@@ -23,8 +23,8 @@
   "markets_total": 12,
   "new_signals": 0,
   "open_trades": 0,
-  "upcoming": 11,
-  "blocked": 1,
+  "upcoming": 4,
+  "blocked": 7,
   "tradeable_strategies": [],
   "today_closed_r": 0.0,
   "trading_halted": false
@@ -38,20 +38,20 @@
    "group": "india_index",
    "ccy": "INR",
    "dp": 2,
-   "price": 25905.0,
-   "price_time": "2026-11-26T14:45:00+05:30",
+   "price": 25884.5,
+   "price_time": "2026-11-26T15:15:00+05:30",
    "prev_close": 25819.25,
-   "change_pct": 0.33,
+   "change_pct": 0.25,
    "last_bar": "2026-11-26",
-   "last_completed_bar": "2026-11-25",
-   "today_forming": true,
+   "last_completed_bar": "2026-11-26",
+   "today_forming": false,
    "stale_days": 0,
    "trend": "Up",
-   "rsi14": 71.7,
-   "atr": 365.81,
-   "ema20": 24755.43,
-   "ema50": 24076.94,
-   "ema200": 24074.19,
+   "rsi14": 72.3,
+   "atr": 356.93,
+   "ema20": 24862.96,
+   "ema50": 24147.83,
+   "ema200": 24092.2,
    "candles": [
     {
      "time": "2026-05-20",
@@ -961,20 +961,20 @@
      "open": 25873.2,
      "high": 25974.95,
      "low": 25733.5,
-     "close": 25902.65
+     "close": 25884.5
     }
    ],
    "patterns": [
     {
-     "name": "Inside bar",
+     "name": "Doji (indecision)",
      "bias": 0
     }
    ],
    "flow": {
-    "available": true,
-    "vol_ratio": 1.36,
-    "obv_slope": 1.0,
-    "note": "Volume 1.4x 20-day average, OBV rising"
+    "available": false,
+    "vol_ratio": null,
+    "obv_slope": 0,
+    "note": "No volume data (normal for forex)"
    }
   },
   {
@@ -985,20 +985,20 @@
    "group": "india_index",
    "ccy": "INR",
    "dp": 2,
-   "price": 63620.9,
-   "price_time": "2026-11-26T14:45:00+05:30",
+   "price": 63535.3,
+   "price_time": "2026-11-26T15:15:00+05:30",
    "prev_close": 63703.25,
-   "change_pct": -0.13,
+   "change_pct": -0.26,
    "last_bar": "2026-11-26",
-   "last_completed_bar": "2026-11-25",
-   "today_forming": true,
+   "last_completed_bar": "2026-11-26",
+   "today_forming": false,
    "stale_days": 0,
    "trend": "Up",
-   "rsi14": 71.0,
-   "atr": 1122.03,
-   "ema20": 60207.98,
-   "ema50": 58120.01,
-   "ema200": 56939.27,
+   "rsi14": 69.8,
+   "atr": 1097.06,
+   "ema20": 60524.86,
+   "ema50": 58332.38,
+   "ema200": 57004.9,
    "candles": [
     {
      "time": "2026-05-20",
@@ -1908,7 +1908,7 @@
      "open": 63883.1,
      "high": 64104.75,
      "low": 63332.3,
-     "close": 63620.9
+     "close": 63535.3
     }
    ],
    "patterns": [
@@ -1918,10 +1918,10 @@
     }
    ],
    "flow": {
-    "available": true,
-    "vol_ratio": 0.89,
-    "obv_slope": 1.0,
-    "note": "Volume 0.9x 20-day average, OBV rising"
+    "available": false,
+    "vol_ratio": null,
+    "obv_slope": 0,
+    "note": "No volume data (normal for forex)"
    }
   },
   {
@@ -1932,20 +1932,20 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 1400.9,
-   "price_time": "2026-11-26T14:45:00+05:30",
+   "price": 1396.0,
+   "price_time": "2026-11-26T15:15:00+05:30",
    "prev_close": 1373.9,
-   "change_pct": 1.97,
+   "change_pct": 1.61,
    "last_bar": "2026-11-26",
-   "last_completed_bar": "2026-11-25",
-   "today_forming": true,
+   "last_completed_bar": "2026-11-26",
+   "today_forming": false,
    "stale_days": 0,
    "trend": "Mixed",
-   "rsi14": 68.9,
-   "atr": 30.65,
-   "ema20": 1318.53,
-   "ema50": 1281.51,
-   "ema200": 1315.47,
+   "rsi14": 72.1,
+   "atr": 31.31,
+   "ema20": 1325.92,
+   "ema50": 1286.01,
+   "ema200": 1316.28,
    "candles": [
     {
      "time": "2026-05-20",
@@ -2853,15 +2853,15 @@
     {
      "time": "2026-11-26",
      "open": 1371.1,
-     "high": 1401.5,
+     "high": 1401.7,
      "low": 1361.8,
-     "close": 1400.9
+     "close": 1396.2
     }
    ],
    "patterns": [],
    "flow": {
     "available": true,
-    "vol_ratio": 0.87,
+    "vol_ratio": 0.91,
     "obv_slope": 1.0,
     "note": "Volume 0.9x 20-day average, OBV rising"
    }
@@ -2874,20 +2874,20 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 861.85,
-   "price_time": "2026-11-26T14:45:00+05:30",
+   "price": 862.0,
+   "price_time": "2026-11-26T15:15:00+05:30",
    "prev_close": 846.2,
-   "change_pct": 1.85,
+   "change_pct": 1.87,
    "last_bar": "2026-11-26",
-   "last_completed_bar": "2026-11-25",
-   "today_forming": true,
+   "last_completed_bar": "2026-11-26",
+   "today_forming": false,
    "stale_days": 0,
    "trend": "Mixed",
-   "rsi14": 70.4,
-   "atr": 20.66,
-   "ema20": 787.26,
-   "ema50": 755.35,
-   "ema200": 785.64,
+   "rsi14": 72.9,
+   "atr": 21.13,
+   "ema20": 794.38,
+   "ema50": 759.53,
+   "ema200": 786.4,
    "candles": [
     {
      "time": "2026-05-20",
@@ -3797,20 +3797,15 @@
      "open": 849.1,
      "high": 871.6,
      "low": 844.3,
-     "close": 861.85
+     "close": 862.0
     }
    ],
-   "patterns": [
-    {
-     "name": "Inside bar",
-     "bias": 0
-    }
-   ],
+   "patterns": [],
    "flow": {
     "available": true,
-    "vol_ratio": 1.15,
+    "vol_ratio": 1.62,
     "obv_slope": 1.0,
-    "note": "Volume 1.1x 20-day average, OBV rising"
+    "note": "Volume 1.6x 20-day average, OBV rising"
    }
   },
   {
@@ -3821,20 +3816,20 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 1616.2,
-   "price_time": "2026-11-26T14:45:00+05:30",
+   "price": 1613.0,
+   "price_time": "2026-11-26T15:15:00+05:30",
    "prev_close": 1640.0,
-   "change_pct": -1.45,
+   "change_pct": -1.65,
    "last_bar": "2026-11-26",
-   "last_completed_bar": "2026-11-25",
-   "today_forming": true,
+   "last_completed_bar": "2026-11-26",
+   "today_forming": false,
    "stale_days": 0,
    "trend": "Up",
-   "rsi14": 71.3,
-   "atr": 35.32,
-   "ema20": 1540.83,
-   "ema50": 1466.59,
-   "ema200": 1394.35,
+   "rsi14": 64.9,
+   "atr": 36.2,
+   "ema20": 1547.51,
+   "ema50": 1472.26,
+   "ema200": 1396.5,
    "candles": [
     {
      "time": "2026-05-20",
@@ -4744,15 +4739,24 @@
      "open": 1650.1,
      "high": 1652.0,
      "low": 1604.3,
-     "close": 1616.2
+     "close": 1611.0
     }
    ],
-   "patterns": [],
+   "patterns": [
+    {
+     "name": "Bearish engulfing",
+     "bias": -1
+    },
+    {
+     "name": "Strong bear candle",
+     "bias": -1
+    }
+   ],
    "flow": {
     "available": true,
-    "vol_ratio": 1.07,
+    "vol_ratio": 0.87,
     "obv_slope": 1.0,
-    "note": "Volume 1.1x 20-day average, OBV rising"
+    "note": "Volume 0.9x 20-day average, OBV rising"
    }
   },
   {
@@ -4763,20 +4767,20 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 1140.55,
-   "price_time": "2026-11-26T14:45:00+05:30",
+   "price": 1139.05,
+   "price_time": "2026-11-26T15:15:00+05:30",
    "prev_close": 1138.15,
-   "change_pct": 0.21,
+   "change_pct": 0.08,
    "last_bar": "2026-11-26",
-   "last_completed_bar": "2026-11-25",
-   "today_forming": true,
+   "last_completed_bar": "2026-11-26",
+   "today_forming": false,
    "stale_days": 0,
    "trend": "Up",
-   "rsi14": 71.0,
-   "atr": 26.25,
-   "ema20": 1071.42,
-   "ema50": 1030.59,
-   "ema200": 1010.43,
+   "rsi14": 70.5,
+   "atr": 25.72,
+   "ema20": 1077.64,
+   "ema50": 1034.75,
+   "ema200": 1011.68,
    "candles": [
     {
      "time": "2026-05-20",
@@ -5686,20 +5690,15 @@
      "open": 1139.8,
      "high": 1150.05,
      "low": 1131.2,
-     "close": 1140.55
+     "close": 1136.65
     }
    ],
-   "patterns": [
-    {
-     "name": "Inside bar",
-     "bias": 0
-    }
-   ],
+   "patterns": [],
    "flow": {
     "available": true,
-    "vol_ratio": 0.64,
+    "vol_ratio": 0.49,
     "obv_slope": 1.0,
-    "note": "Volume 0.6x 20-day average, OBV rising"
+    "note": "Volume 0.5x 20-day average, OBV rising"
    }
   },
   {
@@ -5710,20 +5709,20 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 1177.4,
-   "price_time": "2026-11-26T14:45:00+05:30",
+   "price": 1181.2,
+   "price_time": "2026-11-26T15:15:00+05:30",
    "prev_close": 1130.0,
-   "change_pct": 4.19,
+   "change_pct": 4.53,
    "last_bar": "2026-11-26",
-   "last_completed_bar": "2026-11-25",
-   "today_forming": true,
+   "last_completed_bar": "2026-11-26",
+   "today_forming": false,
    "stale_days": 0,
    "trend": "Mixed",
-   "rsi14": 51.6,
-   "atr": 35.3,
-   "ema20": 1125.97,
-   "ema50": 1114.71,
-   "ema200": 1195.83,
+   "rsi14": 61.1,
+   "atr": 36.71,
+   "ema20": 1131.41,
+   "ema50": 1117.39,
+   "ema200": 1195.7,
    "candles": [
     {
      "time": "2026-05-20",
@@ -6631,17 +6630,22 @@
     {
      "time": "2026-11-26",
      "open": 1151.0,
-     "high": 1177.5,
+     "high": 1185.0,
      "low": 1148.3,
-     "close": 1177.4
+     "close": 1183.0
     }
    ],
-   "patterns": [],
+   "patterns": [
+    {
+     "name": "Strong bull candle",
+     "bias": 1
+    }
+   ],
    "flow": {
     "available": true,
-    "vol_ratio": 1.3,
+    "vol_ratio": 1.51,
     "obv_slope": 1.0,
-    "note": "Volume 1.3x 20-day average, OBV rising"
+    "note": "Volume 1.5x 20-day average, OBV rising"
    }
   },
   {
@@ -6652,20 +6656,20 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 2605.1,
-   "price_time": "2026-11-26T14:45:00+05:30",
+   "price": 2624.0,
+   "price_time": "2026-11-26T15:15:00+05:30",
    "prev_close": 2517.3,
-   "change_pct": 3.49,
+   "change_pct": 4.24,
    "last_bar": "2026-11-26",
-   "last_completed_bar": "2026-11-25",
-   "today_forming": true,
+   "last_completed_bar": "2026-11-26",
+   "today_forming": false,
    "stale_days": 0,
    "trend": "Mixed",
-   "rsi14": 62.4,
-   "atr": 70.26,
-   "ema20": 2424.41,
-   "ema50": 2367.65,
-   "ema200": 2462.64,
+   "rsi14": 70.7,
+   "atr": 74.02,
+   "ema20": 2444.97,
+   "ema50": 2378.34,
+   "ema200": 2464.4,
    "candles": [
     {
      "time": "2026-05-20",
@@ -7573,17 +7577,22 @@
     {
      "time": "2026-11-26",
      "open": 2523.6,
-     "high": 2606.5,
+     "high": 2640.3,
      "low": 2523.6,
-     "close": 2605.1
+     "close": 2640.3
     }
    ],
-   "patterns": [],
+   "patterns": [
+    {
+     "name": "Strong bull candle",
+     "bias": 1
+    }
+   ],
    "flow": {
     "available": true,
-    "vol_ratio": 1.41,
+    "vol_ratio": 1.54,
     "obv_slope": 1.0,
-    "note": "Volume 1.4x 20-day average, OBV rising"
+    "note": "Volume 1.5x 20-day average, OBV rising"
    }
   },
   {
@@ -7594,10 +7603,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 5,
-   "price": 1.09842,
-   "price_time": "2026-11-26T09:15:00+00:00",
+   "price": 1.09721,
+   "price_time": "2026-11-26T10:00:00+00:00",
    "prev_close": 1.09623,
-   "change_pct": 0.2,
+   "change_pct": 0.09,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -8517,7 +8526,7 @@
      "open": 1.09782,
      "high": 1.09842,
      "low": 1.09601,
-     "close": 1.09842
+     "close": 1.09721
     }
    ],
    "patterns": [
@@ -8541,10 +8550,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 5,
-   "price": 1.31185,
-   "price_time": "2026-11-26T09:15:00+00:00",
+   "price": 1.31103,
+   "price_time": "2026-11-26T10:00:00+00:00",
    "prev_close": 1.31118,
-   "change_pct": 0.05,
+   "change_pct": -0.01,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -9464,7 +9473,7 @@
      "open": 1.31191,
      "high": 1.31196,
      "low": 1.30972,
-     "close": 1.31185
+     "close": 1.31103
     }
    ],
    "patterns": [
@@ -9496,10 +9505,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 3,
-   "price": 159.161,
-   "price_time": "2026-11-26T09:15:00+00:00",
+   "price": 159.229,
+   "price_time": "2026-11-26T10:00:00+00:00",
    "prev_close": 159.262,
-   "change_pct": -0.06,
+   "change_pct": -0.02,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -10419,7 +10428,7 @@
      "open": 159.116,
      "high": 159.261,
      "low": 158.946,
-     "close": 159.161
+     "close": 159.227
     }
    ],
    "patterns": [
@@ -11366,7 +11375,7 @@
      "open": 3619.8,
      "high": 3634.7,
      "low": 3578.8,
-     "close": 3598.2
+     "close": 3599.8
     }
    ],
    "patterns": [],
@@ -11382,6 +11391,51 @@
  "new_signals": [],
  "blocked": [
   {
+   "market": "TCS",
+   "name": "TCS",
+   "strategy_name": "20-day breakout",
+   "direction": "LONG",
+   "score": 54,
+   "blocks": [
+    "Strategy is REJECTED for this market in the backtest (not proven after costs)",
+    "Score 54 is below 60"
+   ],
+   "bar_date": "2026-11-26",
+   "entry": 2624.0,
+   "stop": 2475.95,
+   "target": 2920.09
+  },
+  {
+   "market": "TCS",
+   "name": "TCS",
+   "strategy_name": "Bollinger squeeze",
+   "direction": "LONG",
+   "score": 54,
+   "blocks": [
+    "Strategy is REJECTED for this market in the backtest (not proven after costs)",
+    "Score 54 is below 60"
+   ],
+   "bar_date": "2026-11-26",
+   "entry": 2624.0,
+   "stop": 2512.96,
+   "target": 2846.07
+  },
+  {
+   "market": "TCS",
+   "name": "TCS",
+   "strategy_name": "MACD trend cross",
+   "direction": "LONG",
+   "score": 54,
+   "blocks": [
+    "Strategy is REJECTED for this market in the backtest (not proven after costs)",
+    "Score 54 is below 60"
+   ],
+   "bar_date": "2026-11-26",
+   "entry": 2624.0,
+   "stop": 2475.95,
+   "target": 2920.09
+  },
+  {
    "market": "USDJPY",
    "name": "USD/JPY",
    "strategy_name": "Trend pullback",
@@ -11392,9 +11446,54 @@
     "Score 50 is below 60"
    ],
    "bar_date": "2026-11-25",
-   "entry": 159.161,
-   "stop": 157.768,
-   "target": 161.947
+   "entry": 159.229,
+   "stop": 157.836,
+   "target": 162.015
+  },
+  {
+   "market": "HDFCBANK",
+   "name": "HDFC Bank",
+   "strategy_name": "20-day breakout",
+   "direction": "LONG",
+   "score": 48,
+   "blocks": [
+    "Strategy is REJECTED for this market in the backtest (not proven after costs)",
+    "Score 48 is below 60"
+   ],
+   "bar_date": "2026-11-26",
+   "entry": 862.0,
+   "stop": 819.74,
+   "target": 946.52
+  },
+  {
+   "market": "RELIANCE",
+   "name": "Reliance",
+   "strategy_name": "20-day breakout",
+   "direction": "LONG",
+   "score": 46,
+   "blocks": [
+    "Strategy is REJECTED for this market in the backtest (not proven after costs)",
+    "Score 46 is below 60"
+   ],
+   "bar_date": "2026-11-26",
+   "entry": 1396.0,
+   "stop": 1333.38,
+   "target": 1521.24
+  },
+  {
+   "market": "INFY",
+   "name": "Infosys",
+   "strategy_name": "RSI(2) dip buy",
+   "direction": "SHORT",
+   "score": 36,
+   "blocks": [
+    "Strategy is REJECTED for this market in the backtest (not proven after costs)",
+    "Score 36 is below 60"
+   ],
+   "bar_date": "2026-11-26",
+   "entry": 1181.2,
+   "stop": 1254.62,
+   "target": 1071.08
   }
  ],
  "upcoming": [
@@ -11404,35 +11503,11 @@
    "strategy": "inside_bar",
    "strategy_name": "Inside-bar breakout",
    "direction": "LONG",
-   "trigger": 64133.8,
+   "trigger": 64104.75,
    "when": "a daily close above this inside bar's high",
    "verdict": "WATCH",
-   "price": 63620.9,
-   "atr": 1122.034894366545
-  },
-  {
-   "market": "INFY",
-   "name": "Infosys",
-   "strategy": "squeeze",
-   "strategy_name": "Bollinger squeeze",
-   "direction": "LONG",
-   "trigger": 1193.25,
-   "when": "a close above the upper Bollinger band",
-   "verdict": "WATCH",
-   "price": 1177.4,
-   "atr": 35.30076578971332
-  },
-  {
-   "market": "SBIN",
-   "name": "SBI",
-   "strategy": "inside_bar",
-   "strategy_name": "Inside-bar breakout",
-   "direction": "LONG",
-   "trigger": 1153.8,
-   "when": "a daily close above this inside bar's high",
-   "verdict": "WATCH",
-   "price": 1140.55,
-   "atr": 26.252179976251835
+   "price": 63535.3,
+   "atr": 1097.0644889653634
   },
   {
    "market": "XAUUSD",
@@ -11455,44 +11530,8 @@
    "trigger": 1.30499,
    "when": "a daily close below this inside bar's low",
    "verdict": "REJECTED",
-   "price": 1.31185,
+   "price": 1.31103,
    "atr": 0.008764032369671939
-  },
-  {
-   "market": "HDFCBANK",
-   "name": "HDFC Bank",
-   "strategy": "inside_bar",
-   "strategy_name": "Inside-bar breakout",
-   "direction": "SHORT",
-   "trigger": 831.55,
-   "when": "a daily close below this inside bar's low",
-   "verdict": "REJECTED",
-   "price": 861.85,
-   "atr": 20.65553548412134
-  },
-  {
-   "market": "ICICIBANK",
-   "name": "ICICI Bank",
-   "strategy": "donchian",
-   "strategy_name": "20-day breakout",
-   "direction": "LONG",
-   "trigger": 1650.0,
-   "when": "a daily close above the 20-day high",
-   "verdict": "REJECTED",
-   "price": 1616.2,
-   "atr": 35.31824800201606
-  },
-  {
-   "market": "INFY",
-   "name": "Infosys",
-   "strategy": "rsi_reversion",
-   "strategy_name": "RSI(2) dip buy",
-   "direction": "SHORT",
-   "trigger": 1130.0,
-   "when": "RSI(2) rises above 95 (one more up day)",
-   "verdict": "REJECTED",
-   "price": 1177.4,
-   "atr": 35.30076578971332
   },
   {
    "market": "NIFTY",
@@ -11503,32 +11542,8 @@
    "trigger": 25992.6,
    "when": "a daily close above the 20-day high",
    "verdict": "REJECTED",
-   "price": 25905.0,
-   "atr": 365.814692937156
-  },
-  {
-   "market": "NIFTY",
-   "name": "NIFTY 50",
-   "strategy": "inside_bar",
-   "strategy_name": "Inside-bar breakout",
-   "direction": "LONG",
-   "trigger": 25951.65,
-   "when": "a daily close above this inside bar's high",
-   "verdict": "REJECTED",
-   "price": 25905.0,
-   "atr": 365.814692937156
-  },
-  {
-   "market": "TCS",
-   "name": "TCS",
-   "strategy": "squeeze",
-   "strategy_name": "Bollinger squeeze",
-   "direction": "LONG",
-   "trigger": 2554.12,
-   "when": "a close above the upper Bollinger band",
-   "verdict": "REJECTED",
-   "price": 2605.1,
-   "atr": 70.25625817685072
+   "price": 25884.5,
+   "atr": 356.9314447809306
   }
  ],
  "track_record": {
@@ -11719,13 +11734,13 @@
    "hold_days": 20,
    "verdict": "REJECTED",
    "stats": {
-    "trades": 417,
-    "win_rate": 41.0,
-    "expectancy": -0.064,
-    "profit_factor": 0.89,
-    "total_r": -26.64,
+    "trades": 418,
+    "win_rate": 41.1,
+    "expectancy": -0.059,
+    "profit_factor": 0.9,
+    "total_r": -24.67,
     "max_dd_r": 53.43,
-    "oos_expectancy": 0.015
+    "oos_expectancy": 0.014
    },
    "per_market": {
     "NIFTY": {
@@ -11766,13 +11781,13 @@
     },
     "HDFCBANK": {
      "stats": {
-      "trades": 37,
-      "win_rate": 37.8,
-      "expectancy": -0.062,
-      "profit_factor": 0.9,
-      "total_r": -2.28,
+      "trades": 38,
+      "win_rate": 39.5,
+      "expectancy": -0.008,
+      "profit_factor": 0.99,
+      "total_r": -0.32,
       "max_dd_r": 6.2,
-      "oos_expectancy": 0.042
+      "oos_expectancy": 0.317
      },
      "verdict": "REJECTED"
     },
@@ -12211,12 +12226,12 @@
    "hold_days": 20,
    "verdict": "REJECTED",
    "stats": {
-    "trades": 358,
-    "win_rate": 39.4,
-    "expectancy": -0.073,
-    "profit_factor": 0.87,
-    "total_r": -26.22,
-    "max_dd_r": 33.11,
+    "trades": 359,
+    "win_rate": 39.3,
+    "expectancy": -0.076,
+    "profit_factor": 0.86,
+    "total_r": -27.25,
+    "max_dd_r": 33.78,
     "oos_expectancy": -0.12
    },
    "per_market": {
@@ -12306,13 +12321,13 @@
     },
     "TCS": {
      "stats": {
-      "trades": 30,
-      "win_rate": 46.7,
-      "expectancy": -0.01,
-      "profit_factor": 0.98,
-      "total_r": -0.29,
+      "trades": 31,
+      "win_rate": 45.2,
+      "expectancy": -0.042,
+      "profit_factor": 0.92,
+      "total_r": -1.31,
       "max_dd_r": 6.26,
-      "oos_expectancy": 0.242
+      "oos_expectancy": 0.182
      },
      "verdict": "REJECTED"
     },
@@ -12537,8 +12552,8 @@
    "name": "Chief",
    "job": "Runs all bots, combines scores, applies the rules, writes the website data",
    "status": "ok",
-   "note": "Finished in 12.1s",
-   "ms": 12147
+   "note": "Finished in 13.7s",
+   "ms": 13688
   },
   {
    "key": "data",
@@ -12546,7 +12561,7 @@
    "job": "Downloads daily + 15-minute prices (Yahoo Finance, free)",
    "status": "ok",
    "note": "12/12 markets loaded via yfinance",
-   "ms": 9100
+   "ms": 11094
   },
   {
    "key": "chart",
@@ -12554,23 +12569,23 @@
    "job": "Calculates EMA, RSI, ATR, Bollinger, MACD, 20-day high/low",
    "status": "ok",
    "note": "Indicators for 12 markets (finished daily candles only)",
-   "ms": 208
+   "ms": 131
   },
   {
    "key": "candle",
    "name": "Candle bot",
    "job": "Finds candlestick patterns on the last finished candle",
    "status": "ok",
-   "note": "9 patterns found",
-   "ms": 1
+   "note": "11 patterns found",
+   "ms": 0
   },
   {
    "key": "flow",
    "name": "Flow bot",
    "job": "Checks volume and on-balance volume (money flow)",
    "status": "ok",
-   "note": "Volume available for 9 markets",
-   "ms": 3
+   "note": "Volume available for 7 markets",
+   "ms": 1
   },
   {
    "key": "network",
@@ -12578,7 +12593,7 @@
    "job": "Market breadth, relative strength vs NIFTY, US-dollar strength",
    "status": "ok",
    "note": "Breadth: india index 100%, india stock 100%, fx 33%, metal 0%",
-   "ms": 1
+   "ms": 0
   },
   {
    "key": "news",
@@ -12586,7 +12601,7 @@
    "job": "Reads free RSS headlines and tags them by market",
    "status": "ok",
    "note": "60 headlines from last 48h (0 feed(s) failed)",
-   "ms": 2693
+   "ms": 2024
   },
   {
    "key": "backtest",
@@ -12594,7 +12609,7 @@
    "job": "Tests all 6 strategies on ~5 years of daily data, after costs",
    "status": "ok",
    "note": "0/6 strategies TRADEABLE after costs",
-   "ms": 128
+   "ms": 81
   },
   {
    "key": "forward",
@@ -12609,15 +12624,15 @@
    "name": "Strategy bot",
    "job": "Checks the 6 strategies on the latest finished candle",
    "status": "ok",
-   "note": "1 raw setups triggered on the last candle",
-   "ms": 0
+   "note": "7 raw setups triggered on the last candle",
+   "ms": 1
   },
   {
    "key": "risk",
    "name": "Risk & mistake guard",
    "job": "1% sizing, stop on every trade, daily loss limit, blocks common mistakes",
    "status": "ok",
-   "note": "0 new signal(s), 1 blocked; today's closed P&L +0.00R",
+   "note": "0 new signal(s), 7 blocked; today's closed P&L +0.00R",
    "ms": 0
   },
   {
@@ -12626,15 +12641,152 @@
    "job": "Sends new signals, closed trades and warnings to your phone",
    "status": "ok",
    "note": "0 signal alert(s), 0 close alert(s)",
-   "ms": 0
+   "ms": 347
   }
  ],
  "news": [
   {
+   "title": "Sensex, Nifty end near 10-month highs: 5 reasons why stock market closed higher today - CNBC TV18",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPbkl4dnh2VG5MbGV4TENYRXo2dVBzdkc5Q2VoXzVnOE9lUGs5dE9Rd3JiQ2pGUnZUdmFFTDlSQzRvTEp2Vm5YNGZJb2pNelAweThXc0tKdjZzRHF1eXFCSjJaVGJBQ1JoRlJIaWUzM1daX3V0WXFFRjl2LWh2UnoyYkx1WThHdFNzY2hDaUJxamxTUFZZOGlrUGxGcEE5OFNOemo0UGRMcE9zRXBTV2NFWllvUmZBRG5pOFRsV1hoWnFWejJQWDJXTTJmVTDSAcwBQVVfeXFMT25JeHZ4dlRuTGxleExDWEV6NnVQc3ZHOUNlaF81ZzhPZVBrOXRPUXdyYkNqRlJ2VHZhRUw5UkM0b0xKdlZuWDRmSW9qTXpQMHk4V3NLSnY2c0RxdXlxQkoyWlRiQUNSaEZSSGllMzNXWl91dFlxRUY5di1odlJ6MmJMdVk4R3RTc2NoQ2lCcWpsU1BWWThpa1BsRnBBOThTTnpqNFBkTHBPc0VwU1djRVpZb1JmQURuaThUbFdYaFpxVnoyUFgyV00yZlUw?oc=5",
+   "published": "2026-11-26T10:06:09+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "NIFTY"
+   ]
+  },
+  {
+   "title": "Tech billionaire takes his case against red tape to the Federal Reserve - The Washington Post",
+   "source": "Google News: Fed & dollar",
+   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSVZoU0stTElBY1VHVk93NWpGbjZQeEFTQll0TXZBUE82dGVpMmVEOGpKbldjRGcxZERvTUl6SHF4eDRUdHV0Sm1YVVpLcWF5X0txSldhaWZMcFFJa2l4blpIVFk2M2p5N2NrbHFwYzY1Vm9YWTFOTFJkaFFwb2ZaQk9HczlteC1kQzQ0YlB4S2Qza2lvS0RkZllMT25pdmRDcXB3WUVna1poWDlXeE56VGFIeHFMS3ltNWZjTEt3cjM?oc=5",
+   "published": "2026-11-26T10:02:15+00:00",
+   "sentiment": 1,
+   "high_impact": true,
+   "markets": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "XAUUSD"
+   ],
+   "usd_news": true
+  },
+  {
+   "title": "The New Itty-Bitty Fiat Is a Nifty Fit for the City - The New York Times",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPWFZqejF0dTNpU3dhWktRMmdhcWZ2RXZXT3ljdjJlZ1BiZG1pZnZobTNHZlYzZTJtTnhWaEV3ekhtVmlzU1VNZXlWRFVDWDlPVTlkNnFZRVkxeFZDMkJnOTVJdkcwOFVmNmxwaWVmbHZGa3dNcnBpYVA5SW9yUU1SZTFmMjU?oc=5",
+   "published": "2026-11-26T10:02:11+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": [
+    "NIFTY"
+   ]
+  },
+  {
+   "title": "World gold price today, November 26: The signal of reversal is still faint - Laodong.vn",
+   "source": "Google News: Forex & gold",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQeFc3RXFSX0llczZfekoySTJEcXBHbXRBM2Q2RU5TODdVNTZnNlAwaUJxVE5POVZfbzk4Qy1jVFFBZ1EtaUZveFB2MFcteldtOVhIb00ybDUyLU5TMFJzWEJTWWZ1V2Izd2lESUZDeWZkam9ZNG9qU1ZXYnhIa0w5dFJMMU1CV2pyM203cUl2eERrZnVZZjV3ajE0N01qXzN1ZGtqTXU1NlM?oc=5",
+   "published": "2026-11-26T09:59:01+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": [
+    "XAUUSD"
+   ]
+  },
+  {
+   "title": "Zee Business. . Why are MCX, BSE and NSE witnessing strong action? Which AI and power equipment stocks are rallying? Why have sugar stocks regained their sweetness? Why are FMCG stocks witnessing profit booking? Prestige and Lodha rally: What sh - Facebook",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPWWcyVnZCT084UENvVkZIX190SExyNkl1NGxPeVNzUDh5eHFVM2VBYXM1VkFwak5IR3lqcEQ1aF9oQ09QWEJ4cGFOMlRxdmZ1am5ScHJQb2hrNlROTjFNUEF6SjF6NTFsZ2FQaUp2QXc1dGllWUhIQnNaelR0Qk9WNXlTaVhhYkZNeDk0cjh3b3ZvdE5RVnVwdGdJQV9iUlNxdFFNY3drMGFsN2dSQ3h0SFg2dXNQWDRyN3p0b1paM3Nfd2FXdndIXzZ6M1hsTlFpbm5vQ09Wekt2b2ZVbVpWUU1B?oc=5",
+   "published": "2026-11-26T09:55:30+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "IndiGo up 22% in a month; Anand Rathi sees macro tailwinds aiding recovery - Business Standard",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPd08tLUpYdm9ZNFhYMXJKY1l5UDZHWjFEOEFEOFJQUXdjQjB4cGE1Rlc3QkxfXzdtdWUxV2Q3LUU4WmpHWWFtQ1JtZW5TV1VzTmxhQXhFRVFZSHMyR2J6c0JHNlc3dWc5V29yR2gxMFUzcHdCS1BHRkpsQjdacWFCRUZTTTVkOWZTTVV5WS03dVV3UEZfbFdleDRtdE9UaThiR2RxVXVQRGtFR0VoSWt3OHBBRGlYZ2N2akxmc0c0RWQ5eER5eTlfMDdiMlpYMm5aSy1xNktB0gHbAUFVX3lxTFBPWFp2Tk4weGRHeWVJM2hfSjlaeXhsWGp5aFdZbUQyWDFFNFdWVGU5UmlXbnU5ZHRxdzl4d1J4bzQyY240dk03VE9haWFrRjJXY1RpaDdveUVyelRrUVRqOVpITklyanJrUVlIdFZtZlh2UUNBR2JfaEVrVkZlaXBuUTZ5WjZiUUFYVkotS3l1SjVGS0J0YkYtQ3hrRTlud3YtVFJpWU5TVlJhOU9lWFg3QUNrWk1YMExEZktjeG54cUNBZi1IdDNCWHFITW51TGcwb19GbTRhMDduVQ?oc=5",
+   "published": "2026-11-26T09:44:00+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": []
+  },
+  {
+   "title": "Australian Dollar: Rebound gains traction against US Dollar - UOB - FXStreet",
+   "source": "Google News: Fed & dollar",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdFFkbkhOblJqVEM2X21BUTQ4aUVELUwzQjBldDJBeU5iUmdtaUtQZ2N2X0hVOEFJWnJoRHJDSlJUNG11YzFhNUR4ZzVaR2RiZkhCUWJmN2hMNHJ3bl8xS0Q1TkJyN1drOGNySEl1WEQyWmxEQm93eUt4VDZVUElHMkNsSzFYVTZTT25UZEU0RVoyUjBnei1mdDJHUDQwNmlGTHd4a3NRd20?oc=5",
+   "published": "2026-11-26T09:40:33+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "XAUUSD"
+   ],
+   "usd_news": true
+  },
+  {
+   "title": "#MCInterview | \ud83d\udea8 Is the bull run finally around the corner, or does the market have more turbulence ahead? \"End of a bear market resumption of a bull market or start of a bull market, there might be a problematic middle over, we will enter that from now onward - LinkedIn",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQUdsOEp2eFdySEM2Ukl1MlJRbmd4VHV2aS13RU4zemQ1NXlTNU41LUlvZGRyeHRxU0RvMDlWc1FNYWU1LXBrUEE4QjVyZWJ2NFVzOEJiOGVURkg2cDMtcnRucUNEcGhvWkY1RlZQaU4xaS1ud3dWVUZLVlhwTGlPYWFJTmRreGxENlJtWXFYOXo1em1EaHdNMFZGQnBaSmZEZElVaEM2RlBzWFE5OTM0U2U4aFJrR3hoQ2c?oc=5",
+   "published": "2026-11-26T09:36:51+00:00",
+   "sentiment": 0,
+   "high_impact": true,
+   "markets": []
+  },
+  {
+   "title": "US Dollar Index (DXY) flatlines just below 104.00 in Thanksgiving lull - FXStreet",
+   "source": "Google News: Fed & dollar",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQzk4VVlTTGNvdE9iMVdoVDAwYVFkaGJVT3p3YURZQWhPVXZOWDBlbDNXZ0g2OThDYmVtZ0hUZ2FFa2xjRHNmMS1Sd19yc1lBNVAtRy16dHlaQm1ibkVBSzBhbVpuanFfc3RwbUFweGxPWkN3UjREZDV0dzJoWWYtaHlrQW8wVjg1Nl9xSThkeDN2OTRtRWhKb0FGbDNVVmpuRHVqR28xVFY1ZlNEYjB3?oc=5",
+   "published": "2026-11-26T09:32:47+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "XAUUSD"
+   ],
+   "usd_news": true
+  },
+  {
+   "title": "Nifty IT jumps over 2% as HCLTech, Wipro, Infosys lead IT rally - BusinessLine",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbFR2cTZmb3dlMGM5VDZJSHBOdzg0SkRaZmllRzYzWlItSmJLMDh0UlBHaC1ySVAzMkd3dXNVOVJCUF9lVnp1QXp5cy1TazdqT0hfbFVHRThTWHFBeDhPVUxxakZLdVlZN2cteTRTbWN5RTRTV1Baa25jSzlZb3NoQVB3OGN2VDFrVE5MLWcwVkMxZTM4X3NnSVZHcU5iSnI4U3FuQ3hDMHRPVXpkLWhxQ1YwMGlKcDFSOXR6b1Z0R18zWmPSAcoBQVVfeXFMTy1vR3ZRTnJKWm1Hd2pZeEpaWHFIS25peXk1eXZMLTlpUGs1WWZLNXpiMjRQYXZvMk9vb05QNnNtZWxmLTNUeWU4aDhIa3RIZm14dl95eG5LZlllS1Uxc3hWWWlhY1FuZTc0SVV4c3Y4dlJINjVFMm9GRUh4V3labEhpQm5KLVFpQ2VnMUd2VGxEM1o5RWktS2pYYnZfQ2h4WnZtNFdnX3U2MUdPV2ZGRW5HdlRtbi1sTGk4NGdjM3VkVjhvS1VMWFdzdw?oc=5",
+   "published": "2026-11-26T09:24:27+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "NIFTY",
+    "INFY"
+   ]
+  },
+  {
+   "title": "Tata Sons Board Meeting on November 30 Puts Tata Group Stocks in Focus; TCS, Tata Steel Gain Over 2% While Trent and Indian Hotels Decline - Kotak Neo",
+   "source": "Google News: Indian stocks",
+   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPTGRkSVdLZVFxb3dvcWlUM3Z3dEFrTXY4RlFTWVNvWmljbUFIMnB4Vm1sNjRLVDVtcGhWaHZGX2lUQnVqaTJSZk9NOXdSYTVMN3pBWE52ZTQ4b2xpUjhENDQwWHJHNDN6dHpfdjVaS01OazhjT0Y4U0ZzOWtnbTg2QWhneE1PUDVkcGlkTFYzVXBUeGx5T1VqQ2ZMMl9lLXZ3SFczTGhUSWZ6ajg1T2xpUFkyaVhhcDlYSXQybWxuaGtLdkd6Mk5kSGxkQW5DVkJCQy1lNGl4LXNTVHNCT19yTw?oc=5",
+   "published": "2026-11-26T09:21:14+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": [
+    "TCS"
+   ]
+  },
+  {
+   "title": "Indian Rupee takes a brief pause after a vertical rally - FXStreet",
+   "source": "Google News: Fed & dollar",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOOUJBWmFuNXJmbGZNV0tUXzNKYldhY2ExZ0JQcTA3WDVhT2VpalpMYXl2VzVrZnNoRXZJbUlRX21HTS02Y0VOV2dUbEpWcVNnWEpIVXdZbHN6YlVHT0lIMXk2LUpDZHJrU3d1VjVlUW5SVmZjRWt0RjZ0WHVGUi1IYV9MRFBvalgycHFXWjJlaU1pb3JBZGFvcUtPQ3ZwT3VPTjI1c1JVcUN5ZGc?oc=5",
+   "published": "2026-11-26T09:12:59+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": []
+  },
+  {
    "title": "Shafaq News..Gold prices rise in Baghdad and Erbil - \u0634\u0641\u0642 \u0646\u064a\u0648\u0632",
    "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPTVphM015Y0dTNXJKbU9GcEFyRHdFVXJnSkM3RGJuTXpHYVNUMXBESVlFQWR2Z0JMd0NhYzIybTdkN0Y1NTB4bGNjcHg4VFppRzhRdkE1aldzQU9aN0hZeW9vSGh4Zkx0Ym4yU1BMUlZIbm5TX0R4cE1RTWVHeU16cw?oc=5",
-   "published": "2026-11-26T09:14:12+00:00",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE82M3lMZzdfanZCbXM3cEpzNjJ6SzVLMzZsbE1FMVpHOEM3RVNkR3Y2NzRuanVnMkJiTlk4RldKZDROSlpVNS1DRm5tamVQXzhSZ1FFR2R5TUpUQ1hYMHFiNjFOeHprYWlNMnJZRUt6TFpGQ0FaZWNjYnd6aw?oc=5",
+   "published": "2026-11-26T09:12:08+00:00",
    "sentiment": 1,
    "high_impact": true,
    "markets": [
@@ -12642,6 +12794,21 @@
     "BANKNIFTY",
     "XAUUSD"
    ]
+  },
+  {
+   "title": "11 Countries Using the US Dollar as Their Official Currency - Tempo.co English",
+   "source": "Google News: Fed & dollar",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZEFOMk9LQklKTW13SUxEUExtX1cwNVFfUktET3RmUHBTZ0JJd2dZdERCUzU2bTZkRE8xOV9IbVhNRWNna21fS2VZLVVtQ0o5bDlUN0NEdmVCb1NySklhZXJrUnlHTVhYNkxYRkFOVDB5anB1NHk4Sk51Z0xvWkYzS1BIWG5qR0o0M3NKb1hHaFI0QTZLLTBF?oc=5",
+   "published": "2026-11-26T09:11:03+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "XAUUSD"
+   ],
+   "usd_news": true
   },
   {
    "title": "Nifty Realty hits 52-wk high, up 3% led by Prestige, Brigade Enterprises - Business Standard",
@@ -12702,6 +12869,17 @@
    "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOTVoxZFI1aU5RWF9GUDk5NDBZQWNjTmcwaXd2TWNUY1AwbXRVNkdkQXRQRGJwNDdqWDZFU3Frc254cTZ0Z3MtNDNDUnktZ0RSbDZvSURGaTU0cHdYS3EzZThBSHBMN3NxWjdKUHpSRWMzdDdMemx3eXFqOWpYR1k5WjNpODRiUkx4X0dBYU81RFN4X3NnTUZJZ0lvUkFJc2c0T09xd1RjODJ5OGhCOU9kWmZwN2VtWm43ZzBKdnRKVUxwN3htMWtCcG5wRUk0SklvLVdZVDBwOGtNRFJLbWFmOHln0gHnAUFVX3lxTE4zOFNEb2luODI1ekNuWjQ3a1RHdjBGcjh1bzJ0T2RiRy1XT1NtU3AwbWJESXV6bzdhdUJuS3VFYTdoa2xQZkhvVFJlVVlfX09OSHdxUG44SDJwZWNSMTNUUVAtRjY1SFBnamZMbDhIV3k0YXBmTnMtQkVZaVRZUkRCOWJOWXh0Mmc5QW93TVJQeFcxVk9ReWJMQ1BPdEZldVBPUVNuQ3Bxc25YY0dBS1RhamlUM3dlSW5MZ1Ewdnloc2ZKVGdOV21vVHB2Y1RPUDR4dG9QbG1mM1hnZE05RENwUC1ybVdsNA?oc=5",
    "published": "2026-11-26T09:00:42+00:00",
    "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "NIFTY"
+   ]
+  },
+  {
+   "title": "Bajaj Housing Finance Ltd trails Nifty 500 over one year - Multibagg AI",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNTVtY1hkUXU2a3RZZjhUMXB2eWhfNEk1MkV5UEJaYzZyOWFyQmVKUmoyYW9fVVFuNkhqYVdPSDdickdGYWRael9JbWtiODVYdERnc1BwS3V2ZkhDSXhzYkg3Xy0xZlJOOFE4VnhLVV9EelZHUHAzcWxRT3c5Y01pZHRzT3B0aG5lMFpBUFFWTlR2aGs4eXhVUnZ4S2Z5emFyVTBTaEI3azVVMWxK?oc=5",
+   "published": "2026-11-26T09:00:38+00:00",
+   "sentiment": 0,
    "high_impact": false,
    "markets": [
     "NIFTY"
@@ -12771,6 +12949,17 @@
    ]
   },
   {
+   "title": "USD/JPY Price Forecast: Flat 20-day EMA reflects continuation of sideways trend - Mitrade",
+   "source": "Google News: Forex & gold",
+   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPekxwaFlaeTNMM3d5bWVBTHpBUGs5QmxVNVM1LVNlSy1VWXVMZHplRWJueVRHN0lGWTJQd19JYnJ2YjBmNXNsY1d1NHdfSVkzMXBmaURQdHFYcmx6czM0U0pqYXlXTEt3VW9ETjRGV2h3Y0thMjFwTjgtUXV6UnNnVVdPYw?oc=5",
+   "published": "2026-11-26T08:39:14+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": [
+    "USDJPY"
+   ]
+  },
+  {
    "title": "Chart GBP/USD Update: Cautious trade - Continuum Economics",
    "source": "Google News: Forex & gold",
    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxORDNMRnRxd1NVWld2ejl5ZGNSNURPaWdxcThBWVBaa3h1WU4xandxQnoyN1h1dE5QUFQ5M19TWjhyWTZQRXhOanAtWi1fZGJLbVBXWDBFMUo1WV9wY2ZGaE9lV2FNRmNoaTV0dThOWkhadjN3M1FTdy1IaGtSREMxc0Vn?oc=5",
@@ -12782,6 +12971,19 @@
    ]
   },
   {
+   "title": "Nifty IT surges to 33,000 as Wipro, TCS, and Infosys drive gains - FlipItMoney",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPN2pwNURhcXVNWVlwUzEwN2xkaG4wOGdGSHpJS19kV0JkeGk0SmM3bkJ6eV9LNHhsTmxZRjhOSFI4azIyTkxqSlJKM3NSYUFJRVEzY0ZNeUxlbFAtTkFua0Z6azRHU2dJMkdnWFpESkhRU2xlLWFtNGktZ2x2bEMwNWJxYUFON3YxN1dZbkoxR0pYQQ?oc=5",
+   "published": "2026-11-26T08:30:20+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "NIFTY",
+    "INFY",
+    "TCS"
+   ]
+  },
+  {
    "title": "Order win impact: Multibagger stock Welspun Corp rises 5%, up 180% YTD - Business Standard",
    "source": "Google News: India markets",
    "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNRVNTWndNbVlQMkk2OU5vTXYyc09zZEtlaEZpODA5X2JacDBzVkdNS2JWQjhTLW4xSl9qeTcxZFQ3VFlSU1JESDNvN3NpUS1KQ25JUWNfZUVxYV9EazNCTXpaMzhzSUROS29mVWNGZ3pjUHoyZ2FzZGFxYVRkZmpDaFpzSF9ldTM2UDJHLUpXRGlqTTk0amlabXduYUFxblRXcUtYNEhPVHFYM0ZUdk14allsS0NKZW83ZE9MLVI4OWpjOTlRTXpQcG40MHdrd9IB0wFBVV95cUxQMjdhOTJIUUVzNWhQUE4waElRYlRyaW5DVzh2OXQ1cEQ2UWVMbERzMGNlb1JVYm5GWml5TXZVaU80MDRBSTBhRTk0a3RXXzlwM21EamozQUkyWGNIbVVMZnBsZ3BmaHVjRXBXSG1RbkRuemgxbjlwczd1NmFOZl9TdFhYWFJjT0lnRzYyOF9vbXBWbUFtSkxETnF5cXpTT1FFRFlEeG82X2I1V3JBVTRNOG9uNUxqX05GYlE1QVdrZ0ZwUGxRTGdMd2xpT2xWcUJuOGhJ?oc=5",
@@ -12789,32 +12991,6 @@
    "sentiment": 1,
    "high_impact": false,
    "markets": []
-  },
-  {
-   "title": "USD/JPY Price Forecast: Flat 20-day EMA reflects continuation of sideways trend - FXStreet",
-   "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPenYwZmNZNDlvdG42bjBHdU02eTRDUWxpWU5rWWFYQ3ZvdXpmbGFJM01NUVNONkM0Qk1SeHNSaW5EMlBaVDZFTGRMQkF0S3BSRUxhUjFzWTJOQmlGckZadGM4VGQ4aTZCcHJKOEcySXpheXVlOFFNM2g5eGtWdGoxeWRBR1pSM01rRW9WTThRa1RmQ2dHTU5ya01fRlBrU082bjJIdHh2NXdRR2JGNklxQ0VVRW54dkZGMG1XR1pn?oc=5",
-   "published": "2026-11-26T08:24:01+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "USDJPY"
-   ]
-  },
-  {
-   "title": "Dollar Forecasts Raised at Bank of America on Three Back-to-Back Fed Hikes - Pound Sterling Live",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNcTVsVUk2VUdmNjd0YWJRWEVpZjkxajJrcVF5R04yVzBKbTFfWUMxTWdtcXRFaWNfUFlwNDlSZVo0R1k5ZmZLN3ZYSnJHUjRVcFJ3QUMxZmc4Vm82dU9GN0Q5N0JKSElCcThsODlhUUhLZThzcVdKUklPMmJMWGMyTEh0RllraHZrTG5BdXJMYVgzOG5XSTRxWlZTSzFSQy14c1pHWVpfN3dWQ1c4WXliNndRak4wZw?oc=5",
-   "published": "2026-11-26T08:17:49+00:00",
-   "sentiment": 0,
-   "high_impact": true,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
   },
   {
    "title": "Baht weakens past THB34 per US dollar, its lowest level in over 19 months - Nation Thailand",
@@ -12832,6 +13008,28 @@
    "usd_news": true
   },
   {
+   "title": "Indian Stock Market Rallies! Sensex Gains 200 Points, Nifty Crosses 25,800: What's Driving the Rise? - jeevanutsahnews.in",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRmRZMzdMaHhiRGVvUUdPMXh5bzFkVjlDZnkxRjctY191Wkktem1oWVpZQTUxWFhhMkZsSEZwdWJmQl9kb3Z5UEpoelRiN09XeDlsbURYS2tncHBSZm1DNkVhcHA1c3NPaFpXUnNpNDhXOUIyWTQ4aGwxLVE1TkJpNVB0SksyaGlBR3YxUDhTanBKQ2d4WlpCNF92aXotTU9zcjZjd1lYY2k?oc=5",
+   "published": "2026-11-26T08:09:55+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "NIFTY"
+   ]
+  },
+  {
+   "title": "SBI Share Price - Live NSE: SBIN Stock Price & Chart - Upstox",
+   "source": "Google News: Indian stocks",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBPa0lHTFVCTVBxWVRmVXR6cE5FMDhDc25ublZmbVllcFgyMU0wZF9NZmdZQWVjQmJrd0tPSFN2OUdVRnpfVVBWdDFCMmRPSkZFc1R4cFIyOGdMSmdtNThoam1zNGN6WnFKbGc?oc=5",
+   "published": "2026-11-26T08:08:31+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": [
+    "SBIN"
+   ]
+  },
+  {
    "title": "EUR/USD Forex Signal 26/11: Euro Rebounds Toward 1.1000 - Daily Forex",
    "source": "Google News: Forex & gold",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTlh5VzU1T041czJINFZ1b24tYjN4QkZYdGZTakR2d0RVaHQ4Qk9fZGdZTXM3UFdsR1NPQnNhTTA4eDlHQVl1bXhjV1V6R05mYV9HRDgwMlRBTGJnazI0VGQ2U0ZKQVVfZVllWVRvT3Jzd19xMERRUFNLUXRQRnVTaDBWVG8yMXBKREU1bmM4bzlsWWJ3dXVibmxxRnZHZw?oc=5",
@@ -12840,17 +13038,6 @@
    "high_impact": true,
    "markets": [
     "EURUSD"
-   ]
-  },
-  {
-   "title": "Indian Stock Market Rallies! Sensex Gains 200 Points, Nifty Crosses 25,800: What's Driving the Rise? - jeevanutsahnews.in",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxON2RDWTU2RzYteUJVak91b2huVUVKSVlDa2xueUJ1OW1rMlVuRXVSeU5ZSGd2eUxWU1dKRFk5UEVrdF9CbjJqQmVZcW1xLTR5bWNwSUNIYU1EdGpVVDJ6T084eDZRMXRkUmFoNUtKQUhxZlowaDZGM2gyMl9kOHFRMDQ0c2hzTXFfZUFQaHBRQzVQVUhjWHYzd2JqMEdOSndEUFIwVldHMkI?oc=5",
-   "published": "2026-11-26T07:54:26+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "NIFTY"
    ]
   },
   {
@@ -12906,6 +13093,17 @@
    "usd_news": true
   },
   {
+   "title": "Infosys Ltd. (NYSE:INFY) Stock Has Average Target Price of $12.11 - MarketBeat",
+   "source": "Google News: Indian stocks",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPT2lvQzE2b25pbEcxbDNSQnhlVkIzYUdpX1VXcnFJMkEybkJuZFVPRFVhWUppay1lMXNaV0x2Z0Uwa3lWb2NnUlNCRC1sUlJKVGI1Szh5MFdCZWJVSUtpa2NqZUpzelMwaV8tazVfQkwxUDhPVnVxU0hzWlJ2aHJ5czJpZktrLW9yOXZXU2FrbzRuMWphQ3YzYlFIdWttNGNFRmJLMS1ubTYxdHhIRkgxUGJkQ28wQ1M1NUJ2SzQycG5Tdw?oc=5",
+   "published": "2026-11-26T07:37:30+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "INFY"
+   ]
+  },
+  {
    "title": "Nifty at 26-week high, Sensex up 0.47%; HDFC Bank, IT stocks lead; FMCG lags - BusinessLine",
    "source": "Google News: India markets",
    "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQY1NUMnU4c0hqLVlDODFlbUd3MkdqaEZKN04yLS1rMUVwNWZlLTlFTFkxSTQzRDNxMERGTmxMUVJiZlQxLW5qdGUxcldBcGYwTnhWMkhSZEV2dlpYY2h0cTY5Qk15TGRzaS13eGV1czQzS1hLTF94R24wYjJDNkRwTGJndmRYR0RoUlhwMHRyWkdxZDRLYjIyZkliUE4zVXNJVmppamhZLUt3WUdvMTFhS0w1ZlJfOTE1bDZxSERPNmpSb1ZqaWlPTTZtSGpQeWdn0gHXAUFVX3lxTE5RbnNXWjNKQWFUZ2hrMm9FVWtlUGdqREQ4SUQ3THN5QlUwdnJQVmQ2UGpHVlNzNDdjcHF6TXUzampBNWwxR0R4QjI4YjluTnBhVW9QUUc2U0V4SWd1Y1RTZ0hNRzBSYlh3YmxPWklRaksyd2tNZUR1dkZPUW44Nm4tcWFhWHlhME9iV1VPZ2pvb05LZmJ5azNVQVY0OVY2WEFEYmtmUFk3M2gyU3Q2azgzNGMwWHdNSHdrUmo2VDRTREx5dFIwcXdpNHZpT09aOU5SaTBkRjZn?oc=5",
@@ -12916,207 +13114,6 @@
     "NIFTY",
     "HDFCBANK"
    ]
-  },
-  {
-   "title": "Nifty Realty hits fresh 52-week high; index up 22% in a month; Prestige Estate, Brigade Enterprises lead... - Moneycontrol.com",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMipwJBVV95cUxNMkMxMXoyVTdMd3dIQVU2elF1ZHQ2Q0hlODgxOFRCVlRYM0JNRkFUcW1uWVFZZ0JCV0NuZk5pMTNIYm9BNndheF9TTzFKZExsQ2k1d3dFTzE1S1Z2eHIyZ0dHZERZeUdHNmRESHNJNzNLNjBSWHhWTlRuYW1MTXo5OVVmUXpLWVZTd2VtUkljUmZZeFhLdjh1ZTBPSVM0Q3A3TUJPSml6N05JVXN1ajZ4YThaRGxrSmZXUmV6TUp3djNVUlIyUEhrLVhKRFdLSFN3NXBHNFZRN1BGWmZJOEl5a2hBdF90VWdyb0Q3TmFValdVT190REROWk9iWExLem9XaVpOVG51aDc3VFRzcVhDSktaRXZNdHhuWUFYMGM3bEFLUGJaYTBr0gGnAkFVX3lxTE0yQzExejJVN0x3d0hBVTZ6UXVkdDZDSGU4ODE4VEJWVFgzQk1GQVRxbW5ZUVlnQkJXQ25mTmkxM0hib0E2d2F4X1NPMUpkTGxDaTV3d0VPMTVLVnZ4cjJnR0dkRFl5R0c2ZERIc0k3M0s2MFJYeFZOVG5hbUxNejk5VWZRektZVlN3ZW1SSWNSZll4WEt2OHVlME9JUzRDcDdNQk9KaXo3TklVc3VqNnhhOFpEbGtKZldSZXpNSnd2M1VSUjJQSGstWEpEV0tIU3c1cEc0VlE3UEZaZkk4SXlraEF0X3RVZ3JvRDdOYVVqV1VPX3RERE5aT2JYTEt6b1dpWk5UbnVoNzdUVHNxWENKS1pFdk10eG5ZQVgwYzdsQUtQYlphMGs?oc=5",
-   "published": "2026-11-26T07:36:56+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "NIFTY"
-   ]
-  },
-  {
-   "title": "Titan, Trent, TCS, Indian Hotels: Tata Group stocks in focus ahead of Nov 30 board meet; latest developments - Upstox",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPdnVyd0JKS3hTZUtCYVhXenhHT1A1N2x5WFJUbXVQUHFJMjctWF80a0VRdWxocnFtV1dVUHQ1aU12bFd1WHd0T1RHUkQwMExMRWpsQ05jcE9YRXBJQkFOUFQwcDVXdFlGOEVOenF3WjdsVzBrOEpaNDZaaWdXMURvVUtxbXFsbUFSdjBHWlQweV9zeVpZakZRZDRXcjgwUFh2ZDZ6dkNqRmxKcURvSUd1bTA0eGZTdFpyMmYtN2NReVdjTWlISGVlSGpCUUhmSjF4MHM2azBlSFJwLWczc1dYcEZ2RnZzd2RGMjkzemVpa2c?oc=5",
-   "published": "2026-11-26T07:34:23+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "TCS"
-   ]
-  },
-  {
-   "title": "Wipro, Infosys, HCL Tech, LTTS, TCS shares rally up to 5%; IT picks by Bernstein, others - Business Today",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQWURyQWxVUV82VkNRY1YzZEpGUDlyeDNlRU9yWXZXakJ3c1h5TkZPZUE4YndHOFRTbjRHdnlMb3V5RENpMjZnYVRsQll1NmNFaDZGS1dwcXM4LWJ6Yy14VnlhNEFKZnEtd1haLW1IQnlFM2ppWDFITE9uVXlDMm4yME9reXg0eFlJVnpxX2NEYVhBLU9SV0FmaU9KS25CVmo0QUxQazJveDVlUFpQVEhlT1NHTTFYc0JNeVFlSS1Qbm0tYUF0WkNZdVl4WmpiMVRKY25UUC1fLXhHc3FQcGlxb1ZMY3pDLVZG0gHoAUFVX3lxTFBZRHJBbFVRXzZWQ1FjVjNkSkZQOXJ4M2VFT3JZdldqQndzWHlORk9lQThid0c4VFNuNEd2eUxvdXlEQ2kyNmdhVGxCWXU2Y0VoNkZLV3BxczgtYnpjLXhWeWE0QUpmcS13WFotbUhCeUUzamlYMUhMT25VeUMybjIwT2t5eDR4WUlWenFfY0RhWEEtT1JXQWZpT0pLbkJWajRBTFBrMm94NWVQWlBUSGVPU0dNMVhzQk15UWVJLVBubS1hQXRaQ1l1WXhaamIxVEpjblRQLV8teEdzcVBwaXFvVkxjekMtVkY?oc=5",
-   "published": "2026-11-26T07:33:35+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "INFY",
-    "TCS"
-   ]
-  },
-  {
-   "title": "NIFTY trades above 25,850, SENSEX jumps over 370 pts; Wipro, HZL, Siemens Energy among buzzing stocks - Upstox",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQLThDZS1oM1lEUE02OUhjWDBxTW11SEY5VTI4YW1SNzhfcjJMUnp3WDNlVkxiVGF4aFFXUVJkdVZTUzVEZEdfeGpqcWdQcHFRamx0bC1KalRDSWh6dlJ3TW9pOHY4Zm8zTU16X0RaQXNGM2o5eVFpUHV4UmltdjFEZE9USXluWWlyNUx1TldUV3FjcUkyYVk5Z3FzcjJ6RENxandjT3JZaGprOTMwcjRNZDN5VUF2amhqanBPcXdkM0xxajhybHNzRDZmT1FCY0QxSFI1TjJpVU9MdG51Z05pNXVXX1RTa2J1eUFWRw?oc=5",
-   "published": "2026-11-26T07:32:41+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "NIFTY"
-   ]
-  },
-  {
-   "title": "Greaves Cotton hits record high on heavy volume; stock up 82% in four weeks - Business Standard",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOQTNMNHppN1J5aW9DYzkwOC16YXBVLUVkV2ZhemtpeGJxRFN6bE5tUTVhaE56czJ5R3cyQzVIb3ZZS3dPVUgxZ21xWFRkYjBMdE9jam1PVm5EMTB3V0V2dVJsUDVmYmZEV2lvQ20zazRHS2JqcFBvSEhaUi1tX3dIX3M2aEF6OUR5dm83SFhOdUVGTVNwWGJaNDBRZnR6clNKWGZhaXN3WmNHcTMzZzVtX0Fodm82UVJSRGhzZF9YaTk1UXhlMFVEX0ROd0hNSXJTZi1qbUlLONIB3AFBVV95cUxNVTJzejU0LUF2a3lDVEVXZWF5dDNpR2huYXN1MGJ1VVl2THNUMW1TNXEzVFlKbFVSSWwxMXBhaDc2MVpMdGdJeGFQcjJ6YVpDVjk2dERaSU9selFkSjJ2WkdMYXFSOTJCVHZ5MGNPZzlLMF93VDNWV05HU0hIeFBXRmJUS0VOZk1vMnFhNVBIWkFacVpuSEdKUEViNldCNzZNcllBNVVOVUNCd3NIOF9pdDE4ejI4dW0tU0UzcG5CN2pjbE9UT0NveWNRaFhwRW5DOTNCQVpIZW5QMGhG?oc=5",
-   "published": "2026-11-26T07:32:10+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": []
-  },
-  {
-   "title": "US Dollar Pauses Near 2026 Highs as Rate Expectations and AI Risks Collide - kalkine.co.uk",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPejJkUXBpZlVGQ2JmaGg2Z2xIak5GOTQ0c0c3S0J1RVlxekVHSWVmU1BQc1ZSMnZZYlFJcEdqUFpkNFplOUV5dFVQT3l5OHJTemJEdUZEME41T2xZZGluTTczcmdwNzFXMkZnUEdNWjA3blJyZGFzZ1pzYTkxeF92VHB0LXNGeG9XTmZ1RFhWYTdPYS1icVZ5Y3htWnUteTk1Y2R2TDEwR0VzNFZoOElXVm0wQzE?oc=5",
-   "published": "2026-11-26T07:29:00+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "S. Korean won gains slightly against U.S. dollar after BOK hikes key rate - Yonhap News Agency",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE96b3BmeDROMXk2WHBSc3hDNkg3X0U5U1NNQ1hySGRDdGxNY25lVGNONDU5cVZ1ZWszeENiQ0RKS3VtMFdoRS1aNmI4RGJWa0o1cjJkNlc5Ym5jdw?oc=5",
-   "published": "2026-11-26T07:28:07+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "EUR/USD remains under pressure despite recovery above 1.0800 - FXStreet",
-   "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPcUJMckxOSVRCRlhrRGJnN0FqTkM2bDIwdTczbXNuZUhvVlE4TG1FZHV2Y1F6MjFwdGNZZTVlMUJTMDVJMXdwM2Fab0dJbkhtWWtvbS1ESmJaYkRUZ0xPVGhwRjVNS2FBOE5neTZnb0FnZG9USkt1WXVpYUEwRFppMjlFdE9OdjJpQnlWS3l4SnNzQ013cU11dTNCbzhFdUdhMHJDSzE4X01CQQ?oc=5",
-   "published": "2026-11-26T07:18:20+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "EURUSD"
-   ]
-  },
-  {
-   "title": "Gold Outlook: US Dollar Fatigue Opens the Door to a Squeeze - Investing.com",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUWRqOENWTDdTRlhRMjZkU3p2ZklwalpRS3g0bEZaMUNTMnBLdHJoZXRYMGVkbkJkZG9VMVVQZVZzR2h4MXptclBGVWtRNWNqbFRaVTZyMHlwbVEzN1R3T3FHYm5UV0RtSDQzLXYxa09EOGFhSzg3MTQwX3luelg4REFfOHhELWJmUGZaMXhNQ1c0SkpqdmpQcUFVd2V4VGFIZlVyUFBn?oc=5",
-   "published": "2026-11-26T07:13:12+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "Gold Prices Fall 28% From January Peak but Titan, Kalyan Jewellers and PC Jeweller Gain Up to 47%; What's Driving Jewellery Stocks? - Kotak Neo",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZTBVNHE5aGJPX3I4eEUxNzlzcHQwNEQzVjJDZXUwbzdZLXF5SXJoUzMwbmcyV3FfMzVyejZxWHR4czc0WWhxSDVhY2hkVmNWdTlfNWtKR3FNckZJS2RiVmhEZG9HUThfSlRuMnFPSW9ScUtuN1ppS19pZ2xGalpVRU1YZFRiYmFTQlV2Vm5TQng1UjJBWjk2cG14WTJoMWxNYmpPejd3MGhrOWM?oc=5",
-   "published": "2026-11-26T07:08:43+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "XAUUSD"
-   ]
-  },
-  {
-   "title": "US Dollar Strengthens as Markets Assess the Fed\u2019s December Policy Outlook - Investing.com",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMGxsLUExS2RsOV9FV2FOeC1yclZMU2VlbzVMZTNIYXM3NnRPWko3dWtmTHNQbl9WUTFzNWltamFWRF9JWWNuQWdYb3BNTlhGS083bUR1WjlGWFhtcnJsZk1DTXBJdkRtQTdKZndjMTJMVWlmVWwwcDNBV2FqRVlsM2NwQ0ZTNUJPbXZpSURBdHlYWHVMd2xza1NhclN6b3hMLWNzdkxWcDRwWERQRWh6OWJJLW1oZ1NJ?oc=5",
-   "published": "2026-11-26T07:01:31+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "Sensex Jumps 508 Points, Nifty Surges Past 25,935 on IT Stock Rally - FlipItMoney",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdXVURFdWT1FPbVVlU19DLW5OVUtBZEZrWk96R1pVamxsUEhuajl0czY3R3kyaVp5NHJrakxhRENwNEN2NWZCNUMtanJsbU0yZWpldDNxQUc5QUF5dmFmeDdLbkprV1dSZzlzTTJoeHNOTEM5cEx5Sm5XZlB5ZDJRVThPMGllSEtvNTNvMkZvQjQyZXdwMUZF?oc=5",
-   "published": "2026-11-26T07:00:09+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "NIFTY"
-   ]
-  },
-  {
-   "title": "Wipro shares jump 4% on partnership with BP, emerges top Nifty IT gainer - Business Standard",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQazZVd1psMW9kZ3hFTTZaanl1NVpkM3BFRGFXSTVnU3ZfaDJqaGx4bjNTdjhOb2FoWkZWUWQwMTg3eEVlOU40UXpITFlBQnRWZzNXaGh1aDJQNV9rWm1kYVA3UXZNNmhIZ1JrRG1iOHRfRkk0a3I1cG1qaFpDcmZSbWF1T1FmT01UZEtwY3ZvNDBFUzhOaVNLZGhDdXlJci0wWUUtNmkyTmF4VjFzTnV2UjQwcXRxajVRTXN5LXRmUDZrc2k3VGNuYWRUVWRlS3B2Q2Nqa2dHUlQ3WThGQXpLZzBQTUnSAeoBQVVfeXFMUFF2QWg4QXAtNUtPa19hWkpXUS1PbDhHQ2NtZTV5VUFKN1paVEdORWFHMVp4cFNjVGVVdG1icTZHZXhKa29GWGtnZzNTY0xaWmpJbFJvWjZObkxtcFhQdklTZ2tiNFZlbWxtN2kyWDZLb3hPNGxRVnRlNFVwVmpoQkVHZTZIb3ZHUjBMeEl0eVZqNU5scTVnS2pZMzRLeE5DaVo1TTV0Uy1lOEhaZVd4R0JkUHVkakM5UVdma1NmaTY0d3lyay14ZzFZd0FFbmtucnJ2NjlKUFJ3RVdpOVFQWS01TlBjM2NNM0dn?oc=5",
-   "published": "2026-11-26T06:59:06+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "NIFTY"
-   ]
-  },
-  {
-   "title": "USD INR Rate: Rupee Falls 20 Paise to 92.40 Against US Dollar as Crude Oil Prices Rise and Tariff Concerns Mount - Kotak Neo",
-   "source": "Google News: Fed & dollar",
-   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYXlFVFMzUXI0Zi1EQy1pcWhSTUxfaVFNVWpPcEtEaVJSYkdJSlZBczU5OTF5SklUVkFfbzJjRFZ3c1FKeWo3OXRyMnNMOGstNVcxcGVZbl9sMl9ZSlhWQU1sN3AyeUdFdFlxMFJpSDBiZTBqMTRxc1lNRjBqZnhEdkp6bF9XV2RnWFgzbXZDUVNRalZ6ZUNUaW11N0hKRmdFSS1MbmdyWVJjSkY4MkRybWRiaExhbE5ydFBwWWtfb181d1JicEpRaEh3?oc=5",
-   "published": "2026-11-26T06:52:30+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
-  },
-  {
-   "title": "Wipro, TCS, Infosys push Nifty IT to 33,000 mark - India Infoline",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPQVd1aHZ2UUZNbThlVGo3Sy1EcnFJeEtuMWkweTVScHRWTkxYQ0hkSjRGa0VGbTNhUndaZzZlTFpOOFlmU2pCbnhybXJHRTl4ZzRNemRnWVk1ZjBrclZINGRNOGNHVFVzbDByZ3gzMlk0aDFKdHhnQktoNlc0UVhKM1dpNmlPb0lDdEpnYlE1ZE5vVFhw?oc=5",
-   "published": "2026-11-26T06:50:14+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "NIFTY",
-    "INFY",
-    "TCS"
-   ]
-  },
-  {
-   "title": "US Dollar Price Forecast: Yields Slide, DXY Eyes 104.08 as EUR/USD, GBP/USD Stall - FXEmpire",
-   "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOd3J0NFh2MGxkSTQ3dGQzQmRNcjZaM21kUG1Yd2xNajdnbUFiejQ0S2RSZ01PZmpGQTlEMzQ5MHAzLW1xN1ZyQkRjUVNwQWlBRjB0emNlaXN3eDY5eTdhdnZZaURNVTF0Nm9lNmY4eVJnWjBldUFuangweGo2Rm9hQ05rZEhjRUFzV3dfNnRoMXNqbnh3bmtURHZtdWdUWU5iTG5ES3BNZXVPZkEwWmVLLThJdlpQT2lMb3p5Zk5POHBKaWt3RGhrMg?oc=5",
-   "published": "2026-11-26T06:50:00+00:00",
-   "sentiment": -1,
-   "high_impact": false,
-   "markets": [
-    "EURUSD",
-    "GBPUSD",
-    "USDJPY",
-    "XAUUSD"
-   ],
-   "usd_news": true
   }
  ],
  "errors": []
