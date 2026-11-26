@@ -2,8 +2,8 @@
  "app": "EdgeDesk Live",
  "version": "1.0.0",
  "mode": "live",
- "generated_at": "2026-11-26T05:38:25.103133+00:00",
- "generated_at_ist": "26 Nov 2026, 11:08 IST",
+ "generated_at": "2026-11-26T05:53:39.098388+00:00",
+ "generated_at_ist": "26 Nov 2026, 11:23 IST",
  "refresh_minutes": 15,
  "disclaimer": "Paper-trading research tool. Not investment advice. Signals are not guaranteed and can lose money. Past/backtest results do not predict the future.",
  "settings": {
@@ -38,10 +38,10 @@
    "group": "india_index",
    "ccy": "INR",
    "dp": 2,
-   "price": 25937.55,
-   "price_time": "2026-11-26T11:00:00+05:30",
+   "price": 25914.9,
+   "price_time": "2026-11-26T11:15:00+05:30",
    "prev_close": 25819.25,
-   "change_pct": 0.46,
+   "change_pct": 0.37,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -961,7 +961,7 @@
      "open": 25873.2,
      "high": 25974.95,
      "low": 25733.5,
-     "close": 25937.55
+     "close": 25914.9
     }
    ],
    "patterns": [
@@ -985,10 +985,10 @@
    "group": "india_index",
    "ccy": "INR",
    "dp": 2,
-   "price": 63894.75,
-   "price_time": "2026-11-26T11:00:00+05:30",
+   "price": 63782.05,
+   "price_time": "2026-11-26T11:15:00+05:30",
    "prev_close": 63703.25,
-   "change_pct": 0.3,
+   "change_pct": 0.12,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -1908,7 +1908,7 @@
      "open": 63883.1,
      "high": 64104.75,
      "low": 63471.35,
-     "close": 63892.55
+     "close": 63782.05
     }
    ],
    "patterns": [
@@ -1932,10 +1932,10 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 1383.9,
-   "price_time": "2026-11-26T11:00:00+05:30",
+   "price": 1389.4,
+   "price_time": "2026-11-26T11:15:00+05:30",
    "prev_close": 1373.9,
-   "change_pct": 0.73,
+   "change_pct": 1.13,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -2853,9 +2853,9 @@
     {
      "time": "2026-11-26",
      "open": 1371.1,
-     "high": 1385.7,
+     "high": 1390.0,
      "low": 1361.8,
-     "close": 1383.9
+     "close": 1389.4
     }
    ],
    "patterns": [],
@@ -2874,10 +2874,10 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 867.9,
-   "price_time": "2026-11-26T11:00:00+05:30",
+   "price": 866.6,
+   "price_time": "2026-11-26T11:15:00+05:30",
    "prev_close": 846.2,
-   "change_pct": 2.56,
+   "change_pct": 2.41,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -3797,7 +3797,7 @@
      "open": 849.1,
      "high": 870.85,
      "low": 844.3,
-     "close": 867.9
+     "close": 866.6
     }
    ],
    "patterns": [
@@ -3821,10 +3821,10 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 1627.1,
-   "price_time": "2026-11-26T11:00:00+05:30",
+   "price": 1623.4,
+   "price_time": "2026-11-26T11:15:00+05:30",
    "prev_close": 1640.0,
-   "change_pct": -0.79,
+   "change_pct": -1.01,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -4743,8 +4743,8 @@
      "time": "2026-11-26",
      "open": 1650.1,
      "high": 1652.0,
-     "low": 1624.1,
-     "close": 1627.1
+     "low": 1622.9,
+     "close": 1623.4
     }
    ],
    "patterns": [],
@@ -4763,10 +4763,10 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 1143.25,
-   "price_time": "2026-11-26T11:00:00+05:30",
+   "price": 1143.35,
+   "price_time": "2026-11-26T11:15:00+05:30",
    "prev_close": 1138.15,
-   "change_pct": 0.45,
+   "change_pct": 0.46,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -5686,7 +5686,7 @@
      "open": 1139.8,
      "high": 1146.0,
      "low": 1131.2,
-     "close": 1143.25
+     "close": 1143.35
     }
    ],
    "patterns": [
@@ -5710,10 +5710,10 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 1163.2,
-   "price_time": "2026-11-26T11:00:00+05:30",
+   "price": 1162.3,
+   "price_time": "2026-11-26T11:15:00+05:30",
    "prev_close": 1130.0,
-   "change_pct": 2.94,
+   "change_pct": 2.86,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -6633,7 +6633,7 @@
      "open": 1151.0,
      "high": 1167.9,
      "low": 1148.3,
-     "close": 1163.2
+     "close": 1162.3
     }
    ],
    "patterns": [],
@@ -6652,10 +6652,10 @@
    "group": "india_stock",
    "ccy": "INR",
    "dp": 2,
-   "price": 2564.1,
-   "price_time": "2026-11-26T11:00:00+05:30",
+   "price": 2554.0,
+   "price_time": "2026-11-26T11:15:00+05:30",
    "prev_close": 2517.3,
-   "change_pct": 1.86,
+   "change_pct": 1.46,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -7575,7 +7575,7 @@
      "open": 2523.6,
      "high": 2590.0,
      "low": 2523.6,
-     "close": 2564.1
+     "close": 2554.0
     }
    ],
    "patterns": [],
@@ -7594,10 +7594,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 5,
-   "price": 1.09637,
-   "price_time": "2026-11-26T05:30:00+00:00",
+   "price": 1.09625,
+   "price_time": "2026-11-26T05:45:00+00:00",
    "prev_close": 1.09623,
-   "change_pct": 0.01,
+   "change_pct": 0.0,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -8517,7 +8517,7 @@
      "open": 1.09782,
      "high": 1.0983,
      "low": 1.09601,
-     "close": 1.09637
+     "close": 1.09625
     }
    ],
    "patterns": [
@@ -8541,10 +8541,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 5,
-   "price": 1.3101,
-   "price_time": "2026-11-26T05:30:00+00:00",
+   "price": 1.31003,
+   "price_time": "2026-11-26T05:45:00+00:00",
    "prev_close": 1.31118,
-   "change_pct": -0.08,
+   "change_pct": -0.09,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -9464,7 +9464,7 @@
      "open": 1.31191,
      "high": 1.31196,
      "low": 1.30972,
-     "close": 1.3101
+     "close": 1.31003
     }
    ],
    "patterns": [
@@ -9496,10 +9496,10 @@
    "group": "fx",
    "ccy": "USD",
    "dp": 3,
-   "price": 159.2,
-   "price_time": "2026-11-26T05:30:00+00:00",
+   "price": 159.181,
+   "price_time": "2026-11-26T05:45:00+00:00",
    "prev_close": 159.262,
-   "change_pct": -0.04,
+   "change_pct": -0.05,
    "last_bar": "2026-11-26",
    "last_completed_bar": "2026-11-25",
    "today_forming": true,
@@ -10417,9 +10417,9 @@
     {
      "time": "2026-11-26",
      "open": 159.116,
-     "high": 159.236,
+     "high": 159.261,
      "low": 158.946,
-     "close": 159.199
+     "close": 159.181
     }
    ],
    "patterns": [
@@ -11366,7 +11366,7 @@
      "open": 3619.8,
      "high": 3634.7,
      "low": 3578.8,
-     "close": 3627.3
+     "close": 3622.4
     }
    ],
    "patterns": [],
@@ -11392,9 +11392,9 @@
     "Score 51 is below 60"
    ],
    "bar_date": "2026-11-25",
-   "entry": 159.2,
-   "stop": 157.807,
-   "target": 161.986
+   "entry": 159.181,
+   "stop": 157.788,
+   "target": 161.967
   }
  ],
  "upcoming": [
@@ -11407,7 +11407,7 @@
    "trigger": 64133.8,
    "when": "a daily close above this inside bar's high",
    "verdict": "WATCH",
-   "price": 63894.75,
+   "price": 63782.05,
    "atr": 1122.034894366545
   },
   {
@@ -11419,7 +11419,7 @@
    "trigger": 1193.25,
    "when": "a close above the upper Bollinger band",
    "verdict": "WATCH",
-   "price": 1163.2,
+   "price": 1162.3,
    "atr": 35.30076578971332
   },
   {
@@ -11431,7 +11431,7 @@
    "trigger": 1153.8,
    "when": "a daily close above this inside bar's high",
    "verdict": "WATCH",
-   "price": 1143.25,
+   "price": 1143.35,
    "atr": 26.252179976251835
   },
   {
@@ -11455,7 +11455,7 @@
    "trigger": 1.30499,
    "when": "a daily close below this inside bar's low",
    "verdict": "REJECTED",
-   "price": 1.3101,
+   "price": 1.31003,
    "atr": 0.008764032369671939
   },
   {
@@ -11467,7 +11467,7 @@
    "trigger": 831.55,
    "when": "a daily close below this inside bar's low",
    "verdict": "REJECTED",
-   "price": 867.9,
+   "price": 866.6,
    "atr": 20.65553548412134
   },
   {
@@ -11479,7 +11479,7 @@
    "trigger": 1650.0,
    "when": "a daily close above the 20-day high",
    "verdict": "REJECTED",
-   "price": 1627.1,
+   "price": 1623.4,
    "atr": 35.31824800201606
   },
   {
@@ -11491,7 +11491,7 @@
    "trigger": 1130.0,
    "when": "RSI(2) rises above 95 (one more up day)",
    "verdict": "REJECTED",
-   "price": 1163.2,
+   "price": 1162.3,
    "atr": 35.30076578971332
   },
   {
@@ -11503,7 +11503,7 @@
    "trigger": 25992.6,
    "when": "a daily close above the 20-day high",
    "verdict": "REJECTED",
-   "price": 25937.55,
+   "price": 25914.9,
    "atr": 365.814692937156
   },
   {
@@ -11515,7 +11515,7 @@
    "trigger": 25951.65,
    "when": "a daily close above this inside bar's high",
    "verdict": "REJECTED",
-   "price": 25937.55,
+   "price": 25914.9,
    "atr": 365.814692937156
   },
   {
@@ -11527,7 +11527,7 @@
    "trigger": 2554.12,
    "when": "a close above the upper Bollinger band",
    "verdict": "REJECTED",
-   "price": 2564.1,
+   "price": 2554.0,
    "atr": 70.25625817685072
   }
  ],
@@ -12538,7 +12538,7 @@
    "job": "Runs all bots, combines scores, applies the rules, writes the website data",
    "status": "ok",
    "note": "Finished in 11.5s",
-   "ms": 11537
+   "ms": 11527
   },
   {
    "key": "data",
@@ -12546,7 +12546,7 @@
    "job": "Downloads daily + 15-minute prices (Yahoo Finance, free)",
    "status": "ok",
    "note": "12/12 markets loaded via yfinance",
-   "ms": 9279
+   "ms": 9054
   },
   {
    "key": "chart",
@@ -12554,7 +12554,7 @@
    "job": "Calculates EMA, RSI, ATR, Bollinger, MACD, 20-day high/low",
    "status": "ok",
    "note": "Indicators for 12 markets (finished daily candles only)",
-   "ms": 208
+   "ms": 205
   },
   {
    "key": "candle",
@@ -12586,7 +12586,7 @@
    "job": "Reads free RSS headlines and tags them by market",
    "status": "ok",
    "note": "60 headlines from last 48h (0 feed(s) failed)",
-   "ms": 1904
+   "ms": 2120
   },
   {
    "key": "backtest",
@@ -12594,7 +12594,7 @@
    "job": "Tests all 6 strategies on ~5 years of daily data, after costs",
    "status": "ok",
    "note": "0/6 strategies TRADEABLE after costs",
-   "ms": 129
+   "ms": 130
   },
   {
    "key": "forward",
@@ -12630,6 +12630,28 @@
   }
  ],
  "news": [
+  {
+   "title": "Bulls rule D-St! Sensex jumps 600 pts, Nifty moves closer to 26,000. Major factors behind over Rs 3 lakh c - The Economic Times",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNN19pS3FmbFVHS3UwMk52bUY4M1RMeUlISGJWQWkyWHBfWEtTQXFZVHZhdVA2X285dkpLRzNiMlpnd1lUd3VFSmFzUldfTkxhVnRZQUs0U1EtLWtsNVlWUHppb0xVZlIyTl9Xd0t0QkhHU0xpb0MxSnY3S2k4SEdvbElpNEItazB3LVlzS3EtNG14akRCLVhpNEJwbmZOdEpvWFBzMWJwZ01BVnI0T0JLMVNtWHA4OVBwTG9vQlVkU2pyTEdUaU5MXzJJYXFHME5STDhDRHZNbHJhcWFzLXdNcWdvYmxQZGtIQ1lLR1dzRFdPM2VJOXI1YmtuZTUtWTdwUkE4N3N2REQtYVJpelZnSDBaUWlZMnBfUklGcWJzY9IBmAJBVV95cUxOT1AtQlZEU0haSzNrc3hjanNGUzctdjJqSmhuZUMwUVRSQm44NS1pQ2pLQk5sMWlWbGVEVHdVY0NZN1g4bWRQMWE1aHpTVDVudHBkRjJWX3VFVnVZeXNjWEFvQ1hlT1hHWmdEX2hxXzBERVp6NHJISEdBVVQzaU82cHNGWTRmOE85cEpVN2RsMERLZlFHRlJKcEZJV2RVS3pvVi04X0JnSjNOTkJmcHd0YTMwVGg3cDlzRXNoZTU5MDhqcTZEV1RwT2NpV3lrWGpPUGRob3lTMWhOSUNLdXkxcXAwOG5wNDZ3dDVlMGZacVdESW9pN01SY29Wc2VnNG1NNktFRFhyLVRJRTlfSmN5Q0w3SlpVMHF6?oc=5",
+   "published": "2026-11-26T05:42:51+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "NIFTY"
+   ]
+  },
+  {
+   "title": "Rupee recovery spells margin pressure for IT; Infosys stands out: Jefferies - Business Standard",
+   "source": "Google News: Indian stocks",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNYWlNak5IdEFKS0ZhaHBYX01WMllHQUtQc29hVmtCLUgyZ3c1eUZKS1lFSG9KT1NpSl9NT0hUcm5iaGhQQjYwWHpISjhCdzU4Z0Q0WFZHNlFNUlFiODgwZUR1QkN6MWk4TXNrdGh4cWl0X0xyWEpxQ2VGbzNpT01wTll5T0tTOU5GVHBBYXVXOEpVMF9kVWtQNV9TQS1rUFdrOGNWSUV4OGstcDFBUXJlNnV3aVgyMGZtaURFb1NPckdrQ0JoWXBnakdtMDZBUjRrOHliREJSb9IB3AFBVV95cUxPWFJQOVJaTjBZRHg3TTFESEVHeHZpWnBRSkw0cmlyUGxrMkJqSmJWM2xmeGdzSkR3SjVNR1ItTVo0VThYcnJMZ0VVNDlpQ1d0MFFybTd4OVh4LVB3WEZJSjBraXJLRUZEeERac3NvcXhpdHAxWk1HaGtRQ1VZdHpkOWNVRlcxa2RyaWVkWXphY3pNWW5hNVpwaUhMM1dzQjl1VkYzQ1cwRGE1SjVfcnc0Q0YtSU51UmN5b3lPTGFtMEt6ZEJDMnhWcTZ3VDV2YnBrVUk1TkkwcTFpRmlh?oc=5",
+   "published": "2026-11-26T05:34:00+00:00",
+   "sentiment": 0,
+   "high_impact": false,
+   "markets": [
+    "INFY"
+   ]
+  },
   {
    "title": "Gold price rises by Rs 1,400 per tola, silver gains Rs 35 - OnlineKhabar English News",
    "source": "Google News: Forex & gold",
@@ -12683,7 +12705,7 @@
    "title": "BSE shares gain 3%, hit 4-month high on HDFC Securities' upgrade to 'Buy' - Business Standard",
    "source": "Google News: India markets",
    "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZDRncXRLLVFtTmRsWUhLWnFqQnlLa0g3MUUtNG5VakpWLTZNYUV1SUpETzdQNnJ0dmI1VUIzMC1nOTZvS0RDLTVDajR5R2FweGxQVVlfTHhIalFLOVJTZE5FY1I1c1JhamJLNk1pVVVQY1J3MjJBQ1k4ZGROX3d2dVdSM18td2NVWnZBZUNIckRPOG5zYUZKeGhaTmcxZ0xjN2lSTmV0REl5NDEyT1NYMXFKWFI5Rmk0MUQ3QWRheS1oN1ZkLUI5eHIxamxwX3pQ0gHWAUFVX3lxTE9KaERqNUxpcjFuZVJ3cUdkWWhCZmhiZkpJQU5zeEJ3a1VvVEU0LS1NaFJIaERLT29sLWNEV05HYzRCOTBEc1FhWjFMSWozcjlkMVZ0TW9ZQW1ieTgwTGU2WXFkb0I2UHpoUUFIaXRxay1MSEFKXzVPeFhkX2lTTllDaGdkWDJ1aFBNMWY0U0RJbkpudGVQUkstLVhKNUliYXczU3RiLVBpY3QyajkwTVhiUDExRUpENmJrbElaWGZVai00TDM5d3dlOFZNQTkzaE5JUGhlVmc?oc=5",
-   "published": "2026-11-26T05:19:31+00:00",
+   "published": "2026-11-26T05:19:36+00:00",
    "sentiment": 1,
    "high_impact": false,
    "markets": [
@@ -12761,6 +12783,32 @@
    "usd_news": true
   },
   {
+   "title": "India Gold price today: FXStreet data show Gold prices moving higher - www.tmgm.com",
+   "source": "Google News: Forex & gold",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPa3ZmcmFpamc1dDJJWjV6aHBkeVp4RmQyXzNJOU5UV1dJSUdENlo3YTF1MWtjaEtpd08yNjh5cHZNQW01bkVrREplUXozek5qbGZqRUxQWEhQYzdvbVBlcWZIbE9MaHdjZ01GSEs3dWFFTnpaSmVOSDZjTHk5OHQ5TU5HTmZDMVRJaFY5SnhZeWx2eGRPZnEzVGhPWkRqWnNYTThQUEdCZjdHNVlEVTJ1VDA3cDJXb2dNaWpmS0Nia1MyY1puR3lJTw?oc=5",
+   "published": "2026-11-26T05:07:11+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "XAUUSD"
+   ]
+  },
+  {
+   "title": "United States Dollar Index recovers to around 103.85 as AI trade extends its rebound - www.tmgm.com",
+   "source": "Google News: Fed & dollar",
+   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOX0pnWXUyRFRxWFlZaEU5bDQ0LUlBRGJWRkFIRmRSWkhfM1RkUm9RNTJrOHZpUjFEdmxudFhjRE54akxoWHo1TEJ3aDZhWnJFalg5Zk94cDRrS25ROUtHdzFzeVk1RWhseTM1QTVhWWYxX2VzUjhQOUNsbHl1MXlPazhUM0NHX1NkTTd3Q1Rvc0JhMHdseDU0aW4wYUlfMVRKV002REJHLXR0YS1sNlNHZ3ZiaGxYX2tmbDVjaFpWTjNtbGNzN054TFdmdm45d1RMZ1pzVGFWMzB4RFBnc21aWA?oc=5",
+   "published": "2026-11-26T05:07:11+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "XAUUSD"
+   ],
+   "usd_news": true
+  },
+  {
    "title": "Gold Price Increases Slightly in Nepali Market - Ratopati",
    "source": "Google News: Forex & gold",
    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbDRJQ0Jza2lkY01SQTVjZlBMX09Wd2RWSW5oZ29iTEJHRm5FbmFWVVJaMDZ4bmlON2o1ZllKZXR2T0JINkctUGFsSXNUaUNWSzZoS0lFM3RRcE1RX1NPSFhGa2VNVURNODdBX3hTdnlmYWYxbmZTZE9KNmlsanJyOW1xNW5LQzVzUTZJa0tveEI1cVBwNWNxa1BvM0M1UjZIcHZJVWc2STBiYlVUd0UybUN4Nkowdw?oc=5",
@@ -12801,6 +12849,17 @@
    "markets": []
   },
   {
+   "title": "Sharp drop in gold prices! A first in 14 months. - Haberler.com",
+   "source": "Google News: Fed & dollar",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNS3dHWTUyS2sxUnN6RnIzTndvc3RSVHlHX24zRU0ySVctZVNGR3FjeUZSMTR1QVViZ3lRVUJVUHRYU1JKMEdxWHZ2RmctbnkwTXFLeTRBWURmd2N1S0xLUU9lZVR6S1p4Q18tRVhvclE0VEdSNjgxd1dFMmFxSkFwMkJXV2pOUQ?oc=5",
+   "published": "2026-11-26T04:50:35+00:00",
+   "sentiment": -1,
+   "high_impact": false,
+   "markets": [
+    "XAUUSD"
+   ]
+  },
+  {
    "title": "Gold Price Forecast: XAU/USD Tests $3,600 on Thanksgiving Short Covering - FXLeaders",
    "source": "Google News: Forex & gold",
    "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONGduYlI0Q2VnOTFxRl83UXc4RDA2V0hQamdIV1g3SU0tc3pVWEtnejRIYi0zS2cxaXl6OW9SUk55bHpLc0czZFRwNmxpXzFLTjcxTGdtcXR6T0drQ3YzOVJxRzQzNXdwbUtGUmNYbnJIYm5YMmpnc1ctWDNNcklIS05RQVhMVU5oeHh0X2JLRzFUdHJfNEJwcHhqYU9adGhJREhZS3VNc1AtQVFXQ3VsV1d3?oc=5",
@@ -12809,6 +12868,17 @@
    "high_impact": false,
    "markets": [
     "XAUUSD"
+   ]
+  },
+  {
+   "title": "Sensex gains nearly 400 pts in early trade as IT stocks rally, Nifty below 25,900 - tennews.in",
+   "source": "Google News: India markets",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZl9TVHlsLXNIWURyNUE3MXNodnVvVjc1enlkQmx4TlJVN0k4VWRJbGZVLTBuUW9ROTdHZW9DRFBtLVZLTkxRZEN6enNiUVh0bl8tUlpzMk13MWJZZWg3SWI3ODVvczF5M25rRko0bENwLVZGbXRTSXh5ak1EU0ZTYnRpd1l4bW8yaVpsbHAtb3g5RVlxQkN5ZldESDVlMFMx?oc=5",
+   "published": "2026-11-26T04:49:51+00:00",
+   "sentiment": 1,
+   "high_impact": false,
+   "markets": [
+    "NIFTY"
    ]
   },
   {
@@ -13015,72 +13085,6 @@
    "high_impact": false,
    "markets": [
     "XAUUSD"
-   ]
-  },
-  {
-   "title": "Gold Price Forecast: XAU/USD struggles below $3,600 amid Thanksgiving light trading - FXStreet",
-   "source": "Google News: Forex & gold",
-   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOYXhUOTE4OUlfNVJEaGpJMmM5ZVh6My1vUFBMMnhWRWU5WWY5Qi1wZkY5djVJSHdmNVFPUnptV3VsbEVUMDk0VEs1UkdiUktjYmJWWWRrNmw4WGxOSmZHdWViQ3FSYklMS3hsbWpEa1gxTS0tSVU4RmJvbGtDZ3dfNEZqQ1pENGZiM1h6QVYyaWFiVW9wd1hjVlN2V24yYmlVSC1nVHRrbEUwQmFuSjVGZXR0OUVpTnpCbmkyZEJWLTJUckI0S2Uw?oc=5",
-   "published": "2026-11-26T04:26:17+00:00",
-   "sentiment": 0,
-   "high_impact": false,
-   "markets": [
-    "XAUUSD"
-   ]
-  },
-  {
-   "title": "TCS, Infosys, Wipro: NIFTY IT gains 7% as IT stocks rally for fourth straight session; growth challenges ahead? - Upstox",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOU014bmZXWFkzekU3dG9BYVBoREVjQjI1c0FJT2c3aG8zOHByS2pIUUZCS3p0SUpjZVhvMTFNRW52d0NYV3BDRTFoV1pSTDZzODNjTlNsWngxaUVKV1Y3cXJoUzE0ZjhETmI1SnRGSHpnZzMxdG8tTmVLT1B2SHcwZmVibmc3cUZJck1RZmdZUm1ibEk5anpyd251X1RWNGtVcmViSkx3ZVMxTVlUYmx3UjN1bHdHRE9LVm1veU5MM3NsTFI2V2U0Wm9uUGlTTW9NMWNac2M4NjhXRHZ0ZE81LTBocDVFaEtETmNnU1VyOU9zb0lkN0pv?oc=5",
-   "published": "2026-11-26T04:25:39+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "NIFTY",
-    "INFY",
-    "TCS"
-   ]
-  },
-  {
-   "title": "Opening Bell: Sensex Rises 218 Points, Nifty 50 Holds Above 25,840; Foodlink F&B IPO Opens Today - Dalal Street Investment Journal",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSV9uMU0wdnlZakhmMGhFNzZXdXg2SzlhM3VPeHo2RHVvb1ZockZ3X0tkZHBmTWRYMkNQeDlGODRuWjZIMVIxT0c2V2xDTi00akxkeHdrMVAwZGJrWW5oQnVPQk5ZcUNoV3Y5dk5GQ2RUT3IwVHBDWVZ6ZWRseUlWdHNHTWdwR3pra3pzaGZ4aW9yS0F0NWRTa2JBeFlVZlJuUnJCLTl5QnN6d0J6MWRqRXpxcm1aNDlvTERhMVluNEpoTnBGeGxqanREOFhhOEh3VEo1N2pVRQ?oc=5",
-   "published": "2026-11-26T04:25:19+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "NIFTY"
-   ]
-  },
-  {
-   "title": "Why is Alphabet stock sliding? Key factors behind the sell-off",
-   "source": "Economic Times Markets",
-   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/why-is-alphabet-stock-sliding-key-factors-behind-the-sell-off/slideshow/136178516.cms",
-   "published": "2026-11-26T04:22:51+00:00",
-   "sentiment": -1,
-   "high_impact": false,
-   "markets": []
-  },
-  {
-   "title": "Sensex gives up 472 points after opening surge as US tariff risk returns - The Week",
-   "source": "Google News: India markets",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNOUc0RlJDLVlfYmdVcEVYWDFtZFRYbFhCY0VMTkNoaDdaSFd5TWZIX0k1eFdCRVU3NkRHcUtBZDg3M0lCM0g4S2lvdExNUk5pTXg4d3huWXg4WkRIamxiTWk1US02WTVRZThGZzRHYUFnbDVlald1bmlJX2lNaW51UERxckVSLXoxUURKUDEta1RBUXhuS3FR0gGcAUFVX3lxTE9OUm9sYzNBdlU4aktUV2MxaWZxZG5KS0ctQjl0YVRHczlWQ0duSWFGbHFIQ1Rhakc0QnhlUVZwdVd0WHktSjB2TUY2eUdJMjU4UTZJcnNfUTByRHNkT2ZDVjNKZ05GMXUyZks4cnhxdlFjdmFqVU9obThmMXVsQ213aWFwektJYmNCVHdQSk1fZ0tNVEtrNFFUS3FTTw?oc=5",
-   "published": "2026-11-26T04:21:00+00:00",
-   "sentiment": 1,
-   "high_impact": false,
-   "markets": [
-    "NIFTY"
-   ]
-  },
-  {
-   "title": "Wipro, Infosys, Coforge: IT Stocks Rally As Bernstein Sees A $2.1 Trillion AI Opportunity, But Warns Of A Widening Gap - NDTV Profit",
-   "source": "Google News: Indian stocks",
-   "link": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPVFppaGo5VkhoSlNXLUpKRTg3TklWREluOVVyTlVBNEZ2V2lkZTR5eDBFZ2NkdDU0aFlLckQxQVBtRFd4QkJRQ3FTekJZMFNhZmd5bmRJUllBVmFnem5ZRjM3QXNRMUstZi1GS1QxV1hlWi13NWN4dFJyekRTOWNtX2R2WTNONExVTlczVG5iYUhVR3g0NDN4bDVNcmFrWGRiVGdsaTFaaVpYOGZlR2dJSU94OUdrZGhEQUJheXI5SVcyNkppVWp6M3Z0SmlQZmVGVjlMc0hRRlotOXFvTDFEY1FPcjF2SVZyRklqR3U4WjBaaFlQWXNWc3ByNmk3ZHVMMmhzRnYwTmpYXzFXQm82RFppTHpPT0FR0gGgAkFVX3lxTE4wNVhGTXl5cnA4dC1oQ2lOUkFuQjRUNjlEeG9MUlRiVGgwWkUwUFplODFWeHpFVV8xMmZ0Q2xCQjFBV1NzalVQdmJRWHNnd1IxcFA1VjF2LUNZdnZQd0ZseXJCcE94a0h2c3M2bnpjRnczcmxldnVCQk5GR2NLWHkxTGFrU1BVSWxMNXRvODBqMHRKMjJ4UktWb3gtLWVhbkZiZ0MyblJ3REFnMERraDNlY09oZTJxdEhYZmFZVEhzX01rbS01Y01TR3haR2xXLXR1X1B2MlBxeEpCMFNjT1NTZTBSb001VkNuMlRadExCblJSV0c2a3JtVXo0Ym5xekI3WFY4RGVNTjhPVm01Z0RaVWhPTGZXZjlFc09TX1psbg?oc=5",
-   "published": "2026-11-26T04:14:16+00:00",
-   "sentiment": 1,
-   "high_impact": true,
-   "markets": [
-    "INFY"
    ]
   }
  ],
