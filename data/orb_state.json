@@ -1,5 +1,16 @@
 {
- "trades": [],
+ "trades": [
+  {
+   "date": "2026-11-26",
+   "cp": 1,
+   "reason": "index went back through the range (stop)",
+   "est_pnl": -768.0,
+   "news_mood": 70,
+   "news_agrees": true,
+   "global_score": 8,
+   "global_agrees": null
+  }
+ ],
  "days": {
   "2026-11-24": {
    "hello": true,
@@ -12,6 +23,38 @@
    ],
    "global_score": 65,
    "closed_msg": true
+  },
+  "2026-11-26": {
+   "hello": true,
+   "news_mood": 70,
+   "news_events": [
+    "Company results",
+    "Inflation data",
+    "RBI policy",
+    "US Fed",
+    "War / geopolitics"
+   ],
+   "global_score": 8,
+   "range_hi": 63972.8515625,
+   "range_lo": 63473.94921875,
+   "entry": {
+    "time": "2026-11-26T10:15:00+05:30",
+    "cp": 1,
+    "S": 63975.8515625,
+    "stop_idx": 63473.94921875,
+    "tgt_idx": 64973.65625,
+    "K": 70500,
+    "prem": 64.85181909568837,
+    "iv": 17.3799991607666,
+    "exp": "2026-12-29T15:30:00+05:30"
+   },
+   "exit": {
+    "reason": "index went back through the range (stop)",
+    "index": 63473.94921875,
+    "est_pnl": -768.0,
+    "time": "2026-11-26T14:00:52.209502+05:30"
+   },
+   "summary": true
   }
  }
 }

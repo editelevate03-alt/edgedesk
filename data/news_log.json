@@ -11,5 +11,19 @@
   ],
   "headlines": 185,
   "feeds_failed": 0
+ },
+ "2026-11-26": {
+  "date": "2026-11-26",
+  "nifty": 61,
+  "banknifty": 70,
+  "events": [
+   "Company results",
+   "Inflation data",
+   "RBI policy",
+   "US Fed",
+   "War / geopolitics"
+  ],
+  "headlines": 209,
+  "feeds_failed": 0
  }
 }
