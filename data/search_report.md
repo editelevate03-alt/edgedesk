@@ -1,4 +1,4 @@
-# EdgeDesk strategy search (walk-forward) - 2026-11-26 10:03 UTC
+# EdgeDesk strategy search (walk-forward) - 2026-11-27 10:11 UTC
 
 756 combinations tested on NIFTY & BANK NIFTY ATM options (1 lot, after Zerodha charges). TRAIN = first 70% of data, TEST = last 30% (unseen). 🟢 = passed both + luck test. Option prices are estimates. Not investment advice.
 
